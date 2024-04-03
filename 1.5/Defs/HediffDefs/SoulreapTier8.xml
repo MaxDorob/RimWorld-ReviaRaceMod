@@ -35,7 +35,7 @@
     <renderNodeProperties>
       <li>
         <workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
-        <texPath>Things/Tails/Tail8</texPath>
+        <texPath>Things/Tails/Tail8/Tail</texPath>
         <colorType>Hair</colorType>
         <overrideMeshSize>(1, 1)</overrideMeshSize>
         <parentTagDef>Body</parentTagDef>
