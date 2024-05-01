@@ -54,7 +54,7 @@
     </graphicData>
     <projectile>
       <damageDef>ReviaRangedGash</damageDef>
-      <damageAmountBase>11</damageAmountBase>
+      <damageAmountBase>14</damageAmountBase>
       <speed>55</speed>
       <stoppingPower>3.00</stoppingPower>
       <armorPenetrationBase>0.87</armorPenetrationBase>

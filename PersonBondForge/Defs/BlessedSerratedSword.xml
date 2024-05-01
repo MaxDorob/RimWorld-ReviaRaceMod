@@ -12,7 +12,7 @@
         <capacities>
           <li>Blunt</li>
         </capacities>
-        <power>14</power>
+        <power>10</power>
         <cooldownTime>1.5</cooldownTime>
         <armorPenetration>0.12</armorPenetration>
       </li>
@@ -21,7 +21,7 @@
         <capacities>
           <li>Gash</li>
         </capacities>
-        <power>24</power>
+        <power>28</power>
         <cooldownTime>1.75</cooldownTime>
         <armorPenetration>0.30</armorPenetration>
       </li>
@@ -30,7 +30,7 @@
         <capacities>
           <li>Gash</li>
         </capacities>
-        <power>29</power>
+        <power>32</power>
         <cooldownTime>1.75</cooldownTime>
         <armorPenetration>0.30</armorPenetration>
       </li>
