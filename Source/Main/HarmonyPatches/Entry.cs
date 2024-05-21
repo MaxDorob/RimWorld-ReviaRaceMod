@@ -133,6 +133,7 @@ namespace ReviaRace.HarmonyPatches
         public static void PreGeneratePawn(ref PawnGenerationRequest request)
         {
             if (StaticModVariables.BirthOutcome) return;
+            if (!request.KindDef.RaceProps.Humanlike) return;
             if ((request.ForcedXenotype?.Equals(Defs.XenotypeDef) ?? false) || (request.Faction?.def?.defName?.StartsWith("Revia") ?? false))
             {
                 request.FixedGender = Gender.Female;
@@ -177,30 +178,23 @@ namespace ReviaRace.HarmonyPatches
         static bool doLogging = true;
         public static IEnumerable<CodeInstruction> Gene_Randomizer_Transpiler(IEnumerable<CodeInstruction> instructions)
         {
-            MethodInfo addGeneMI = AccessTools.Method("RimWorld.Pawn_GeneTracker:AddGene", new Type[] { typeof(GeneDef), typeof(bool) });
+            MethodInfo addGeneMI = AccessTools.Method("RimWorld.Pawn_GeneTracker:AddGene", [typeof(GeneDef), typeof(bool)]);
             MethodInfo checkMI = patchType.GetMethod(nameof(GeneCanBeAdded));
             if (doLogging) Log.Message($"[AG-Patch] {addGeneMI == null}");
 
             foreach (var instruction in instructions)
             {
-                var potentialGeneAdd = instructions.SkipWhile(x => x != instruction).Take(9);
-                if (potentialGeneAdd.Last().Calls(addGeneMI))
-                {
-                    var label = instructions.SkipWhile(x => x != instruction).Select(x => x.labels).FirstOrDefault(x => x != null && x.Count > 0)[0];
-                    yield return new CodeInstruction(OpCodes.Ldarg_0);
-                    yield return CodeInstruction.LoadField(AccessTools.TypeByName("Verse.Gene"), "pawn");
-                    yield return new CodeInstruction(OpCodes.Ldloc_S, 7);
-                    yield return CodeInstruction.Call(patchType, nameof(GeneCanBeAdded));
-                    yield return new CodeInstruction(OpCodes.Brfalse, label);
-                    if (doLogging)
-                    {
-                        doLogging = false;
-                        Log.Warning($"[AG-Patch] Inserted GeneCanBeAdded method.\n {string.Join("\n", Gene_Randomizer_Transpiler(instructions).Select(x=>$"{x.opcode} - {x.operand}"))}");
-                        doLogging = true;
-                    }
-
-                }
                 yield return instruction;
+                if (instruction.IsStloc() && instruction.operand is LocalVariableInfo info && info.LocalIndex == 7)
+                {
+                    yield return new CodeInstruction(OpCodes.Ldarg_0);
+                    yield return CodeInstruction.LoadField(typeof(Gene), nameof(Gene.pawn));
+                    yield return new CodeInstruction(OpCodes.Ldloc_S, 6);
+                    yield return CodeInstruction.Call(typeof(Entry), nameof(Entry.GeneCanBeAdded));
+                    yield return new CodeInstruction(OpCodes.Ldloc_S, 7);
+                    yield return new CodeInstruction(OpCodes.And);
+                    yield return new CodeInstruction(OpCodes.Stloc_S, 7);
+                }
             }
         }
         public static void AdjustXenotypeForFactionlessPawn_Postfix(Pawn pawn, ref PawnGenerationRequest request, ref XenotypeDef xenotype)

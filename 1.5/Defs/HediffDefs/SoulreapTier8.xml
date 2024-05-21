@@ -7,6 +7,7 @@
     <isBad>false</isBad>
     <defaultLabelColor>(0.8, 0.4, 0.4)</defaultLabelColor>
     <causesNeed>ReviaRaceBloodthirstNeed</causesNeed>
+    <countsAsAddedPartOrImplant>false</countsAsAddedPartOrImplant>
     <stages>
       <li>
         <capMods>
@@ -30,6 +31,7 @@
           <MarketValue>1200</MarketValue>
           <PainShockThreshold>0.20</PainShockThreshold>
         </statOffsets>
+        <hungerRateFactorOffset>0.35</hungerRateFactorOffset>
       </li>
     </stages>
     <renderNodeProperties>
@@ -45,11 +47,11 @@
           <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
           <scale>1.70</scale>
           <defaultData>
-            <layer>-2</layer>
+            <layer>-10</layer>
           </defaultData>
           <dataNorth>
             <offset>(-0.09, 0.03, -0.57)</offset>
-            <layer>90</layer>
+            <layer>-10</layer>
           </dataNorth>
           <dataSouth>
             <offset>(-0.05, 0, -0.12)</offset>

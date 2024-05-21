@@ -3,7 +3,7 @@
   <GeneDef ParentName="GeneTailBase">
     <defName>ReviaTail</defName>
     <label>Revian tail</label>
-    <description>Revian tail.People say that Skarne blesses their carriers.</description>
+    <description>A Foxlike tail with a white tip, the sign of the Blood goddess. The Skarne may bless those who kill in her name with power.</description>
     <geneClass>ReviaRace.Genes.ReviaTailGene</geneClass>
     <iconPath>UI/icons/ReviaTail_icon</iconPath>
     <iconColor>(0.75, 0.75, 0.75)</iconColor>
@@ -13,20 +13,10 @@
       <MoveSpeed>0.3</MoveSpeed>
       <LifespanFactor>1.7</LifespanFactor>
     </statOffsets>
-    <biostatMet>-2</biostatMet>
+    <biostatMet>0</biostatMet>
     <biostatCpx>2</biostatCpx>
     <minAgeActive>3</minAgeActive>
-    <!--<graphicData>
-      <graphicPath>Things/Tails/Tail1</graphicPath>
-      <colorType>Hair</colorType>
-      <drawLoc>Tailbone</drawLoc>
-      <drawScale>1.70</drawScale>
-      <drawOffsetNorth>(0, 0, 0)</drawOffsetNorth>
-      <drawOffsetSouth>(0, 0, 0)</drawOffsetSouth>
-      <drawOffsetEast>(0, 0, 0)</drawOffsetEast>
-    </graphicData>-->
     <causesNeed>ReviaRaceBloodthirstNeed</causesNeed>
-
     <forcedTraits>
       <li>
         <def>Bloodlust</def>
@@ -39,7 +29,7 @@
     <defName>ReviaClaws</defName>
     <label>Revian claws</label>
     <iconPath>UI/icons/ReviaClaw_icon</iconPath>
-    <description>Sharp revian claws. Makes enemy bleeding</description>
+    <description>The sharp claws of the Revia, specialized for bloodshed.</description>
     <geneClass>ReviaRace.Genes.ReviaClawsGene</geneClass>
     <biostatCpx>0</biostatCpx>
     <biostatMet>0</biostatMet>
@@ -50,14 +40,6 @@
     <iconPath>UI/icons/ReviaEar_icon</iconPath>
     <description>Revian ear. Helps them hear better than the average person. And looks nice.</description>
     <geneClass>ReviaRace.Genes.ReviaEarGene</geneClass>
-    <!--<graphicData>
-    <drawScale>1.00</drawScale>
-    <drawOffsetNorth>(0, -0.3, 0)</drawOffsetNorth>
-
-      <graphicPath>Things/Ears/Adult/EarMerged/EarMerged</graphicPath>
-      <colorType>Hair</colorType>
-      <useSkinShader>False</useSkinShader>
-    </graphicData>-->
     <capMods>
       <li>
         <capacity>Hearing</capacity>
@@ -83,7 +65,7 @@
             <layer>92</layer>
           </defaultData>
           <dataNorth>
-            <layer>62</layer>
+            <layer>61</layer>
           </dataNorth>
         </drawData>
         <bodyPartLabel>right ear</bodyPartLabel>
@@ -104,41 +86,12 @@
             <layer>92</layer>
           </defaultData>
           <dataNorth>
-            <layer>62</layer>
+            <layer>61</layer>
           </dataNorth>
         </drawData>
         <bodyPartLabel>left ear</bodyPartLabel>
       </li>
     </renderNodeProperties>
-    <!--<modExtensions>
-      <li Class="BetterGeneGraphicsFramework.GraphicsWithAge">
-        <ages>
-          <li>-1</li>
-
-        </ages>
-        <bodyPartExpressions>
-          <li>Left ear|Right ear</li>
-          <li>!Left ear|Right ear</li>
-          <li>Left ear|!Right ear</li>
-          <li>!Left ear|!Right ear</li>
-        </bodyPartExpressions>
-        <graphicPaths>
-
-          -->
-    <!--adult-->
-    <!--
-          <li>Things/Ears/Adult/EarMerged/EarMerged</li>
-          <li>Things/Ears/Adult/EarRight/EarRight</li>
-          <li>Things/Ears/Adult/EarLeft/EarLeft</li>
-          <li>Things/Ears/EarNone/EarNone</li>
-        </graphicPaths>
-      </li>
-
-      <li Class="BetterGeneGraphicsFramework.ShaderSupport">
-        <shaderType>CutoutComplex</shaderType>
-        <colorType>Hair</colorType>
-      </li>
-    </modExtensions>-->
   </GeneDef>
 
 
@@ -148,7 +101,7 @@
     <biostatCpx>1</biostatCpx>
     <biostatMet>0</biostatMet>
     <iconPath>UI/icons/ReviaTooth_icon</iconPath>
-    <description>Sharp teeth that cause the victim to bleed.</description>
+    <description>Serrated teeth to rip and tear any opponent of a Revia.</description>
     <geneClass>ReviaRace.Genes.ReviaTeethGene</geneClass>
   </GeneDef>
 </Defs>
