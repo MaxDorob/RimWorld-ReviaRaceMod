@@ -11,6 +11,7 @@ namespace ReviaRace
     {
         public PawnRenderNode_HeadBodyPart(Pawn pawn, PawnRenderNodeProperties props, PawnRenderTree tree) : base(pawn, props, tree)
         {
+            Log.Warning("Using obsolete " + nameof(PawnRenderNode_HeadBodyPart));
         }
         PawnRenderNodeProperties_BodyPart Props => props as PawnRenderNodeProperties_BodyPart;
         public override Graphic GraphicFor(Pawn pawn)

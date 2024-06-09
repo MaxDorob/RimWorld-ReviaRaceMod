@@ -49,8 +49,7 @@
     <biostatCpx>1</biostatCpx>
     <biostatMet>0</biostatMet>
     <renderNodeProperties>
-      <li Class="ReviaRace.PawnRenderNodeProperties_BodyPart">
-        <nodeClass>ReviaRace.PawnRenderNode_HeadBodyPart</nodeClass>
+      <li>
         <workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
         <texPath>Things/Ears/Adult/EarRight/EarRight</texPath>
         <colorType>Hair</colorType>
@@ -68,10 +67,9 @@
             <layer>61</layer>
           </dataNorth>
         </drawData>
-        <bodyPartLabel>right ear</bodyPartLabel>
+        <linkedBodyPartsGroup>RightEar</linkedBodyPartsGroup>
       </li>
-      <li Class="ReviaRace.PawnRenderNodeProperties_BodyPart">
-        <nodeClass>ReviaRace.PawnRenderNode_HeadBodyPart</nodeClass>
+      <li>
         <workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
         <texPath>Things/Ears/Adult/EarLeft/EarLeft</texPath>
         <colorType>Hair</colorType>
@@ -89,7 +87,7 @@
             <layer>61</layer>
           </dataNorth>
         </drawData>
-        <bodyPartLabel>left ear</bodyPartLabel>
+        <linkedBodyPartsGroup>LeftEar</linkedBodyPartsGroup>
       </li>
     </renderNodeProperties>
   </GeneDef>
