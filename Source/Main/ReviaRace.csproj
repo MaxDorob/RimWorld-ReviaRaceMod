@@ -85,6 +85,7 @@
     <Compile Include="Genes\ReviaEarGene.cs" />
     <Compile Include="Genes\ReviaTailGene.cs" />
     <Compile Include="Genes\ReviaTeethGene.cs" />
+    <Compile Include="HarmonyPatches\AlphaGenes_Patch.cs" />
     <Compile Include="HarmonyPatches\DamageWorker_AddInjury.cs" />
     <Compile Include="HarmonyPatches\Entry.cs" />
     <Compile Include="HarmonyPatches\HeredityPatcher.cs" />

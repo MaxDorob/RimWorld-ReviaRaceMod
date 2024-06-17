@@ -26,9 +26,10 @@ namespace ReviaRace.HarmonyPatches
         internal static bool NoCraftLimitation { get; set; }
         internal static BornSettingsEnum BornSettings { get; set; }
         private static readonly Type patchType = typeof(Entry);
+        internal static Harmony harmony;
         static Entry()
         {
-            var harmony = new Harmony("ReviaRace");
+            harmony = new Harmony("ReviaRace");
             harmony.PatchAll(Assembly.GetExecutingAssembly());
             harmony.Patch(AccessTools.Method(typeof(WorkGiver_Researcher), nameof(WorkGiver_Researcher.ShouldSkip)),
                 postfix: new HarmonyMethod(patchType, nameof(ShouldSkipResearchPostfix)));
@@ -55,8 +56,7 @@ namespace ReviaRace.HarmonyPatches
                 {
                     if (LoadedModManager.RunningModsListForReading.Any(x => x.PackageId.Replace("_steam", "").Replace("_copy", "") == "sarg.alphagenes"))
                     {
-                        harmony.Patch(AccessTools.Method("AlphaGenes.Gene_Randomizer:PostAdd"),
-                             transpiler: new HarmonyMethod(patchType, nameof(Gene_Randomizer_Transpiler)));
+                        AlphaGenes_Patch.Patch();
                     }
 
                 }))();
@@ -175,28 +175,7 @@ namespace ReviaRace.HarmonyPatches
 
             if (project?.defName?.StartsWith("Revia") ?? false) __result = !pawn.IsRevia();
         }
-        static bool doLogging = true;
-        public static IEnumerable<CodeInstruction> Gene_Randomizer_Transpiler(IEnumerable<CodeInstruction> instructions)
-        {
-            MethodInfo addGeneMI = AccessTools.Method("RimWorld.Pawn_GeneTracker:AddGene", [typeof(GeneDef), typeof(bool)]);
-            MethodInfo checkMI = patchType.GetMethod(nameof(GeneCanBeAdded));
-            if (doLogging) Log.Message($"[AG-Patch] {addGeneMI == null}");
 
-            foreach (var instruction in instructions)
-            {
-                yield return instruction;
-                if (instruction.IsStloc() && instruction.operand is LocalVariableInfo info && info.LocalIndex == 7)
-                {
-                    yield return new CodeInstruction(OpCodes.Ldarg_0);
-                    yield return CodeInstruction.LoadField(typeof(Gene), nameof(Gene.pawn));
-                    yield return new CodeInstruction(OpCodes.Ldloc_S, 6);
-                    yield return CodeInstruction.Call(typeof(Entry), nameof(Entry.GeneCanBeAdded));
-                    yield return new CodeInstruction(OpCodes.Ldloc_S, 7);
-                    yield return new CodeInstruction(OpCodes.And);
-                    yield return new CodeInstruction(OpCodes.Stloc_S, 7);
-                }
-            }
-        }
         public static void AdjustXenotypeForFactionlessPawn_Postfix(Pawn pawn, ref PawnGenerationRequest request, ref XenotypeDef xenotype)
         {
             XenotypeDef xenotypeDef;
