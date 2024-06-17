@@ -15,7 +15,12 @@ namespace ReviaRace
         {
             foreach (var mapPawn in map.mapPawns.FreeColonistsAndPrisoners)
             {
-                var memories = mapPawn.needs.mood.thoughts.memories;
+                var memories = mapPawn.needs?.mood?.thoughts?.memories;
+                if (memories == null)
+                {
+                    continue;
+                }
+
                 if (mapPawn.IsPrisoner)
                 {
                     memories.TryGainMemory(corpse ? ReviaDefOf.ReviaRaceThoughtSacrificedNegativePrisoner : Defs.SacrificedFear, corpse ? 1 : -1); ;
