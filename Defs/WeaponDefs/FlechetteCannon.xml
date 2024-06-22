@@ -83,7 +83,7 @@
     </graphicData>
     <projectile>
       <damageDef>ReviaRangedGash</damageDef>
-      <damageAmountBase>8</damageAmountBase>
+      <damageAmountBase>12</damageAmountBase>
       <speed>55</speed>
       <stoppingPower>3.00</stoppingPower>
       <armorPenetrationBase>0.65</armorPenetrationBase>

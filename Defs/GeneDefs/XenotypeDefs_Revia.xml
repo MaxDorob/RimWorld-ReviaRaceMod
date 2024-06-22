@@ -3,25 +3,25 @@
 	<XenotypeDef>
 		<defName>RevianXenotype</defName>
 		<label>Revia</label>
-		<description>Revia are near-humans with vulpine traits. Feared in the sector of the galaxy that they exist in for their warlike natures, it is said that Revia accept only one absolute law in their society: the strong live and prosper, and the weak serve the strong in whatever way they are able.Their society worships bloodshed in the name of a certain deity that sits upon a throne of bleached skulls, and will stop at nothing to slake his thirst.</description>
-		<descriptionShort>Near-humans with vulpine traits. Blood, blood, blood!</descriptionShort>
+		<description>Revia are near-human females with vulpine traits. Beautiful, aggressive and with a natural sadistic precision, they thrive in close combat with their devastating jaws and claws, and are immensely empowered by sacrifice to their bloody goddess; the amount of sacrifice coinciding directly to the number of white-tipped tails a Revia has. Their fanatical bloodthirsty worship of a bloody goddess, aggressive warlike nature and the innate danger of creatures who get more powerful through killing others, causes fear in the section of the galaxy they inhabit despite their natural beauty.\n\n Accepting only her absolute law in their minds: the strong live and prosper, and the weak serve the strong in whatever way they are able. The Bloody Goddess' power is attained through the blood of others, and in her name the Revia will bleed the enemies of Skarne of every last drop! Blood, blood, blood!</description>
+		<descriptionShort>Revia are near-human females; beautiful, aggressive, and incredibly dangerous up close, they are empowered through ritual sacrifice to a Bloody Goddess. Blood, blood, blood!</descriptionShort>
 		<iconPath>UI/icons/Revia_XenotypeIcon</iconPath>
 		<inheritable>true</inheritable>
 		<combatPowerFactor>1.3</combatPowerFactor>
 		<nameMaker>NamerPersonRevia</nameMaker>
 		<chanceToUseNameMaker>1</chanceToUseNameMaker>
 		<genes>
-      <li>ReviaTail</li>
-      <li>ReviaEars</li>
-      <li>Body_Thin</li>
-      <li>Body_Standard</li>
-      <li>Beauty_Beautiful</li>
-      <li>MeleeDamage_Strong</li>
-      <li>ReviaTeeth</li>
-      <li>ReviaClaws</li>
-      <li>Aggression_Aggressive</li>
-      <li>AptitudePoor_Plants</li>
-      <li>AptitudePoor_Mining</li>
+			<li>ReviaTail</li>
+			<li>ReviaEars</li>
+			<li>Body_Thin</li>
+			<li>Body_Standard</li>
+			<li>Beauty_Beautiful</li>
+			<li>MeleeDamage_Strong</li>
+			<li>ReviaTeeth</li>
+			<li>ReviaClaws</li>
+			<li>Aggression_Aggressive</li>
+			<li>AptitudePoor_Plants</li>
+			<li>AptitudePoor_Mining</li>
 		</genes>
 	</XenotypeDef>
 
