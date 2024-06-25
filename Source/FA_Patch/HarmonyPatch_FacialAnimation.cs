@@ -68,7 +68,7 @@ namespace ReviaRace.FA_Compat
         }
     }
 
-    [HarmonyPatch(typeof(ControllerBaseComp<FaceTypeDef, BrowShapeDef>), "InitIfNeed")]
+    [HarmonyPatch(typeof(ControllerBaseComp<FaceTypeDef, BrowShapeDef>), "InitializeIfNeed")]
     internal static class ControllerBaseComp_Patch
     {
         public static bool Prefix(ThingComp __instance, ref Pawn ___pawn, ref Gender ___prevGender, ref Color ___color, ref FaceTypeDef ___faceType, Thing ___parent)
