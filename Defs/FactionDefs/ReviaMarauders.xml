@@ -10,7 +10,7 @@
     <settlementGenerationWeight>1</settlementGenerationWeight>
     <requiredCountAtGameStart>1</requiredCountAtGameStart>
     <canMakeRandomly>true</canMakeRandomly>
-    <canSiege>true</canSiege>
+    <canSiege>false</canSiege>
     <canStageAttacks>true</canStageAttacks>
     <leaderTitle>Skullshatterer</leaderTitle>
     <factionIconPath>World/ReviaEmblem</factionIconPath>
