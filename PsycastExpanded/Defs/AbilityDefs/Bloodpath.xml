@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+  <VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+    <defName>Revia_Bloodseek</defName>
+    <label>bloodseek</label>
+    <description>TODO. Teleport to a bleeding target.</description>
+    <iconPath>Abilities/Bloodpath/Bloodseek</iconPath>
+		<abilityClass>Revia_VanillaPsycastExpanded.Ability_Bloodseek</abilityClass>
+		<castTime>30</castTime>
+		<durationTime>100</durationTime> <!--Slow down time-->
+		<needsTicking>true</needsTicking>
+		<targetMode>Pawn</targetMode>
+		<range>99999</range>
+		<targetingParametersList>
+			<li>
+				<canTargetSelf>False</canTargetSelf>
+				<canTargetPawns>True</canTargetPawns>
+				<canTargetBuildings>False</canTargetBuildings>
+				<canTargetItems>False</canTargetItems>
+				<canTargetPlants>false</canTargetPlants>
+				<mapObjectTargetsMustBeAutoAttackable>false</mapObjectTargetsMustBeAutoAttackable>
+			</li>
+		</targetingParametersList>
+    <modExtensions>
+      <li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+        <path>Revia_BloodPath</path>
+        <level>1</level>
+        <order>1</order>
+        <psyfocusCost>0.02</psyfocusCost>
+        <entropyGain>25</entropyGain>
+      </li>
+      <li Class="VanillaPsycastsExpanded.Skipmaster.AbilityExtension_Clamor">
+        <clamorType>Ability</clamorType>
+        <clamorRadius>10</clamorRadius>
+      </li>
+			<li Class="VFECore.Abilities.AbilityExtension_Hediff">
+				<hediff>PsychicBurden</hediff>
+				<durationMultiplier>PsychicSensitivity</durationMultiplier>
+			</li>
+    </modExtensions>
+  </VFECore.Abilities.AbilityDef>
+  
+</Defs>
