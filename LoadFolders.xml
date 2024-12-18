@@ -11,5 +11,6 @@
     <li>1.5</li>
     <li IfModActive="Nals.FacialAnimation">FA_Compat</li>
     <li IfModActive="StatistNo1.personabond">PersonBondForge</li>
+	<li IfModActive="VanillaExpanded.VPsycastsE">PsycastExpanded</li>
   </v1.5>
 </loadFolders>
