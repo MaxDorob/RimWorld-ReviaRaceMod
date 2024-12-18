@@ -38,3 +38,5 @@ UnityEngine.dll
 /Source/FA_Patch/obj
 /Source/Main/obj/Debug
 /Source/Main/obj
+/Source/Revia_VanillaPsycastExpanded/obj
+/Source/ThirdPartyAssemblies/VanillaPsycastsExpanded.dll
