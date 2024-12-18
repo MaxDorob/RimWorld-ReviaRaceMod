@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+	<!--TODO: finish-->
+  <VanillaPsycastsExpanded.PsycasterPathDef>
+    <defName>Revia_BloodPath</defName>
+    <label>bloodpath</label>
+    <description>TODO.</description> 
+    <background>UI/Backgrounds/EmpathPath</background>
+    <altBackground>UI/AlternativeBackgrounds/PathBG_Empath</altBackground>
+    <tab>Psycasts</tab>
+    <tooltip>TODO tooltip.</tooltip>
+  </VanillaPsycastsExpanded.PsycasterPathDef>
+</Defs>
