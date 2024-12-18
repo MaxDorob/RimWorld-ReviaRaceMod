@@ -9,9 +9,10 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Revia_VanillaPsycastExpanded</RootNamespace>
     <AssemblyName>Revia_VanillaPsycastExpanded</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -41,13 +42,20 @@
     <Reference Include="System.Xml" />
     <Reference Include="VanillaPsycastsExpanded">
       <HintPath>..\ThirdPartyAssemblies\VanillaPsycastsExpanded.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="VFECore">
       <HintPath>..\ThirdPartyAssemblies\VFECore.dll</HintPath>
+      <Private>False</Private>
     </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Krafs.Rimworld.Ref">
+      <Version>1.5.4297</Version>
+    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
