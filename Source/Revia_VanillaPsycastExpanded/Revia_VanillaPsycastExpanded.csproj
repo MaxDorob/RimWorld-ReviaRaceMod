@@ -42,6 +42,9 @@
     <Reference Include="VanillaPsycastsExpanded">
       <HintPath>..\ThirdPartyAssemblies\VanillaPsycastsExpanded.dll</HintPath>
     </Reference>
+    <Reference Include="VFECore">
+      <HintPath>..\ThirdPartyAssemblies\VFECore.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
