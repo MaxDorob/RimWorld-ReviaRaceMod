@@ -40,3 +40,4 @@ UnityEngine.dll
 /Source/Main/obj
 /Source/Revia_VanillaPsycastExpanded/obj
 /Source/ThirdPartyAssemblies
+*.lnk
