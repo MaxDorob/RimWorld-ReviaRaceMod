@@ -50,8 +50,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AttackTargetFinderEx.cs" />
     <Compile Include="Bloodseek\Ability_Bloodseek.cs" />
+    <Compile Include="Defs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SkarneAvatar\JobGiver_SkarneAvatar.cs" />
+    <Compile Include="SkarneAvatar\MentalState_SkarneAvatar.cs" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Krafs.Publicizer">
@@ -64,7 +68,7 @@
     </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-	<ItemGroup>
-		<Publicize Include="Assembly-CSharp"/>
-	</ItemGroup>
+  <ItemGroup>
+    <Publicize Include="Assembly-CSharp" />
+  </ItemGroup>
 </Project>
