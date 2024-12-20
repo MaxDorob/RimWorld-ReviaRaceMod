@@ -50,9 +50,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AbilityExtension_ReviaPsycast.cs" />
     <Compile Include="AttackTargetFinderEx.cs" />
     <Compile Include="Bloodseek\Ability_Bloodseek.cs" />
     <Compile Include="Defs.cs" />
+    <Compile Include="Patches\AbilityToolTip_Patch.cs" />
+    <Compile Include="Patches\Psycast_PrereqsCompleted_Patch.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SkarneAvatar\JobGiver_SkarneAvatar.cs" />
     <Compile Include="SkarneAvatar\MentalState_SkarneAvatar.cs" />
@@ -69,12 +72,19 @@
     </PackageReference>
     <PackageReference Include="Lib.Harmony">
       <Version>2.3.3</Version>
-			<IncludeAssets>compile</IncludeAssets>
-			<PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>compile</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
     </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <Publicize Include="Assembly-CSharp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Main\ReviaRace.csproj">
+      <Project>{df2bd9db-9224-4eb0-a772-d1757c6dcae2}</Project>
+      <Name>ReviaRace</Name>
+      <Private>False</Private>
+    </ProjectReference>
   </ItemGroup>
 </Project>

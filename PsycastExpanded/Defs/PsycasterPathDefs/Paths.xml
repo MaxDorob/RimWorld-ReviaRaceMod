@@ -9,5 +9,7 @@
     <altBackground>UI/AlternativeBackgrounds/PathBG_Empath</altBackground>
     <tab>Psycasts</tab>
     <tooltip>TODO tooltip.</tooltip>
+		<requiredGene>ReviaTail</requiredGene>
+		<lockedReason>MustBeRevia</lockedReason>
   </VanillaPsycastsExpanded.PsycasterPathDef>
 </Defs>

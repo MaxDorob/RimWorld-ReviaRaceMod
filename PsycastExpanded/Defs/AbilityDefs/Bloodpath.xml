@@ -22,12 +22,13 @@
 			</li>
 		</targetingParametersList>
     <modExtensions>
-      <li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+      <li Class="Revia_VanillaPsycastExpanded.AbilityExtension_ReviaPsycast">
         <path>Revia_BloodPath</path>
         <level>1</level>
         <order>1</order>
         <psyfocusCost>0.02</psyfocusCost>
         <entropyGain>25</entropyGain>
+				<soulReapLevel>5</soulReapLevel>
       </li>
       <li Class="VanillaPsycastsExpanded.Skipmaster.AbilityExtension_Clamor">
         <clamorType>Ability</clamorType>
@@ -53,12 +54,13 @@
 			<canTargetSelf>True</canTargetSelf>
 		</targetingParameters>
 		<modExtensions>
-			<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+			<li Class="Revia_VanillaPsycastExpanded.AbilityExtension_ReviaPsycast">
 				<path>Revia_BloodPath</path>
 				<level>1</level>
 				<order>1</order>
 				<psyfocusCost>0.80</psyfocusCost>
 				<entropyGain>60</entropyGain>
+				<soulReapLevel>9</soulReapLevel>
 			</li>
 			<li Class="VanillaPsycastsExpanded.AbilityExtension_GiveMentalState">
 				<stateDef>SkarneAvatar</stateDef>
