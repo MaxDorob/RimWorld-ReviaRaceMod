@@ -12,6 +12,6 @@ namespace Revia_VanillaPsycastExpanded
     public static class Defs
     {
         public static HediffDef SkarneAvatar;
-
+        public static StatDef PsyfocusPerKill;
     }
 }

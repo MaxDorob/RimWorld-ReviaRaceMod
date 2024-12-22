@@ -67,5 +67,32 @@
 			</li>
 		</modExtensions>
 	</VFECore.Abilities.AbilityDef>
+
+	<VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+		<defName>ReviaBloodbath</defName>
+		<label>bloodbath</label>
+		<description>TODO.</description>
+		<iconPath>Abilities/Bloodpath/Bloodbath</iconPath>
+		<castSound>VPE_BladeFocus_Cast</castSound> <!--TODO: Change to some other sound-->
+		<targetMode>Self</targetMode>
+		<castTime>15</castTime>
+		<durationTime>7200</durationTime>
+		<abilityClass>VFECore.Abilities.Ability_Blank</abilityClass>
+		<modExtensions>
+			<li Class="Revia_VanillaPsycastExpanded.AbilityExtension_ReviaPsycast">
+				<path>Revia_BloodPath</path>
+				<level>2</level>
+				<order>1</order>
+				<psyfocusCost>0.08</psyfocusCost>
+				<entropyGain>5</entropyGain>
+				<psychic>true</psychic>
+				<soulReapLevel>3</soulReapLevel>
+			</li>
+			<li Class="VFECore.Abilities.AbilityExtension_Hediff">
+				<hediff>ReviaBloodbath</hediff>
+				<durationMultiplier>PsychicSensitivity</durationMultiplier>
+			</li>
+		</modExtensions>
+	</VFECore.Abilities.AbilityDef>
   
 </Defs>

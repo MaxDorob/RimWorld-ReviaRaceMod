@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <HediffDef  ParentName="PsycastHediffBase">
+    <defName>ReviaBloodbath</defName>
+    <label>bloodbath</label>
+    <description>TODO.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+    <isBad>false</isBad>
+    <defaultLabelColor>(0.8, 0.4, 0.4)</defaultLabelColor>
+    <countsAsAddedPartOrImplant>false</countsAsAddedPartOrImplant>
+		<comps>
+			<li Class="Revia_VanillaPsycastExpanded.HediffCompProperties_SoulReapSeverity">
+			</li>
+		</comps>
+    <stages>
+      <li> <!--Lvl 1-->
+				<minSeverity>0.1</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>0.05</offset>
+          </li>
+        </capMods>
+				<statFactors>
+					<MeleeDodgeChance>1.05</MeleeDodgeChance>
+					<MeleeCooldownFactor>0.97</MeleeCooldownFactor>
+				</statFactors>
+      </li>
+			<li> <!--Lvl 2-->
+				<minSeverity>0.2</minSeverity>
+				<capMods>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>0.10</offset>
+					</li>
+				</capMods>
+				<statFactors>
+					<MeleeDodgeChance>1.10</MeleeDodgeChance>
+					<MeleeCooldownFactor>0.94</MeleeCooldownFactor>
+				</statFactors>
+			</li>
+			<li> <!--Lvl 3-->
+				<minSeverity>0.3</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>0.15</offset>
+          </li>
+        </capMods>
+				<statFactors>
+					<MeleeDodgeChance>1.15</MeleeDodgeChance>
+					<MeleeCooldownFactor>0.91</MeleeCooldownFactor>
+				</statFactors>
+      </li>
+			<li> <!--Lvl 4-->
+				<minSeverity>0.4</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>0.20</offset>
+          </li>
+        </capMods>
+				<statFactors>
+					<MeleeDodgeChance>1.20</MeleeDodgeChance>
+					<MeleeCooldownFactor>0.85</MeleeCooldownFactor>
+				</statFactors>
+      </li>
+			<li> <!--Lvl 5-->
+				<minSeverity>0.5</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>0.25</offset>
+          </li>
+        </capMods>
+				<statFactors>
+					<MeleeDodgeChance>1.29</MeleeDodgeChance>
+					<MeleeCooldownFactor>0.80</MeleeCooldownFactor>
+				</statFactors>
+      </li>
+			<li> <!--Lvl 6-->
+				<minSeverity>0.6</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>0.33</offset>
+          </li>
+        </capMods>
+				<statFactors>
+					<MeleeDodgeChance>1.38</MeleeDodgeChance>
+					<MeleeCooldownFactor>0.75</MeleeCooldownFactor>
+				</statFactors>
+      </li>
+			<li> <!--Lvl 7-->
+				<minSeverity>0.7</minSeverity>
+				<capMods>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>0.41</offset>
+					</li>
+				</capMods>
+				<statFactors>
+					<MeleeDodgeChance>1.46</MeleeDodgeChance>
+					<MeleeCooldownFactor>0.68</MeleeCooldownFactor>
+				</statFactors>
+				<statOffsets>
+					<PsyfocusPerKill>0.03</PsyfocusPerKill>
+				</statOffsets>
+			</li>
+			<li> <!--Lvl 8-->
+				<minSeverity>0.8</minSeverity>
+				<capMods>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>0.49</offset>
+					</li>
+				</capMods>
+				<statFactors>
+					<MeleeDodgeChance>1.51</MeleeDodgeChance>
+					<MeleeCooldownFactor>0.63</MeleeCooldownFactor>
+				</statFactors>
+				<statOffsets>
+					<PsyfocusPerKill>0.06</PsyfocusPerKill>
+				</statOffsets>
+			</li>
+			<li> <!--Lvl 9-->
+				<minSeverity>0.9</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>0.58</offset>
+          </li>
+        </capMods>
+				<statFactors>
+					<MeleeDodgeChance>1.65</MeleeDodgeChance>
+					<MeleeCooldownFactor>0.56</MeleeCooldownFactor>
+				</statFactors>
+				<statOffsets>
+					<PsyfocusPerKill>0.09</PsyfocusPerKill>
+				</statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+</Defs>
