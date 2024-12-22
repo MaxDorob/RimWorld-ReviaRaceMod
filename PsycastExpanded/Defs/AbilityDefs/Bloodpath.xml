@@ -94,5 +94,28 @@
 			</li>
 		</modExtensions>
 	</VFECore.Abilities.AbilityDef>
+
+	<VFECore.Abilities.AbilityDef ParentName="VPE_WordOfAbilityBase">
+		<defName>SkarnesProtection</defName>
+		<label>skarne's protection</label>
+		<description>TODO.</description>
+		<iconPath>Abilities/Bloodpath/SkarnesProtection</iconPath>
+		<castTime>150</castTime>
+
+		<abilityClass>VFECore.Abilities.Ability_Blank</abilityClass>
+		<modExtensions>
+			<li Class="Revia_VanillaPsycastExpanded.AbilityExtension_ReviaPsycast">
+				<path>Revia_BloodPath</path>
+				<level>3</level>
+				<order>1</order>
+				<psyfocusCost>0.15</psyfocusCost>
+				<entropyGain>15</entropyGain>
+				<psychic>true</psychic>
+				<soulReapLevel>5</soulReapLevel>
+			</li>
+			<li Class="Revia_VanillaPsycastExpanded.AbilityExtension_SkarneProtection">
+			</li>
+		</modExtensions>
+	</VFECore.Abilities.AbilityDef>
   
 </Defs>

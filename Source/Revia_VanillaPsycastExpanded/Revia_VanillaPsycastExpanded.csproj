@@ -61,6 +61,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SkarneAvatar\JobGiver_SkarneAvatar.cs" />
     <Compile Include="SkarneAvatar\MentalState_SkarneAvatar.cs" />
+    <Compile Include="SkarnesProtection\AbilityExtension_SkarneProtection.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
