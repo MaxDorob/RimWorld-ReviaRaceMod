@@ -45,7 +45,7 @@
 		<defName>SkarneAvatar</defName>
 		<label>skarne avatar</label>
 		<description>TODO.</description>
-		<iconPath>Abilities/Bloodpath/SkarneAvatar </iconPath>
+		<iconPath>Abilities/Bloodpath/SkarneAvatar</iconPath>
 		<abilityClass>VFECore.Abilities.Ability_Blank</abilityClass>
 		<targetMode>Self</targetMode>
 		<castTime>150</castTime>
