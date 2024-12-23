@@ -24,7 +24,7 @@
     <modExtensions>
       <li Class="Revia_VanillaPsycastExpanded.AbilityExtension_ReviaPsycast">
         <path>Revia_BloodPath</path>
-        <level>1</level>
+        <level>3</level>
         <order>1</order>
         <psyfocusCost>0.02</psyfocusCost>
         <entropyGain>25</entropyGain>
@@ -56,7 +56,7 @@
 		<modExtensions>
 			<li Class="Revia_VanillaPsycastExpanded.AbilityExtension_ReviaPsycast">
 				<path>Revia_BloodPath</path>
-				<level>1</level>
+				<level>5</level>
 				<order>1</order>
 				<psyfocusCost>0.80</psyfocusCost>
 				<entropyGain>60</entropyGain>
@@ -107,11 +107,101 @@
 			<li Class="Revia_VanillaPsycastExpanded.AbilityExtension_ReviaPsycast">
 				<path>Revia_BloodPath</path>
 				<level>3</level>
-				<order>1</order>
+				<order>2</order>
 				<psyfocusCost>0.15</psyfocusCost>
 				<entropyGain>15</entropyGain>
 				<psychic>true</psychic>
 				<soulReapLevel>5</soulReapLevel>
+			</li>
+			<li Class="Revia_VanillaPsycastExpanded.AbilityExtension_SkarneProtection">
+			</li>
+		</modExtensions>
+	</VFECore.Abilities.AbilityDef>
+
+	<VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+		<defName>SkarnesCurse</defName>
+		<label>skarne's curse</label>
+		<description>TODO.</description>
+		<iconPath>Abilities/Bloodpath/SkarnesProtection</iconPath>
+		<castTime>150</castTime>
+
+		<abilityClass>VFECore.Abilities.Ability_Blank</abilityClass>
+		<modExtensions>
+			<li Class="Revia_VanillaPsycastExpanded.AbilityExtension_ReviaPsycast">
+				<path>Revia_BloodPath</path>
+				<level>4</level>
+				<order>2</order>
+				<psyfocusCost>0.15</psyfocusCost>
+				<entropyGain>45</entropyGain>
+				<psychic>true</psychic>
+				<soulReapLevel>7</soulReapLevel>
+			</li>
+			<li Class="Revia_VanillaPsycastExpanded.AbilityExtension_SkarneProtection">
+			</li>
+		</modExtensions>
+	</VFECore.Abilities.AbilityDef>
+
+	<VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+		<defName>ReviaBloodyExplosion</defName>
+		<label>bloody explosion</label>
+		<description>TODO.</description>
+		<iconPath>Abilities/Bloodpath/BloodyExplosion</iconPath>
+		<castTime>150</castTime>
+
+		<abilityClass>VFECore.Abilities.Ability_Blank</abilityClass>
+		<modExtensions>
+			<li Class="Revia_VanillaPsycastExpanded.AbilityExtension_ReviaPsycast">
+				<path>Revia_BloodPath</path>
+				<level>4</level>
+				<order>1</order>
+				<psyfocusCost>0.15</psyfocusCost>
+				<entropyGain>15</entropyGain>
+				<psychic>true</psychic>
+				<soulReapLevel>7</soulReapLevel>
+			</li>
+		</modExtensions>
+	</VFECore.Abilities.AbilityDef>
+	
+		<VFECore.Abilities.AbilityDef ParentName="VPE_WordOfAbilityBase">
+		<defName>Revia_VermilionReap</defName>
+		<label>vermilion reap</label>
+		<description>TODO.</description>
+		<iconPath>Abilities/Bloodpath/SkarnesProtection</iconPath>
+		<castTime>150</castTime>
+
+		<abilityClass>VFECore.Abilities.Ability_Blank</abilityClass>
+		<modExtensions>
+			<li Class="Revia_VanillaPsycastExpanded.AbilityExtension_ReviaPsycast">
+				<path>Revia_BloodPath</path>
+				<level>1</level>
+				<order>1</order>
+				<psyfocusCost>0.15</psyfocusCost>
+				<entropyGain>15</entropyGain>
+				<psychic>true</psychic>
+				<soulReapLevel>1</soulReapLevel>
+			</li>
+			<li Class="Revia_VanillaPsycastExpanded.AbilityExtension_SkarneProtection">
+			</li>
+		</modExtensions>
+	</VFECore.Abilities.AbilityDef>
+
+	<VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+		<defName>Revia_SkarnistSow</defName>
+		<label>skarnist sow</label>
+		<description>TODO.</description>
+		<iconPath>Abilities/Bloodpath/SkarnesProtection</iconPath>
+		<castTime>150</castTime>
+
+		<abilityClass>VFECore.Abilities.Ability_Blank</abilityClass>
+		<modExtensions>
+			<li Class="Revia_VanillaPsycastExpanded.AbilityExtension_ReviaPsycast">
+				<path>Revia_BloodPath</path>
+				<level>1</level>
+				<order>2</order>
+				<psyfocusCost>0.10</psyfocusCost>
+				<entropyGain>10</entropyGain>
+				<psychic>true</psychic>
+				<soulReapLevel>1</soulReapLevel>
 			</li>
 			<li Class="Revia_VanillaPsycastExpanded.AbilityExtension_SkarneProtection">
 			</li>
