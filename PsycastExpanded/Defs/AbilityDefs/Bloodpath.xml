@@ -126,7 +126,6 @@
 		<castTime>50</castTime>
 		<durationTime>2700</durationTime>
 		<needsTicking>true</needsTicking>
-		<castTime>120</castTime>
 		<power>1</power>
 		<range>99999</range>
 		<requireLineOfSight>true</requireLineOfSight>
