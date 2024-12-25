@@ -13,5 +13,8 @@ namespace Revia_VanillaPsycastExpanded
     {
         public static HediffDef SkarneAvatar;
         public static StatDef PsyfocusPerKill;
+        public static DamageDef Revia_MysticalScratch;
+        public static DamageDef Revia_MysticalMediumBleedingScratch;
+        public static DamageDef Revia_MysticalHeavyBleedingScratch;
     }
 }

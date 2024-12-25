@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
-  <VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
-    <defName>Revia_Bloodseek</defName>
-    <label>bloodseek</label>
-    <description>TODO. Teleport to a bleeding target.</description>
-    <iconPath>Abilities/Bloodpath/Bloodseek</iconPath>
+	<VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+		<defName>Revia_Bloodseek</defName>
+		<label>bloodseek</label>
+		<description>TODO. Teleport to a bleeding target.</description>
+		<iconPath>Abilities/Bloodpath/Bloodseek</iconPath>
 		<abilityClass>Revia_VanillaPsycastExpanded.Ability_Bloodseek</abilityClass>
 		<castTime>30</castTime>
 		<durationTime>100</durationTime> <!--Slow down time-->
@@ -21,25 +21,25 @@
 				<mapObjectTargetsMustBeAutoAttackable>false</mapObjectTargetsMustBeAutoAttackable>
 			</li>
 		</targetingParametersList>
-    <modExtensions>
-      <li Class="Revia_VanillaPsycastExpanded.AbilityExtension_ReviaPsycast">
-        <path>Revia_BloodPath</path>
-        <level>3</level>
-        <order>1</order>
-        <psyfocusCost>0.02</psyfocusCost>
-        <entropyGain>25</entropyGain>
+		<modExtensions>
+			<li Class="Revia_VanillaPsycastExpanded.AbilityExtension_ReviaPsycast">
+				<path>Revia_BloodPath</path>
+				<level>3</level>
+				<order>1</order>
+				<psyfocusCost>0.02</psyfocusCost>
+				<entropyGain>25</entropyGain>
 				<soulReapLevel>5</soulReapLevel>
-      </li>
-      <li Class="VanillaPsycastsExpanded.Skipmaster.AbilityExtension_Clamor">
-        <clamorType>Ability</clamorType>
-        <clamorRadius>10</clamorRadius>
-      </li>
+			</li>
+			<li Class="VanillaPsycastsExpanded.Skipmaster.AbilityExtension_Clamor">
+				<clamorType>Ability</clamorType>
+				<clamorRadius>10</clamorRadius>
+			</li>
 			<li Class="VFECore.Abilities.AbilityExtension_Hediff">
 				<hediff>PsychicBurden</hediff>
 				<durationMultiplier>PsychicSensitivity</durationMultiplier>
 			</li>
-    </modExtensions>
-  </VFECore.Abilities.AbilityDef>
+		</modExtensions>
+	</VFECore.Abilities.AbilityDef>
 
 	<VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
 		<defName>SkarneAvatar</defName>
@@ -122,10 +122,16 @@
 		<defName>SkarnesCurse</defName>
 		<label>skarne's curse</label>
 		<description>TODO.</description>
-		<iconPath>Abilities/Bloodpath/SkarnesProtection</iconPath>
-		<castTime>150</castTime>
-
-		<abilityClass>VFECore.Abilities.Ability_Blank</abilityClass>
+		<iconPath>Abilities/Bloodpath/SkarnesCurse</iconPath>
+		<castTime>50</castTime>
+		<durationTime>2700</durationTime>
+		<needsTicking>true</needsTicking>
+		<castTime>120</castTime>
+		<power>1</power>
+		<range>99999</range>
+		<requireLineOfSight>true</requireLineOfSight>
+		<targetMode>Pawn</targetMode>
+		<abilityClass>Revia_VanillaPsycastExpanded.Ability_SkarnesCurse</abilityClass>
 		<modExtensions>
 			<li Class="Revia_VanillaPsycastExpanded.AbilityExtension_ReviaPsycast">
 				<path>Revia_BloodPath</path>
@@ -136,7 +142,9 @@
 				<psychic>true</psychic>
 				<soulReapLevel>7</soulReapLevel>
 			</li>
-			<li Class="Revia_VanillaPsycastExpanded.AbilityExtension_SkarneProtection">
+			<li Class="VFECore.Abilities.AbilityExtension_Hediff">
+				<hediff>SkarnesCurse</hediff>
+				<durationMultiplier>PsychicSensitivity</durationMultiplier>
 			</li>
 		</modExtensions>
 	</VFECore.Abilities.AbilityDef>
@@ -161,8 +169,8 @@
 			</li>
 		</modExtensions>
 	</VFECore.Abilities.AbilityDef>
-	
-		<VFECore.Abilities.AbilityDef ParentName="VPE_WordOfAbilityBase">
+
+	<VFECore.Abilities.AbilityDef ParentName="VPE_WordOfAbilityBase">
 		<defName>Revia_VermilionReap</defName>
 		<label>vermilion reap</label>
 		<description>TODO.</description>
@@ -207,5 +215,5 @@
 			</li>
 		</modExtensions>
 	</VFECore.Abilities.AbilityDef>
-  
+
 </Defs>

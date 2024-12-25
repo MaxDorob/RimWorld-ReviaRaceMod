@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<HediffDef Name="ScratchBase" ParentName="InjuryBase" Abstract="True">
+		<label>scratch</label>
+		<labelNoun>a scratch</labelNoun>
+		<description>A scratch or tear.</description>
+		<comps>
+			<li Class="HediffCompProperties_TendDuration">
+				<labelTendedWell>bandaged</labelTendedWell>
+				<labelTendedWellInner>sutured</labelTendedWellInner>
+				<labelSolidTendedWell>set</labelSolidTendedWell>
+			</li>
+			<li Class="HediffCompProperties_Infecter">
+				<infectionChance>0.15</infectionChance>
+			</li>
+			<li Class="HediffCompProperties_GetsPermanent">
+				<permanentLabel>scratch scar</permanentLabel>
+			</li>
+		</comps>
+		<injuryProps>
+			<painPerSeverity>0.0125</painPerSeverity>
+			<averagePainPerSeverityPermanent>0.00625</averagePainPerSeverityPermanent>
+			<bleedRate>0.06</bleedRate>
+			<canMerge>false</canMerge>
+			<destroyedLabel>Torn off</destroyedLabel>
+			<destroyedOutLabel>Torn out</destroyedOutLabel>
+		</injuryProps>
+	</HediffDef>
+	
+  <HediffDef ParentName="ScratchBase">
+    <defName>HeavyBleeding_Scratch</defName>
+    <injuryProps>
+      <bleedRate>0.32</bleedRate>
+    </injuryProps>
+  </HediffDef>
+
+	<HediffDef ParentName="ScratchBase">
+		<defName>MediumBleeding_Scratch</defName>
+		<injuryProps>
+			<bleedRate>0.16</bleedRate>
+		</injuryProps>
+	</HediffDef>
+
+</Defs>
