@@ -50,9 +50,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AbilityExtension_MultipliedEffecterOnTarget.cs" />
     <Compile Include="AbilityExtension_ReviaPsycast.cs" />
     <Compile Include="AttackTargetFinderEx.cs" />
     <Compile Include="Bloodseek\Ability_Bloodseek.cs" />
+    <Compile Include="BloodyExplosion\AbilityExtension_BloodyExplosion_Effecter.cs" />
+    <Compile Include="BloodyExplosion\AbilityExtension_BloodyExplosion.cs" />
     <Compile Include="Defs.cs" />
     <Compile Include="HediffComp_SoulReapSeverity.cs" />
     <Compile Include="Patches\AbilityToolTip_Patch.cs" />
@@ -65,6 +68,7 @@
     <Compile Include="SkarnesCurse\HediffComp_SkarnesCurse.cs" />
     <Compile Include="SkarnesProtection\AbilityExtension_SkarneProtection.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="Utils.cs" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Krafs.Publicizer">

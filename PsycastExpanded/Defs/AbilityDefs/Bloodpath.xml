@@ -153,7 +153,10 @@
 		<label>bloody explosion</label>
 		<description>TODO.</description>
 		<iconPath>Abilities/Bloodpath/BloodyExplosion</iconPath>
-		<castTime>150</castTime>
+		<castTime>40</castTime>
+		<range>45</range>
+		<requireLineOfSight>true</requireLineOfSight>
+		<targetMode>Pawn</targetMode>
 
 		<abilityClass>VFECore.Abilities.Ability_Blank</abilityClass>
 		<modExtensions>
@@ -166,6 +169,13 @@
 				<psychic>true</psychic>
 				<soulReapLevel>7</soulReapLevel>
 			</li>
+			<li Class="Revia_VanillaPsycastExpanded.AbilityExtension_BloodyExplosion_Effecter">
+				<effecterDef>BloodyExplosion</effecterDef>
+			</li>
+			<li Class="Revia_VanillaPsycastExpanded.AbilityExtension_BloodyExplosion">
+				
+			</li>
+
 		</modExtensions>
 	</VFECore.Abilities.AbilityDef>
 
