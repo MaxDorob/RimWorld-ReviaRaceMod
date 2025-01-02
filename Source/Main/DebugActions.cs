@@ -113,7 +113,7 @@ namespace ReviaRace
         {
             Find.WindowStack.Add(new Dialog_DebugOptionListLister(SpawnRandomRewardOptions(true).ToList(), null));
         }
-        [DebugAction(category = "Revia debug", name = "Spawn random reward (non-human)", actionType = DebugActionType.ToolMap)]
+        [DebugAction(category = "Revia debug", name = "Spawn random reward (non-human)", actionType = DebugActionType.Action)]
         public static void SpawnRandomRewardNonHuman()
         {
             Find.WindowStack.Add(new Dialog_DebugOptionListLister(SpawnRandomRewardOptions(false).ToList(), null));
