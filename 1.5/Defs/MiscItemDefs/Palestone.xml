@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="ResourceBase">
+    <defName>ReviaRacePalestone</defName>
+    <label>palestone</label>
+    <description>A lesser blessing given by the Revian pantheon. Supposedly confers divine favour on the user.</description>
+    <thingClass>ThingWithComps</thingClass>
+    <techLevel>Neolithic</techLevel>
+    <graphicData>
+      <texPath>Things/Item/Health/HealthItem</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.80</drawSize>
+      <color>(220, 220, 200)</color>
+    </graphicData>
+    <stackLimit>2000</stackLimit>
+    <thingCategories>
+      <li>Artifacts</li>
+    </thingCategories>
+    <tradeability>None</tradeability>
+    <statBases>
+      <Mass>0.01</Mass>
+      <MarketValue>5</MarketValue>
+      <MaxHitPoints>1000</MaxHitPoints>
+      <Flammability>0.0</Flammability>
+      <DeteriorationRate>0.0</DeteriorationRate>
+      <Beauty>4</Beauty>
+    </statBases>
+    <altitudeLayer>Item</altitudeLayer>
+    <tickerType>Never</tickerType>
+    <comps>
+      <li Class="CompProperties_Usable">
+        <useJob>UseArtifact</useJob>
+        <useLabel>Make offering</useLabel>
+      </li>
+      <li Class="CompProperties_UseEffect">
+        <compClass>ReviaRace.Comps.InvokeLesserBlessing</compClass>
+      </li>
+    </comps>
+		<modExtensions>
+			<li Class="ReviaRace.SacrificeReward_Extension">
+				<human>false</human>
+				<animal>true</animal>
+				<countCurve>
+					<points>
+						<li>(0, 0)</li>
+						<li>(1, 16)</li>
+						<li>(3, 80)</li>
+						<li>(8, 224)</li>
+						<li>(16, 512)</li>
+						<li>(32, 1024)</li>
+					</points>
+				</countCurve>
+				<chanceWeightCurve>
+					<points>
+						<li>(0, 1)</li>
+						<li>(10000, 1)</li>
+					</points>
+				</chanceWeightCurve>
+			</li>
+		</modExtensions>
+  </ThingDef>
+</Defs>

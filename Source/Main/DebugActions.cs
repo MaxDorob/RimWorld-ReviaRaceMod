@@ -107,5 +107,37 @@ namespace ReviaRace
                     Log.Error("qPartChoices is empty!");
             }
         }
+
+        [DebugAction(category = "Revia debug", name = "Spawn random reward", actionType = DebugActionType.Action)]
+        public static void SpawnRandomReward()
+        {
+            Find.WindowStack.Add(new Dialog_DebugOptionListLister(SpawnRandomRewardOptions(true).ToList(), null));
+        }
+        [DebugAction(category = "Revia debug", name = "Spawn random reward (non-human)", actionType = DebugActionType.Action)]
+        public static void SpawnRandomRewardNonHuman()
+        {
+            Find.WindowStack.Add(new Dialog_DebugOptionListLister(SpawnRandomRewardOptions(false).ToList(), null));
+        }
+        private static IEnumerable<DebugMenuOption> SpawnRandomRewardOptions(bool human)
+        {
+            for (float i = 0.25f; i < 101; i += 0.25f)
+            {
+                float local = i;
+                yield return new DebugMenuOption(i.ToString(), DebugMenuOptionMode.Tool, () => SpawnRandomReward(human, local));
+            }
+        }
+        private static void SpawnRandomReward(bool human, float score)
+        {
+            var cell = UI.MouseCell();
+            Log.Message($"Spawning for score {score}");
+            var result = SacrificeHelper.ThingsForScore(score, human);
+            if (result.Count <= 0)
+            {
+                return;
+            }
+            Thing thing = ThingMaker.MakeThing(result.ThingDef, null);
+            thing.stackCount = result.Count;
+            GenDrop.TryDropSpawn(thing, cell, Find.CurrentMap, ThingPlaceMode.Near, out _);
+        }
     }
 }

@@ -92,6 +92,7 @@
     <Compile Include="Helpers\ReviaDefOf.cs" />
     <Compile Include="Helpers\Defs.cs" />
     <Compile Include="Helpers\PawnHelpers.cs" />
+    <Compile Include="Helpers\SacrificeHelper.cs" />
     <Compile Include="Helpers\SoulReaperWorker.cs" />
     <Compile Include="Helpers\StaticModVariables.cs" />
     <Compile Include="Helpers\Strings.cs" />
@@ -116,7 +117,7 @@
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
     <PackageReference Include="Krafs.Rimworld.Ref">
-      <Version>1.5.4061-beta</Version>
+      <Version>1.5.4297</Version>
     </PackageReference>
     <PackageReference Include="Lib.Harmony">
       <Version>2.2.2</Version>
