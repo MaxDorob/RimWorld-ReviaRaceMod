@@ -180,13 +180,31 @@
 	</VFECore.Abilities.AbilityDef>
 
 	<VFECore.Abilities.AbilityDef ParentName="VPE_WordOfAbilityBase">
-		<defName>Revia_VermilionReap</defName>
-		<label>vermilion reap</label>
+		<defName>Revia_ReavingReap</defName>
+		<label>reaving reap</label>
 		<description>TODO.</description>
 		<iconPath>Abilities/Bloodpath/SkarnesProtection</iconPath>
-		<castTime>150</castTime>
+		<!--<castTime>150</castTime>-->
 
 		<abilityClass>VFECore.Abilities.Ability_Blank</abilityClass>
+		<castTime>600</castTime>
+		<targetMode>Self</targetMode>
+		<hasAoE>true</hasAoE>
+		<radius>8.9</radius>
+		<needsTicking>true</needsTicking>
+		<targetingParametersForAoE>
+			<canTargetLocations>False</canTargetLocations>
+			<canTargetSelf>False</canTargetSelf>
+			<canTargetAnimals>False</canTargetAnimals>
+			<canTargetPawns>False</canTargetPawns>
+			<canTargetHumans>False</canTargetHumans>
+			<canTargetItems>true</canTargetItems>
+			<thingCategory>Item</thingCategory>
+			<mapObjectTargetsMustBeAutoAttackable>False</mapObjectTargetsMustBeAutoAttackable>
+		</targetingParametersForAoE>
+		<reserveTargets>true</reserveTargets>
+		<castSound>VPE_ConsumeBodies_Cast</castSound>
+		<!--<castSound>VPE_CorpseTalk_Cast</castSound>-->
 		<modExtensions>
 			<li Class="Revia_VanillaPsycastExpanded.AbilityExtension_ReviaPsycast">
 				<path>Revia_BloodPath</path>
@@ -197,7 +215,7 @@
 				<psychic>true</psychic>
 				<soulReapLevel>1</soulReapLevel>
 			</li>
-			<li Class="Revia_VanillaPsycastExpanded.AbilityExtension_SkarneProtection">
+			<li Class="Revia_VanillaPsycastExpanded.AbilityExtension_ReavingReap">
 			</li>
 		</modExtensions>
 	</VFECore.Abilities.AbilityDef>
