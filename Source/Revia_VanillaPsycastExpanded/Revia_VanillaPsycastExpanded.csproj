@@ -70,6 +70,7 @@
     <Compile Include="SkarnesProtection\AbilityExtension_SkarneProtection.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="Utils.cs" />
+    <Compile Include="VermilionHarvest\AbilityExtension_VermilionHarvest.cs" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Krafs.Publicizer">

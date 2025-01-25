@@ -173,7 +173,7 @@
 				<effecterDef>BloodyExplosion</effecterDef>
 			</li>
 			<li Class="Revia_VanillaPsycastExpanded.AbilityExtension_BloodyExplosion">
-				
+
 			</li>
 
 		</modExtensions>
@@ -220,12 +220,12 @@
 		</modExtensions>
 	</VFECore.Abilities.AbilityDef>
 
-	<VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
-		<defName>Revia_SkarnistSow</defName>
-		<label>skarnist sow</label>
+	<VFECore.Abilities.AbilityDef ParentName="VPE_WordOfAbilityBase">
+		<defName>Revia_VermilionHarvest</defName>
+		<label>vermilion harvest</label>
 		<description>TODO.</description>
 		<iconPath>Abilities/Bloodpath/SkarnesProtection</iconPath>
-		<castTime>150</castTime>
+		<castTime>350</castTime>
 
 		<abilityClass>VFECore.Abilities.Ability_Blank</abilityClass>
 		<modExtensions>
@@ -238,7 +238,10 @@
 				<psychic>true</psychic>
 				<soulReapLevel>1</soulReapLevel>
 			</li>
-			<li Class="Revia_VanillaPsycastExpanded.AbilityExtension_SkarneProtection">
+			<li Class="Revia_VanillaPsycastExpanded.AbilityExtension_VermilionHarvest">
+			</li>
+			<li Class="Revia_VanillaPsycastExpanded.AbilityExtension_MultipliedEffecterOnTarget">
+				<effecterDef>BloodyExplosion</effecterDef>
 			</li>
 		</modExtensions>
 	</VFECore.Abilities.AbilityDef>
