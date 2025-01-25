@@ -40,8 +40,9 @@ namespace Revia_VanillaPsycastExpanded
             {
                 return;
             }
-            var thing = GenSpawn.Spawn(reward.ThingDef, pos, map);
+            var thing = ThingMaker.MakeThing(reward.ThingDef);
             thing.stackCount = reward.Count;
+            GenPlace.TryPlaceThing(thing, pos, map, ThingPlaceMode.Near);
         }
     }
 }
