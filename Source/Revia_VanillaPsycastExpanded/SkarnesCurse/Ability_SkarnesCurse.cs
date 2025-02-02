@@ -9,57 +9,76 @@ using UnityEngine;
 using VanillaPsycastsExpanded;
 using Verse;
 using Verse.Sound;
+using Verse.AI;
+using ReviaRace.Helpers;
+using VFECore.Abilities;
 
 namespace Revia_VanillaPsycastExpanded
 {
     /// <summary>
     /// Skarne's curse ability
     /// </summary>
-    /// <remarks>Mostly reworked <see cref="VanillaPsycastsExpanded.Nightstalker.Ability_Assassinate"/></remarks>
+    /// <remarks>Mostly reworked <see cref="Ability_Killskip"/></remarks>
     public class Ability_SkarnesCurse : VFECore.Abilities.Ability
     {
+
         public override void Cast(params GlobalTargetInfo[] targets)
         {
             base.Cast(targets);
-            this.target = (targets.FirstOrDefault((GlobalTargetInfo t) => t.Thing is Pawn).Thing as Pawn);
-            bool flag = this.target == null;
-            if (!flag)
+            attacksLeft = Mathf.RoundToInt(GetPowerForPawn());
+            originalPosition = pawn.Position;
+            this.AttackTarget((LocalTargetInfo)targets[0]);
+            this.TryQueueAttack((LocalTargetInfo)targets[0]);
+        }
+        public override float GetPowerForPawn()
+        {
+            return Mathf.Pow(2, Mathf.Max(pawn.GetSoulReapTier() - 7, 0));
+        }
+        private void TryQueueAttack(LocalTargetInfo target)
+        {
+            if (attacksLeft > 0)
             {
-                this.attacksLeft = Mathf.RoundToInt(this.GetPowerForPawn());
-                Map map = this.pawn.Map;
-                this.originalPosition = this.pawn.Position;
-                this.target.stances.stunner.StunFor(this.attacksLeft * 2, this.pawn, true, true, false);
-                this.TeleportPawnTo((from c in GenAdjFast.AdjacentCellsCardinal(this.target.Position)
-                                     where c.Walkable(map)
-                                     select c).RandomElement<IntVec3>());
+                this.attackInTicks = Find.TickManager.TicksGame + this.def.castTime;
+            }
+            else
+            {
+                this.attackInTicks = -1;
+                TeleportPawnTo(originalPosition);
+                VPE_DefOf.VPE_Assassinate_Return.PlayOneShot(this.pawn);
             }
         }
 
         public override void Tick()
         {
             base.Tick();
-            bool flag = this.attacksLeft > 0;
+            bool flag = this.attackInTicks != -1 && Find.TickManager.TicksGame >= this.attackInTicks;
             if (flag)
             {
-                this.attacksLeft--;
-                this.DoAttack();
-                bool flag2 = this.attacksLeft == 0;
+                this.attackInTicks = -1;
+                Pawn pawn = this.FindAttackTarget();
+                bool flag2 = pawn != null;
                 if (flag2)
                 {
-                    VPE_DefOf.VPE_Assassinate_Return.PlayOneShot(this.pawn);
-                    this.TeleportPawnTo(this.originalPosition);
+                    this.AttackTarget(pawn);
+                    this.TryQueueAttack(pawn);
                 }
+
             }
         }
 
-        private void DoAttack()
+        private void AttackTarget(LocalTargetInfo target)
         {
-            Verb verb = this.pawn.meleeVerbs.GetUpdatedAvailableVerbsList(false).Where(x=>x.verb.GetDamageDef().hediff.injuryProps.bleedRate > 0.01f).MaxBy((VerbEntry v) => VerbUtility.DPS(v.verb, this.pawn)).verb;
-            this.pawn.meleeVerbs.TryMeleeAttack(this.target, verb, true);
-            this.pawn.stances.CancelBusyStanceHard();
-            FleckMaker.AttachedOverlay(this.target, VPE_DefOf.VPE_Slash, Rand.InsideUnitCircle * 0.3f, 1f, -1f);
-        }
+            TeleportPawnTo(target.Cell);
 
+            VerbProperties_AdjustedMeleeDamageAmount_Patch.multiplyByPawnMeleeSkill = true;
+            Verb verb = this.pawn.meleeVerbs.GetUpdatedAvailableVerbsList(false).Where(x => x.verb.GetDamageDef().hediff.injuryProps.bleedRate > 0.01f).MaxBy((VerbEntry v) => VerbUtility.DPS(v.verb, this.pawn)).verb;
+            this.pawn.meleeVerbs.TryMeleeAttack(target.Pawn, verb, true);
+            ApplyHediff(target.Pawn);
+            VerbProperties_AdjustedMeleeDamageAmount_Patch.multiplyByPawnMeleeSkill = false;
+            castSounds.RandomElement<SoundDef>().PlayOneShot(this.pawn);
+            FleckMaker.AttachedOverlay(target.Thing, VPE_DefOf.VPE_Slash, Rand.InsideUnitCircle * 0.3f, 1f, -1f);
+            attacksLeft--;
+        }
         private void TeleportPawnTo(IntVec3 c)
         {
             FleckCreationData dataAttachedOverlay = FleckMaker.GetDataAttachedOverlay(this.pawn, FleckDefOf.PsycastSkipFlashEntry, Vector3.zero, 1f, -1f);
@@ -74,8 +93,22 @@ namespace Revia_VanillaPsycastExpanded
             base.AddEffecterToMaintain(EffecterDefOf.Skip_ExitNoDelay.Spawn(source.Cell, source.Map, 1f), source.Cell, 60, null);
             this.pawn.Position = c;
             this.pawn.Notify_Teleported(true, true);
+            this.pawn.stances.SetStance(new Stance_Mobile());
         }
 
+        private Pawn FindAttackTarget()
+        {
+            TargetScanFlags flags = TargetScanFlags.NeedLOSToPawns | TargetScanFlags.NeedReachableIfCantHitFromMyPos | TargetScanFlags.NeedThreat | TargetScanFlags.NeedAutoTargetable;
+            return AttackTargetFinder.BestAttackTarget(this.pawn, flags, delegate (Thing x)
+            {
+                Pawn pawn = x as Pawn;
+                return pawn != null && !pawn.Dead && ValidateTarget(pawn) && !pawn.health.hediffSet.HasHediff(def.GetModExtension<AbilityExtension_Hediff>().hediff);
+            }, 0f, 999999f, default(IntVec3), float.MaxValue, false, true, false, false) as Pawn ?? (Pawn)AttackTargetFinder.BestAttackTarget(this.pawn, flags, delegate (Thing x)
+            {
+                Pawn pawn = x as Pawn;
+                return pawn != null && !pawn.Dead && ValidateTarget(pawn);
+            }, 0f, 999999f, default(IntVec3), float.MaxValue, false, true, false, false);
+        }
         public override bool ValidateTarget(LocalTargetInfo target, bool showMessages = true)
         {
             Pawn pawn = target.Pawn;
@@ -85,19 +118,29 @@ namespace Revia_VanillaPsycastExpanded
             }
             return false;
         }
+        public override void CheckCastEffects(GlobalTargetInfo[] targetsInfos, out bool cast, out bool target, out bool hediffApply)
+        {
+            base.CheckCastEffects(targetsInfos, out cast, out target, out hediffApply);
+            hediffApply = false;
+        }
 
         public override void ExposeData()
         {
             base.ExposeData();
+            Scribe_Values.Look<int>(ref this.attackInTicks, "attackInTicks", -1, false);
             Scribe_Values.Look<int>(ref this.attacksLeft, "attacksLeft", 0, false);
             Scribe_Values.Look<IntVec3>(ref this.originalPosition, "originalPosition", default(IntVec3), false);
-            Scribe_References.Look<Pawn>(ref this.target, "target", false);
         }
 
+        private int attackInTicks = -1;
+
+        private static List<SoundDef> castSounds = new List<SoundDef>
+        {
+            VPE_DefOf.VPE_Killskip_Jump_01a,
+            VPE_DefOf.VPE_Killskip_Jump_01b,
+            VPE_DefOf.VPE_Killskip_Jump_01c
+        };
         private int attacksLeft;
-
         private IntVec3 originalPosition;
-
-        private Pawn target;
     }
 }
