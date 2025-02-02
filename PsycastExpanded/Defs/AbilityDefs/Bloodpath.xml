@@ -95,14 +95,25 @@
 		</modExtensions>
 	</VFECore.Abilities.AbilityDef>
 
-	<VFECore.Abilities.AbilityDef ParentName="VPE_WordOfAbilityBase">
+	<VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
 		<defName>SkarnesProtection</defName>
 		<label>skarne's protection</label>
 		<description>TODO.</description>
 		<iconPath>Abilities/Bloodpath/SkarnesProtection</iconPath>
 		<castTime>150</castTime>
-
+		<range>36</range>
+		<targetMode>Pawn</targetMode>
 		<abilityClass>VFECore.Abilities.Ability_Blank</abilityClass>
+		<targetingParametersList>
+			<li>
+				<canTargetSelf>True</canTargetSelf>
+				<canTargetPawns>True</canTargetPawns>
+				<canTargetBuildings>False</canTargetBuildings>
+				<canTargetItems>False</canTargetItems>
+				<canTargetPlants>false</canTargetPlants>
+				<mapObjectTargetsMustBeAutoAttackable>false</mapObjectTargetsMustBeAutoAttackable>
+			</li>
+		</targetingParametersList>
 		<modExtensions>
 			<li Class="Revia_VanillaPsycastExpanded.AbilityExtension_ReviaPsycast">
 				<path>Revia_BloodPath</path>
