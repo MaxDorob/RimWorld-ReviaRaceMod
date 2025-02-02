@@ -90,6 +90,9 @@
 					<MeleeDodgeChance>1.38</MeleeDodgeChance>
 					<MeleeCooldownFactor>0.75</MeleeCooldownFactor>
 				</statFactors>
+				<statOffsets>
+					<Revia_LifeLeechImpact>0.15</Revia_LifeLeechImpact>
+				</statOffsets>
       </li>
 			<li> <!--Lvl 7-->
 				<minSeverity>0.7</minSeverity>
@@ -105,6 +108,7 @@
 				</statFactors>
 				<statOffsets>
 					<PsyfocusPerKill>0.03</PsyfocusPerKill>
+					<Revia_LifeLeechImpact>0.25</Revia_LifeLeechImpact>
 				</statOffsets>
 			</li>
 			<li> <!--Lvl 8-->
@@ -121,6 +125,7 @@
 				</statFactors>
 				<statOffsets>
 					<PsyfocusPerKill>0.06</PsyfocusPerKill>
+					<Revia_LifeLeechImpact>0.35</Revia_LifeLeechImpact>
 				</statOffsets>
 			</li>
 			<li> <!--Lvl 9-->
@@ -137,6 +142,7 @@
 				</statFactors>
 				<statOffsets>
 					<PsyfocusPerKill>0.09</PsyfocusPerKill>
+					<Revia_LifeLeechImpact>0.5</Revia_LifeLeechImpact>
 				</statOffsets>
       </li>
     </stages>

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <StatDef>
+    <defName>Revia_LifeLeechImpact</defName>
+    <label>life leech impact</label>
+    <description>Multiplier for life leech.</description>
+    <category>PawnCombat</category>
+    <toStringStyle>PercentZero</toStringStyle>
+    <defaultBaseValue>1</defaultBaseValue>
+    <hideAtValue>1</hideAtValue>
+    <minValue>0.0000</minValue>
+    <displayPriorityInCategory>5600</displayPriorityInCategory>
+  </StatDef>
+	
+</Defs>
