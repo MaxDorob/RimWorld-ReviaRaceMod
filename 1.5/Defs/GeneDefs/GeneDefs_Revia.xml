@@ -9,10 +9,12 @@
     <iconColor>(0.75, 0.75, 0.75)</iconColor>
     <displayOrderInCategory>1000</displayOrderInCategory>
     <statOffsets>
-      <MeleeDodgeChance>0.12</MeleeDodgeChance>
       <MoveSpeed>0.3</MoveSpeed>
       <LifespanFactor>1.7</LifespanFactor>
     </statOffsets>
+		<statFactors>
+      <MeleeDodgeChance>1.12</MeleeDodgeChance>			
+		</statFactors>
     <biostatMet>0</biostatMet>
     <biostatCpx>2</biostatCpx>
     <minAgeActive>3</minAgeActive>
