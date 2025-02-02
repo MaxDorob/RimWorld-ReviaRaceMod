@@ -1,4 +1,5 @@
 ﻿using ReviaRace;
+using ReviaRace.Helpers;
 using RimWorld.Planet;
 using System;
 using System.Collections.Generic;
@@ -17,8 +18,8 @@ namespace Revia_VanillaPsycastExpanded
             base.Cast(targets, ability);
             var humans = targets.Select(x => x.Thing).OfType<Corpse>().Select(x => x.InnerPawn).Where(x => x.RaceProps.Humanlike && x.RaceProps.IsFlesh).ToList();
             var animals = targets.Select(x => x.Thing).OfType<Corpse>().Select(x => x.InnerPawn).Where(x => x.RaceProps.Animal && x.RaceProps.IsFlesh).ToList();
-            var humansScore = humans.Sum(x => SacrificeHelper.GetScore(x));
-            var animalsScore = animals.Sum(x => SacrificeHelper.GetScore(x));
+            var humansScore = humans.Sum(x => SacrificeHelper.GetScore(x)) * Multiplier(ability.pawn);
+            var animalsScore = animals.Sum(x => SacrificeHelper.GetScore(x)) * Multiplier(ability.pawn);
             var cells = GenRadial.RadialCellsAround(targets[0].Thing.Position, ability.GetRadiusForPawn(), true).Where(x => x.InBounds(ability.pawn.Map));
             if (humansScore > float.Epsilon)
             {
@@ -33,6 +34,7 @@ namespace Revia_VanillaPsycastExpanded
                 thing.Destroy(DestroyMode.KillFinalize);
             }
         }
+        protected virtual float Multiplier(Pawn pawn) => 0.7f + (0.5f * pawn.GetSoulReapTier()) / 9;
         protected virtual void SpawnReward(Map map, IntVec3 pos, float score, bool human)
         {
             var reward = SacrificeHelper.ThingsForScore(score, human);

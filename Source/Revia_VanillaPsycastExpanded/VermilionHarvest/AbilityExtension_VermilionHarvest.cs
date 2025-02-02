@@ -1,4 +1,5 @@
 ﻿using ReviaRace;
+using ReviaRace.Helpers;
 using ReviaRace.Needs;
 using RimWorld;
 using RimWorld.Planet;
@@ -49,10 +50,11 @@ namespace Revia_VanillaPsycastExpanded
                 }
             }
         }
+        protected virtual float Multiplier(Pawn pawn) => 0.9f + (0.7f * pawn.GetSoulReapTier()) / 9;
         protected virtual void SpawnReward(Pawn victim)
         {
             bool isAnimal = victim.RaceProps.Animal;
-            var reward = SacrificeHelper.ThingsForScore(score.RandomInRange, !isAnimal);
+            var reward = SacrificeHelper.ThingsForScore(score.RandomInRange * Multiplier(victim), !isAnimal);
             if (reward.Count > 0)
             {
                 var thing = ThingMaker.MakeThing(reward.ThingDef);
