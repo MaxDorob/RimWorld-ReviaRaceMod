@@ -62,7 +62,11 @@ namespace Revia_VanillaPsycastExpanded
                     this.AttackTarget(pawn);
                     this.TryQueueAttack(pawn);
                 }
-
+                else
+                {
+                    TeleportPawnTo(originalPosition);
+                    attacksLeft = 0;
+                }
             }
         }
 
