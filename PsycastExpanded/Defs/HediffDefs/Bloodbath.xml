@@ -18,7 +18,7 @@
         <capMods>
           <li>
             <capacity>Moving</capacity>
-            <offset>0.05</offset>
+						<postFactor>1.05</postFactor>
           </li>
         </capMods>
 				<statFactors>
@@ -31,7 +31,7 @@
 				<capMods>
 					<li>
 						<capacity>Moving</capacity>
-						<offset>0.10</offset>
+						<postFactor>1.10</postFactor>
 					</li>
 				</capMods>
 				<statFactors>
@@ -44,7 +44,7 @@
         <capMods>
           <li>
             <capacity>Moving</capacity>
-            <offset>0.15</offset>
+						<postFactor>1.15</postFactor>
           </li>
         </capMods>
 				<statFactors>
@@ -57,7 +57,7 @@
         <capMods>
           <li>
             <capacity>Moving</capacity>
-            <offset>0.20</offset>
+						<postFactor>1.18</postFactor>
           </li>
         </capMods>
 				<statFactors>
@@ -70,7 +70,7 @@
         <capMods>
           <li>
             <capacity>Moving</capacity>
-            <offset>0.25</offset>
+						<postFactor>1.22</postFactor>
           </li>
         </capMods>
 				<statFactors>
@@ -83,7 +83,7 @@
         <capMods>
           <li>
             <capacity>Moving</capacity>
-            <offset>0.33</offset>
+						<postFactor>1.28</postFactor>
           </li>
         </capMods>
 				<statFactors>
@@ -99,7 +99,7 @@
 				<capMods>
 					<li>
 						<capacity>Moving</capacity>
-						<offset>0.41</offset>
+						<postFactor>1.35</postFactor>
 					</li>
 				</capMods>
 				<statFactors>
@@ -116,7 +116,7 @@
 				<capMods>
 					<li>
 						<capacity>Moving</capacity>
-						<offset>0.49</offset>
+						<postFactor>1.40</postFactor>
 					</li>
 				</capMods>
 				<statFactors>
@@ -133,7 +133,7 @@
         <capMods>
           <li>
             <capacity>Moving</capacity>
-            <offset>0.58</offset>
+						<postFactor>1.45</postFactor>
           </li>
         </capMods>
 				<statFactors>
