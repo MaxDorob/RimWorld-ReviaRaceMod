@@ -60,6 +60,9 @@
           <li>Morbid</li>
         </focusTypes>
       </li>
+			<li Class="ReviaRace.StartRitual_CompProperties">
+				<ritualDef>Revia_SacrificePrisoner</ritualDef>
+			</li>
     </comps>
     <building>
       <spawnedConceptLearnOpportunity>ReviaBloodstoneSacrifice</spawnedConceptLearnOpportunity>
