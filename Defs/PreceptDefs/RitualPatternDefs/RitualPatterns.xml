@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  
+  <RitualPatternDef Abstract="True" Name="Revia_CelebrationPartyChat">
+    <defName>CelebrationPartyChat</defName> 
+    <nameMaker>NamerRitualFestival</nameMaker>
+    <ritualExpectedDesc>Every year on {DATE}, {MEMBERS} can have a special celebration.</ritualExpectedDesc>
+    <iconPathOverride>UI/Icons/Rituals/RitualFestival</iconPathOverride>
+    <canStartAnytime>true</canStartAnytime>
+    <ritualObligationTriggers>
+      <li Class="RitualObligationTrigger_DateProperties">
+        <mustBePlayerIdeo>true</mustBePlayerIdeo>
+      </li>
+    </ritualObligationTriggers>
+    <ritualObligationTargetFilter>GatheringSpotOrAltar</ritualObligationTargetFilter>
+    <ritualBehavior>DateRitual</ritualBehavior>
+    <ritualOutcomeEffect>CelebratedDate</ritualOutcomeEffect>
+    <tags>
+      <li>CelebratedDate</li>
+    </tags>
+    <patternGroupTag>CelebratedDate</patternGroupTag>
+  </RitualPatternDef>
+
+  <RitualPatternDef Abstract="True" Name="Revia_SacrificeBase" ParentName="Revia_CelebrationPartyChat">
+    <nameMaker>NamerRitualSacrifice</nameMaker>
+    <canStartAnytime>true</canStartAnytime>
+    <ritualObligationTargetFilter>RitualSpotOrAltar</ritualObligationTargetFilter>
+    <tags>
+      <li>Sacrifice</li>
+    </tags>
+  </RitualPatternDef>
+  
+  <RitualPatternDef ParentName="Revia_SacrificeBase">
+    <defName>Revia_SacrificePrisoner</defName>
+    <ritualBehavior>Revia_SacrificePrisoner</ritualBehavior>
+    <shortDescOverride>prisoner sacrifice</shortDescOverride>
+    <descOverride>A ritualistic prisoner sacrifice. The organizer will give a speech to excite the crowd, then cut the prisoner's throat. Once the prisoner is dead, organizer will speak some finishing words.</descOverride>
+    <iconPathOverride>UI/Icons/Rituals/RitualPrisonerSacrifice</iconPathOverride>
+    <patternGroupTag/>
+    <ritualOutcomeEffect>Sacrifice</ritualOutcomeEffect>
+  </RitualPatternDef>
+  
+</Defs>

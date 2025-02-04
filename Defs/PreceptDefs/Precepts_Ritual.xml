@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <PreceptDef>
+    <defName>Revia_PrisonerSacrification</defName>
+    <label>sacrification</label>
+    <tipLabelOverride>Sacrification</tipLabelOverride>
+    <description>An executioner will publicly execute a prisoner. The executioner will give a short speech, execute the prisoner by cutting, and say some closing words. Spectating slaves will become afraid and intimidated, and colonists will feel exhilarated or disgusted depending on their beliefs.</description>
+    <iconPath>UI/Icons/Rituals/PublicExecution</iconPath>
+    <issue>Ritual</issue>
+    <preceptClass>Precept_Ritual</preceptClass>
+    <ritualPatternBase>Revia_SacrificePrisoner</ritualPatternBase>
+    <classic>true</classic>
+    <visible>false</visible>
+    <countsTowardsPreceptLimit>false</countsTowardsPreceptLimit>
+    <selectionWeight>1.0</selectionWeight>
+    <capitalizeAsTitle>false</capitalizeAsTitle>
+  </PreceptDef>
+  
+</Defs>
