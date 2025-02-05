@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-  <RitualBehaviorDef Name="Revia_DateRitualBehavior">
-    <defName>Revia_DateRitual</defName>
+  <RitualBehaviorDef Abstract="True" Name="Revia_DateRitualBehavior">
     <durationTicks>6250</durationTicks>
     <roles>
       <li Class="RitualRoleTag">
@@ -67,7 +66,7 @@
         <label>cutter</label>
         <id>moralist</id>
         <tag>Moralist</tag>
-        <precept>IdeoRole_Moralist</precept>
+        <precept>Revia_PrisonerSacrification</precept>
         <required>True</required>
         <substitutable>true</substitutable>
         <maxCount>1</maxCount>
