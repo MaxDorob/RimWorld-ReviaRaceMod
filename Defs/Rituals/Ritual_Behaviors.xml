@@ -3,20 +3,6 @@
 
   <RitualBehaviorDef Abstract="True" Name="Revia_DateRitualBehavior">
     <durationTicks>6250</durationTicks>
-    <roles>
-      <li Class="RitualRoleTag">
-        <label>speaker</label>
-        <tag>Leader</tag>
-        <id>leader</id>
-        <precept>IdeoRole_Leader</precept>
-        <required>True</required>
-        <substitutable>True</substitutable>
-        <maxCount>1</maxCount>
-        <countsAsParticipant>False</countsAsParticipant>
-        <allowChild>false</allowChild>
-        <mustBeAbleToReachTarget>True</mustBeAbleToReachTarget>
-      </li>
-    </roles>
     <spectatorsLabel>Participants</spectatorsLabel>
     <spectatorGerund>participate</spectatorGerund>
     <stages>
@@ -35,7 +21,7 @@
         <roleBehaviors>
           <li>
             <roleId>leader</roleId>
-            <dutyDef>SpeakOnCellFacingSpectators</dutyDef>
+            <dutyDef>Revia_SpeakOnCellFacingSpectators</dutyDef>
             <speakerInteraction>Speech_DateRitual</speakerInteraction>
             <customPositions>
               <li Class="RitualPosition_Lectern">
@@ -111,7 +97,7 @@
         <roleBehaviors>
           <li>
             <roleId>moralist</roleId>
-            <dutyDef>DeliverPawnToAltar</dutyDef>
+            <dutyDef>Revia_DeliverPawnToAltar</dutyDef>
           </li>
           <li>
             <roleId>prisoner</roleId>
@@ -129,8 +115,8 @@
         <roleBehaviors>
           <li>
             <roleId>moralist</roleId>
-            <dutyDef>SpeakOnCellFacingSpectators</dutyDef>
-            <speakerInteraction>Speech_Sacrifice</speakerInteraction>
+            <dutyDef>Revia_SpeakOnCellFacingSpectators</dutyDef>
+            <speakerInteraction>Revia_Speech_Sacrifice</speakerInteraction>
             <customPositions>
               <li Class="RitualPosition_Lectern">
                 <maxDistanceToFocus>5</maxDistanceToFocus>
@@ -155,7 +141,7 @@
         <roleBehaviors>
           <li>
             <roleId>moralist</roleId>
-            <dutyDef>Sacrifice</dutyDef>
+            <dutyDef>Revia_Sacrifice</dutyDef>
             <customPositions>
               <li Class="RitualPosition_OnInteractionCell" />
             </customPositions>
@@ -165,7 +151,7 @@
             <dutyDef>LayDownAwake</dutyDef>
           </li>
         </roleBehaviors>
-        <visualEffectDef>SacrificePrisoner</visualEffectDef>
+        <visualEffectDef>Revia_SacrificePrisoner</visualEffectDef>
       </li>
       <li>
         <defaultDuty>Spectate</defaultDuty>
@@ -183,8 +169,8 @@
         <roleBehaviors>
           <li>
             <roleId>moralist</roleId>
-            <dutyDef>SpeakOnCellFacingSpectators</dutyDef>
-            <speakerInteraction>Speech_Sacrifice</speakerInteraction>
+            <dutyDef>Revia_SpeakOnCellFacingSpectators</dutyDef>
+            <speakerInteraction>Revia_Speech_Sacrifice</speakerInteraction>
             <customPositions>
               <li Class="RitualPosition_OnInteractionCell" />
             </customPositions>

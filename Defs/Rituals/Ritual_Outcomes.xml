@@ -10,11 +10,11 @@
       <li>If the {0} is satisfying, one of the participants might gain an inspiration.</li>
     </extraPredictedOutcomeDescriptions>
     <comps>
-      <li Class="RitualOutcomeComp_BuildingOfDefUsed">
+      <!--<li Class="RitualOutcomeComp_BuildingOfDefUsed">
         <def>Lectern</def>
         <qualityOffset>0.15</qualityOffset>
         <maxHorDistFromTarget>5</maxHorDistFromTarget>
-      </li>
+      </li>-->
       <li Class="RitualOutcomeComp_RitualSeatPresent">
         <qualityOffset>0.15</qualityOffset>
       </li>
