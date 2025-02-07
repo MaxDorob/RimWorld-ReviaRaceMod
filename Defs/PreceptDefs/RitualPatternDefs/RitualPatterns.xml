@@ -4,7 +4,7 @@
   <RitualPatternDef Abstract="True" Name="Revia_CelebrationPartyChat">
     <nameMaker>NamerRitualFestival</nameMaker>
     <ritualExpectedDesc>Every year on {DATE}, {MEMBERS} can have a special celebration.</ritualExpectedDesc>
-    <iconPathOverride>UI/Icons/Rituals/RitualFestival</iconPathOverride>
+    <iconPathOverride>UI/Misc/BadTexture</iconPathOverride>
     <canStartAnytime>true</canStartAnytime>
     <ritualObligationTriggers>
       <li Class="RitualObligationTrigger_DateProperties">
@@ -21,7 +21,7 @@
   </RitualPatternDef>
 
   <RitualPatternDef Abstract="True" Name="Revia_SacrificeBase" ParentName="Revia_CelebrationPartyChat">
-    <nameMaker>NamerRitualSacrifice</nameMaker>
+    <nameMaker>Revia_NamerRitualSacrifice</nameMaker>
     <canStartAnytime>true</canStartAnytime>
     <ritualObligationTargetFilter>ReviaBloodSigil</ritualObligationTargetFilter>
     <tags>
@@ -34,7 +34,7 @@
     <ritualBehavior>Revia_SacrificePrisoner</ritualBehavior>
     <shortDescOverride>prisoner sacrifice</shortDescOverride>
     <descOverride>A ritualistic prisoner sacrifice. The organizer will give a speech to excite the crowd, then cut the prisoner's throat. Once the prisoner is dead, organizer will speak some finishing words.</descOverride>
-    <iconPathOverride>UI/Icons/Rituals/RitualPrisonerSacrifice</iconPathOverride>
+    <iconPathOverride>UI/Misc/BadTexture</iconPathOverride>
     <patternGroupTag/>
     <ritualOutcomeEffect>Revia_Sacrifice</ritualOutcomeEffect>
   </RitualPatternDef>

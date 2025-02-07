@@ -6,7 +6,7 @@
     <label>sacrification</label>
     <tipLabelOverride>Sacrification</tipLabelOverride>
     <description>An executioner will publicly execute a prisoner. The executioner will give a short speech, execute the prisoner by cutting, and say some closing words. Spectating slaves will become afraid and intimidated, and colonists will feel exhilarated or disgusted depending on their beliefs.</description>
-    <iconPath>UI/Icons/Rituals/PublicExecution</iconPath>
+    <iconPath>UI/Misc/BadTexture</iconPath>
     <issue>Ritual</issue>
     <preceptClass>Precept_Ritual</preceptClass>
     <ritualPatternBase>Revia_SacrificePrisoner</ritualPatternBase>

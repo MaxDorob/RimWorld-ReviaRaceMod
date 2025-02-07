@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Verse;
 
 namespace ReviaRace.Helpers
 {
@@ -12,5 +13,7 @@ namespace ReviaRace.Helpers
     {
         public static TraitDef Tough;
         public static ThoughtDef ReviaRaceThoughtSacrificedNegativePrisoner;
+        public static JobDef Revia_DeliverToAltar;
+        public static JobDef Revia_Sacrifice;
     }
 }

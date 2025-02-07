@@ -37,7 +37,7 @@
     <thinkNode Class="ThinkNode_Priority">
       <subNodes>
         <!-- Goto pawn -->
-        <li Class="JobGiver_DeliverPawnToAltar">
+        <li Class="ReviaRace.JobGiver_DeliverPawnToAltar">
           <exactCell>true</exactCell>
           <locomotionUrgency>Jog</locomotionUrgency>
         </li>
@@ -52,7 +52,7 @@
     <socialModeMax>Off</socialModeMax>
     <thinkNode Class="ThinkNode_Priority">
       <subNodes>
-        <li Class="JobGiver_Sacrifice"/>
+        <li Class="ReviaRace.JobGiver_Sacrifice"/>
       </subNodes>
     </thinkNode>
   </DutyDef>

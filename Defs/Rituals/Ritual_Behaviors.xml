@@ -24,9 +24,9 @@
             <dutyDef>Revia_SpeakOnCellFacingSpectators</dutyDef>
             <speakerInteraction>Speech_DateRitual</speakerInteraction>
             <customPositions>
-              <li Class="RitualPosition_Lectern">
+              <!--<li Class="RitualPosition_Lectern">
                 <maxDistanceToFocus>5</maxDistanceToFocus>
-              </li>
+              </li>-->
               <li Class="RitualPosition_BesideThing" />
             </customPositions>
           </li>
@@ -118,9 +118,9 @@
             <dutyDef>Revia_SpeakOnCellFacingSpectators</dutyDef>
             <speakerInteraction>Revia_Speech_Sacrifice</speakerInteraction>
             <customPositions>
-              <li Class="RitualPosition_Lectern">
+              <!--<li Class="RitualPosition_Lectern">
                 <maxDistanceToFocus>5</maxDistanceToFocus>
-              </li>
+              </li>-->
               <li Class="RitualPosition_OnInteractionCell" />
             </customPositions>
           </li>

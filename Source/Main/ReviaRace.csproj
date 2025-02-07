@@ -97,8 +97,12 @@
     <Compile Include="Helpers\StaticModVariables.cs" />
     <Compile Include="Helpers\Strings.cs" />
     <Compile Include="JobDrivers\ConversationRitualJobDriver.cs" />
+    <Compile Include="JobDrivers\JobDriver_DeliverPawnToAltar.cs" />
+    <Compile Include="JobDrivers\JobDriver_Sacrifice.cs" />
     <Compile Include="JobDrivers\SacrificePrisonerJobDriver.cs" />
     <Compile Include="JobDrivers\WaitPrisonerJobDriver.cs" />
+    <Compile Include="JobGiver\JobGiver_DeliverPawnToAltar.cs" />
+    <Compile Include="JobGiver\JobGiver_Sacrifice.cs" />
     <Compile Include="Needs\BloodthirstNeed.cs" />
     <Compile Include="PersistentData\ReviaSettings.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
