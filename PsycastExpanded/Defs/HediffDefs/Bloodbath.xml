@@ -22,7 +22,7 @@
           </li>
         </capMods>
 				<statFactors>
-					<MeleeDodgeChance>1.05</MeleeDodgeChance>
+					<MeleeDodgeChance>1.02</MeleeDodgeChance>
 					<MeleeCooldownFactor>0.97</MeleeCooldownFactor>
 				</statFactors>
       </li>
@@ -35,8 +35,9 @@
 					</li>
 				</capMods>
 				<statFactors>
-					<MeleeDodgeChance>1.10</MeleeDodgeChance>
-					<MeleeCooldownFactor>0.94</MeleeCooldownFactor>
+					<MeleeDodgeChance>1.06</MeleeDodgeChance>
+					<MeleeCooldownFactor>0.96</MeleeCooldownFactor>
+					<RangedCooldownFactor>0.98</RangedCooldownFactor>
 				</statFactors>
 			</li>
 			<li> <!--Lvl 3-->
@@ -48,8 +49,9 @@
           </li>
         </capMods>
 				<statFactors>
-					<MeleeDodgeChance>1.15</MeleeDodgeChance>
-					<MeleeCooldownFactor>0.91</MeleeCooldownFactor>
+					<MeleeDodgeChance>1.11</MeleeDodgeChance>
+					<MeleeCooldownFactor>0.93</MeleeCooldownFactor>
+					<RangedCooldownFactor>0.96</RangedCooldownFactor>
 				</statFactors>
       </li>
 			<li> <!--Lvl 4-->
@@ -61,8 +63,9 @@
           </li>
         </capMods>
 				<statFactors>
-					<MeleeDodgeChance>1.20</MeleeDodgeChance>
-					<MeleeCooldownFactor>0.85</MeleeCooldownFactor>
+					<MeleeDodgeChance>1.16</MeleeDodgeChance>
+					<MeleeCooldownFactor>0.87</MeleeCooldownFactor>
+					<RangedCooldownFactor>0.93</RangedCooldownFactor>
 				</statFactors>
       </li>
 			<li> <!--Lvl 5-->
@@ -74,8 +77,9 @@
           </li>
         </capMods>
 				<statFactors>
-					<MeleeDodgeChance>1.29</MeleeDodgeChance>
-					<MeleeCooldownFactor>0.80</MeleeCooldownFactor>
+					<MeleeDodgeChance>1.20</MeleeDodgeChance>
+					<MeleeCooldownFactor>0.82</MeleeCooldownFactor>
+					<RangedCooldownFactor>0.90</RangedCooldownFactor>
 				</statFactors>
       </li>
 			<li> <!--Lvl 6-->
@@ -87,8 +91,9 @@
           </li>
         </capMods>
 				<statFactors>
-					<MeleeDodgeChance>1.38</MeleeDodgeChance>
-					<MeleeCooldownFactor>0.75</MeleeCooldownFactor>
+					<MeleeDodgeChance>1.25</MeleeDodgeChance>
+					<MeleeCooldownFactor>0.77</MeleeCooldownFactor>
+					<RangedCooldownFactor>0.85</RangedCooldownFactor>
 				</statFactors>
 				<statOffsets>
 					<Revia_LifeLeechImpact>0.15</Revia_LifeLeechImpact>
@@ -103,8 +108,9 @@
 					</li>
 				</capMods>
 				<statFactors>
-					<MeleeDodgeChance>1.46</MeleeDodgeChance>
-					<MeleeCooldownFactor>0.68</MeleeCooldownFactor>
+					<MeleeDodgeChance>1.30</MeleeDodgeChance>
+					<MeleeCooldownFactor>0.73</MeleeCooldownFactor>
+					<RangedCooldownFactor>0.8</RangedCooldownFactor>
 				</statFactors>
 				<statOffsets>
 					<PsyfocusPerKill>0.03</PsyfocusPerKill>
@@ -120,8 +126,9 @@
 					</li>
 				</capMods>
 				<statFactors>
-					<MeleeDodgeChance>1.51</MeleeDodgeChance>
-					<MeleeCooldownFactor>0.63</MeleeCooldownFactor>
+					<MeleeDodgeChance>1.35</MeleeDodgeChance>
+					<MeleeCooldownFactor>0.66</MeleeCooldownFactor>
+					<RangedCooldownFactor>0.75</RangedCooldownFactor>
 				</statFactors>
 				<statOffsets>
 					<PsyfocusPerKill>0.06</PsyfocusPerKill>
@@ -137,8 +144,9 @@
           </li>
         </capMods>
 				<statFactors>
-					<MeleeDodgeChance>1.65</MeleeDodgeChance>
-					<MeleeCooldownFactor>0.56</MeleeCooldownFactor>
+					<MeleeDodgeChance>1.4</MeleeDodgeChance>
+					<MeleeCooldownFactor>0.59</MeleeCooldownFactor>
+					<RangedCooldownFactor>0.65</RangedCooldownFactor>
 				</statFactors>
 				<statOffsets>
 					<PsyfocusPerKill>0.09</PsyfocusPerKill>
