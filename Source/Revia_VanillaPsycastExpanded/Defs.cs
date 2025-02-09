@@ -11,8 +11,8 @@ namespace Revia_VanillaPsycastExpanded
     [RimWorld.DefOf()]
     public static class Defs
     {
-        public static HediffDef SkarneAvatar;
-        public static StatDef PsyfocusPerKill;
+        public static HediffDef Revia_SkarneAvatar;
+        public static StatDef Revia_PsyfocusPerKill;
         public static DamageDef Revia_MysticalScratch;
         public static DamageDef Revia_MysticalMediumBleedingScratch;
         public static DamageDef Revia_MysticalHeavyBleedingScratch;

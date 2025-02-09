@@ -16,7 +16,7 @@ namespace Revia_VanillaPsycastExpanded.Patches
             var killer = dinfo?.Instigator as Pawn;
             if (killer != null && killer.HasPsylink)
             {
-                var value = killer.GetStatValue(Defs.PsyfocusPerKill);
+                var value = killer.GetStatValue(Defs.Revia_PsyfocusPerKill);
                 if (value > float.Epsilon)
                 {
                     killer.psychicEntropy?.OffsetPsyfocusDirectly(value);

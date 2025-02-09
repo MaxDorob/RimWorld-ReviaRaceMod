@@ -25,12 +25,12 @@ namespace Revia_VanillaPsycastExpanded
         }
         public override void PreStart()
         {
-            pawn.health.AddHediff(Defs.SkarneAvatar);
+            pawn.health.AddHediff(Defs.Revia_SkarneAvatar);
             base.PreStart();
         }
         public override void PostEnd()
         {
-            pawn.health.RemoveHediff(pawn.health.hediffSet.GetFirstHediffOfDef(Defs.SkarneAvatar));
+            pawn.health.RemoveHediff(pawn.health.hediffSet.GetFirstHediffOfDef(Defs.Revia_SkarneAvatar));
             base.PostEnd();
             Hediff hediff = HediffMaker.MakeHediff(VPE_DefOf.PsychicComa, pawn, null);
             hediff.TryGetComp<HediffComp_Disappears>().ticksToDisappear = Mathf.FloorToInt(2500 * 48);

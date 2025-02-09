@@ -2,7 +2,7 @@
 <Defs>
 
   <MentalStateDef ParentName="Berserk">
-    <defName>SkarneAvatar</defName>
+    <defName>Revia_SkarneAvatar</defName>
     <stateClass>Revia_VanillaPsycastExpanded.MentalState_SkarneAvatar</stateClass>
     <label>skarne avatar</label>
     <category>Aggro</category>

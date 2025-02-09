@@ -5,7 +5,7 @@
     <xpath>/Defs/ThinkTreeDef[defName="MentalStateCritical"]/thinkRoot/subNodes</xpath>
     <value>
 			<li Class="ThinkNode_ConditionalMentalState">
-				<state>SkarneAvatar</state>
+				<state>Revia_SkarneAvatar</state>
 				<subNodes>
 					<li Class="ThinkNode_Priority">
 						<subNodes>

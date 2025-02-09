@@ -31,7 +31,7 @@
 				<entropyGain>25</entropyGain>
 				<soulReapLevel>5</soulReapLevel>
 				<prerequisites>
-					<li>ReviaBloodbath</li>
+					<li>Revia_Bloodbath</li>
 				</prerequisites>
 			</li>
 			<li Class="VanillaPsycastsExpanded.Skipmaster.AbilityExtension_Clamor">
@@ -46,7 +46,7 @@
 	</VFECore.Abilities.AbilityDef>
 
 	<VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
-		<defName>SkarneAvatar</defName>
+		<defName>Revia_SkarneAvatar</defName>
 		<label>skarne avatar</label>
 		<description>TODO.</description>
 		<iconPath>Abilities/Bloodpath/SkarneAvatar</iconPath>
@@ -66,18 +66,18 @@
 				<entropyGain>60</entropyGain>
 				<soulReapLevel>9</soulReapLevel>
 				<prerequisites>
-					<li>ReviaBloodyExplosion</li>
-					<li>SkarnesCurse</li>
+					<li>Revia_BloodyExplosion</li>
+					<li>Revia_SkarnesCurse</li>
 				</prerequisites>
 			</li>
 			<li Class="VanillaPsycastsExpanded.AbilityExtension_GiveMentalState">
-				<stateDef>SkarneAvatar</stateDef>
+				<stateDef>Revia_SkarneAvatar</stateDef>
 			</li>
 		</modExtensions>
 	</VFECore.Abilities.AbilityDef>
 
 	<VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
-		<defName>ReviaBloodbath</defName>
+		<defName>Revia_Bloodbath</defName>
 		<label>bloodbath</label>
 		<description>TODO.</description>
 		<iconPath>Abilities/Bloodpath/Bloodbath</iconPath>
@@ -102,14 +102,14 @@
 				</prerequisites>
 			</li>
 			<li Class="VFECore.Abilities.AbilityExtension_Hediff">
-				<hediff>ReviaBloodbath</hediff>
+				<hediff>Revia_Bloodbath</hediff>
 				<durationMultiplier>PsychicSensitivity</durationMultiplier>
 			</li>
 		</modExtensions>
 	</VFECore.Abilities.AbilityDef>
 
 	<VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
-		<defName>SkarnesProtection</defName>
+		<defName>Revia_SkarnesProtection</defName>
 		<label>skarne's protection</label>
 		<description>TODO.</description>
 		<iconPath>Abilities/Bloodpath/SkarnesProtection</iconPath>
@@ -137,7 +137,7 @@
 				<psychic>true</psychic>
 				<soulReapLevel>5</soulReapLevel>
 				<prerequisites>
-					<li>ReviaBloodbath</li>
+					<li>Revia_Bloodbath</li>
 				</prerequisites>
 			</li>
 			<li Class="Revia_VanillaPsycastExpanded.AbilityExtension_SkarneProtection">
@@ -146,7 +146,7 @@
 	</VFECore.Abilities.AbilityDef>
 
 	<VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
-		<defName>SkarnesCurse</defName>
+		<defName>Revia_SkarnesCurse</defName>
 		<label>skarne's curse</label>
 		<description>TODO.</description>
 		<iconPath>Abilities/Bloodpath/SkarnesCurse</iconPath>
@@ -168,18 +168,18 @@
 				<psychic>true</psychic>
 				<soulReapLevel>7</soulReapLevel>
 				<prerequisites>
-					<li>SkarnesProtection</li>
+					<li>Revia_SkarnesProtection</li>
 				</prerequisites>
 			</li>
 			<li Class="VFECore.Abilities.AbilityExtension_Hediff">
-				<hediff>SkarnesCurse</hediff>
+				<hediff>Revia_SkarnesCurse</hediff>
 				<durationMultiplier>PsychicSensitivity</durationMultiplier>
 			</li>
 		</modExtensions>
 	</VFECore.Abilities.AbilityDef>
 
 	<VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
-		<defName>ReviaBloodyExplosion</defName>
+		<defName>Revia_BloodyExplosion</defName>
 		<label>bloody explosion</label>
 		<description>TODO.</description>
 		<iconPath>Abilities/Bloodpath/BloodyExplosion</iconPath>
@@ -203,7 +203,7 @@
 				</prerequisites>
 			</li>
 			<li Class="Revia_VanillaPsycastExpanded.AbilityExtension_BloodyExplosion_Effecter">
-				<effecterDef>BloodyExplosion</effecterDef>
+				<effecterDef>Revia_BloodyExplosion</effecterDef>
 			</li>
 			<li Class="Revia_VanillaPsycastExpanded.AbilityExtension_BloodyExplosion">
 
@@ -274,7 +274,7 @@
 			<li Class="Revia_VanillaPsycastExpanded.AbilityExtension_VermilionHarvest">
 			</li>
 			<li Class="Revia_VanillaPsycastExpanded.AbilityExtension_MultipliedEffecterOnTarget">
-				<effecterDef>BloodyExplosion</effecterDef>
+				<effecterDef>Revia_BloodyExplosion</effecterDef>
 			</li>
 		</modExtensions>
 	</VFECore.Abilities.AbilityDef>

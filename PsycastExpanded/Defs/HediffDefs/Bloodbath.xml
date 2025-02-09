@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
   <HediffDef  ParentName="PsycastHediffBase">
-    <defName>ReviaBloodbath</defName>
+    <defName>Revia_Bloodbath</defName>
     <label>bloodbath</label>
     <description>TODO.</description>
 		<hediffClass>HediffWithComps</hediffClass>
@@ -113,7 +113,7 @@
 					<RangedCooldownFactor>0.8</RangedCooldownFactor>
 				</statFactors>
 				<statOffsets>
-					<PsyfocusPerKill>0.03</PsyfocusPerKill>
+					<Revia_PsyfocusPerKill>0.03</Revia_PsyfocusPerKill>
 					<Revia_LifeLeechImpact>0.25</Revia_LifeLeechImpact>
 				</statOffsets>
 			</li>
@@ -131,7 +131,7 @@
 					<RangedCooldownFactor>0.75</RangedCooldownFactor>
 				</statFactors>
 				<statOffsets>
-					<PsyfocusPerKill>0.06</PsyfocusPerKill>
+					<Revia_PsyfocusPerKill>0.06</Revia_PsyfocusPerKill>
 					<Revia_LifeLeechImpact>0.35</Revia_LifeLeechImpact>
 				</statOffsets>
 			</li>
@@ -149,7 +149,7 @@
 					<RangedCooldownFactor>0.65</RangedCooldownFactor>
 				</statFactors>
 				<statOffsets>
-					<PsyfocusPerKill>0.09</PsyfocusPerKill>
+					<Revia_PsyfocusPerKill>0.09</Revia_PsyfocusPerKill>
 					<Revia_LifeLeechImpact>0.5</Revia_LifeLeechImpact>
 				</statOffsets>
       </li>

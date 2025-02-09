@@ -3,7 +3,7 @@
 
 
 	<EffecterDef>
-		<defName>BloodyExplosion</defName>
+		<defName>Revia_BloodyExplosion</defName>
 		<children>
 			<li>
 				<subEffecterClass>SubEffecter_SoundTriggered</subEffecterClass>

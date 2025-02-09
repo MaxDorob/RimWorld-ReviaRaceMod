@@ -2,7 +2,7 @@
 <Defs>
 
   <StatDef>
-    <defName>PsyfocusPerKill</defName>
+    <defName>Revia_PsyfocusPerKill</defName>
     <label>psyfocus gain</label>
     <description>Amount of psyfocus gain per kill.</description>
     <category>PawnCombat</category>
