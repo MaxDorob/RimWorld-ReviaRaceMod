@@ -3,6 +3,7 @@
   <HediffDef>
     <defName>SkarneAvatar</defName>
     <label>skarne avatar</label>
+		<hediffClass>HediffWithComps</hediffClass>
     <description>TODO.</description>
     <isBad>false</isBad>
     <defaultLabelColor>(0.8, 0.4, 0.4)</defaultLabelColor>
@@ -28,5 +29,10 @@
 				</statFactors>
 			</li>
     </stages>
+		<comps>
+			<li>
+				<compClass>ReviaRace.HediffComp_EntropyIncrease</compClass>
+			</li>
+		</comps>
   </HediffDef>
 </Defs>

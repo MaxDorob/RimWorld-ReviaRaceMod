@@ -57,6 +57,7 @@
     <Compile Include="BloodyExplosion\AbilityExtension_BloodyExplosion_Effecter.cs" />
     <Compile Include="BloodyExplosion\AbilityExtension_BloodyExplosion.cs" />
     <Compile Include="Defs.cs" />
+    <Compile Include="HediffComp_EntropyIncrease.cs" />
     <Compile Include="HediffComp_SoulReapSeverity.cs" />
     <Compile Include="Patches\AbilityToolTip_Patch.cs" />
     <Compile Include="Patches\Psycast_PrereqsCompleted_Patch.cs" />
