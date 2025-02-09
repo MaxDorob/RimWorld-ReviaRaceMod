@@ -7,7 +7,8 @@
 		<iconPath>Abilities/Bloodpath/Bloodseek</iconPath>
 		<abilityClass>Revia_VanillaPsycastExpanded.Ability_Bloodseek</abilityClass>
 		<castTime>30</castTime>
-		<durationTime>100</durationTime> <!--Slow down time-->
+		<durationTime>100</durationTime>
+		<!--Slow down time-->
 		<needsTicking>true</needsTicking>
 		<targetMode>Pawn</targetMode>
 		<range>99999</range>
@@ -29,6 +30,9 @@
 				<psyfocusCost>0.02</psyfocusCost>
 				<entropyGain>25</entropyGain>
 				<soulReapLevel>5</soulReapLevel>
+				<prerequisites>
+					<li>ReviaBloodbath</li>
+				</prerequisites>
 			</li>
 			<li Class="VanillaPsycastsExpanded.Skipmaster.AbilityExtension_Clamor">
 				<clamorType>Ability</clamorType>
@@ -61,6 +65,10 @@
 				<psyfocusCost>0.80</psyfocusCost>
 				<entropyGain>60</entropyGain>
 				<soulReapLevel>9</soulReapLevel>
+				<prerequisites>
+					<li>ReviaBloodyExplosion</li>
+					<li>SkarnesCurse</li>
+				</prerequisites>
 			</li>
 			<li Class="VanillaPsycastsExpanded.AbilityExtension_GiveMentalState">
 				<stateDef>SkarneAvatar</stateDef>
@@ -73,7 +81,8 @@
 		<label>bloodbath</label>
 		<description>TODO.</description>
 		<iconPath>Abilities/Bloodpath/Bloodbath</iconPath>
-		<castSound>VPE_BladeFocus_Cast</castSound> <!--TODO: Change to some other sound-->
+		<castSound>VPE_BladeFocus_Cast</castSound>
+		<!--TODO: Change to some other sound-->
 		<targetMode>Self</targetMode>
 		<castTime>15</castTime>
 		<durationTime>7200</durationTime>
@@ -87,6 +96,10 @@
 				<entropyGain>5</entropyGain>
 				<psychic>true</psychic>
 				<soulReapLevel>3</soulReapLevel>
+				<prerequisites>
+					<li>Revia_ReavingReap</li>
+					<li>Revia_VermilionHarvest</li>
+				</prerequisites>
 			</li>
 			<li Class="VFECore.Abilities.AbilityExtension_Hediff">
 				<hediff>ReviaBloodbath</hediff>
@@ -123,6 +136,9 @@
 				<entropyGain>15</entropyGain>
 				<psychic>true</psychic>
 				<soulReapLevel>5</soulReapLevel>
+				<prerequisites>
+					<li>ReviaBloodbath</li>
+				</prerequisites>
 			</li>
 			<li Class="Revia_VanillaPsycastExpanded.AbilityExtension_SkarneProtection">
 			</li>
@@ -151,6 +167,9 @@
 				<entropyGain>45</entropyGain>
 				<psychic>true</psychic>
 				<soulReapLevel>7</soulReapLevel>
+				<prerequisites>
+					<li>SkarnesProtection</li>
+				</prerequisites>
 			</li>
 			<li Class="VFECore.Abilities.AbilityExtension_Hediff">
 				<hediff>SkarnesCurse</hediff>
@@ -179,6 +198,9 @@
 				<entropyGain>15</entropyGain>
 				<psychic>true</psychic>
 				<soulReapLevel>7</soulReapLevel>
+				<prerequisites>
+					<li>Revia_Bloodseek</li>
+				</prerequisites>
 			</li>
 			<li Class="Revia_VanillaPsycastExpanded.AbilityExtension_BloodyExplosion_Effecter">
 				<effecterDef>BloodyExplosion</effecterDef>
