@@ -60,7 +60,7 @@ namespace Revia_VanillaPsycastExpanded
         {
             this.compClass = typeof(HediffComp_SkarnesCurse);
         }
-        public IntRange interval = new IntRange(150, 450);
+        public IntRange interval = new IntRange(120, 350);
         public FloatRange damage = new FloatRange(1, 3);
     }
 }
