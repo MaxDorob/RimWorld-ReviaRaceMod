@@ -259,7 +259,8 @@
 		<description>TODO.</description>
 		<iconPath>Abilities/Bloodpath/SkarnesProtection</iconPath>
 		<castTime>350</castTime>
-
+		<warmupMote></warmupMote>
+		<warmupSound></warmupSound>
 		<abilityClass>VFECore.Abilities.Ability_Blank</abilityClass>
 		<modExtensions>
 			<li Class="Revia_VanillaPsycastExpanded.AbilityExtension_ReviaPsycast">
