@@ -48,10 +48,9 @@
     <preceptRequirements><li Class="PreceptRequirement_Altar"/></preceptRequirements>
     <durationTicks>7500</durationTicks>
     <roles Inherit="False">
-      <li Class="RitualRoleTag">
+      <li Class="ReviaRace.RitualRoleReviaOrSkarnite">
         <label>cutter</label>
         <id>moralist</id>
-        <tag>Moralist</tag>
         <precept>Revia_PrisonerSacrification</precept>
         <required>True</required>
         <substitutable>true</substitutable>
