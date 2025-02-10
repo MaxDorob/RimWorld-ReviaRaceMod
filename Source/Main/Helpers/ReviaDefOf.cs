@@ -15,5 +15,8 @@ namespace ReviaRace.Helpers
         public static ThoughtDef ReviaRaceThoughtSacrificedNegativePrisoner;
         public static JobDef Revia_DeliverToAltar;
         public static JobDef Revia_Sacrifice;
+        public static PreceptDef Revia_PrisonerSacrification;
+        [MayRequireIdeology]
+        public static MemeDef ReviaRaceSkarniteMeme;
     }
 }
