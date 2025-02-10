@@ -37,6 +37,7 @@
     <iconPathOverride>UI/Misc/BadTexture</iconPathOverride>
     <patternGroupTag/>
     <ritualOutcomeEffect>Revia_Sacrifice</ritualOutcomeEffect>
+		<alwaysStartAnytime>true</alwaysStartAnytime>
   </RitualPatternDef>
   
 </Defs>
