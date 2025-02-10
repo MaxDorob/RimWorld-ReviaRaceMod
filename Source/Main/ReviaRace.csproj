@@ -109,6 +109,8 @@
     <Compile Include="Render\PawnRenderNodeProperties_BodyPart.cs" />
     <Compile Include="Render\PawnRenderNode_HeadBodyPart.cs" />
     <Compile Include="ReviaRaceMod.cs" />
+    <Compile Include="RitualRole\RitualRoleRevia.cs" />
+    <Compile Include="RitualRole\RitualRoleReviaOrSkarnite.cs" />
     <Compile Include="RoomRoleWorkers\SkarneChapel.cs" />
     <Compile Include="Utils.cs" />
     <Compile Include="Workers\SacrificeWorker.cs" />
