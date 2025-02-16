@@ -13,5 +13,6 @@ namespace ReviaRace.Helpers
         public static TraitDef Tough;
         public static ThoughtDef ReviaRaceThoughtSacrificedNegativePrisoner;
         public static StatDef Revia_LifeLeechImpact;
+        public static StatDef Revia_BleedRate;
     }
 }

@@ -12,5 +12,17 @@
     <minValue>0.0000</minValue>
     <displayPriorityInCategory>5600</displayPriorityInCategory>
   </StatDef>
+
+	<StatDef>
+		<defName>Revia_BleedRate</defName>
+		<label>bleed rate</label>
+		<description>Multiplier for bleed rate.</description>
+		<category>Basics</category>
+		<toStringStyle>PercentZero</toStringStyle>
+		<defaultBaseValue>1</defaultBaseValue>
+		<hideAtValue>1</hideAtValue>
+		<minValue>0.0000</minValue>
+		<displayPriorityInCategory>4400</displayPriorityInCategory>
+	</StatDef>
 	
 </Defs>

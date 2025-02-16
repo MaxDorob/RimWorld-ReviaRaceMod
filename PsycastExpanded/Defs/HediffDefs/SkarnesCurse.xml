@@ -1,18 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  <HediffDef  ParentName="PsycastHediffBase">
-    <defName>Revia_SkarnesCurse</defName>
-    <label>skarne's curse</label>
-    <description>TODO.</description>
+	<HediffDef ParentName="PsycastHediffBase">
+		<defName>Revia_SkarnesCurse</defName>
+		<label>skarne's curse</label>
+		<description>TODO.</description>
 		<hediffClass>HediffWithComps</hediffClass>
-    <isBad>true</isBad>
-    <defaultLabelColor>(0.8, 0.4, 0.4)</defaultLabelColor>
-    <countsAsAddedPartOrImplant>false</countsAsAddedPartOrImplant>
+		<isBad>true</isBad>
+		<defaultLabelColor>(0.8, 0.4, 0.4)</defaultLabelColor>
+		<countsAsAddedPartOrImplant>false</countsAsAddedPartOrImplant>
 		<comps>
 			<li Class="Revia_VanillaPsycastExpanded.HediffCompProperties_SkarnesCurse">
-				
+
 			</li>
 		</comps>
-      
-  </HediffDef>
+		<stages>
+			<li>
+				<statFactors>
+					<Revia_BleedRate>2</Revia_BleedRate>
+				</statFactors>
+			</li>
+		</stages>
+	</HediffDef>
 </Defs>
