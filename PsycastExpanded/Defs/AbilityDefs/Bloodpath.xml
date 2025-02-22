@@ -151,7 +151,7 @@
 		<description>TODO.</description>
 		<iconPath>Abilities/Bloodpath/SkarnesCurse</iconPath>
 		<castTime>40</castTime>
-		<durationTime>2700</durationTime>
+		<durationTime>1800</durationTime>
 		<needsTicking>true</needsTicking>
 		<power>1</power>
 		<range>99999</range>

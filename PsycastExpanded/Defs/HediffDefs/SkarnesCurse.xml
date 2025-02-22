@@ -17,6 +17,7 @@
 			<li>
 				<statFactors>
 					<Revia_BleedRate>2</Revia_BleedRate>
+					<IncomingDamageFactor>1.5</IncomingDamageFactor>
 				</statFactors>
 			</li>
 		</stages>

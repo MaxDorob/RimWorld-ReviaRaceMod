@@ -31,14 +31,14 @@
   <HediffDef ParentName="ScratchBase">
     <defName>HeavyBleeding_Scratch</defName>
     <injuryProps>
-      <bleedRate>0.32</bleedRate>
+      <bleedRate>0.72</bleedRate>
     </injuryProps>
   </HediffDef>
 
 	<HediffDef ParentName="ScratchBase">
 		<defName>MediumBleeding_Scratch</defName>
 		<injuryProps>
-			<bleedRate>0.16</bleedRate>
+			<bleedRate>0.38</bleedRate>
 		</injuryProps>
 	</HediffDef>
 
