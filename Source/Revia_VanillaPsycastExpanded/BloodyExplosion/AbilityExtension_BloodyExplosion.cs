@@ -45,6 +45,20 @@ namespace Revia_VanillaPsycastExpanded
                     {
                         victim.health.DropBloodFilth();
                     }
+
+                    var targetsToDamage = target.Map.mapPawns.AllPawnsSpawned.Where(x => x != target.Thing && x.Position.InHorDistOf(target.Cell, radius));
+                    if (requireLOS)
+                    {
+                        targetsToDamage = targetsToDamage.Where(x => GenSight.LineOfSightToThing(target.Cell, x, x.Map));
+                    }
+                    foreach (var toDamage in targetsToDamage)
+                    {
+                        var injuriesCount = amount * injuriesCountMultiplier.RandomInRange;
+                        for (int i = 0; i < injuriesCount; i++)
+                        {
+                            toDamage.TakeDamage(new DamageInfo(damageDef, damageAmount.RandomInRange, penetration, instigator: ability.Caster));
+                        }
+                    }
                 }
             }
         }
@@ -54,5 +68,12 @@ namespace Revia_VanillaPsycastExpanded
         public float psyfocusPerKill = 0.2f;
         public float multiplierForBloodthirst = 0.85f;
         public float dropBloodPerRate = 0.07f;
+
+        public FloatRange injuriesCountMultiplier = new FloatRange(2.3f, 5.5f);
+        public float radius;
+        public bool requireLOS;
+        public DamageDef damageDef;
+        public FloatRange damageAmount;
+        public float penetration;
     }
 }

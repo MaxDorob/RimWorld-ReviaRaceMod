@@ -50,7 +50,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AbilityExtension_DamagePawnsAround.cs" />
     <Compile Include="AbilityExtension_MultipliedEffecterOnTarget.cs" />
     <Compile Include="AbilityExtension_ReviaPsycast.cs" />
     <Compile Include="AttackTargetFinderEx.cs" />
