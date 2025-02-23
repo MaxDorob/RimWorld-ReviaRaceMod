@@ -206,7 +206,13 @@
 				<effecterDef>Revia_BloodyExplosion</effecterDef>
 			</li>
 			<li Class="Revia_VanillaPsycastExpanded.AbilityExtension_BloodyExplosion">
-
+			</li>
+			<li Class="Revia_VanillaPsycastExpanded.AbilityExtension_DamagePawnsAround">
+				<damageDef>Revia_BloodExplosionScratch</damageDef>
+				<radius>3.9</radius>
+				<damageAmount>8~12</damageAmount>
+				<penetration>7.5</penetration>
+				<requireLOS>true</requireLOS>
 			</li>
 
 		</modExtensions>

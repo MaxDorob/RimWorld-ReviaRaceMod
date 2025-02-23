@@ -17,4 +17,16 @@
 		<hediffSolid>Crack</hediffSolid>
 	</DamageDef>
 
+	<DamageDef>
+		<defName>Revia_BloodExplosionScratch</defName>
+		<label>scratch</label>
+		<workerClass>DamageWorker_AddInjury</workerClass>
+		<externalViolence>true</externalViolence>
+		<hediff>Scratch</hediff>
+		<hediffSolid>Crack</hediffSolid>
+		<harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+		<impactSoundType>Tornado</impactSoundType>
+		<armorCategory>Sharp</armorCategory>
+	</DamageDef>
+
 </Defs>
