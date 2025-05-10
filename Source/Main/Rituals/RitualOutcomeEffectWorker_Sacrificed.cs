@@ -18,12 +18,12 @@ namespace ReviaRace.Rituals
         public override void Apply(float progress, Dictionary<Pawn, int> totalPresence, LordJob_Ritual jobRitual)
         {
             base.Apply(progress, totalPresence, jobRitual);
-            var sacrificer = totalPresence.Keys.First();
-            var position = sacrificer.Position;
+            var prisoner = jobRitual.PawnWithRole("prisoner");
+            var position = prisoner.Corpse?.PositionHeld ?? prisoner.PositionHeld;
+            var map = prisoner.Corpse?.MapHeld ?? prisoner.MapHeld;
             var thing = ThingMaker.MakeThing(Defs.Bloodstone);
             thing.stackCount = 2;
-
-            GenPlace.TryPlaceThing(thing, position, sacrificer.Map, ThingPlaceMode.Near);
+            GenPlace.TryPlaceThing(thing, position, map, ThingPlaceMode.Near);
         }
     }
 }
