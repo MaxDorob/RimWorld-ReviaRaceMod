@@ -112,6 +112,7 @@
     <Compile Include="ReviaRaceMod.cs" />
     <Compile Include="RitualRole\RitualRoleRevia.cs" />
     <Compile Include="RitualRole\RitualRoleReviaOrSkarnite.cs" />
+    <Compile Include="Rituals\RitualOutcomeComp_ReviaCount.cs" />
     <Compile Include="Rituals\RitualOutcomeEffectWorker_Sacrificed.cs" />
     <Compile Include="Rituals\SacrificeBaseScore_Extension.cs" />
     <Compile Include="RoomRoleWorkers\SkarneChapel.cs" />

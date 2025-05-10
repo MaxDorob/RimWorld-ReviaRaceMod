@@ -28,6 +28,16 @@
           </points>
         </curve>
       </li>
+			<li Class="ReviaRace.Rituals.RitualOutcomeComp_ReviaCount">
+				<label>revia count</label>
+				<curve>
+					<points>
+						<li>(1,  0.0)</li>
+						<li>(5,  0.18)</li>
+						<li>(10, 0.25)</li>
+					</points>
+				</curve>
+			</li>
       <li Class="RitualOutcomeComp_RitualTargetDefs">
         <allowAltars>true</allowAltars>
         <label>started at altar</label>
