@@ -5,7 +5,7 @@
   <RitualOutcomeEffectDef>
     <defName>Revia_Sacrifice</defName>
     <description>Depending on ritual quality, participants will get between {MINMOOD} and {MAXMOOD} mood for {MOODDAYS} days.</description>
-    <workerClass>RitualOutcomeEffectWorker_Consumable</workerClass>
+    <workerClass>ReviaRace.Rituals.RitualOutcomeEffectWorker_Sacrificed</workerClass>
     <extraPredictedOutcomeDescriptions>
       <li>If the {0} is satisfying, one of the participants might gain an inspiration.</li>
     </extraPredictedOutcomeDescriptions>

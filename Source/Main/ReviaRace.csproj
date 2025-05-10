@@ -111,6 +111,7 @@
     <Compile Include="ReviaRaceMod.cs" />
     <Compile Include="RitualRole\RitualRoleRevia.cs" />
     <Compile Include="RitualRole\RitualRoleReviaOrSkarnite.cs" />
+    <Compile Include="Rituals\RitualOutcomeEffectWorker_Sacrificed.cs" />
     <Compile Include="RoomRoleWorkers\SkarneChapel.cs" />
     <Compile Include="Utils.cs" />
     <Compile Include="Workers\SacrificeWorker.cs" />
