@@ -19,11 +19,18 @@ namespace ReviaRace.Rituals
         protected override void ApplyExtraOutcome(Dictionary<Pawn, int> totalPresence, LordJob_Ritual jobRitual, RitualOutcomePossibility outcome, out string extraOutcomeDesc, ref LookTargets letterLookTargets)
         {
             base.ApplyExtraOutcome(totalPresence, jobRitual, outcome, out extraOutcomeDesc, ref letterLookTargets);
+            var multiplier = outcome.positivityIndex;
+            if (multiplier <= 0)
+            {
+                return;
+            }
             var prisoner = jobRitual.PawnWithRole("prisoner");
+            var score = (def.GetModExtension<SacrificeBaseScore_Extension>()?.baseScore ?? 1f) * SacrificeHelper.GetScore(prisoner) * multiplier;
             var position = prisoner.Corpse?.PositionHeld ?? prisoner.PositionHeld;
             var map = prisoner.Corpse?.MapHeld ?? prisoner.MapHeld;
-            var thing = ThingMaker.MakeThing(Defs.Bloodstone);
-            thing.stackCount = 2;
+            var thingCount = SacrificeHelper.ThingsForScore(score, prisoner.RaceProps.Humanlike && prisoner.RaceProps.IsFlesh);
+            var thing = ThingMaker.MakeThing(thingCount.ThingDef);
+            thing.stackCount = thingCount.Count;
             GenPlace.TryPlaceThing(thing, position, map, ThingPlaceMode.Near);
         }
     }

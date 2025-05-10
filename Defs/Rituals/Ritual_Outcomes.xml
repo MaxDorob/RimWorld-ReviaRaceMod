@@ -72,6 +72,11 @@
         <positivityIndex>2</positivityIndex>
       </li>
     </outcomeChances>
+		<modExtensions>
+			<li Class="ReviaRace.Rituals.SacrificeBaseScore_Extension">
+				<baseScore>1.8</baseScore>
+			</li>
+		</modExtensions>
   </RitualOutcomeEffectDef>
 
 </Defs>
