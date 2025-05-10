@@ -2,6 +2,7 @@
 using RimWorld;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Security.Permissions;
 using System.Text;
@@ -15,9 +16,9 @@ namespace ReviaRace.Rituals
 
         public RitualOutcomeEffectWorker_Sacrificed() : base() { }
         public RitualOutcomeEffectWorker_Sacrificed(RitualOutcomeEffectDef def) : base(def) { }
-        public override void Apply(float progress, Dictionary<Pawn, int> totalPresence, LordJob_Ritual jobRitual)
+        protected override void ApplyExtraOutcome(Dictionary<Pawn, int> totalPresence, LordJob_Ritual jobRitual, RitualOutcomePossibility outcome, out string extraOutcomeDesc, ref LookTargets letterLookTargets)
         {
-            base.Apply(progress, totalPresence, jobRitual);
+            base.ApplyExtraOutcome(totalPresence, jobRitual, outcome, out extraOutcomeDesc, ref letterLookTargets);
             var prisoner = jobRitual.PawnWithRole("prisoner");
             var position = prisoner.Corpse?.PositionHeld ?? prisoner.PositionHeld;
             var map = prisoner.Corpse?.MapHeld ?? prisoner.MapHeld;
