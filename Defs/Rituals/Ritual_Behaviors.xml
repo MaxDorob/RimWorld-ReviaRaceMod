@@ -108,7 +108,7 @@
         <defaultDuty>Spectate</defaultDuty>
         <endTriggers>
           <li Class="StageEndTrigger_DurationPercentage">
-            <percentage>0.4</percentage>
+            <percentage>0.999</percentage>
           </li>
         </endTriggers>
         <roleBehaviors>
@@ -156,7 +156,7 @@
         <defaultDuty>Spectate</defaultDuty>
         <endTriggers>
           <li Class="StageEndTrigger_DurationPercentage">
-            <percentage>0.6</percentage>
+            <percentage>0.001</percentage>
           </li>
         </endTriggers>
         <failTriggers>
