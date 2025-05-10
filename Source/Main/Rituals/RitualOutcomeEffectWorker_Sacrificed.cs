@@ -25,6 +25,10 @@ namespace ReviaRace.Rituals
                 return;
             }
             var prisoner = jobRitual.PawnWithRole("prisoner");
+            if (!prisoner.Dead)//Vanilla Expanded Archon?
+            {
+                return;
+            }
             var score = (def.GetModExtension<SacrificeBaseScore_Extension>()?.baseScore ?? 1f) * SacrificeHelper.GetScore(prisoner) * multiplier;
             var position = prisoner.Corpse?.PositionHeld ?? prisoner.PositionHeld;
             var map = prisoner.Corpse?.MapHeld ?? prisoner.MapHeld;
