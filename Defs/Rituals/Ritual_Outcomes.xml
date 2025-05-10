@@ -18,11 +18,6 @@
       <li Class="RitualOutcomeComp_RitualSeatPresent">
         <qualityOffset>0.15</qualityOffset>
       </li>
-      <li Class="RitualOutcomeComp_RolePresentNotSubstituted">
-        <roleId>moralist</roleId>
-        <label>moral guide present</label>
-        <qualityOffset>0.25</qualityOffset>
-      </li>
       <li Class="RitualOutcomeComp_ParticipantCount">
         <label>participant count</label>
         <curve>
