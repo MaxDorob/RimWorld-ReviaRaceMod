@@ -180,4 +180,72 @@
   </RitualBehaviorDef>
 
 
+
+	<RitualBehaviorDef ParentName="DateRitualBehavior">
+		<defName>ReviaBlessingRitual</defName>
+		<durationTicks>7500</durationTicks>
+		<roles Inherit="False">
+			<li Class="ReviaRace.RitualRoleReviaOrSkarnite">
+				<label>sacrificer</label>
+				<id>sacrificer</id>
+				<precept>Revia_BlessingForSoulreap</precept>
+				<required>True</required>
+				<substitutable>true</substitutable>
+				<maxCount>1</maxCount>
+				<countsAsParticipant>False</countsAsParticipant>
+				<mustBeAbleToReachTarget>True</mustBeAbleToReachTarget>
+			</li>
+		</roles>
+		<spectatorsLabel>Participants</spectatorsLabel>
+		<spectatorGerund>participate</spectatorGerund>
+		<stages Inherit="False">
+			<li>
+				<defaultDuty>Spectate</defaultDuty>
+				<essential>True</essential>
+				<endTriggers>
+					<li Class="StageEndTrigger_DurationPercentage">
+						<percentage>0.6</percentage>
+					</li>
+				</endTriggers>
+				<!--
+				
+				<pawnLeaveAction Class="RitualStageAction_DropThing">
+					<def>WoodLog</def>
+					<count>4</count>
+				</pawnLeaveAction>
+				<interruptedAction Class="RitualStageAction_DropThing">
+					<def>WoodLog</def>
+					<count>4</count>
+				</interruptedAction>
+				<tickActionMaker Class="RitualStageAction_ReleaseLanterns">
+					<woodCost>4</woodCost>
+					<preliminaryTicks>0~90</preliminaryTicks>
+				</tickActionMaker>
+				
+				-->
+				<roleBehaviors>
+					<li>
+						<roleId>sacrificer</roleId>
+						<dutyDef>InvokeBlessingForSoulreap</dutyDef>
+						<speakerInteraction>Revia_Speech_Sacrifice</speakerInteraction>
+						<customPositions>
+							<!--<li Class="RitualPosition_Lectern">
+                <maxDistanceToFocus>5</maxDistanceToFocus>
+              </li>-->
+							<li Class="RitualPosition_OnInteractionCell" />
+						</customPositions>
+					</li>
+				</roleBehaviors>
+			</li>
+			<li>
+				<defaultDuty>Spectate</defaultDuty>
+				<endTriggers>
+					<li Class="StageEndTrigger_DurationPercentage">
+						<percentage>0.4</percentage>
+					</li>
+				</endTriggers>
+			</li>
+		</stages>
+	</RitualBehaviorDef>
+
 </Defs>

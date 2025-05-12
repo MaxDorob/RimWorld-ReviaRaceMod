@@ -16,5 +16,21 @@
     <selectionWeight>1.0</selectionWeight>
     <capitalizeAsTitle>false</capitalizeAsTitle>
   </PreceptDef>
+
+	<PreceptDef>
+		<defName>Revia_BlessingForSoulreap</defName>
+		<label>soulreap blessing</label>
+		<tipLabelOverride>Soulreap blessing</tipLabelOverride>
+		<description>TODO.</description>
+		<iconPath>UI/Misc/BadTexture</iconPath>
+		<issue>Ritual</issue>
+		<preceptClass>Precept_Ritual</preceptClass>
+		<ritualPatternBase>Revia_BleesingForSoulreap</ritualPatternBase>
+		<classic>true</classic>
+		<visible>false</visible>
+		<countsTowardsPreceptLimit>false</countsTowardsPreceptLimit>
+		<selectionWeight>1.0</selectionWeight>
+		<capitalizeAsTitle>false</capitalizeAsTitle>
+	</PreceptDef> 
   
 </Defs>

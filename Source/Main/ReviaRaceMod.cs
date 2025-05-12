@@ -29,7 +29,7 @@ namespace ReviaRace
             LongEventHandler.ExecuteWhenFinished(AddLifeLeechComp);
         }
 
-        public ReviaSettings Settings { get; set; }
+        public static ReviaSettings Settings { get; set; }
         private string _baseCostBuf;
         private string _growthFactorBuf;
         private string _growthStartTierBuf;

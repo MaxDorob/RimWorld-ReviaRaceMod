@@ -39,5 +39,21 @@
     <ritualOutcomeEffect>Revia_Sacrifice</ritualOutcomeEffect>
 		<alwaysStartAnytime>true</alwaysStartAnytime>
   </RitualPatternDef>
+
+
+
+	<RitualPatternDef>
+		<defName>Revia_BleesingForSoulreap</defName>
+		<nameMaker>NamerRitualFestival</nameMaker>
+		<ritualExpectedDesc>Every year on {DATE}, {MEMBERS} can have a special celebration.</ritualExpectedDesc>
+		<ritualObligationTargetFilter>Revia_BleesingForSoulreap</ritualObligationTargetFilter>
+		<shortDescOverride>blessing ritual</shortDescOverride>
+		<descOverride>TODO.</descOverride>
+		<iconPathOverride>UI/Icons/Rituals/CelebrationPartySkylanterns</iconPathOverride>
+		<alwaysStartAnytime>true</alwaysStartAnytime>
+		<ritualBehavior>ReviaBlessingRitual</ritualBehavior>
+		<patternGroupTag>CelebratedDate</patternGroupTag>
+		<ritualOutcomeEffect>Revia_BlessingForSoulreap</ritualOutcomeEffect>
+	</RitualPatternDef>
   
 </Defs>

@@ -56,5 +56,25 @@
       </subNodes>
     </thinkNode>
   </DutyDef>
+
+	<DutyDef>
+		<defName>InvokeBlessingForSoulreap</defName>
+		<hook>HighPriority</hook>
+		<thinkNode Class="ThinkNode_Priority">
+			<subNodes>
+				<li Class="ReviaRace.JobGiver.JobGiver_TakeBloodstonesForBlessingRitual"/>
+
+				<li Class="JobGiver_GotoTravelDestination">
+					<exactCell>true</exactCell>
+					<locomotionUrgency>Jog</locomotionUrgency>
+					<ritualTagOnArrival>Arrived</ritualTagOnArrival>
+				</li>
+				
+				<li Class="ReviaRace.JobGiver.JobGiver_InvokeBlessing">
+				</li>
+
+			</subNodes>
+		</thinkNode>
+	</DutyDef>
   
 </Defs>

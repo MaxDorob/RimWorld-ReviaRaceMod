@@ -9,4 +9,12 @@
 		</thingDefs>
 	</RitualObligationTargetFilterDef>
 
+	<RitualObligationTargetFilterDef>
+		<defName>Revia_BleesingForSoulreap</defName>
+		<workerClass>ReviaRace.Rituals.RitualObligationTargetWorker_SoulreapLevelUp</workerClass>
+		<thingDefs>
+			<li>ReviaBloodSigil</li>
+		</thingDefs>
+	</RitualObligationTargetFilterDef>
+	
 </Defs>

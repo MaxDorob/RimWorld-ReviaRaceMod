@@ -99,11 +99,14 @@
     <Compile Include="Helpers\Strings.cs" />
     <Compile Include="JobDrivers\ConversationRitualJobDriver.cs" />
     <Compile Include="JobDrivers\JobDriver_DeliverPawnToAltar.cs" />
+    <Compile Include="JobDrivers\JobDriver_InvokeBlessing.cs" />
     <Compile Include="JobDrivers\JobDriver_Sacrifice.cs" />
     <Compile Include="JobDrivers\SacrificePrisonerJobDriver.cs" />
     <Compile Include="JobDrivers\WaitPrisonerJobDriver.cs" />
     <Compile Include="JobGiver\JobGiver_DeliverPawnToAltar.cs" />
+    <Compile Include="JobGiver\JobGiver_InvokeBlessing.cs" />
     <Compile Include="JobGiver\JobGiver_Sacrifice.cs" />
+    <Compile Include="JobGiver\JobGiver_TakeBloodstonesForBlessingRitual.cs" />
     <Compile Include="Needs\BloodthirstNeed.cs" />
     <Compile Include="PersistentData\ReviaSettings.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -112,8 +115,10 @@
     <Compile Include="ReviaRaceMod.cs" />
     <Compile Include="RitualRole\RitualRoleRevia.cs" />
     <Compile Include="RitualRole\RitualRoleReviaOrSkarnite.cs" />
+    <Compile Include="Rituals\RitualObligationTargetWorker_SoulreapLevelUp.cs" />
     <Compile Include="Rituals\RitualOutcomeComp_ReviaCount.cs" />
     <Compile Include="Rituals\RitualOutcomeEffectWorker_Sacrificed.cs" />
+    <Compile Include="Rituals\RitualOutcomeEffectWorker_SkarnesBlessing.cs" />
     <Compile Include="Rituals\SacrificeBaseScore_Extension.cs" />
     <Compile Include="RoomRoleWorkers\SkarneChapel.cs" />
     <Compile Include="Utils.cs" />

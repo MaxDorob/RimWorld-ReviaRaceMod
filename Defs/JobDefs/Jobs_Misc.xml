@@ -14,5 +14,12 @@
     <reportString>Sacrificing TargetA.</reportString>
     <casualInterruptible>false</casualInterruptible>
   </JobDef>
+
+	<JobDef>
+		<defName>Revia_InvokeBlessing</defName>
+		<driverClass>ReviaRace.JobDrivers.JobDriver_InvokeBlessing</driverClass>
+		<reportString>TODO.</reportString>
+		<casualInterruptible>false</casualInterruptible>
+	</JobDef>
   
 </Defs>

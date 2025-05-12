@@ -18,5 +18,6 @@ namespace ReviaRace.Helpers
         public static PreceptDef Revia_PrisonerSacrification;
         [MayRequireIdeology]
         public static MemeDef ReviaRaceSkarniteMeme;
+        public static JobDef Revia_InvokeBlessing;
     }
 }
