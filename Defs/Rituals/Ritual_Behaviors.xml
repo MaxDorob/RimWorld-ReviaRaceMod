@@ -183,6 +183,7 @@
 
 	<RitualBehaviorDef ParentName="DateRitualBehavior">
 		<defName>ReviaBlessingRitual</defName>
+		<workerClass>ReviaRace.Rituals.RitualBehaviorWorker_InvokeBlessingForSoulreap</workerClass>
 		<durationTicks>7500</durationTicks>
 		<roles Inherit="False">
 			<li Class="ReviaRace.RitualRoleReviaOrSkarnite">
