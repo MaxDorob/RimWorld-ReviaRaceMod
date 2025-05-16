@@ -120,6 +120,7 @@
     <Compile Include="Rituals\RitualOutcomeComp_ReviaCount.cs" />
     <Compile Include="Rituals\RitualOutcomeEffectWorker_Sacrificed.cs" />
     <Compile Include="Rituals\RitualOutcomeEffectWorker_SkarnesBlessing.cs" />
+    <Compile Include="Rituals\RitualPosition_OnInteractionCell.cs" />
     <Compile Include="Rituals\SacrificeBaseScore_Extension.cs" />
     <Compile Include="RoomRoleWorkers\SkarneChapel.cs" />
     <Compile Include="Utils.cs" />

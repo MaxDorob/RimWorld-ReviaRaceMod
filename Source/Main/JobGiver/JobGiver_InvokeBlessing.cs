@@ -15,7 +15,7 @@ namespace ReviaRace.JobGiver
     {
         protected override Job TryGiveJob(Pawn pawn)
         {
-            IntVec3 dest = base.GetDest(pawn);
+            IntVec3 dest = pawn.Position;
             Job job = JobMaker.MakeJob(ReviaDefOf.Revia_InvokeBlessing, dest);
             job.locomotionUrgency = this.locomotionUrgency;
             job.expiryInterval = this.expiryInterval;
