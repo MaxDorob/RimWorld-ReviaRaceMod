@@ -9,7 +9,7 @@ using Verse;
 namespace ReviaRace.Rituals
 {
     /// <summary>
-    /// The same ritual position, but pawn able to on altar
+    /// The same ritual position, but pawn able to stay on altar
     /// </summary>
     public class RitualPosition_OnInteractionCell : RimWorld.RitualPosition_OnInteractionCell
     {
