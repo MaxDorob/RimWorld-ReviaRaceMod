@@ -43,18 +43,18 @@
         </endTriggers>
         <failTriggers>
           <li Class="StageFailTrigger_TargetPawnUnreachable">
-            <takerId>cutter</takerId>
+            <takerId>sacrificer</takerId>
             <takeeId>prisoner</takeeId>
             <desc>Prisoner is not reachable.</desc>
           </li>
           <li Class="StageFailTrigger_PawnAsleep">
             <desc>escort asleep</desc>
-            <pawnId>cutter</pawnId>
+            <pawnId>sacrificer</pawnId>
           </li>
         </failTriggers>
         <roleBehaviors>
           <li>
-            <roleId>cutter</roleId>
+            <roleId>sacrificer</roleId>
             <dutyDef>Revia_DeliverPawnToAltar</dutyDef>
           </li>
           <li>
@@ -72,7 +72,7 @@
         </endTriggers>
         <roleBehaviors>
           <li>
-            <roleId>cutter</roleId>
+            <roleId>sacrificer</roleId>
             <dutyDef>Revia_SpeakOnCellFacingSpectators</dutyDef>
             <speakerInteraction>Revia_Speech_Sacrifice</speakerInteraction>
             <customPositions>
@@ -98,7 +98,7 @@
         </endTriggers>
         <roleBehaviors>
           <li>
-            <roleId>cutter</roleId>
+            <roleId>sacrificer</roleId>
             <dutyDef>Revia_Sacrifice</dutyDef>
             <customPositions>
               <li Class="ReviaRace.Rituals.RitualPosition_OnInteractionCell" />
@@ -126,7 +126,7 @@
         </failTriggers>
         <roleBehaviors>
           <li>
-            <roleId>cutter</roleId>
+            <roleId>sacrificer</roleId>
             <dutyDef>Revia_SpeakOnCellFacingSpectators</dutyDef>
             <speakerInteraction>Revia_Speech_Sacrifice</speakerInteraction>
             <customPositions>
