@@ -74,19 +74,12 @@ namespace ReviaRace.Rituals
         public override QualityFactor GetQualityFactor(Precept_Ritual ritual, TargetInfo ritualTarget, RitualObligation obligation, RitualRoleAssignments assignments, RitualOutcomeComp_Data data)
         {
             IEnumerable<Pawn> additionalCollection = [];
-            var cutterRole = assignments.GetRole("Cutter");
+            var cutterRole = assignments.GetRole("sacrificer");
             if (cutterRole != null)
             {
                 additionalCollection = assignments.AssignedPawns(cutterRole);
             }
-            else
-            {
-                var sacrificerRole = assignments.GetRole("Sacrificer");
-                if (sacrificerRole != null)
-                {
-                    additionalCollection = assignments.AssignedPawns(sacrificerRole);
-                }
-            }
+            
             int num = assignments.Participants.Union(additionalCollection).Count((Pawn p) => this.Counts(assignments, p));
             float quality = this.curve.Evaluate(num);
             return new QualityFactor

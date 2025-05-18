@@ -1,56 +1,15 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-
-  <RitualBehaviorDef Abstract="True" Name="Revia_DateRitualBehavior">
-    <durationTicks>6250</durationTicks>
-    <spectatorsLabel>Participants</spectatorsLabel>
-    <spectatorGerund>participate</spectatorGerund>
-    <stages>
-      <li>
-        <defaultDuty>Spectate</defaultDuty>
-        <essential>True</essential>
-        <endTriggers>
-          <li Class="StageEndTrigger_DurationPercentage">
-            <percentage>0.3</percentage>
-          </li>
-        </endTriggers>
-        <postAction Class="RitualStageAction_Message">
-            <text>{0}: The speech is over, and the party is beginning.</text>
-            <messageTypeDef>NeutralEvent</messageTypeDef>
-        </postAction>
-        <roleBehaviors>
-          <li>
-            <roleId>leader</roleId>
-            <dutyDef>Revia_SpeakOnCellFacingSpectators</dutyDef>
-            <speakerInteraction>Speech_DateRitual</speakerInteraction>
-            <customPositions>
-              <!--<li Class="RitualPosition_Lectern">
-                <maxDistanceToFocus>5</maxDistanceToFocus>
-              </li>-->
-              <li Class="RitualPosition_BesideThing" />
-            </customPositions>
-          </li>
-        </roleBehaviors>
-      </li>
-      <li>
-        <defaultDuty>Party</defaultDuty>
-        <endTriggers>
-          <li Class="StageEndTrigger_DurationPercentage">
-            <percentage>0.7</percentage>
-          </li>
-        </endTriggers>
-      </li>
-    </stages>
-  </RitualBehaviorDef>
-
   
-  <RitualBehaviorDef Name="Revia_SacrificeBehaviorBase" Abstract="True" ParentName="Revia_DateRitualBehavior">
+  <RitualBehaviorDef Name="Revia_SacrificeBehaviorBase" Abstract="True">
     <preceptRequirements><li Class="PreceptRequirement_Altar"/></preceptRequirements>
     <durationTicks>7500</durationTicks>
-    <roles Inherit="False">
+		<spectatorsLabel>Participants</spectatorsLabel>
+		<spectatorGerund>participate</spectatorGerund>
+    <roles>
       <li Class="ReviaRace.RitualRoleReviaOrSkarnite">
-        <label>cutter</label>
-        <id>cutter</id>
+        <label>sacrificer</label>
+        <id>sacrificer</id>
         <precept>Revia_PrisonerSacrification</precept>
         <required>True</required>
         <substitutable>true</substitutable>
