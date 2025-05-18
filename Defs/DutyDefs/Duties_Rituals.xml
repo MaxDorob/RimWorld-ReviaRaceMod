@@ -1,61 +1,57 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-  <DutyDef>
-    <defName>Revia_SpeakOnCellFacingSpectators</defName>
-    <hook>HighPriority</hook>
-    <socialModeMax>Off</socialModeMax>
-    <ritualSpectateTarget>true</ritualSpectateTarget>
-    <thinkNode Class="ThinkNode_Priority">
-      <subNodes>
-        <!-- Goto my spot -->
-        <li Class="JobGiver_GotoTravelDestination">
-          <exactCell>true</exactCell>
-          <locomotionUrgency>Jog</locomotionUrgency>
-          <ritualTagOnArrival>Arrived</ritualTagOnArrival>
-        </li>
+	<DutyDef>
+		<defName>Revia_SpeakOnCellFacingSpectators</defName>
+		<hook>HighPriority</hook>
+		<socialModeMax>Off</socialModeMax>
+		<ritualSpectateTarget>true</ritualSpectateTarget>
+		<thinkNode Class="ThinkNode_Priority">
+			<subNodes>
+				<!-- Goto my spot -->
+				<li Class="JobGiver_GotoTravelDestination">
+					<exactCell>true</exactCell>
+					<locomotionUrgency>Jog</locomotionUrgency>
+					<ritualTagOnArrival>Arrived</ritualTagOnArrival>
+				</li>
 
-        <!-- Arrived -->
-        <li Class="ThinkNode_ConditionalAtDutyLocation">
-          <subNodes>
-            <li Class="JobGiver_GiveSpeechFacingTarget">
-              <showSpeechBubbles>false</showSpeechBubbles>
-              <faceSpectatorsIfPossible>true</faceSpectatorsIfPossible>
-              <soundDefMale>Speech_Ideoligious_Male</soundDefMale>
-              <soundDefFemale>Speech_Ideoligious_Female</soundDefFemale>
-            </li>
-          </subNodes>
-        </li>
-      </subNodes>
-    </thinkNode>
-  </DutyDef>
-  
-  <DutyDef>
-    <defName>Revia_DeliverPawnToAltar</defName>
-    <hook>HighPriority</hook>
-    <socialModeMax>Off</socialModeMax>
-    <thinkNode Class="ThinkNode_Priority">
-      <subNodes>
-        <!-- Goto pawn -->
-        <li Class="ReviaRace.JobGiver_DeliverPawnToAltar">
-          <exactCell>true</exactCell>
-          <locomotionUrgency>Jog</locomotionUrgency>
-        </li>
-      </subNodes>
-    </thinkNode>
-  </DutyDef>
+				<!-- Arrived -->
+				<li Class="ReviaRace.JobGiver.JobGiver_GiveSpeechFacingTarget">
+					<showSpeechBubbles>false</showSpeechBubbles>
+					<faceSpectatorsIfPossible>true</faceSpectatorsIfPossible>
+					<soundDefMale>Speech_Ideoligious_Male</soundDefMale>
+					<soundDefFemale>Speech_Ideoligious_Female</soundDefFemale>
+				</li>
+			</subNodes>
+		</thinkNode>
+	</DutyDef>
+
+	<DutyDef>
+		<defName>Revia_DeliverPawnToAltar</defName>
+		<hook>HighPriority</hook>
+		<socialModeMax>Off</socialModeMax>
+		<thinkNode Class="ThinkNode_Priority">
+			<subNodes>
+				<!-- Goto pawn -->
+				<li Class="ReviaRace.JobGiver_DeliverPawnToAltar">
+					<exactCell>true</exactCell>
+					<locomotionUrgency>Jog</locomotionUrgency>
+				</li>
+			</subNodes>
+		</thinkNode>
+	</DutyDef>
 
 
-  <DutyDef>
-    <defName>Revia_Sacrifice</defName>
-    <hook>HighPriority</hook>
-    <socialModeMax>Off</socialModeMax>
-    <thinkNode Class="ThinkNode_Priority">
-      <subNodes>
-        <li Class="ReviaRace.JobGiver_Sacrifice"/>
-      </subNodes>
-    </thinkNode>
-  </DutyDef>
+	<DutyDef>
+		<defName>Revia_Sacrifice</defName>
+		<hook>HighPriority</hook>
+		<socialModeMax>Off</socialModeMax>
+		<thinkNode Class="ThinkNode_Priority">
+			<subNodes>
+				<li Class="ReviaRace.JobGiver_Sacrifice"/>
+			</subNodes>
+		</thinkNode>
+	</DutyDef>
 
 	<DutyDef>
 		<defName>InvokeBlessingForSoulreap</defName>
@@ -69,12 +65,12 @@
 					<locomotionUrgency>Jog</locomotionUrgency>
 					<ritualTagOnArrival>Arrived</ritualTagOnArrival>
 				</li>
-				
+
 				<li Class="ReviaRace.JobGiver.JobGiver_InvokeBlessing">
 				</li>
 
 			</subNodes>
 		</thinkNode>
 	</DutyDef>
-  
+
 </Defs>

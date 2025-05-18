@@ -19,5 +19,6 @@ namespace ReviaRace.Helpers
         [MayRequireIdeology]
         public static MemeDef ReviaRaceSkarniteMeme;
         public static JobDef Revia_InvokeBlessing;
+        public static JobDef Revia_GiveSpeech;
     }
 }

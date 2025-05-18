@@ -21,5 +21,12 @@
 		<reportString>TODO.</reportString>
 		<casualInterruptible>false</casualInterruptible>
 	</JobDef>
+
+	<JobDef>
+		<defName>Revia_GiveSpeech</defName>
+		<driverClass>ReviaRace.JobDrivers.JobDriver_GiveSpeech_NoReservations</driverClass>
+		<reportString>talking.</reportString>
+		<casualInterruptible>false</casualInterruptible>
+	</JobDef>
   
 </Defs>
