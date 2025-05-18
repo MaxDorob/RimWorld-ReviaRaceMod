@@ -104,7 +104,6 @@
     <Compile Include="JobDrivers\SacrificePrisonerJobDriver.cs" />
     <Compile Include="JobDrivers\WaitPrisonerJobDriver.cs" />
     <Compile Include="JobGiver\JobGiver_DeliverPawnToAltar.cs" />
-    <Compile Include="JobGiver\JobGiver_GotoTravelDestination.cs" />
     <Compile Include="JobGiver\JobGiver_InvokeBlessing.cs" />
     <Compile Include="JobGiver\JobGiver_Sacrifice.cs" />
     <Compile Include="JobGiver\JobGiver_TakeBloodstonesForBlessingRitual.cs" />
