@@ -139,5 +139,22 @@ namespace ReviaRace
             thing.stackCount = result.Count;
             GenDrop.TryDropSpawn(thing, cell, Find.CurrentMap, ThingPlaceMode.Near, out _);
         }
+        [DebugAction(category = "Revia debug", name = "Inspect cell", actionType = DebugActionType.ToolMap,
+    allowedGameStates = AllowedGameStates.PlayingOnMap)]
+        public static void InspectCell()
+        {
+            var cell = UI.MouseCell();
+            var map = Find.CurrentMap;
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine(cell.ToString());
+            sb.AppendLine($"Standable: {cell.Standable(map)}");
+            foreach (var thing in map.thingGrid.ThingsListAt(cell))
+            {
+                var interactionCell = thing.InteractionCell;
+                sb.AppendLine($"{thing} at {thing.Position} with passability {thing.def.passability}, where is interaction pos {interactionCell} with offset {thing.def.interactionCellOffset}");
+                sb.AppendLine($"Is inside rect: {CommonRitualCellPredicates.InsideRect(thing.OccupiedRect(), interactionCell)}");
+            }
+            Log.Message(sb.ToString());
+        }
     }
 }
