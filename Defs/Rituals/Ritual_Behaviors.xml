@@ -140,25 +140,11 @@
 
 
 
-	<RitualBehaviorDef ParentName="DateRitualBehavior">
+	<RitualBehaviorDef ParentName="Revia_SacrificeBehaviorBase">
 		<defName>ReviaBlessingRitual</defName>
 		<workerClass>ReviaRace.Rituals.RitualBehaviorWorker_InvokeBlessingForSoulreap</workerClass>
 		<durationTicks>7500</durationTicks>
-		<roles Inherit="False">
-			<li Class="ReviaRace.RitualRoleReviaOrSkarnite">
-				<label>sacrificer</label>
-				<id>sacrificer</id>
-				<precept>Revia_BlessingForSoulreap</precept>
-				<required>True</required>
-				<substitutable>true</substitutable>
-				<maxCount>1</maxCount>
-				<countsAsParticipant>False</countsAsParticipant>
-				<mustBeAbleToReachTarget>True</mustBeAbleToReachTarget>
-			</li>
-		</roles>
-		<spectatorsLabel>Participants</spectatorsLabel>
-		<spectatorGerund>participate</spectatorGerund>
-		<stages Inherit="False">
+		<stages>
 			<li>
 				<defaultDuty>Spectate</defaultDuty>
 				<essential>True</essential>
