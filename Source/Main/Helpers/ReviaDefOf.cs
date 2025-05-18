@@ -20,5 +20,6 @@ namespace ReviaRace.Helpers
         public static MemeDef ReviaRaceSkarniteMeme;
         public static JobDef Revia_InvokeBlessing;
         public static JobDef Revia_GiveSpeech;
+        public static JobDef Revia_LayDownAwake;
     }
 }

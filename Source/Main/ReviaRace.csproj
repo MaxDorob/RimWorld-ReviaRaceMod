@@ -101,12 +101,14 @@
     <Compile Include="JobDrivers\JobDriver_DeliverPawnToAltar.cs" />
     <Compile Include="JobDrivers\JobDriver_GiveSpeech_NoReservations.cs" />
     <Compile Include="JobDrivers\JobDriver_InvokeBlessing.cs" />
+    <Compile Include="JobDrivers\JobDriver_LayDownAwake.cs" />
     <Compile Include="JobDrivers\JobDriver_Sacrifice.cs" />
     <Compile Include="JobDrivers\SacrificePrisonerJobDriver.cs" />
     <Compile Include="JobDrivers\WaitPrisonerJobDriver.cs" />
     <Compile Include="JobGiver\JobGiver_DeliverPawnToAltar.cs" />
     <Compile Include="JobGiver\JobGiver_GiveSpeechFacingTarget.cs" />
     <Compile Include="JobGiver\JobGiver_InvokeBlessing.cs" />
+    <Compile Include="JobGiver\JobGiver_LayDownAwake.cs" />
     <Compile Include="JobGiver\JobGiver_Sacrifice.cs" />
     <Compile Include="JobGiver\JobGiver_TakeBloodstonesForBlessingRitual.cs" />
     <Compile Include="Needs\BloodthirstNeed.cs" />

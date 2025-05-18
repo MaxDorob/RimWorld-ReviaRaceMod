@@ -73,4 +73,16 @@
 		</thinkNode>
 	</DutyDef>
 
+	<DutyDef>
+		<defName>Revia_LayDownAwake</defName>
+		<hook>HighPriority</hook>
+		<socialModeMax>Off</socialModeMax>
+		<thinkNode Class="ThinkNode_Priority">
+			<subNodes>
+				<li Class="ReviaRace.JobGiver.JobGiver_LayDownAwake">
+				</li>
+			</subNodes>
+		</thinkNode>
+	</DutyDef>
+
 </Defs>
