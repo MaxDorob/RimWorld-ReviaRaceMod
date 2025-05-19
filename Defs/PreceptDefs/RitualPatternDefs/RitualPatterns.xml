@@ -2,7 +2,7 @@
 <Defs>
   
   <RitualPatternDef Abstract="True" Name="Revia_CelebrationPartyChat">
-    <nameMaker>NamerRitualFestival</nameMaker>
+    <nameMaker>Revia_NamerRitualSacrifice</nameMaker>
     <ritualExpectedDesc>Every year on {DATE}, {MEMBERS} can have a special celebration.</ritualExpectedDesc>
     <iconPathOverride>UI/Misc/BadTexture</iconPathOverride>
     <canStartAnytime>true</canStartAnytime>
@@ -44,7 +44,7 @@
 
 	<RitualPatternDef>
 		<defName>Revia_BleesingForSoulreap</defName>
-		<nameMaker>NamerRitualFestival</nameMaker>
+		<nameMaker>Revia_NamerRitualSacrifice</nameMaker>
 		<ritualExpectedDesc>Every year on {DATE}, {MEMBERS} can have a special celebration.</ritualExpectedDesc>
 		<ritualObligationTargetFilter>Revia_BleesingForSoulreap</ritualObligationTargetFilter>
 		<shortDescOverride>blessing ritual</shortDescOverride>
