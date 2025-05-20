@@ -31,6 +31,22 @@
 		<countsTowardsPreceptLimit>false</countsTowardsPreceptLimit>
 		<selectionWeight>1.0</selectionWeight>
 		<capitalizeAsTitle>false</capitalizeAsTitle>
-	</PreceptDef> 
-  
+	</PreceptDef>
+
+	<PreceptDef>
+		<defName>Revia_XenotypeConversation</defName>
+		<label>revia conversation</label>
+		<tipLabelOverride>Revia conversation</tipLabelOverride>
+		<description>TODO.</description>
+		<iconPath>UI/Misc/BadTexture</iconPath>
+		<issue>Ritual</issue>
+		<preceptClass>Precept_Ritual</preceptClass>
+		<ritualPatternBase>Revia_XenotypeConversation</ritualPatternBase>
+		<classic>true</classic>
+		<visible>false</visible>
+		<countsTowardsPreceptLimit>false</countsTowardsPreceptLimit>
+		<selectionWeight>1.0</selectionWeight>
+		<capitalizeAsTitle>false</capitalizeAsTitle>
+	</PreceptDef>
+
 </Defs>
