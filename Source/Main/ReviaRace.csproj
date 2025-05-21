@@ -111,6 +111,7 @@
     <Compile Include="JobGiver\JobGiver_LayDownAwake.cs" />
     <Compile Include="JobGiver\JobGiver_Sacrifice.cs" />
     <Compile Include="JobGiver\JobGiver_TakeBloodstonesForBlessingRitual.cs" />
+    <Compile Include="JobGiver\JobGiver_TakeCountToInventory.cs" />
     <Compile Include="Needs\BloodthirstNeed.cs" />
     <Compile Include="PersistentData\ReviaSettings.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
