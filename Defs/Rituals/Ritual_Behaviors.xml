@@ -257,7 +257,7 @@
 					</li>
 					<li>
 						<roleId>convertee</roleId>
-						<dutyDef>LayDownAwake</dutyDef>
+						<dutyDef>Revia_LayDownAwake</dutyDef>
 					</li>
 				</roleBehaviors>
 			</li>
