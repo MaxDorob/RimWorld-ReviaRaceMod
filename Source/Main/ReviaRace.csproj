@@ -129,6 +129,7 @@
     <Compile Include="Rituals\RitualPosition_OnInteractionCell.cs" />
     <Compile Include="Rituals\RitualRoleWithReviaGene.cs" />
     <Compile Include="Rituals\SacrificeBaseScore_Extension.cs" />
+    <Compile Include="Rituals\StageEndTrigger_PawnDeliveredOrNotValidAndBloodstonesCollected.cs" />
     <Compile Include="RoomRoleWorkers\SkarneChapel.cs" />
     <Compile Include="Utils.cs" />
     <Compile Include="Workers\SacrificeWorker.cs" />

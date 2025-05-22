@@ -213,7 +213,9 @@
 				<defaultDuty>Spectate</defaultDuty>
 				<targetId>convertee</targetId>
 				<endTriggers>
-					<li Class="StageEndTrigger_PawnDeliveredOrNotValid"/>
+					<li Class="ReviaRace.Rituals.StageEndTrigger_PawnDeliveredOrNotValidAndBloodstonesCollected">
+						<count>10</count>
+					</li>
 				</endTriggers>
 				<failTriggers>
 					<li Class="StageFailTrigger_TargetPawnUnreachable">
@@ -229,7 +231,7 @@
 				<roleBehaviors>
 					<li>
 						<roleId>sacrificer</roleId>
-						<dutyDef>Revia_DeliverPawnToAltar</dutyDef>
+						<dutyDef>Revia_TakeBloodstonesAndDeliverPawnToAltar</dutyDef>
 					</li>
 					<li>
 						<roleId>convertee</roleId>
