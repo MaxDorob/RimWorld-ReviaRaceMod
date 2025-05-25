@@ -12,6 +12,10 @@ namespace ReviaRace.JobDrivers
 {
     public class JobDriver_InvokeBlessing : JobDriver_GotoAndStandSociallyActive
     {
+        public override bool TryMakePreToilReservations(bool errorOnFailed)
+        {
+            return true;
+        }
         public override Toil StandToil
         {
             get
@@ -20,6 +24,7 @@ namespace ReviaRace.JobDrivers
                 toil.AddPreInitAction(() =>
                 {
                     Thing thing = this.pawn.inventory.innerContainer.FirstOrDefault((Thing t) => t.def == this.job.thingDefToCarry && t.stackCount >= this.job.count);
+                    Log.Message($"{thing?.ToString() ?? "null"}, {job.count} {thing?.stackCount}");
                     if (thing != null)
                     {
                         this.pawn.carryTracker.TryStartCarry(thing, this.job.count, true);

@@ -109,6 +109,7 @@
     <Compile Include="JobGiver\JobGiver_GiveSpeechFacingTarget.cs" />
     <Compile Include="JobGiver\JobGiver_InvokeBlessing.cs" />
     <Compile Include="JobGiver\JobGiver_LayDownAwake.cs" />
+    <Compile Include="JobGiver\JobGiver_ProcessXenotypeConversion.cs" />
     <Compile Include="JobGiver\JobGiver_Sacrifice.cs" />
     <Compile Include="JobGiver\JobGiver_TakeBloodstonesForBlessingRitual.cs" />
     <Compile Include="JobGiver\JobGiver_TakeCountToInventory.cs" />

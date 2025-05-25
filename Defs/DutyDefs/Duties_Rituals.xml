@@ -103,4 +103,30 @@
 		</thinkNode>
 	</DutyDef>
 
+	<DutyDef>
+		<defName>Revia_ProcessXenotypeConversion</defName>
+		<hook>HighPriority</hook>
+		<socialModeMax>Off</socialModeMax>
+		<ritualSpectateTarget>true</ritualSpectateTarget>
+		<thinkNode Class="ThinkNode_Priority">
+			<subNodes>
+				<!-- Goto my spot -->
+				<li Class="JobGiver_GotoTravelDestination">
+					<exactCell>true</exactCell>
+					<locomotionUrgency>Jog</locomotionUrgency>
+					<ritualTagOnArrival>Arrived</ritualTagOnArrival>
+				</li>
+
+				<!-- Arrived -->
+				<li Class="ReviaRace.JobGiver.JobGiver_ProcessXenotypeConversion">
+					<showSpeechBubbles>false</showSpeechBubbles>
+					<faceSpectatorsIfPossible>true</faceSpectatorsIfPossible>
+					<soundDefMale>Speech_Ideoligious_Male</soundDefMale>
+					<soundDefFemale>Speech_Ideoligious_Female</soundDefFemale>
+					<count>10</count>
+				</li>
+			</subNodes>
+		</thinkNode>
+	</DutyDef>
+	
 </Defs>

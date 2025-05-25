@@ -252,7 +252,7 @@
 				<roleBehaviors>
 					<li>
 						<roleId>sacrificer</roleId>
-						<dutyDef>Revia_SpeakOnCellFacingSpectators</dutyDef>
+						<dutyDef>Revia_ProcessXenotypeConversion</dutyDef>
 						<customPositions>
 							<li Class="ReviaRace.Rituals.RitualPosition_OnInteractionCell" />
 						</customPositions>
