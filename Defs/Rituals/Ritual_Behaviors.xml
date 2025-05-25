@@ -197,7 +197,7 @@
 	<RitualBehaviorDef ParentName="Revia_SacrificeBehaviorBase">
 		<defName>Revia_XenotypeConversation</defName>
 		<roles>
-			<li Class="ReviaRace.Rituals.RitualRoleWithReviaGene">
+			<li Class="ReviaRace.RitualRoleWithReviaGene">
 				<label>convert</label>
 				<missingDesc>a convertee</missingDesc>
 				<id>convertee</id>

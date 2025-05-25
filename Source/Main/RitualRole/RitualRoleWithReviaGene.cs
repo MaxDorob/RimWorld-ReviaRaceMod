@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Verse;
 
-namespace ReviaRace.Rituals
+namespace ReviaRace
 {
     public class RitualRoleWithReviaGene : RitualRole
     {

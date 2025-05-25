@@ -127,7 +127,7 @@
     <Compile Include="Rituals\RitualOutcomeEffectWorker_XenotypeConversation.cs" />
     <Compile Include="Rituals\RitualOutcomeEffectWorker_SkarnesBlessing.cs" />
     <Compile Include="Rituals\RitualPosition_OnInteractionCell.cs" />
-    <Compile Include="Rituals\RitualRoleWithReviaGene.cs" />
+    <Compile Include="RitualRole\RitualRoleWithReviaGene.cs" />
     <Compile Include="Rituals\SacrificeBaseScore_Extension.cs" />
     <Compile Include="Rituals\StageEndTrigger_PawnDeliveredOrNotValidAndBloodstonesCollected.cs" />
     <Compile Include="RoomRoleWorkers\SkarneChapel.cs" />
