@@ -12,7 +12,7 @@ using Verse.Noise;
 
 namespace ReviaRace.Rituals
 {
-    public class RitualObligationTargetWorker_SoulreapLevelUp : RitualObligationTargetWorker_ThingDef
+    public class RitualObligationTargetWorker_SoulreapLevelUp : RitualObligationTargetWorker_BloodstonesRequired
     {
         public RitualObligationTargetWorker_SoulreapLevelUp()
         {
@@ -22,28 +22,6 @@ namespace ReviaRace.Rituals
         {
         }
 
-        public override IEnumerable<string> GetBlockingIssues(TargetInfo target, RitualRoleAssignments assignments)
-        {
-            Dictionary<Thing, int> dictionary = new Dictionary<Thing, int>();
-            bool notEnoughBloodstones = true;
-            var pawn = assignments.FirstAssignedPawn("sacrificer");
-            if (pawn == null)
-            {
-                yield return "SacrificerNotSelected".Translate();
-                yield break;
-            }
-            List<Thing> list = target.Map.listerThings.ThingsOfDef(Defs.Bloodstone).Where(thing => !thing.IsForbidden(pawn) && pawn.CanReserveAndReach(thing, PathEndMode.Touch, pawn.NormalMaxDanger())).ToList(); ;
-            var srTier = SoulReaperWorker.GetSoulReapTier(pawn);
-            var requiredBloodstones = InvokeGreaterBlessing.GetAdvanceCost(ReviaRaceMod.Settings.CostGrowthMode, srTier, ReviaRaceMod.Settings.CostBase, ReviaRaceMod.Settings.CostGrowthFactor, ReviaRaceMod.Settings.CostGrowthStartTier);
-
-
-            int countToTake = Math.Max(requiredBloodstones - pawn.inventory.Count(Defs.Bloodstone), 0);
-
-            if (list.Sum(x => x.stackCount) < countToTake)
-            {
-                TaggedString taggedString = "RitualTargetBloodstonesInfo".Translate(requiredBloodstones);
-                yield return taggedString;
-            }
-        }
+        public override int Count(Pawn forPawn) => InvokeGreaterBlessing.GetAdvanceCost(ReviaRaceMod.Settings.CostGrowthMode, SoulReaperWorker.GetSoulReapTier(forPawn), ReviaRaceMod.Settings.CostBase, ReviaRaceMod.Settings.CostGrowthFactor, ReviaRaceMod.Settings.CostGrowthStartTier);
     }
 }

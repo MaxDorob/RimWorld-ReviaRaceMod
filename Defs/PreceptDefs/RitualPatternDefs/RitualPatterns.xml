@@ -59,6 +59,7 @@
 	<RitualPatternDef ParentName="Revia_SacrificeBase">
 		<defName>Revia_XenotypeConversation</defName>
 		<nameMaker>Revia_NamerRitualSacrifice</nameMaker>
+		<ritualObligationTargetFilter>Revia_XenotypeConversation</ritualObligationTargetFilter>
 		<ritualExpectedDesc>Every year on {DATE}, {MEMBERS} can have a special celebration.</ritualExpectedDesc>
 		<shortDescOverride>blessing ritual</shortDescOverride>
 		<descOverride>TODO.</descOverride>

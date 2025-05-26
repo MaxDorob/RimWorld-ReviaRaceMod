@@ -16,5 +16,14 @@
 			<li>ReviaBloodSigil</li>
 		</thingDefs>
 	</RitualObligationTargetFilterDef>
+
+	<RitualObligationTargetFilterDef>
+		<defName>Revia_XenotypeConversation</defName>
+		<workerClass>ReviaRace.Rituals.RitualObligationTargetWorker_BloodstonesRequired</workerClass>
+		<thingDefs>
+			<li>ReviaBloodSigil</li>
+		</thingDefs>
+		<woodPerParticipant>10</woodPerParticipant> <!--count of bloodstones-->
+	</RitualObligationTargetFilterDef>
 	
 </Defs>

@@ -122,6 +122,7 @@
     <Compile Include="RitualRole\RitualRoleRevia.cs" />
     <Compile Include="RitualRole\RitualRoleReviaOrSkarnite.cs" />
     <Compile Include="Rituals\RitualBehaviorWorker_InvokeBlessingForSoulreap.cs" />
+    <Compile Include="Rituals\RitualObligationTargetWorker_BloodstonesRequired.cs" />
     <Compile Include="Rituals\RitualObligationTargetWorker_SoulreapLevelUp.cs" />
     <Compile Include="Rituals\RitualOutcomeComp_ReviaCount.cs" />
     <Compile Include="Rituals\RitualOutcomeEffectWorker_Sacrificed.cs" />
