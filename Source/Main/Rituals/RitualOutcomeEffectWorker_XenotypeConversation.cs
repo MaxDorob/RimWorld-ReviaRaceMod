@@ -16,14 +16,16 @@ namespace ReviaRace.Rituals
         protected override void ApplyExtraOutcome(Dictionary<Pawn, int> totalPresence, LordJob_Ritual jobRitual, RitualOutcomePossibility outcome, out string extraOutcomeDesc, ref LookTargets letterLookTargets)
         {
             base.ApplyExtraOutcome(totalPresence, jobRitual, outcome, out extraOutcomeDesc, ref letterLookTargets);
+            var blessedPawn = jobRitual.PawnWithRole("convertee");
             if (outcome.Positive)
             {
-                var blessedPawn = jobRitual.PawnWithRole("convertee");
                 if (blessedPawn != null)
                 {
                     blessedPawn.genes.SetXenotype(Defs.XenotypeDef);
                 }
             }
+            var hediff = blessedPawn.health.AddHediff(HediffDefOf.XenogerminationComa);
+            hediff.TryGetComp<HediffComp_Disappears>().ticksToDisappear = GenDate.TicksPerDay * 2 - GenDate.TicksPerDay * outcome.positivityIndex / 2;
         }
     }
 }
