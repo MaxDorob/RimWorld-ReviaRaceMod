@@ -25,5 +25,13 @@
 		</thingDefs>
 		<woodPerParticipant>10</woodPerParticipant> <!--count of bloodstones-->
 	</RitualObligationTargetFilterDef>
+
+	<RitualObligationTargetFilterDef>
+		<defName>Revia_PsycastRitual</defName>
+		<workerClass>ReviaRace.Rituals.RitualObligationTargetWorker_MysticalStone</workerClass>
+		<thingDefs>
+			<li>ReviaBloodSigil</li>
+		</thingDefs>
+	</RitualObligationTargetFilterDef>
 	
 </Defs>

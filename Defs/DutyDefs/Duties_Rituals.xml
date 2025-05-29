@@ -128,5 +128,30 @@
 			</subNodes>
 		</thinkNode>
 	</DutyDef>
+
+	<DutyDef>
+		<defName>InvokeBlessingForPsycast</defName>
+		<hook>HighPriority</hook>
+		<thinkNode Class="ThinkNode_Priority">
+			<subNodes>
+				<li Class="ReviaRace.JobGiver.JobGiver_TakeCountToInventory">
+					<count>1</count>
+					<def>Revia_MysticalStone</def>
+				</li>
+
+				<li Class="JobGiver_GotoTravelDestination">
+					<exactCell>true</exactCell>
+					<locomotionUrgency>Jog</locomotionUrgency>
+					<ritualTagOnArrival>Arrived</ritualTagOnArrival>
+				</li>
+
+				<li Class="ReviaRace.JobGiver.JobGiver_InvokeBlessing">
+					<count>1</count>
+					<def>Revia_MysticalStone</def>
+				</li>
+
+			</subNodes>
+		</thinkNode>
+	</DutyDef>
 	
 </Defs>

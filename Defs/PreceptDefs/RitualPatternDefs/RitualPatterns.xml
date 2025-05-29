@@ -69,5 +69,19 @@
 		<patternGroupTag>CelebratedDate</patternGroupTag>
 		<ritualOutcomeEffect>Revia_XenotypeConversation</ritualOutcomeEffect>
 	</RitualPatternDef>
+
+	<RitualPatternDef ParentName="Revia_SacrificeBase" MayRequire="Ludeon.Rimworld.Royalty">
+		<defName>Revia_PsycastRitual</defName>
+		<nameMaker>Revia_NamerRitualSacrifice</nameMaker>
+		<ritualObligationTargetFilter>Revia_PsycastRitual</ritualObligationTargetFilter>
+		<ritualExpectedDesc>Every year on {DATE}, {MEMBERS} can have a special celebration.</ritualExpectedDesc>
+		<shortDescOverride>blessing ritual</shortDescOverride>
+		<descOverride>TODO.</descOverride>
+		<iconPathOverride>UI/Misc/BadTexture</iconPathOverride>
+		<alwaysStartAnytime>true</alwaysStartAnytime>
+		<ritualBehavior>Revia_PsycastRitual</ritualBehavior>
+		<patternGroupTag>CelebratedDate</patternGroupTag>
+		<ritualOutcomeEffect>Revia_PsycastRitual</ritualOutcomeEffect>
+	</RitualPatternDef>
 	
 </Defs>

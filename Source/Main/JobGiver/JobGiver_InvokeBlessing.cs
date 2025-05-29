@@ -20,11 +20,25 @@ namespace ReviaRace.JobGiver
             job.locomotionUrgency = this.locomotionUrgency;
             job.expiryInterval = this.expiryInterval;
             job.checkOverrideOnExpire = true;
-            job.thingDefToCarry = Defs.Bloodstone;
-            var srTier = SoulReaperWorker.GetSoulReapTier(pawn);
-            var requiredBloodstones = InvokeGreaterBlessing.GetAdvanceCost(ReviaRaceMod.Settings.CostGrowthMode, srTier, ReviaRaceMod.Settings.CostBase, ReviaRaceMod.Settings.CostGrowthFactor, ReviaRaceMod.Settings.CostGrowthStartTier);
-            job.count = requiredBloodstones;
+            job.thingDefToCarry = def ?? Defs.Bloodstone;
+            int count = this.count;
+            if (count <= 0)
+            {
+                count = InvokeGreaterBlessing.GetAdvanceCost(ReviaRaceMod.Settings.CostGrowthMode, SoulReaperWorker.GetSoulReapTier(pawn), ReviaRaceMod.Settings.CostBase, ReviaRaceMod.Settings.CostGrowthFactor, ReviaRaceMod.Settings.CostGrowthStartTier);
+
+            }
+            job.count = count;
             return job;
         }
+        public override ThinkNode DeepCopy(bool resolve = true)
+        {
+            var result = (JobGiver_InvokeBlessing)base.DeepCopy(resolve);
+            result.count = this.count;
+            result.def = this.def;
+            return result;
+        }
+
+        public int count = -1;
+        public ThingDef def;
     }
 }

@@ -49,4 +49,20 @@
 		<capitalizeAsTitle>false</capitalizeAsTitle>
 	</PreceptDef>
 
+	<PreceptDef MayRequire="Ludeon.Rimworld.Royalty">
+		<defName>Revia_PsycastRitual</defName>
+		<label>revia psycast blessing</label>
+		<tipLabelOverride>Revia psycast blessing</tipLabelOverride>
+		<description>TODO.</description>
+		<iconPath>UI/Misc/BadTexture</iconPath>
+		<issue>Ritual</issue>
+		<preceptClass>Precept_Ritual</preceptClass>
+		<ritualPatternBase>Revia_PsycastRitual</ritualPatternBase>
+		<classic>true</classic>
+		<visible>false</visible>
+		<countsTowardsPreceptLimit>false</countsTowardsPreceptLimit>
+		<selectionWeight>1.0</selectionWeight>
+		<capitalizeAsTitle>false</capitalizeAsTitle>
+	</PreceptDef>
+
 </Defs>

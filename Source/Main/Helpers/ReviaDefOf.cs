@@ -21,5 +21,7 @@ namespace ReviaRace.Helpers
         public static JobDef Revia_InvokeBlessing;
         public static JobDef Revia_GiveSpeech;
         public static JobDef Revia_LayDownAwake;
+        [MayRequireRoyalty]
+        public static ThingDef Revia_MysticalStone;
     }
 }

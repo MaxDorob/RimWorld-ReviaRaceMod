@@ -123,8 +123,10 @@
     <Compile Include="RitualRole\RitualRoleReviaOrSkarnite.cs" />
     <Compile Include="Rituals\RitualBehaviorWorker_InvokeBlessingForSoulreap.cs" />
     <Compile Include="Rituals\RitualObligationTargetWorker_BloodstonesRequired.cs" />
+    <Compile Include="Rituals\RitualObligationTargetWorker_MysticalStone.cs" />
     <Compile Include="Rituals\RitualObligationTargetWorker_SoulreapLevelUp.cs" />
     <Compile Include="Rituals\RitualOutcomeComp_ReviaCount.cs" />
+    <Compile Include="Rituals\RitualOutcomeEffectWorker_PsycastBlessing.cs" />
     <Compile Include="Rituals\RitualOutcomeEffectWorker_Sacrificed.cs" />
     <Compile Include="Rituals\RitualOutcomeEffectWorker_XenotypeConversation.cs" />
     <Compile Include="Rituals\RitualOutcomeEffectWorker_SkarnesBlessing.cs" />
