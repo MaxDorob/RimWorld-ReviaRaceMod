@@ -15,6 +15,7 @@
     <countsTowardsPreceptLimit>false</countsTowardsPreceptLimit>
     <selectionWeight>1.0</selectionWeight>
     <capitalizeAsTitle>false</capitalizeAsTitle>
+		<useRepeatPenalty>false</useRepeatPenalty>
   </PreceptDef>
 
 	<PreceptDef>
@@ -31,6 +32,7 @@
 		<countsTowardsPreceptLimit>false</countsTowardsPreceptLimit>
 		<selectionWeight>1.0</selectionWeight>
 		<capitalizeAsTitle>false</capitalizeAsTitle>
+		<useRepeatPenalty>false</useRepeatPenalty>
 	</PreceptDef>
 
 	<PreceptDef>
@@ -47,6 +49,7 @@
 		<countsTowardsPreceptLimit>false</countsTowardsPreceptLimit>
 		<selectionWeight>1.0</selectionWeight>
 		<capitalizeAsTitle>false</capitalizeAsTitle>
+		<useRepeatPenalty>false</useRepeatPenalty>
 	</PreceptDef>
 
 	<PreceptDef MayRequire="Ludeon.Rimworld.Royalty">
@@ -63,6 +66,7 @@
 		<countsTowardsPreceptLimit>false</countsTowardsPreceptLimit>
 		<selectionWeight>1.0</selectionWeight>
 		<capitalizeAsTitle>false</capitalizeAsTitle>
+		<useRepeatPenalty>false</useRepeatPenalty>
 	</PreceptDef>
 
 </Defs>
