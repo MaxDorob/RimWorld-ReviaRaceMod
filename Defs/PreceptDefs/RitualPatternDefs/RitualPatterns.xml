@@ -6,17 +6,7 @@
     <ritualExpectedDesc>Every year on {DATE}, {MEMBERS} can have a special celebration.</ritualExpectedDesc>
     <iconPathOverride>UI/Misc/BadTexture</iconPathOverride>
     <canStartAnytime>true</canStartAnytime>
-    <ritualObligationTriggers>
-      <li Class="RitualObligationTrigger_DateProperties">
-        <mustBePlayerIdeo>true</mustBePlayerIdeo>
-      </li>
-    </ritualObligationTriggers>
     <ritualObligationTargetFilter>ReviaBloodSigil</ritualObligationTargetFilter>
-    <!--<ritualBehavior>DateRitual</ritualBehavior>
-    <ritualOutcomeEffect>CelebratedDate</ritualOutcomeEffect>-->
-    <tags>
-      <li>CelebratedDate</li>
-    </tags>
     <patternGroupTag>CelebratedDate</patternGroupTag>
   </RitualPatternDef>
 
