@@ -1,72 +1,48 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-  <PreceptDef>
+	<PreceptDef Name="ReviaPreceptBase" Abstract="True">
+		<iconPath>UI/icons/Revia_XenotypeIcon</iconPath>
+		<issue>Ritual</issue>
+		<preceptClass>Precept_Ritual</preceptClass>
+		<classic>true</classic>
+		<visible>false</visible>
+		<countsTowardsPreceptLimit>false</countsTowardsPreceptLimit>
+		<selectionWeight>1.0</selectionWeight>
+		<capitalizeAsTitle>false</capitalizeAsTitle>
+		<useRepeatPenalty>false</useRepeatPenalty>
+	</PreceptDef>
+	
+  <PreceptDef ParentName="ReviaPreceptBase">
     <defName>Revia_PrisonerSacrification</defName>
     <label>sacrification</label>
     <tipLabelOverride>Sacrification</tipLabelOverride>
     <description>An executioner will publicly execute a prisoner. The executioner will give a short speech, execute the prisoner by cutting, and say some closing words. Spectating slaves will become afraid and intimidated, and colonists will feel exhilarated or disgusted depending on their beliefs.</description>
-    <iconPath>UI/Misc/BadTexture</iconPath>
-    <issue>Ritual</issue>
-    <preceptClass>Precept_Ritual</preceptClass>
     <ritualPatternBase>Revia_SacrificePrisoner</ritualPatternBase>
-    <classic>true</classic>
-    <visible>false</visible>
-    <countsTowardsPreceptLimit>false</countsTowardsPreceptLimit>
-    <selectionWeight>1.0</selectionWeight>
-    <capitalizeAsTitle>false</capitalizeAsTitle>
-		<useRepeatPenalty>false</useRepeatPenalty>
   </PreceptDef>
 
-	<PreceptDef>
+	<PreceptDef ParentName="ReviaPreceptBase">
 		<defName>Revia_BlessingForSoulreap</defName>
 		<label>soulreap blessing</label>
 		<tipLabelOverride>Soulreap blessing</tipLabelOverride>
 		<description>TODO.</description>
-		<iconPath>UI/Misc/BadTexture</iconPath>
-		<issue>Ritual</issue>
-		<preceptClass>Precept_Ritual</preceptClass>
 		<ritualPatternBase>Revia_BleesingForSoulreap</ritualPatternBase>
-		<classic>true</classic>
-		<visible>false</visible>
-		<countsTowardsPreceptLimit>false</countsTowardsPreceptLimit>
-		<selectionWeight>1.0</selectionWeight>
-		<capitalizeAsTitle>false</capitalizeAsTitle>
-		<useRepeatPenalty>false</useRepeatPenalty>
 	</PreceptDef>
 
-	<PreceptDef>
+	<PreceptDef ParentName="ReviaPreceptBase">
 		<defName>Revia_XenotypeConversation</defName>
 		<label>revia conversation</label>
 		<tipLabelOverride>Revia conversation</tipLabelOverride>
 		<description>TODO.</description>
-		<iconPath>UI/Misc/BadTexture</iconPath>
-		<issue>Ritual</issue>
-		<preceptClass>Precept_Ritual</preceptClass>
 		<ritualPatternBase>Revia_XenotypeConversation</ritualPatternBase>
-		<classic>true</classic>
-		<visible>false</visible>
-		<countsTowardsPreceptLimit>false</countsTowardsPreceptLimit>
-		<selectionWeight>1.0</selectionWeight>
-		<capitalizeAsTitle>false</capitalizeAsTitle>
-		<useRepeatPenalty>false</useRepeatPenalty>
 	</PreceptDef>
 
-	<PreceptDef MayRequire="Ludeon.Rimworld.Royalty">
+	<PreceptDef ParentName="ReviaPreceptBase" MayRequire="Ludeon.Rimworld.Royalty">
 		<defName>Revia_PsycastRitual</defName>
 		<label>revia psycast blessing</label>
 		<tipLabelOverride>Revia psycast blessing</tipLabelOverride>
 		<description>TODO.</description>
-		<iconPath>UI/Misc/BadTexture</iconPath>
-		<issue>Ritual</issue>
-		<preceptClass>Precept_Ritual</preceptClass>
 		<ritualPatternBase>Revia_PsycastRitual</ritualPatternBase>
-		<classic>true</classic>
-		<visible>false</visible>
-		<countsTowardsPreceptLimit>false</countsTowardsPreceptLimit>
-		<selectionWeight>1.0</selectionWeight>
-		<capitalizeAsTitle>false</capitalizeAsTitle>
-		<useRepeatPenalty>false</useRepeatPenalty>
 	</PreceptDef>
 
 </Defs>
