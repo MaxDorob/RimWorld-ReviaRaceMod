@@ -76,9 +76,6 @@
             <dutyDef>Revia_SpeakOnCellFacingSpectators</dutyDef>
             <speakerInteraction>Revia_Speech_Sacrifice</speakerInteraction>
             <customPositions>
-              <!--<li Class="RitualPosition_Lectern">
-                <maxDistanceToFocus>5</maxDistanceToFocus>
-              </li>-->
               <li Class="ReviaRace.Rituals.RitualPosition_OnInteractionCell" />
             </customPositions>
           </li>
@@ -153,31 +150,12 @@
 						<percentage>0.999</percentage>
 					</li>
 				</endTriggers>
-				<!--
-				
-				<pawnLeaveAction Class="RitualStageAction_DropThing">
-					<def>WoodLog</def>
-					<count>4</count>
-				</pawnLeaveAction>
-				<interruptedAction Class="RitualStageAction_DropThing">
-					<def>WoodLog</def>
-					<count>4</count>
-				</interruptedAction>
-				<tickActionMaker Class="RitualStageAction_ReleaseLanterns">
-					<woodCost>4</woodCost>
-					<preliminaryTicks>0~90</preliminaryTicks>
-				</tickActionMaker>
-				
-				-->
 				<roleBehaviors>
 					<li>
 						<roleId>sacrificer</roleId>
 						<dutyDef>InvokeBlessingForSoulreap</dutyDef>
 						<speakerInteraction>Revia_Speech_Sacrifice</speakerInteraction>
 						<customPositions>
-							<!--<li Class="RitualPosition_Lectern">
-                <maxDistanceToFocus>5</maxDistanceToFocus>
-              </li>-->
 							<li Class="ReviaRace.Rituals.RitualPosition_OnInteractionCell" />
 						</customPositions>
 					</li>
@@ -277,31 +255,12 @@
 						<percentage>0.999</percentage>
 					</li>
 				</endTriggers>
-				<!--
-				
-				<pawnLeaveAction Class="RitualStageAction_DropThing">
-					<def>WoodLog</def>
-					<count>4</count>
-				</pawnLeaveAction>
-				<interruptedAction Class="RitualStageAction_DropThing">
-					<def>WoodLog</def>
-					<count>4</count>
-				</interruptedAction>
-				<tickActionMaker Class="RitualStageAction_ReleaseLanterns">
-					<woodCost>4</woodCost>
-					<preliminaryTicks>0~90</preliminaryTicks>
-				</tickActionMaker>
-				
-				-->
 				<roleBehaviors>
 					<li>
 						<roleId>sacrificer</roleId>
 						<dutyDef>InvokeBlessingForPsycast</dutyDef>
 						<speakerInteraction>Revia_Speech_Sacrifice</speakerInteraction>
 						<customPositions>
-							<!--<li Class="RitualPosition_Lectern">
-                <maxDistanceToFocus>5</maxDistanceToFocus>
-              </li>-->
 							<li Class="ReviaRace.Rituals.RitualPosition_OnInteractionCell" />
 						</customPositions>
 					</li>
