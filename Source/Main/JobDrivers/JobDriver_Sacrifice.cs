@@ -1,4 +1,5 @@
-﻿using RimWorld;
+﻿using ReviaRace.Helpers;
+using RimWorld;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,7 +28,9 @@ namespace ReviaRace
                 {
                     lordJob_Ritual.pawnsDeathIgnored.Add(victim);
                 }
-                ExecutionUtility.DoExecutionByCut(this.pawn, victim, 0, false);
+                var heartBpr = victim.RaceProps.body.AllParts.Find(bpr => bpr.def.defName == "Heart");
+                var dInfo = new DamageInfo(Defs.HeartExtraction, 99999f, armorPenetration: 999f, hitPart: heartBpr);
+                victim.Kill(dInfo);
                 ThoughtUtility.GiveThoughtsForPawnExecuted(victim, this.pawn, PawnExecutionKind.GenericBrutal);
                 TaleRecorder.RecordTale(TaleDefOf.ExecutedPrisoner, new object[]
                 {
