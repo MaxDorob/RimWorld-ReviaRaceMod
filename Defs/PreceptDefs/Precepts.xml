@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Issue -->
+
+	<IssueDef>
+		<defName>Revia_PrisonerSacrifice</defName>
+		<label>revian sacrifice</label>
+		<iconPath>UI/Issues/Execution</iconPath>
+	</IssueDef>
+
+	<HistoryEventDef>
+		<defName>Revia_PrisonerSacrificed</defName>
+		<label>prisoner sacrificed in name of Skarne</label>
+	</HistoryEventDef>
+
+	<ThoughtDef ParentName="DeathMemory">
+		<defName>Revia_PrisonerSacrificed</defName>
+		<durationDays>6</durationDays>
+		<doNotApplyToQuestLodgers>true</doNotApplyToQuestLodgers>
+		<nullifyingTraits>
+			<li>Psychopath</li>
+			<li>Bloodlust</li>
+			<li>Cannibal</li>
+		</nullifyingTraits>
+		<stages>
+			<li>
+				<label>sacrifice</label>
+				<description>A prisoner was sacrificed in name of some bloody God. It is scary...</description>
+				<baseMoodEffect>-5</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+
+	<!-- Precepts -->
+
+	<PreceptDef>
+		<defName>Revia_Sacrifices_Despised_Classic</defName>
+		<issue>Revia_PrisonerSacrifice</issue>
+		<label>despised</label>
+		<description>Why should we sacrifice prisoners in name of some bloody God?</description>
+		<impact>Low</impact>
+		<classic>true</classic>
+		<displayOrderInIssue>10</displayOrderInIssue>
+		<defaultSelectionWeight>1</defaultSelectionWeight>
+		<comps>
+			<li Class="ReviaRace.PreceptComp_KnowsMemoryThought_ExceptRevia">
+				<eventDef>Revia_PrisonerSacrificed</eventDef>
+				<thought>Revia_PrisonerSacrificed</thought>
+			</li>
+		</comps>
+	</PreceptDef>
+
+</Defs>

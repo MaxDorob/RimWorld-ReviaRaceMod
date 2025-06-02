@@ -31,7 +31,7 @@ namespace ReviaRace
                 var heartBpr = victim.RaceProps.body.AllParts.Find(bpr => bpr.def.defName == "Heart");
                 var dInfo = new DamageInfo(Defs.HeartExtraction, 99999f, armorPenetration: 999f, hitPart: heartBpr);
                 victim.Kill(dInfo);
-                ThoughtUtility.GiveThoughtsForPawnExecuted(victim, this.pawn, PawnExecutionKind.GenericBrutal);
+                Find.HistoryEventsManager.RecordEvent(new HistoryEvent(ReviaDefOf.Revia_PrisonerSacrificed, pawn.Named(HistoryEventArgsNames.Doer)));
                 TaleRecorder.RecordTale(TaleDefOf.ExecutedPrisoner, new object[]
                 {
                     this.pawn,

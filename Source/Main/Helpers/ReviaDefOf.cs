@@ -23,5 +23,6 @@ namespace ReviaRace.Helpers
         public static JobDef Revia_LayDownAwake;
         [MayRequireRoyalty]
         public static ThingDef Revia_MysticalStone;
+        public static HistoryEventDef Revia_PrisonerSacrificed;
     }
 }
