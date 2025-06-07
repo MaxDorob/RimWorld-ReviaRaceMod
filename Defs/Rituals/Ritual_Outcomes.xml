@@ -94,6 +94,22 @@
 		<extraPredictedOutcomeDescriptions>
 			<li>If the {0} is satisfying, one of the participants might gain an inspiration.</li>
 		</extraPredictedOutcomeDescriptions>
+		<comps>
+			<li Class="ReviaRace.Rituals.RitualOutcomeComp_TailsCount">
+				<label>{PAWN_labelShort}'s tails</label>
+				<roleId>sacrificer</roleId>
+				<curve>
+					<points>
+						<li>(1,  0.4)</li>
+						<li>(2,  0.22)</li>
+						<li>(3,  0.1)</li>
+						<li>(4,  0)</li>
+						<li>(5, -0.1)</li>
+						<li>(8, -0.55)</li>
+					</points>
+				</curve>
+			</li>
+		</comps>
 	</RitualOutcomeEffectDef>
 
 	<RitualOutcomeEffectDef ParentName="ReviaOutcomeBase">
