@@ -37,6 +37,11 @@
 				<qualityOffset>0.2</qualityOffset>
 				<expectedThingLabelTip>an altar</expectedThingLabelTip>
 			</li>
+			<li Class="RitualOutcomeComp_BuildingOfDefPresent">
+				<label>skarne's sculpture</label>
+				<qualityOffset>0.3</qualityOffset>
+				<def>ReviaSkarnesSculpture</def>
+			</li>
 		</comps>
 		<outcomeChances>
 			<li>
