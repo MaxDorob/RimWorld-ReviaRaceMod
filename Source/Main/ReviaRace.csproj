@@ -62,6 +62,11 @@
     <PlatformTarget>AnyCPU</PlatformTarget>
     <LangVersion>latest</LangVersion>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release 1.6|AnyCPU'">
+    <OutputPath>..\..\1.6\Assemblies\</OutputPath>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -116,7 +121,7 @@
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
     <PackageReference Include="Krafs.Rimworld.Ref">
-      <Version>1.5.4061-beta</Version>
+      <Version>1.6.4490-beta</Version>
     </PackageReference>
     <PackageReference Include="Lib.Harmony">
       <Version>2.2.2</Version>

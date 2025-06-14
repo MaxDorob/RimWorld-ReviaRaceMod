@@ -74,12 +74,12 @@ namespace ReviaRace
             var script = DefDatabase<QuestScriptDef>.GetNamed("ThreatReward_Raid_Joiner");
             if (script.IsRootDecree)
             {
-                slate.Set<Pawn>("asker", PawnsFinder.AllMapsCaravansAndTravelingTransportPods_Alive_FreeColonists.RandomElement<Pawn>(), false);
+                slate.Set<Pawn>("asker", PawnsFinder.AllMapsCaravansAndTravellingTransporters_AliveSpawned_FreeColonists.RandomElement<Pawn>(), false);
             }
 
             Pawn pawn = slate.Get<Pawn>("asker", null, false);
             slate.Set<float>("points", 5000, false);
-            if (!script.CanRun(slate))
+            if (!script.CanRun(slate, null))
             {
                 Log.Error("Script cant be runned");
                 return;

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <GeneDef ParentName="GeneTailBase">
+    <defName>ReviaTail</defName>
+    <label>Revian tail</label>
+    <description>A Foxlike tail with a white tip, the sign of the Blood goddess. The Skarne may bless those who kill in her name with power.</description>
+    <geneClass>ReviaRace.Genes.ReviaTailGene</geneClass>
+    <iconPath>UI/icons/ReviaTail_icon</iconPath>
+    <iconColor>(0.75, 0.75, 0.75)</iconColor>
+    <displayOrderInCategory>1000</displayOrderInCategory>
+    <statOffsets>
+      <MoveSpeed>0.3</MoveSpeed>
+      <LifespanFactor>1.7</LifespanFactor>
+    </statOffsets>
+		<statFactors>
+      <MeleeDodgeChance>1.12</MeleeDodgeChance>			
+		</statFactors>
+    <biostatMet>0</biostatMet>
+    <biostatCpx>2</biostatCpx>
+    <minAgeActive>3</minAgeActive>
+    <enablesNeeds>
+			<li>ReviaRaceBloodthirstNeed</li>
+		</enablesNeeds>
+    <forcedTraits>
+      <li>
+        <def>Bloodlust</def>
+      </li>
+    </forcedTraits>
+  </GeneDef>
+
+
+  <GeneDef>
+    <defName>ReviaClaws</defName>
+    <label>Revian claws</label>
+    <iconPath>UI/icons/ReviaClaw_icon</iconPath>
+    <description>The sharp claws of the Revia, specialized for bloodshed.</description>
+    <geneClass>ReviaRace.Genes.ReviaClawsGene</geneClass>
+    <biostatCpx>0</biostatCpx>
+    <biostatMet>0</biostatMet>
+  </GeneDef>
+  <GeneDef ParentName="GeneEarsBase">
+    <defName>ReviaEars</defName>
+    <label>Revian ears</label>
+    <iconPath>UI/icons/ReviaEar_icon</iconPath>
+    <description>Revian ear. Helps them hear better than the average person. And looks nice.</description>
+    <geneClass>ReviaRace.Genes.ReviaEarGene</geneClass>
+    <capMods>
+      <li>
+        <capacity>Hearing</capacity>
+        <postFactor>1.15</postFactor>
+      </li>
+    </capMods>
+    <biostatCpx>1</biostatCpx>
+    <biostatMet>0</biostatMet>
+    <renderNodeProperties>
+      <li>
+        <workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+        <texPath>Things/Ears/Adult/EarRight/EarRight</texPath>
+        <colorType>Hair</colorType>
+        <parentTagDef>Head</parentTagDef>
+        <useSkinShader>true</useSkinShader>
+        <useRottenColor>true</useRottenColor>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <shaderTypeDef>CutoutComplex</shaderTypeDef>
+        <drawData>
+          <scale>0.87</scale>
+          <defaultData>
+            <layer>92</layer>
+          </defaultData>
+          <dataNorth>
+            <layer>61</layer>
+          </dataNorth>
+        </drawData>
+        <linkedBodyPartsGroup>RightEar</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+        <texPath>Things/Ears/Adult/EarLeft/EarLeft</texPath>
+        <colorType>Hair</colorType>
+        <parentTagDef>Head</parentTagDef>
+        <useSkinShader>true</useSkinShader>
+        <useRottenColor>true</useRottenColor>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <shaderTypeDef>CutoutComplex</shaderTypeDef>
+        <drawData>
+          <scale>0.87</scale>
+          <defaultData>
+            <layer>92</layer>
+          </defaultData>
+          <dataNorth>
+            <layer>61</layer>
+          </dataNorth>
+        </drawData>
+        <linkedBodyPartsGroup>LeftEar</linkedBodyPartsGroup>
+      </li>
+    </renderNodeProperties>
+  </GeneDef>
+
+
+  <GeneDef>
+    <defName>ReviaTeeth</defName>
+    <label>Revian teeth</label>
+    <biostatCpx>1</biostatCpx>
+    <biostatMet>0</biostatMet>
+    <iconPath>UI/icons/ReviaTooth_icon</iconPath>
+    <description>Serrated teeth to rip and tear any opponent of a Revia.</description>
+    <geneClass>ReviaRace.Genes.ReviaTeethGene</geneClass>
+  </GeneDef>
+</Defs>
