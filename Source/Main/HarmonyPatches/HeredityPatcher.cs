@@ -45,7 +45,6 @@ namespace ReviaRace.HarmonyPatches
                 if (ci.opcode == OpCodes.Initobj && (ci.operand?.ToString()?.Contains("Gender") ?? false))
                 {
                     var genderVarOperand = list[i - 1].operand;
-                    Log.Message(genderVarOperand.ToString());
                     yield return new CodeInstruction(OpCodes.Ldarg_S, 4);
                     yield return new CodeInstruction(OpCodes.Ldloc_S, genderVarOperand);
                     yield return CodeInstruction.Call(typeof(HeredityPatcher), nameof(SelectGender));
