@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Precepts -->
+
+  <PreceptDef>
+    <defName>Revia_PrisonerSacrifice_Abhorrent</defName>
+    <issue>Revia_PrisonerSacrifice</issue>
+    <label>always abhorrent</label>
+    <description>Sacrificing a prisoner is an abhorrent evil under any circumstances.</description>
+    <impact>Low</impact>
+    <displayOrderInIssue>50</displayOrderInIssue>
+    <displayOrderInImpact>1000</displayOrderInImpact>
+    <comps>
+      <li Class="PreceptComp_UnwillingToDo">
+        <eventDef>Revia_PrisonerSacrificed</eventDef>
+        <nullifyingTraits>
+          <li>Bloodlust</li>
+          <li>Psychopath</li>
+					<li>Cannibal</li>
+        </nullifyingTraits>
+        <nullifyingHediffs>
+          <li MayRequire="Ludeon.RimWorld.Anomaly">Inhumanized</li>
+        </nullifyingHediffs>
+      </li>
+
+      <!-- on instigator -->
+      <li Class="PreceptComp_SelfTookMemoryThought">
+        <eventDef>Revia_PrisonerSacrificed</eventDef>
+        <thought>Revia_SacrificedPrisoner_Abhorrent</thought>
+      </li>
+
+      <!-- know opinion -->
+      <li Class="PreceptComp_KnowsMemoryThought">
+        <eventDef>Revia_PrisonerSacrificed</eventDef>
+        <thought>Revia_SacrificedPrisoner_Know_Abhorrent</thought>
+        <description>Sacrificed prisoner</description>
+      </li>
+
+			<!-- know mood -->
+			<li Class="PreceptComp_KnowsMemoryThought">
+				<eventDef>Revia_PrisonerSacrificed</eventDef>
+				<thought>Revia_SacrificedPrisoner_Know_Abhorrent_Mood</thought>
+				<description>Sacrificed prisoner</description>
+			</li>
+    </comps>
+  </PreceptDef>
+
+  <PreceptDef>
+    <defName>Revia_PrisonerSacrifice_DontCare</defName>
+		<issue>Revia_PrisonerSacrifice</issue>
+    <label>don't care</label>
+    <description>Sacrificing prisoners is acceptable.</description>
+    <impact>Low</impact>
+    <displayOrderInIssue>20</displayOrderInIssue>
+  </PreceptDef>
+
+  <PreceptDef>
+    <defName>Revia_PrisonerSacrifice_Respected</defName>
+		<issue>Revia_PrisonerSacrifice</issue>
+    <label>respected</label>
+    <description>Sacrificing prisoners is acceptable. We need it, we like it</description>
+    <impact>Low</impact>
+    <displayOrderInIssue>10</displayOrderInIssue>
+    <displayOrderInImpact>1000</displayOrderInImpact>
+    <associatedMemes>
+      <li>ReviaRaceSkarniteMeme</li>
+    </associatedMemes>
+    <comps>
+      <li Class="PreceptComp_SelfTookMemoryThought">
+        <eventDef>Revia_PrisonerSacrificed</eventDef>
+        <thought>Revia_SacrificedPrisoner_Respected</thought>
+      </li>
+      <li Class="PreceptComp_KnowsMemoryThought">
+        <eventDef>Revia_PrisonerSacrificed</eventDef>
+        <thought>Revia_SacrificedPrisoner_Know_Respected</thought>
+      </li>
+			<li Class="PreceptComp_KnowsMemoryThought">
+				<eventDef>Revia_PrisonerSacrificed</eventDef>
+				<thought>Revia_SacrificedPrisoner_Know_Respected_Mood</thought>
+			</li>
+      <li Class="PreceptComp_DevelopmentPoints">
+        <eventDef>Revia_PrisonerSacrificed</eventDef>
+        <eventLabel>sacrificed someone</eventLabel>
+        <points>1</points>
+      </li>
+    </comps>
+  </PreceptDef>
+
+  <PreceptDef>
+    <defName>Revia_PrisonerSacrifice_Required</defName>
+		<issue>Revia_PrisonerSacrifice</issue>
+    <label>required</label>
+    <description>Prisoners must be sacrificed on a regular basis. For the glory of Her name.</description>
+    <impact>Medium</impact>
+    <displayOrderInIssue>0</displayOrderInIssue>
+    <displayOrderInImpact>1000</displayOrderInImpact>
+    <associatedMemes>
+      <li>ReviaRaceSkarniteMeme</li>
+    </associatedMemes>
+    <comps>
+      <!-- on instigator -->
+      <li Class="PreceptComp_SelfTookMemoryThought">
+        <eventDef>Revia_PrisonerSacrificed</eventDef>
+        <thought>Revia_SacrificedPrisoner_Respected</thought>
+      </li>
+
+      <!-- know social -->
+      <li Class="PreceptComp_KnowsMemoryThought">
+        <eventDef>Revia_PrisonerSacrificed</eventDef>
+        <thought>Revia_SacrificedPrisoner_Know_Respected</thought>
+        <description>Sacrificed prisoner</description>
+      </li>
+
+      <!-- know mood -->
+      <li Class="PreceptComp_KnowsMemoryThought">
+        <eventDef>Revia_PrisonerSacrificed</eventDef>
+        <thought>Revia_SacrificedPrisoner_Know_Respected_Mood</thought>
+        <description>Someone executed a prisoner</description>
+      </li>
+
+      <!-- no sacrifice -->
+      <li Class="PreceptComp_SituationalThought">
+        <thought>Revia_NoRecentSacrifice</thought>
+        <description>No execution for {MINDAYSLASTEXECUTION} days</description>
+      </li>
+
+      <!-- development points -->
+      <li Class="PreceptComp_DevelopmentPoints">
+        <eventDef>ExecutedPrisoner</eventDef>
+        <eventLabel>executed someone</eventLabel>
+        <points>1</points>
+      </li>
+
+    </comps>
+  </PreceptDef>
+
+  <!-- Thoughts: Executed prisoner -->
+
+	<ThoughtDef ParentName="DeathMemory">
+		<defName>Revia_SacrificedPrisoner_Abhorrent</defName>
+		<durationDays>6</durationDays>
+		<stackLimit>5</stackLimit>
+		<doNotApplyToQuestLodgers>true</doNotApplyToQuestLodgers>
+		<nullifyingTraits>
+			<li>Psychopath</li>
+			<li>Bloodlust</li>
+		</nullifyingTraits>
+		<nullifyingHediffs>
+			<li MayRequire="Ludeon.RimWorld.Anomaly">Inhumanized</li>
+		</nullifyingHediffs>
+		<stages>
+			<li>
+				<label>sacrificed prisoner</label>
+				<description>I sacrificed a prisoner for ruthless god</description>
+				<baseMoodEffect>-7</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+	
+  <ThoughtDef>
+    <defName>Revia_SacrificedPrisoner_Know_Abhorrent</defName>
+    <thoughtClass>Thought_MemorySocial</thoughtClass>
+    <durationDays>20</durationDays>
+    <stackLimit>100</stackLimit>
+    <stackLimitForSameOtherPawn>3</stackLimitForSameOtherPawn>
+    <nullifyingTraits>
+      <li>Psychopath</li>
+      <li>Bloodlust</li>
+    </nullifyingTraits>
+    <nullifyingHediffs>
+      <li MayRequire="Ludeon.RimWorld.Anomaly">Inhumanized</li>
+    </nullifyingHediffs>
+    <stages>
+      <li>
+        <label>sacrificed prisoner</label>
+        <baseOpinionOffset>-25</baseOpinionOffset>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef ParentName="DeathMemory">
+    <defName>Revia_SacrificedPrisoner_Know_Abhorrent_Mood</defName>
+    <durationDays>6</durationDays>
+    <stackLimit>5</stackLimit>
+    <doNotApplyToQuestLodgers>true</doNotApplyToQuestLodgers>
+    <nullifyingTraits>
+      <li>Psychopath</li>
+      <li>Bloodlust</li>
+    </nullifyingTraits>
+    <nullifyingHediffs>
+      <li MayRequire="Ludeon.RimWorld.Anomaly">Inhumanized</li>
+    </nullifyingHediffs>
+    <stages>
+      <li>
+        <label>innocent prisoner was sacrificed</label>
+        <description>One of our prisoners died at the whim of some bloody god.</description>
+        <baseMoodEffect>-7</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>Revia_SacrificedPrisoner_Respected</defName>
+    <durationDays>6</durationDays>
+    <stages>
+      <li>
+        <label>sacrificed prisoner</label>
+        <description>I sacrificed prisoner. I'm proud to serve Skarne!</description>
+        <baseMoodEffect>10</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>Revia_SacrificedPrisoner_Know_Respected</defName>
+    <thoughtClass>Thought_MemorySocial</thoughtClass>
+    <durationDays>20</durationDays>
+    <stackLimit>100</stackLimit>
+    <stackLimitForSameOtherPawn>3</stackLimitForSameOtherPawn>
+    <stages>
+      <li>
+        <label>sacrificed prisoner</label>
+        <baseOpinionOffset>15</baseOpinionOffset>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef ParentName="DeathMemory">
+    <defName>Revia_SacrificedPrisoner_Know_Respected_Mood</defName>
+    <durationDays>2</durationDays>
+    <stages>
+      <li>
+        <label>execution</label>
+        <description>We sacrificed a prisoner. Blood, blood, blood!</description>
+        <baseMoodEffect>3</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>Revia_NoRecentSacrifice</defName>
+    <thoughtClass>Thought_Situational</thoughtClass>
+    <workerClass>ReviaRace.ThoughtWorker_Precept_NoRecentSacrifice</workerClass>
+    <doNotApplyToQuestLodgers>true</doNotApplyToQuestLodgers>
+    <stages>
+      <li>
+        <label>no execution</label>
+        <description>It has been too long since we sacrificed a prisoner. We disappoint Skarne...</description>
+        <baseMoodEffect>-3</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+</Defs>

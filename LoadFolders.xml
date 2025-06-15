@@ -9,6 +9,7 @@
   <v1.5>
     <li>/</li>
     <li>1.5</li>
+		<li IfModActive="Ludeon.RimWorld.Ideology">Ideology</li>
     <li IfModActive="Nals.FacialAnimation">FA_Compat</li>
     <li IfModActive="StatistNo1.personabond">PersonBondForge</li>
   </v1.5>

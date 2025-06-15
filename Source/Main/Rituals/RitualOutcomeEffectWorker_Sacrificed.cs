@@ -1,4 +1,5 @@
-﻿using ReviaRace.Helpers;
+﻿using ReviaRace.Comps;
+using ReviaRace.Helpers;
 using RimWorld;
 using System;
 using System.Collections.Generic;
@@ -36,6 +37,7 @@ namespace ReviaRace.Rituals
             var thing = ThingMaker.MakeThing(thingCount.ThingDef);
             thing.stackCount = thingCount.Count;
             GenPlace.TryPlaceThing(thing, position, map, ThingPlaceMode.Near);
+            Find.World.GetComponent<SacrificeTracker>().SacrificePerformed(Faction.OfPlayer);
         }
     }
 }
