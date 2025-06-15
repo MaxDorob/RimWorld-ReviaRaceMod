@@ -29,9 +29,9 @@
         <li>Raiding_Required</li>
       </li>
       <li>
-        <li>Execution_DontCare</li>
-        <li>Execution_RespectedIfGuilty</li>
-        <li>Execution_Required</li>
+        <li>Revia_PrisonerSacrifice_DontCare</li>
+        <li>Revia_PrisonerSacrifice_Respected</li>
+        <li>Revia_PrisonerSacrifice_Requested</li>
       </li>
       <li>
         <li>Nudity_Female_NoRules</li>
