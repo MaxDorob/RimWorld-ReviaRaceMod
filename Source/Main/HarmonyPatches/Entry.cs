@@ -123,7 +123,7 @@ namespace ReviaRace.HarmonyPatches
                 {
                     num++;
                     Faction faction;
-                    if (Find.FactionManager.TryGetRandomNonColonyHumanlikeFaction(out faction, false, true, TechLevel.Undefined, false) && !faction.def.defName.StartsWith("Revia"))
+                    if (Find.FactionManager.TryGetRandomNonColonyHumanlikeFaction(out faction, false, true) && !faction.def.defName.StartsWith("Revia"))
                         nonReviaFaction = faction;
                 } while (num < 100 && nonReviaFaction == null);
                 factionType = nonReviaFaction.def;

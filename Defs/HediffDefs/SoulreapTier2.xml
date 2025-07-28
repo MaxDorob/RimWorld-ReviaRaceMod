@@ -10,19 +10,6 @@
     <countsAsAddedPartOrImplant>false</countsAsAddedPartOrImplant>
     <stages>
       <li>
-        <capMods>
-          <li>
-            <capacity>Moving</capacity>
-            <offset>-0.05</offset>
-          </li>
-          <li>
-            <capacity>Manipulation</capacity>
-            <offset>-0.05</offset>
-          </li>
-        </capMods>
-        <statOffsets>
-          <MarketValue>-50</MarketValue>
-        </statOffsets>
       </li>
     </stages>
   </HediffDef>

@@ -18,7 +18,9 @@
     <biostatMet>0</biostatMet>
     <biostatCpx>2</biostatCpx>
     <minAgeActive>3</minAgeActive>
-    <causesNeed>ReviaRaceBloodthirstNeed</causesNeed>
+    <enablesNeeds>
+			<li>ReviaRaceBloodthirstNeed</li>
+		</enablesNeeds>
     <forcedTraits>
       <li>
         <def>Bloodlust</def>

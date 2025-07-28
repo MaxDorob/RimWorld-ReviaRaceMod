@@ -119,7 +119,7 @@
 		<defName>ReviaEars</defName>
 		<label>Revia ears</label>
 		<iconPath>UI/icons/ReviaEar_icon</iconPath>
-		<description>Revian ears. Helps them hear better than the average person, and looks nice.</description>
+		<description>Revia ears. Helps them hear better than the average person, and looks nice.</description>
 		<geneClass>ReviaRace.Genes.ReviaEarGene</geneClass>
 		<graphicData>
 			<drawScale>1.00</drawScale>
