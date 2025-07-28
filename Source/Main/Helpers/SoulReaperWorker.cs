@@ -99,6 +99,11 @@ namespace ReviaRace.Helpers
 
             HediffDef toAdd = HediffDef.Named($"ReviaRaceSoulreapTier{tier}");
             toAdd.initialSeverity = float.Epsilon;
+            if (pawn.kindDef == null)
+            {
+                pawn.kindDef = PawnKindDefOf.Colonist;
+                Log.Warning($"KindDef of {pawn} was null, \"Colonist\" assigned to avoid errors. Will be fixed in next Rimworld patches.");
+            }
             pawn.health.AddHediff(toAdd);
         }
         internal static void RemoveSoulReapHediffs(this Pawn pawn)
