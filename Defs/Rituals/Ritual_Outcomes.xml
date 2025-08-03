@@ -118,7 +118,7 @@
 				<label>Skarne satisfied</label>
 				<chance>0.6</chance>
 				<memory>Revia_SkarneBlessedMe</memory>
-				<description>We were granted a blessing. We got Her power. Good.</description>
+				<description>We were granted a blessing. We got Her power.</description>
 				<potentialExtraOutcomeDesc>There's a 33% chance that followers of Her path will get combat buffs.</potentialExtraOutcomeDesc>
 				<positivityIndex>1</positivityIndex>
 			</li>
