@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Issue -->
+
+	<IssueDef>
+		<defName>Revia_SoulreapBlessing</defName>
+		<label>soulreap blessing</label>
+		<iconPath>UI/Issues/Execution</iconPath>
+	</IssueDef>
+
+	<HistoryEventDef>
+		<defName>Revia_BlessedWithTail</defName>
+		<label>Skarne blessed us with Her power</label>
+	</HistoryEventDef>
+
+	<ThoughtDef>
+		<defName>Revia_BlessedWithTail</defName>
+		<durationDays>8</durationDays>
+		<doNotApplyToQuestLodgers>true</doNotApplyToQuestLodgers>
+		<stackLimit>2</stackLimit>
+		<stages>
+			<li>
+				<label>blessed with a tail</label>
+				<description>I've been blessed by Skarne with a tail.</description>
+				<baseMoodEffect>8</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+
+	<!-- Precepts -->
+
+	<PreceptDef>
+		<defName>Revia_SoulreapBlessing_Classic</defName>
+		<issue>Revia_SoulreapBlessing</issue>
+		<label>enjoyed</label>
+		<description>Revia enjoy blessing</description>
+		<impact>Low</impact>
+		<classic>true</classic>
+		<visible>false</visible>
+		<displayOrderInIssue>10</displayOrderInIssue>
+		<defaultSelectionWeight>1</defaultSelectionWeight>
+		<comps>
+			<li Class="PreceptComp_SelfTookMemoryThought">
+				<eventDef>Revia_BlessedWithTail</eventDef>
+				<thought>Revia_BlessedWithTail</thought>
+			</li>
+		</comps>
+	</PreceptDef>
+
+</Defs>

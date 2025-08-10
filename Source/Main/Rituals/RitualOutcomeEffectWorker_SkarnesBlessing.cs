@@ -26,6 +26,7 @@ namespace ReviaRace.Rituals
                     {
                         blessedPawn.RemoveSoulReapHediffs();
                         blessedPawn.AddSoulReapTier(currentLvl + 1);
+                        Find.HistoryEventsManager.RecordEvent(new HistoryEvent(ReviaDefOf.Revia_BlessedWithTail, blessedPawn.Named(HistoryEventArgsNames.Doer)));
                     }
                 }
             }

@@ -117,7 +117,6 @@
 			<li>
 				<label>Skarne satisfied</label>
 				<chance>0.6</chance>
-				<memory>Revia_SkarneBlessedMe</memory>
 				<description>We were granted a blessing. We got Her power.</description>
 				<potentialExtraOutcomeDesc>There's a 33% chance that followers of Her path will get combat buffs.</potentialExtraOutcomeDesc>
 				<positivityIndex>1</positivityIndex>
@@ -125,7 +124,6 @@
 			<li>
 				<label>Skarne impressed</label>
 				<chance>0.2</chance>
-				<memory>Revia_SkarneImpressed</memory>
 				<description>Skarne was impressed with the offering. You will feel Her in your blood like fire, an endless desire to kill!</description>
 				<potentialExtraOutcomeDesc>Followers of Her path get combat buffs.</potentialExtraOutcomeDesc> <!--A combat buff-->
 				<positivityIndex>2</positivityIndex>

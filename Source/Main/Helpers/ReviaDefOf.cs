@@ -24,5 +24,6 @@ namespace ReviaRace.Helpers
         [MayRequireRoyalty]
         public static ThingDef Revia_MysticalStone;
         public static HistoryEventDef Revia_PrisonerSacrificed;
+        public static HistoryEventDef Revia_BlessedWithTail;
     }
 }
