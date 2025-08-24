@@ -36,7 +36,7 @@ namespace ReviaRace.HarmonyPatches
             }
         }
     }
-    [HarmonyLib.HarmonyPatch(typeof(Command_Ritual), MethodType.Constructor)]
+    [HarmonyLib.HarmonyPatch(typeof(Command_Ritual), MethodType.Constructor, argumentTypes: [typeof(Precept_Ritual), typeof(TargetInfo), typeof(RitualObligation), typeof(Dictionary<string, Pawn>)])]
     internal static class CommandIconColor_Patch
     {
         public static void Postfix(Command_Ritual __instance, Precept_Ritual ritual)
