@@ -40,7 +40,7 @@
 		<ritualObligationTargetFilter>Revia_BleesingForSoulreap</ritualObligationTargetFilter>
 		<shortDescOverride>blessing ritual</shortDescOverride>
 		<descOverride>TODO.</descOverride>
-		<iconPathOverride>UI/Misc/BadTexture</iconPathOverride>
+		<iconPathOverride>UI/icons/ReviaRituals/SoulreapBlessing</iconPathOverride>
 		<alwaysStartAnytime>true</alwaysStartAnytime>
 		<ritualBehavior>ReviaBlessingRitual</ritualBehavior>
 		<patternGroupTag>CelebratedDate</patternGroupTag>
