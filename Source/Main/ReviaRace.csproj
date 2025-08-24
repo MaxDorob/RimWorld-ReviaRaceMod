@@ -96,6 +96,7 @@
     <Compile Include="HarmonyPatches\DamageWorker_AddInjury.cs" />
     <Compile Include="HarmonyPatches\Entry.cs" />
     <Compile Include="HarmonyPatches\HeredityPatcher.cs" />
+    <Compile Include="HarmonyPatches\NoIconColor_Patch.cs" />
     <Compile Include="Helpers\ReviaDefOf.cs" />
     <Compile Include="Helpers\Defs.cs" />
     <Compile Include="Helpers\PawnHelpers.cs" />
