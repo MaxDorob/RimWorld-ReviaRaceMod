@@ -61,7 +61,7 @@
 		<ritualOutcomeEffect>Revia_XenotypeConversation</ritualOutcomeEffect>
 	</RitualPatternDef>
 
-	<RitualPatternDef ParentName="Revia_SacrificeBase" MayRequire="Ludeon.Rimworld.Royalty">
+	<RitualPatternDef ParentName="Revia_SacrificeBase" MayRequire="Ludeon.RimWorld.Royalty">
 		<defName>Revia_PsycastRitual</defName>
 		<nameMaker>Revia_NamerRitualSacrifice</nameMaker>
 		<ritualObligationTargetFilter>Revia_PsycastRitual</ritualObligationTargetFilter>
