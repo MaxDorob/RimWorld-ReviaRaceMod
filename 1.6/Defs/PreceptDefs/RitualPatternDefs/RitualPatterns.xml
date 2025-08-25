@@ -52,7 +52,7 @@
 		<nameMaker>Revia_NamerRitualSacrifice</nameMaker>
 		<ritualObligationTargetFilter>Revia_XenotypeConversation</ritualObligationTargetFilter>
 		<ritualExpectedDesc>Every year on {DATE}, {MEMBERS} can have a special celebration.</ritualExpectedDesc>
-		<shortDescOverride>blessing ritual</shortDescOverride>
+		<shortDescOverride>psycast blessing ritual</shortDescOverride>
 		<descOverride>TODO.</descOverride>
 		<iconPathOverride>UI/Misc/BadTexture</iconPathOverride>
 		<alwaysStartAnytime>true</alwaysStartAnytime>

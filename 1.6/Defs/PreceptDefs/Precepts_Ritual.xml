@@ -37,7 +37,7 @@
 		<ritualPatternBase>Revia_XenotypeConversation</ritualPatternBase>
 	</PreceptDef>
 
-	<PreceptDef ParentName="ReviaPreceptBase" MayRequire="Ludeon.Rimworld.Royalty">
+	<PreceptDef ParentName="ReviaPreceptBase" MayRequire="Ludeon.RimWorld.Royalty">
 		<defName>Revia_PsycastRitual</defName>
 		<label>revia psycast blessing</label>
 		<tipLabelOverride>Revia psycast blessing</tipLabelOverride>
