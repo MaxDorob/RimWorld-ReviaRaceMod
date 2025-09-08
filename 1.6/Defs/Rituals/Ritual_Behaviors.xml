@@ -5,7 +5,7 @@
 		<preceptRequirements>
 			<li Class="PreceptRequirement_Altar"/>
 		</preceptRequirements>
-		<durationTicks>7500</durationTicks>
+		<durationTicks>2000</durationTicks>
 		<spectatorsLabel>Participants</spectatorsLabel>
 		<spectatorGerund>participate</spectatorGerund>
 		<roles>
@@ -25,6 +25,7 @@
 	<RitualBehaviorDef ParentName="Revia_SacrificeBehaviorBase">
 		<defName>Revia_SacrificePrisoner</defName>
 		<workerClass>RitualBehaviorWorker_PrisonerSacrifice</workerClass>
+		<durationTicks>4000</durationTicks>
 		<roles>
 			<li Class="RitualRolePrisoner">
 				<label>sacrifice</label>
@@ -142,7 +143,6 @@
 	<RitualBehaviorDef ParentName="Revia_SacrificeBehaviorBase">
 		<defName>ReviaBlessingRitual</defName>
 		<workerClass>ReviaRace.Rituals.RitualBehaviorWorker_InvokeBlessingForSoulreap</workerClass>
-		<durationTicks>7500</durationTicks>
 		<stages>
 			<li>
 				<defaultDuty>Spectate</defaultDuty>
