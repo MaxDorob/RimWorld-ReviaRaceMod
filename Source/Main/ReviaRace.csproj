@@ -135,6 +135,7 @@
     <Compile Include="Rituals\RitualObligationTargetWorker_BloodstonesRequired.cs" />
     <Compile Include="Rituals\RitualObligationTargetWorker_MysticalStone.cs" />
     <Compile Include="Rituals\RitualObligationTargetWorker_SoulreapLevelUp.cs" />
+    <Compile Include="Rituals\RitualOutcomeComp_BloodstonesCount.cs" />
     <Compile Include="Rituals\RitualOutcomeComp_ReviaCount.cs" />
     <Compile Include="Rituals\RitualOutcomeComp_TailsCount.cs" />
     <Compile Include="Rituals\RitualOutcomeEffectWorker_PsycastBlessing.cs" />
@@ -169,18 +170,19 @@
   <ItemGroup>
     <Folder Include="WorkGivers\" />
   </ItemGroup>
-	<ItemGroup>
-		<Publicize Include="Assembly-CSharp:RimWorld.CompStatue.bodyType" />
-		<Publicize Include="Assembly-CSharp:RimWorld.CompStatue.headType" />
-		<Publicize Include="Assembly-CSharp:RimWorld.CompStatue.hairDef" />
-		<Publicize Include="Assembly-CSharp:RimWorld.CompStatue.xenotype" />
-		<Publicize Include="Assembly-CSharp:RimWorld.CompStatue.hairColor" />
-		<Publicize Include="Assembly-CSharp:RimWorld.CompStatue.apparel" />
-		<Publicize Include="Assembly-CSharp:RimWorld.CompStatue.hediffsWhichAffectRendering" />
-		<Publicize Include="Assembly-CSharp:RimWorld.CompStatue.name" />
-		<Publicize Include="Assembly-CSharp:RimWorld.CompStatue.gender" />
-		<Publicize Include="Assembly-CSharp:RimWorld.CompStatue.lifestageIndex" />
-		<Publicize Include="Assembly-CSharp:RimWorld.CompStatue.InitFakePawn" />
-	</ItemGroup>
+  <ItemGroup>
+    <Publicize Include="Assembly-CSharp:RimWorld.CompStatue.bodyType" />
+    <Publicize Include="Assembly-CSharp:RimWorld.CompStatue.headType" />
+    <Publicize Include="Assembly-CSharp:RimWorld.CompStatue.hairDef" />
+    <Publicize Include="Assembly-CSharp:RimWorld.CompStatue.xenotype" />
+    <Publicize Include="Assembly-CSharp:RimWorld.CompStatue.hairColor" />
+    <Publicize Include="Assembly-CSharp:RimWorld.CompStatue.apparel" />
+    <Publicize Include="Assembly-CSharp:RimWorld.CompStatue.hediffsWhichAffectRendering" />
+    <Publicize Include="Assembly-CSharp:RimWorld.CompStatue.name" />
+    <Publicize Include="Assembly-CSharp:RimWorld.CompStatue.gender" />
+    <Publicize Include="Assembly-CSharp:RimWorld.CompStatue.lifestageIndex" />
+    <Publicize Include="Assembly-CSharp:RimWorld.CompStatue.InitFakePawn" />
+    <Publicize Include="Assembly-CSharp:RimWorld.Dialog_BeginRitual.outcome" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
