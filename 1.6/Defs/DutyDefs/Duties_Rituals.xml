@@ -129,7 +129,7 @@
 		</thinkNode>
 	</DutyDef>
 
-	<DutyDef>
+	<DutyDef MayRequire="Ludeon.Rimworld.Royalty">
 		<defName>InvokeBlessingForPsycast</defName>
 		<hook>HighPriority</hook>
 		<thinkNode Class="ThinkNode_Priority">
