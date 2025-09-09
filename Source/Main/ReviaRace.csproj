@@ -75,6 +75,7 @@
     <Reference Include="System.Net.Http" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Comps\CompSkarneStatue.cs" />
     <Compile Include="Comps\GeneRejectionHediff.cs" />
     <Compile Include="Comps\RejectionType.cs" />
     <Compile Include="Comps\InvokeBlessing.cs" />
@@ -168,5 +169,18 @@
   <ItemGroup>
     <Folder Include="WorkGivers\" />
   </ItemGroup>
+	<ItemGroup>
+		<Publicize Include="Assembly-CSharp:RimWorld.CompStatue.bodyType" />
+		<Publicize Include="Assembly-CSharp:RimWorld.CompStatue.headType" />
+		<Publicize Include="Assembly-CSharp:RimWorld.CompStatue.hairDef" />
+		<Publicize Include="Assembly-CSharp:RimWorld.CompStatue.xenotype" />
+		<Publicize Include="Assembly-CSharp:RimWorld.CompStatue.hairColor" />
+		<Publicize Include="Assembly-CSharp:RimWorld.CompStatue.apparel" />
+		<Publicize Include="Assembly-CSharp:RimWorld.CompStatue.hediffsWhichAffectRendering" />
+		<Publicize Include="Assembly-CSharp:RimWorld.CompStatue.name" />
+		<Publicize Include="Assembly-CSharp:RimWorld.CompStatue.gender" />
+		<Publicize Include="Assembly-CSharp:RimWorld.CompStatue.lifestageIndex" />
+		<Publicize Include="Assembly-CSharp:RimWorld.CompStatue.InitFakePawn" />
+	</ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
