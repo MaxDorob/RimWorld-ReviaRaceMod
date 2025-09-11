@@ -39,7 +39,7 @@ namespace ReviaRace.Rituals
         }
         public void DrawSlider(ref RectDivider layout)
         {
-            var rect = layout.NewRow(32f, VerticalJustification.Bottom, 28f);
+            var rect = layout.NewRow(32f, VerticalJustification.Top, 28f);
             Widgets.HorizontalSlider(rect, ref count, new FloatRange(1, 100), "Some slider", 1f);
         }
         float count;
