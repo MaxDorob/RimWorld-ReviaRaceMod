@@ -20,17 +20,27 @@ namespace ReviaRace.Rituals
         public RitualObligationTargetWorker_BloodstonesRequired(RitualObligationTargetFilterDef def) : base(def)
         {
         }
-        public virtual int Count(Pawn forPawn) => def.woodPerParticipant;
+        public virtual int Count(RitualRoleAssignments assignments, Pawn forPawn)
+        {
+            var comp = assignments.Ritual.outcomeEffect.def.comps.OfType<RitualOutcomeComp_BloodstonesCount>().FirstOrDefault();
+            if (comp != null)
+            {
+                return (int)((RitualOutcomeComp_DataBloodstonesCount)assignments.Ritual.outcomeEffect.DataForComp(comp)).selectedCount;
+            }
+            return def.woodPerParticipant;
+        }
+
         public override IEnumerable<string> GetBlockingIssues(TargetInfo target, RitualRoleAssignments assignments)
         {
+            
             var pawn = assignments.FirstAssignedPawn("sacrificer");
             if (pawn == null)
             {
                 yield return "SacrificerNotSelected".Translate();
                 yield break;
             }
-            List<Thing> list = target.Map.listerThings.ThingsOfDef(Defs.Bloodstone).Where(thing => !thing.IsForbidden(pawn) && pawn.CanReserveAndReach(thing, PathEndMode.Touch, pawn.NormalMaxDanger())).ToList(); ;
-            var requiredBloodstones = Count(pawn);
+            List<Thing> list = target.Map.listerThings.ThingsOfDef(Defs.Bloodstone).Where(thing => !thing.IsForbidden(pawn) && pawn.CanReserveAndReach(thing, PathEndMode.Touch, pawn.NormalMaxDanger())).ToList();
+            int requiredBloodstones = Count(assignments, pawn);
 
 
             int countToTake = Math.Max(requiredBloodstones - pawn.inventory.Count(Defs.Bloodstone), 0);
