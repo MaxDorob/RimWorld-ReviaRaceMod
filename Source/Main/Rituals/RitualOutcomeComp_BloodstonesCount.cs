@@ -1,4 +1,5 @@
 ﻿using HarmonyLib;
+using ReviaRace.Helpers;
 using RimWorld;
 using System;
 using System.Collections.Generic;
@@ -40,12 +41,39 @@ namespace ReviaRace.Rituals
         public void DrawSlider(ref RectDivider layout)
         {
             var rect = layout.NewRow(32f, VerticalJustification.Top, 28f);
-            Widgets.HorizontalSlider(rect, ref count, new FloatRange(1, 100), "Some slider", 1f);
+            Widgets.HorizontalSlider(rect, ref data.selectedCount, new FloatRange(1, curve.Last().x), label, 1f);
         }
-        float count;
+        private RitualOutcomeComp_DataBloodstonesCount data;
+        public override RitualOutcomeComp_Data MakeData()
+        {
+            return data = new RitualOutcomeComp_DataBloodstonesCount();
+        }
         public override float Count(LordJob_Ritual ritual, RitualOutcomeComp_Data data)
         {
-            return 1;
+            return ((RitualOutcomeComp_DataBloodstonesCount)data).selectedCount;
+        }
+        public override QualityFactor GetQualityFactor(Precept_Ritual ritual, TargetInfo ritualTarget, RitualObligation obligation, RitualRoleAssignments assignments, RitualOutcomeComp_Data data)
+        {
+            var count = ((RitualOutcomeComp_DataBloodstonesCount)data).selectedCount;
+            float num = this.curve.Evaluate(count);
+            return new QualityFactor
+            {
+                label = this.label,
+                count = count.ToString(),
+                qualityChange = ExpectedOffsetDesc(num >= 0f, num),
+                positive = (num >= 0f),
+                quality = num,
+                priority = 5.2f
+            };
+        }
+    }
+    public class RitualOutcomeComp_DataBloodstonesCount : RitualOutcomeComp_Data
+    {
+        public float selectedCount = 1;
+        public override void ExposeData()
+        {
+            base.ExposeData();
+            Scribe_Values.Look(ref selectedCount, nameof(selectedCount));
         }
     }
 }
