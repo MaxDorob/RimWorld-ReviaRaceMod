@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using UnityEngine;
 using Verse;
 using Verse.AI;
 
@@ -23,8 +24,7 @@ namespace ReviaRace.JobDrivers
                 var toil = base.StandToil;
                 toil.AddPreInitAction(() =>
                 {
-                    Thing thing = this.pawn.inventory.innerContainer.FirstOrDefault((Thing t) => t.def == this.job.thingDefToCarry && t.stackCount >= this.job.count);
-                    Log.Message($"{thing?.ToString() ?? "null"}, {job.count} {thing?.stackCount}");
+                    Thing thing = this.pawn.inventory.innerContainer.FirstOrDefault((Thing t) => t.def == this.job.thingDefToCarry);
                     if (thing != null)
                     {
                         this.pawn.carryTracker.TryStartCarry(thing, this.job.count, true);
@@ -32,15 +32,33 @@ namespace ReviaRace.JobDrivers
                 });
                 toil.AddFinishAction(() =>
                 {
+                    var totalCountToRemove = this.job.count;
                     var carriedThing = this.pawn.carryTracker.CarriedThing;
-                    if (carriedThing.def == job.thingDefToCarry && carriedThing.stackCount >= job.count)
+                    if (carriedThing.def == job.thingDefToCarry)
                     {
-                        Log.Message($"{carriedThing} ({carriedThing.stackCount}) {job.count}");
-                        carriedThing.stackCount -= this.job.count;
+                        var countToRemove = Mathf.Min(totalCountToRemove, carriedThing.stackCount);
+                        carriedThing.stackCount -= countToRemove;
                         if (carriedThing.stackCount <= 0)
                         {
                             carriedThing.Destroy();
                         }
+                        totalCountToRemove -= countToRemove;
+                    }
+                    while (totalCountToRemove > 0)
+                    {
+                        var thing = pawn.inventory.innerContainer.FirstOrDefault(x=>x.def == job.thingDefToCarry);
+                        if (thing == null)
+                        {
+                            Log.Error($"Can't find enough {job.thingDefToCarry}. Left to remove {totalCountToRemove}");
+                            break;
+                        }
+                        var countToRemove = Mathf.Min(totalCountToRemove, carriedThing.stackCount);
+                        carriedThing.stackCount -= countToRemove;
+                        if (carriedThing.stackCount <= 0)
+                        {
+                            carriedThing.Destroy();
+                        }
+                        totalCountToRemove -= countToRemove;
                     }
                 });
                 return toil;
