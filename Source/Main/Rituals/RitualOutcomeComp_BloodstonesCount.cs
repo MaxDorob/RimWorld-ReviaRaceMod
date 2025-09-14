@@ -1,4 +1,5 @@
 ﻿using HarmonyLib;
+using ReviaRace.Comps;
 using ReviaRace.Helpers;
 using RimWorld;
 using System;
@@ -38,10 +39,22 @@ namespace ReviaRace.Rituals
                 }
             }
         }
+        public SimpleCurve Curve
+        {
+            get
+            {
+                var maxCost = InvokeGreaterBlessing.GetAdvanceCost(8);
+                return new SimpleCurve()
+                {
+                    {new (1, 1f / maxCost) },
+                    {new (maxCost, 1f) }
+                };
+            }
+        }
         public void DrawSlider(ref RectDivider layout)
         {
             var rect = layout.NewRow(32f, VerticalJustification.Top, 28f);
-            Widgets.HorizontalSlider(rect, ref data.selectedCount, new FloatRange(1, curve.Last().x), label, 1f);
+            Widgets.HorizontalSlider(rect, ref data.selectedCount, new FloatRange(1, Curve.Last().x), label, 1f);
         }
         private RitualOutcomeComp_DataBloodstonesCount data;
         public override RitualOutcomeComp_Data MakeData()
@@ -55,7 +68,7 @@ namespace ReviaRace.Rituals
         public override QualityFactor GetQualityFactor(Precept_Ritual ritual, TargetInfo ritualTarget, RitualObligation obligation, RitualRoleAssignments assignments, RitualOutcomeComp_Data data)
         {
             var count = ((RitualOutcomeComp_DataBloodstonesCount)data).selectedCount;
-            float num = this.curve.Evaluate(count);
+            float num = this.Curve.Evaluate(count);
             return new QualityFactor
             {
                 label = this.label,
