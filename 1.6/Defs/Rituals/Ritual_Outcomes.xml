@@ -106,6 +106,9 @@
 					</points>
 				</curve>
 			</li>
+			<li Class="ReviaRace.Rituals.RitualOutcomeComp_BloodstonesCount">
+				<label>Bloodstones count</label>
+			</li>
 		</comps>
 		<outcomeChances>
 			<li>

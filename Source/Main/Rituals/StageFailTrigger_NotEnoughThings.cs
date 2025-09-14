@@ -22,14 +22,29 @@ namespace ReviaRace.Rituals
                 return true;
             }
             var def = this.def ?? Defs.Bloodstone;
-            var count = this.count > 0 ? this.count : InvokeGreaterBlessing.GetAdvanceCost(ReviaRaceMod.Settings.CostGrowthMode, SoulReaperWorker.GetSoulReapTier(pawn), ReviaRaceMod.Settings.CostBase, ReviaRaceMod.Settings.CostGrowthFactor, ReviaRaceMod.Settings.CostGrowthStartTier);
+            int count;
+            if (this.count > 0)
+            {
+                count = this.count;
+            }
+            else
+            {
+                var comp = ritual.Ritual.outcomeEffect.def.comps.OfType<RitualOutcomeComp_BloodstonesCount>().FirstOrDefault();
+                if (comp == null)
+                {
+                    return false;
+                }
+                count = (int)((RitualOutcomeComp_DataBloodstonesCount)ritual.Ritual.outcomeEffect.DataForComp(comp)).selectedCount;
+
+            }
+
             count -= pawn.inventory.Count(def);
             count -= pawn.carryTracker.CarriedCount(def);
             if (count <= 0)
             {
                 return false;
             }
-            if (spot.Map.listerThings.ThingsOfDef(Defs.Bloodstone).Where(thing => !thing.IsForbidden(pawn)).Sum(x=>x.stackCount) >= count)
+            if (spot.Map.listerThings.ThingsOfDef(Defs.Bloodstone).Where(thing => !thing.IsForbidden(pawn)).Sum(x => x.stackCount) >= count)
             {
                 return false;
             }

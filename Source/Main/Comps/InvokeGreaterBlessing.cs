@@ -21,7 +21,7 @@ namespace ReviaRace.Comps
         }
 
         protected override float BlessingValue => 1.0f;
-
+        public static int GetAdvanceCost(int tier) => GetAdvanceCost(ReviaRaceMod.Settings.CostGrowthMode, tier, ReviaRaceMod.Settings.CostBase, ReviaRaceMod.Settings.CostGrowthFactor, ReviaRaceMod.Settings.CostGrowthStartTier);
         public static int GetAdvanceCost(SacrificeCostGrowth growthMode, int tier, float costBase, float growthFactor, int startTier)
         {
             if (tier == -1 || tier == 9)
