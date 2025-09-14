@@ -54,7 +54,7 @@
 		<ritualExpectedDesc>Every year on {DATE}, {MEMBERS} can have a special celebration.</ritualExpectedDesc>
 		<shortDescOverride>psycast blessing ritual</shortDescOverride>
 		<descOverride>TODO.</descOverride>
-		<iconPathOverride>UI/Misc/BadTexture</iconPathOverride>
+		<iconPathOverride>UI/icons/Revia_XenotypeIcon</iconPathOverride>
 		<alwaysStartAnytime>true</alwaysStartAnytime>
 		<ritualBehavior>Revia_XenotypeConversation</ritualBehavior>
 		<patternGroupTag>CelebratedDate</patternGroupTag>
