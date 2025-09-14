@@ -24,7 +24,7 @@
     <ritualBehavior>Revia_SacrificePrisoner</ritualBehavior>
     <shortDescOverride>prisoner sacrifice</shortDescOverride>
     <descOverride>A ritualistic prisoner sacrifice. The organizer will give a speech to excite the crowd, then cut the prisoner's throat. Once the prisoner is dead, organizer will speak some finishing words.</descOverride>
-    <iconPathOverride>UI/Misc/BadTexture</iconPathOverride>
+		<iconPathOverride>Things/Item/Weapons/SerratedDagger</iconPathOverride>
     <patternGroupTag/>
     <ritualOutcomeEffect>Revia_Sacrifice</ritualOutcomeEffect>
 		<ritualObligationTargetFilter>ReviaBloodSigilOrSpot</ritualObligationTargetFilter>
