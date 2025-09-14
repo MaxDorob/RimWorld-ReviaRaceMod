@@ -79,6 +79,11 @@ namespace ReviaRace.Rituals
                 priority = 5.2f
             };
         }
+        protected override string ExpectedOffsetDesc(bool positive, float quality = 0f)
+        {
+            var curve = Curve;
+            return "QualityOutOf".Translate(quality.ToStringWithSign("0.#%"), curve.Points[curve.PointsCount - 1].y.ToStringWithSign("0.#%"));
+        }
     }
     public class RitualOutcomeComp_DataBloodstonesCount : RitualOutcomeComp_Data
     {
