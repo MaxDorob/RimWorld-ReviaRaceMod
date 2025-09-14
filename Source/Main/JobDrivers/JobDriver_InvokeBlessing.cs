@@ -52,11 +52,11 @@ namespace ReviaRace.JobDrivers
                             Log.Error($"Can't find enough {job.thingDefToCarry}. Left to remove {totalCountToRemove}");
                             break;
                         }
-                        var countToRemove = Mathf.Min(totalCountToRemove, carriedThing.stackCount);
-                        carriedThing.stackCount -= countToRemove;
-                        if (carriedThing.stackCount <= 0)
+                        var countToRemove = Mathf.Min(totalCountToRemove, thing.stackCount);
+                        thing.stackCount -= countToRemove;
+                        if (thing.stackCount <= 0)
                         {
-                            carriedThing.Destroy();
+                            thing.Destroy();
                         }
                         totalCountToRemove -= countToRemove;
                     }
