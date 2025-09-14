@@ -4,9 +4,6 @@
 	<RitualOutcomeEffectDef Name="ReviaOutcomeBase" Abstract="True">
 		<workerClass>ReviaRace.Rituals.RitualOutcomeEffectWorker_Sacrificed</workerClass>
 		<comps>
-			<li Class="RitualOutcomeComp_RitualSeatPresent">
-				<qualityOffset>0.15</qualityOffset>
-			</li>
 			<li Class="RitualOutcomeComp_ParticipantCount">
 				<label>participant count</label>
 				<curve>
