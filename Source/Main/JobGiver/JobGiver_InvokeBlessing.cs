@@ -8,6 +8,7 @@ using Verse.AI;
 using Verse;
 using ReviaRace.Helpers;
 using ReviaRace.Comps;
+using ReviaRace.Rituals;
 
 namespace ReviaRace.JobGiver
 {
@@ -24,8 +25,22 @@ namespace ReviaRace.JobGiver
             int count = this.count;
             if (count <= 0)
             {
-                count = InvokeGreaterBlessing.GetAdvanceCost(ReviaRaceMod.Settings.CostGrowthMode, SoulReaperWorker.GetSoulReapTier(pawn), ReviaRaceMod.Settings.CostBase, ReviaRaceMod.Settings.CostGrowthFactor, ReviaRaceMod.Settings.CostGrowthStartTier);
-
+                if (pawn.lord?.LordJob is LordJob_Ritual lordJob_Ritual)
+                {
+                    var comp = lordJob_Ritual.Ritual.outcomeEffect.def.comps.OfType<RitualOutcomeComp_BloodstonesCount>().FirstOrDefault();
+                    if (comp != null)
+                    {
+                        count = (int)((RitualOutcomeComp_DataBloodstonesCount)lordJob_Ritual.Ritual.outcomeEffect.DataForComp(comp)).selectedCount;
+                    }
+                    else
+                    {
+                        count = 1;
+                    }
+                }
+                else
+                {
+                    count = 1;
+                }
             }
             job.count = count;
             return job;
