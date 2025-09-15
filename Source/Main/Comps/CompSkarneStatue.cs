@@ -12,7 +12,24 @@ namespace ReviaRace
 {
     public class CompSkarneStatue : CompStatue
     {
+        [HarmonyLib.HarmonyPatch(typeof(Thing), nameof(Thing.Notify_DebugSpawned))]
+        internal static class DebugSpawnedPatch
+        {
+            public static void Postfix(Thing __instance)
+            {
+                var comp = __instance.TryGetComp<CompSkarneStatue>();
+                if (comp != null)
+                {
+                    comp.Notify_DebugSpawned();
+                }
+            }
+        }
+        public void Notify_DebugSpawned()
+        {
+            JustCreatedBy(Find.WorldPawns.AllPawnsAliveOrDead.RandomElement());
+        }
         public override bool Active => false;
+
         public override void JustCreatedBy(Pawn pawn)
         {
             this.bodyType = Rand.Bool ? BodyTypeDefOf.Female : BodyTypeDefOf.Thin;
@@ -27,5 +44,6 @@ namespace ReviaRace
             hediffsWhichAffectRendering.Add(new SavedHediffProps(null, DefDatabase<HediffDef>.GetNamed("ReviaRaceSoulreapTier9"), 1f));
             InitFakePawn();
         }
+        
     }
 }
