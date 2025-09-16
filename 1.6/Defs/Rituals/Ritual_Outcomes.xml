@@ -112,13 +112,13 @@
 		<outcomeChances>
 			<li>
 				<label>Skarne disappointed</label>
-				<chance>0.02</chance>
+				<chance>0.10</chance>
 				<description>We disappoined Her. We hardly deserve attention...</description>
 				<positivityIndex>-1</positivityIndex>
 			</li>
 			<li>
 				<label>Skarne satisfied</label>
-				<chance>0.78</chance>
+				<chance>0.70</chance>
 				<description>We were granted a blessing. We got Her power.</description>
 				<potentialExtraOutcomeDesc>There's a 33% chance that followers of Her path will get combat buffs.</potentialExtraOutcomeDesc>
 				<positivityIndex>1</positivityIndex>
