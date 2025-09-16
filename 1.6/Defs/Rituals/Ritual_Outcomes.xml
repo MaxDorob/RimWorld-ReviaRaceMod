@@ -9,8 +9,8 @@
 				<curve>
 					<points>
 						<li>(1,  0.0)</li>
-						<li>(5,  0.18)</li>
-						<li>(10, 0.25)</li>
+						<li>(5,  0.02)</li>
+						<li>(10, 0.09)</li>
 					</points>
 				</curve>
 			</li>
@@ -19,8 +19,8 @@
 				<curve>
 					<points>
 						<li>(1,  0.0)</li>
-						<li>(5,  0.18)</li>
-						<li>(9, 0.25)</li>
+						<li>(5,  0.5)</li>
+						<li>(9, 0.125)</li>
 					</points>
 				</curve>
 			</li>
