@@ -183,6 +183,7 @@
     <Publicize Include="Assembly-CSharp:RimWorld.CompStatue.lifestageIndex" />
     <Publicize Include="Assembly-CSharp:RimWorld.CompStatue.InitFakePawn" />
     <Publicize Include="Assembly-CSharp:RimWorld.Dialog_BeginRitual.outcome" />
+    <Publicize Include="Assembly-CSharp:RimWorld.Dialog_BeginRitual.ritual" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

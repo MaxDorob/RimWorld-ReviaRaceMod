@@ -35,7 +35,7 @@ namespace ReviaRace.Rituals
             {
                 foreach (var compWithSlider in dialog.outcome.comps.OfType<RitualOutcomeComp_BloodstonesCount>())
                 {
-                    compWithSlider.DrawSlider(ref layout);
+                    compWithSlider.DrawSlider(dialog.ritual, ref layout);
                 }
             }
         }
@@ -54,15 +54,15 @@ namespace ReviaRace.Rituals
                 return curve;
             }
         }
-        public void DrawSlider(ref RectDivider layout)
+        public void DrawSlider(Precept_Ritual ritual, ref RectDivider layout)
         {
+            var data = (RitualOutcomeComp_DataBloodstonesCount)ritual.outcomeEffect.DataForComp(this);
             var rect = layout.NewRow(32f, VerticalJustification.Top, 28f);
             Widgets.HorizontalSlider(rect, ref data.selectedCount, new FloatRange(1, Curve.Last().x), label, 1f);
         }
-        private RitualOutcomeComp_DataBloodstonesCount data;
         public override RitualOutcomeComp_Data MakeData()
         {
-            return data = new RitualOutcomeComp_DataBloodstonesCount();
+            return new RitualOutcomeComp_DataBloodstonesCount();
         }
         public override float Count(LordJob_Ritual ritual, RitualOutcomeComp_Data data)
         {
