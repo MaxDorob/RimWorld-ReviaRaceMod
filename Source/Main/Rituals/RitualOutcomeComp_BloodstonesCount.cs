@@ -44,11 +44,14 @@ namespace ReviaRace.Rituals
             get
             {
                 var maxCost = InvokeGreaterBlessing.GetAdvanceCost(8);
-                return new SimpleCurve()
+                var curve = new SimpleCurve();
+                for (int i = 1; i < 8; i++)
                 {
-                    {new (1, 1f / maxCost) },
-                    {new (maxCost, 1f) }
-                };
+                    var count = (float)InvokeGreaterBlessing.GetAdvanceCost(i);
+                    curve.Add(count, 1f / (maxCost - count));
+                }
+                curve.Add(maxCost, 1f);
+                return curve;
             }
         }
         public void DrawSlider(ref RectDivider layout)
