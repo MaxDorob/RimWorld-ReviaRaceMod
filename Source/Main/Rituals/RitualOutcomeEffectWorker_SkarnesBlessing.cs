@@ -29,6 +29,13 @@ namespace ReviaRace.Rituals
                         Find.HistoryEventsManager.RecordEvent(new HistoryEvent(ReviaDefOf.Revia_BlessedWithTail, blessedPawn.Named(HistoryEventArgsNames.Doer)));
                     }
                 }
+                if (outcome.BestPositiveOutcome(jobRitual) || (outcome.positivityIndex == 1 && Rand.Chance(0.33f)))
+                {
+                    foreach (var pawn in totalPresence.Keys.Where(x => x.IsRevia()))
+                    {
+                        pawn.health.AddHediff(ReviaDefOf.ReviaRaceBlessedBySkarne);
+                    }
+                }
             }
         }
     }
