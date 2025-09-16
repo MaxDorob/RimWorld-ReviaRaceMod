@@ -32,15 +32,21 @@ namespace ReviaRace.Rituals
 
         public override IEnumerable<string> GetBlockingIssues(TargetInfo target, RitualRoleAssignments assignments)
         {
-            
+
             var pawn = assignments.FirstAssignedPawn("sacrificer");
             if (pawn == null)
             {
                 yield return "SacrificerNotSelected".Translate();
                 yield break;
             }
+            var minimalCount = InvokeGreaterBlessing.GetAdvanceCost(pawn.GetSoulReapTier()) / 3;
+
             List<Thing> list = target.Map.listerThings.ThingsOfDef(Defs.Bloodstone).Where(thing => !thing.IsForbidden(pawn) && pawn.CanReserveAndReach(thing, PathEndMode.Touch, pawn.NormalMaxDanger())).ToList();
             int requiredBloodstones = Count(assignments, pawn);
+            if (minimalCount > 0 && requiredBloodstones < minimalCount)
+            {
+                yield return "ReviaMinimalBloodstonesCount".Translate(pawn, minimalCount);
+            }
 
 
             int countToTake = Math.Max(requiredBloodstones - pawn.inventory.Count(Defs.Bloodstone), 0);

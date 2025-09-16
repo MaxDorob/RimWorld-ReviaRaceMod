@@ -2,4 +2,5 @@
 <LanguageData>
 	<RitualPredictedOutcomeDescReviaCount>Revia count</RitualPredictedOutcomeDescReviaCount>
 	<RitualTargetBloodstonesInfo>Bloodstones required: {0}</RitualTargetBloodstonesInfo>
+	<ReviaMinimalBloodstonesCount>Minimal bloodstones required for {0}: {1}</ReviaMinimalBloodstonesCount>
 </LanguageData>
