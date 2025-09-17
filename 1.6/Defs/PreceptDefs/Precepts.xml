@@ -6,7 +6,7 @@
 	<IssueDef>
 		<defName>Revia_PrisonerSacrifice</defName>
 		<label>revian sacrifice</label>
-		<iconPath>UI/Issues/Execution</iconPath>
+		<iconPath>Things/Item/Weapons/SerratedDagger</iconPath>
 	</IssueDef>
 
 	<HistoryEventDef>
