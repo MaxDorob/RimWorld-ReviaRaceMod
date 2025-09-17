@@ -36,6 +36,7 @@
 				<countsAsParticipant>False</countsAsParticipant>
 				<ignoreBleeding>true</ignoreBleeding>
 				<allowDowned>true</allowDowned>
+				<removeFromAssignmentsOnDeath>false</removeFromAssignmentsOnDeath>
 			</li>
 		</roles>
 		<stages Inherit="False">
