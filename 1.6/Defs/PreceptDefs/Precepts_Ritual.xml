@@ -11,6 +11,7 @@
 		<selectionWeight>1.0</selectionWeight>
 		<capitalizeAsTitle>false</capitalizeAsTitle>
 		<useRepeatPenalty>false</useRepeatPenalty>
+		<iconIgnoresIdeoColor>true</iconIgnoresIdeoColor>
 	</PreceptDef>
 	
   <PreceptDef ParentName="ReviaPreceptBase">
