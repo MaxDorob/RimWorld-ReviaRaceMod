@@ -6,12 +6,15 @@
 		<issue>Ritual</issue>
 		<preceptClass>Precept_Ritual</preceptClass>
 		<classic>true</classic>
+		<classicExtra>true</classicExtra>
 		<visible>false</visible>
 		<countsTowardsPreceptLimit>false</countsTowardsPreceptLimit>
 		<selectionWeight>1.0</selectionWeight>
 		<capitalizeAsTitle>false</capitalizeAsTitle>
 		<useRepeatPenalty>false</useRepeatPenalty>
 		<iconIgnoresIdeoColor>true</iconIgnoresIdeoColor>
+		<ignoreNameUniqueness>true</ignoreNameUniqueness>
+		<isNonIdeoRitual>true</isNonIdeoRitual>
 	</PreceptDef>
 	
   <PreceptDef ParentName="ReviaPreceptBase">
