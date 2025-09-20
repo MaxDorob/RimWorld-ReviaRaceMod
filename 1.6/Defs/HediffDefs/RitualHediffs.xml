@@ -12,16 +12,16 @@
         <capMods>
           <li>
             <capacity>Moving</capacity>
-            <offset>0.15</offset>
+            <offset>0.25</offset>
           </li>
         </capMods>
         <statFactors>
-					<MeleeDamageFactor>1.2</MeleeDamageFactor>
           <IncomingDamageFactor>0.90</IncomingDamageFactor>
         </statFactors>
         <statOffsets>
-          <PainShockThreshold>0.10</PainShockThreshold>
+					<MeleeDamageFactor>0.25</MeleeDamageFactor>
         </statOffsets>
+				<regeneration>5</regeneration> <!--won't work w/o Anomaly-->
       </li>
     </stages>
 		<comps>
