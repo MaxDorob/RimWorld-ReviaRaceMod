@@ -35,6 +35,7 @@
   <ReviaNoProjectLimitaions>No limitations for revia projects</ReviaNoProjectLimitaions>
   <ReviaNoCraftLimitaions>No limitations for revia crafts</ReviaNoCraftLimitaions>
   <ReviaRaceSettingsNoHybrid>No hybrids with revia</ReviaRaceSettingsNoHybrid>
+	<ReviaRaceCorpseProductChance>Bloodstone chance from corpses: {0}</ReviaRaceCorpseProductChance>
   <Linear>Linear</Linear>
   <Quadratic>Quadratic</Quadratic>
   <Exponential>Exponential</Exponential>

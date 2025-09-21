@@ -26,5 +26,6 @@ namespace ReviaRace.Helpers
         public static HistoryEventDef Revia_PrisonerSacrificed;
         public static HistoryEventDef Revia_BlessedWithTail;
         public static HediffDef ReviaRaceBlessedBySkarne;
+        public static RecipeDef ReviaRaceSacrificeCorpse;
     }
 }
