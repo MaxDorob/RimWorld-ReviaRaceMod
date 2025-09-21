@@ -19,7 +19,7 @@
 				<curve>
 					<points>
 						<li>(1,  0.0)</li>
-						<li>(5,  0.5)</li>
+						<li>(5,  0.05)</li>
 						<li>(9, 0.125)</li>
 					</points>
 				</curve>
