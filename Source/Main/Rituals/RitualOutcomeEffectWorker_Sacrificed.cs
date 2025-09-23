@@ -30,7 +30,13 @@ namespace ReviaRace.Rituals
             {
                 return;
             }
-            var score = (def.GetModExtension<SacrificeBaseScore_Extension>()?.baseScore ?? 1f) * SacrificeHelper.GetScore(prisoner) * multiplier;
+            var ext = def.GetModExtension<SacrificeBaseScore_Extension>();
+            float score = 1f;
+            if (ext != null)
+            {
+                score = ext.baseScore * ext.randomFactor.RandomInRange;
+            }
+            score *= SacrificeHelper.GetScore(prisoner) * multiplier;
             var position = prisoner.Corpse?.PositionHeld ?? prisoner.PositionHeld;
             var map = prisoner.Corpse?.MapHeld ?? prisoner.MapHeld;
             var parms = default(ThingSetMakerParams);
