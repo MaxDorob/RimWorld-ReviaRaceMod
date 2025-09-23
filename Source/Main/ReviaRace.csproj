@@ -106,6 +106,7 @@
     <Compile Include="Helpers\SoulReaperWorker.cs" />
     <Compile Include="Helpers\StaticModVariables.cs" />
     <Compile Include="Helpers\Strings.cs" />
+    <Compile Include="Helpers\ThingSetMaker_CountPerScore.cs" />
     <Compile Include="JobDrivers\ConversationRitualJobDriver.cs" />
     <Compile Include="JobDrivers\JobDriver_DeliverPawnToAltar.cs" />
     <Compile Include="JobDrivers\JobDriver_GiveSpeech_NoReservations.cs" />

@@ -33,10 +33,14 @@ namespace ReviaRace.Rituals
             var score = (def.GetModExtension<SacrificeBaseScore_Extension>()?.baseScore ?? 1f) * SacrificeHelper.GetScore(prisoner) * multiplier;
             var position = prisoner.Corpse?.PositionHeld ?? prisoner.PositionHeld;
             var map = prisoner.Corpse?.MapHeld ?? prisoner.MapHeld;
-            var thingCount = SacrificeHelper.ThingsForScore(score, prisoner.RaceProps.Humanlike && prisoner.RaceProps.IsFlesh);
-            var thing = ThingMaker.MakeThing(thingCount.ThingDef);
-            thing.stackCount = thingCount.Count;
-            GenPlace.TryPlaceThing(thing, position, map, ThingPlaceMode.Near);
+            var parms = default(ThingSetMakerParams);
+            parms.custom ??= [];
+            parms.custom[ThingSetMaker_CountPerScore.paramName] = score;
+            foreach (var thing in ReviaDefOf.ReviaRaceHumanlikeSacrifice.root.Generate(parms))
+            {
+                GenPlace.TryPlaceThing(thing, position, map, ThingPlaceMode.Near);
+
+            }
             Find.World.GetComponent<SacrificeTracker>().SacrificePerformed(Faction.OfPlayer);
         }
     }

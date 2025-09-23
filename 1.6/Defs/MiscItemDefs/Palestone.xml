@@ -36,27 +36,5 @@
         <compClass>ReviaRace.Comps.InvokeLesserBlessing</compClass>
       </li>
     </comps>
-		<modExtensions>
-			<li Class="ReviaRace.SacrificeReward_Extension">
-				<human>false</human>
-				<animal>true</animal>
-				<countCurve>
-					<points>
-						<li>(0, 0)</li>
-						<li>(1, 16)</li>
-						<li>(3, 80)</li>
-						<li>(8, 224)</li>
-						<li>(16, 512)</li>
-						<li>(32, 1024)</li>
-					</points>
-				</countCurve>
-				<chanceWeightCurve>
-					<points>
-						<li>(0, 1)</li>
-						<li>(10000, 1)</li>
-					</points>
-				</chanceWeightCurve>
-			</li>
-		</modExtensions>
   </ThingDef>
 </Defs>

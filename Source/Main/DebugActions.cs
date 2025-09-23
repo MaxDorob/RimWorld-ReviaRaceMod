@@ -130,14 +130,15 @@ namespace ReviaRace
         {
             var cell = UI.MouseCell();
             Log.Message($"Spawning for score {score}");
-            var result = SacrificeHelper.ThingsForScore(score, human);
-            if (result.Count <= 0)
+            var parms = default(ThingSetMakerParams);
+            parms.custom ??= [];
+            parms.custom[ThingSetMaker_CountPerScore.paramName] = score;
+            var rewardDef = human ? ReviaDefOf.ReviaRaceHumanlikeSacrifice : ReviaDefOf.ReviaRaceAnimalSacrifice;
+            var generated = rewardDef.root.Generate(parms);
+            foreach (var thing in generated)
             {
-                return;
+                GenDrop.TryDropSpawn(thing, cell, Find.CurrentMap, ThingPlaceMode.Near, out _); 
             }
-            Thing thing = ThingMaker.MakeThing(result.ThingDef, null);
-            thing.stackCount = result.Count;
-            GenDrop.TryDropSpawn(thing, cell, Find.CurrentMap, ThingPlaceMode.Near, out _);
         }
         [DebugAction(category = "Revia debug", name = "Inspect cell", actionType = DebugActionType.ToolMap,
     allowedGameStates = AllowedGameStates.PlayingOnMap)]

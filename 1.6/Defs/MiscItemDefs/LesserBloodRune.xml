@@ -39,26 +39,5 @@
     </statBases>
     <altitudeLayer>Item</altitudeLayer>
     <tickerType>Never</tickerType>
-		<modExtensions>
-			<li Class="ReviaRace.SacrificeReward_Extension">
-				<countCurve>
-					<points>
-						<li>(0, 1)</li>
-						<li>(10000, 1)</li>
-					</points>
-
-				</countCurve>
-				<chanceWeightCurve>
-					<points>
-						<li>(0, 0)</li>
-						<li>(1, .0025)</li>
-						<li>(3, .03)</li>
-						<li>(8, .054)</li>
-						<li>(16, .115)</li>
-						<li>(32, .21)</li>
-					</points>
-				</chanceWeightCurve>
-			</li>
-		</modExtensions>
   </ThingDef>
 </Defs>
