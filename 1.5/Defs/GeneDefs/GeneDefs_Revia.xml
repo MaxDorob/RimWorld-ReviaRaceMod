@@ -2,17 +2,19 @@
 <Defs>
   <GeneDef ParentName="GeneTailBase">
     <defName>ReviaTail</defName>
-    <label>Revian tail</label>
+    <label>Revia tail</label>
     <description>A Foxlike tail with a white tip, the sign of the Blood goddess. The Skarne may bless those who kill in her name with power.</description>
     <geneClass>ReviaRace.Genes.ReviaTailGene</geneClass>
     <iconPath>UI/icons/ReviaTail_icon</iconPath>
     <iconColor>(0.75, 0.75, 0.75)</iconColor>
     <displayOrderInCategory>1000</displayOrderInCategory>
     <statOffsets>
-      <MeleeDodgeChance>0.12</MeleeDodgeChance>
       <MoveSpeed>0.3</MoveSpeed>
       <LifespanFactor>1.7</LifespanFactor>
     </statOffsets>
+		<statFactors>
+      <MeleeDodgeChance>1.12</MeleeDodgeChance>			
+		</statFactors>
     <biostatMet>0</biostatMet>
     <biostatCpx>2</biostatCpx>
     <minAgeActive>3</minAgeActive>
@@ -27,7 +29,7 @@
 
   <GeneDef>
     <defName>ReviaClaws</defName>
-    <label>Revian claws</label>
+    <label>Revia claws</label>
     <iconPath>UI/icons/ReviaClaw_icon</iconPath>
     <description>The sharp claws of the Revia, specialized for bloodshed.</description>
     <geneClass>ReviaRace.Genes.ReviaClawsGene</geneClass>
@@ -36,9 +38,9 @@
   </GeneDef>
   <GeneDef ParentName="GeneEarsBase">
     <defName>ReviaEars</defName>
-    <label>Revian ears</label>
+    <label>Revia ears</label>
     <iconPath>UI/icons/ReviaEar_icon</iconPath>
-    <description>Revian ear. Helps them hear better than the average person. And looks nice.</description>
+    <description>Revia ear. Helps them hear better than the average person. And looks nice.</description>
     <geneClass>ReviaRace.Genes.ReviaEarGene</geneClass>
     <capMods>
       <li>
@@ -95,7 +97,7 @@
 
   <GeneDef>
     <defName>ReviaTeeth</defName>
-    <label>Revian teeth</label>
+    <label>Revia teeth</label>
     <biostatCpx>1</biostatCpx>
     <biostatMet>0</biostatMet>
     <iconPath>UI/icons/ReviaTooth_icon</iconPath>

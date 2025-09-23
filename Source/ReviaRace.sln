@@ -19,6 +19,7 @@ Global
 		Release 1.3|Any CPU = Release 1.3|Any CPU
 		Release 1.4|Any CPU = Release 1.4|Any CPU
 		Release 1.5|Any CPU = Release 1.5|Any CPU
+		Release 1.6|Any CPU = Release 1.6|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
@@ -32,6 +33,8 @@ Global
 		{DF2BD9DB-9224-4EB0-A772-D1757C6DCAE2}.Release 1.4|Any CPU.Build.0 = Release 1.4|Any CPU
 		{DF2BD9DB-9224-4EB0-A772-D1757C6DCAE2}.Release 1.5|Any CPU.ActiveCfg = Release 1.5|Any CPU
 		{DF2BD9DB-9224-4EB0-A772-D1757C6DCAE2}.Release 1.5|Any CPU.Build.0 = Release 1.5|Any CPU
+		{DF2BD9DB-9224-4EB0-A772-D1757C6DCAE2}.Release 1.6|Any CPU.ActiveCfg = Release 1.6|Any CPU
+		{DF2BD9DB-9224-4EB0-A772-D1757C6DCAE2}.Release 1.6|Any CPU.Build.0 = Release 1.6|Any CPU
 		{DF2BD9DB-9224-4EB0-A772-D1757C6DCAE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DF2BD9DB-9224-4EB0-A772-D1757C6DCAE2}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7836166C-0130-4FC8-AB04-EF816BC604D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -44,6 +47,8 @@ Global
 		{7836166C-0130-4FC8-AB04-EF816BC604D1}.Release 1.4|Any CPU.Build.0 = Release|Any CPU
 		{7836166C-0130-4FC8-AB04-EF816BC604D1}.Release 1.5|Any CPU.ActiveCfg = Release 1.5|Any CPU
 		{7836166C-0130-4FC8-AB04-EF816BC604D1}.Release 1.5|Any CPU.Build.0 = Release 1.5|Any CPU
+		{7836166C-0130-4FC8-AB04-EF816BC604D1}.Release 1.6|Any CPU.ActiveCfg = Release 1.6|Any CPU
+		{7836166C-0130-4FC8-AB04-EF816BC604D1}.Release 1.6|Any CPU.Build.0 = Release 1.6|Any CPU
 		{7836166C-0130-4FC8-AB04-EF816BC604D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7836166C-0130-4FC8-AB04-EF816BC604D1}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B349CCA3-8A41-41D7-8DFC-AC43FB58E3D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU

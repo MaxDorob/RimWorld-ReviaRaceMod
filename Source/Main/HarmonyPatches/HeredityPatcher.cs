@@ -36,16 +36,19 @@ namespace ReviaRace.HarmonyPatches
         }
         public static IEnumerable<CodeInstruction> ApplyBirthOutcomeTranspiler(IEnumerable<CodeInstruction> instructions)
         {
-            Log.Message(nameof(ApplyBirthOutcomeTranspiler) + " called");
-            foreach (var ci in instructions)
+
+            var list = instructions.ToList();
+            for (int i = 0; i < list.Count; i++)
             {
+                CodeInstruction ci = list[i];
                 yield return ci;
-                if (ci.opcode == OpCodes.Initobj && ci.operand.ToString().Contains("Gender"))
+                if (ci.opcode == OpCodes.Initobj && (ci.operand?.ToString()?.Contains("Gender") ?? false))
                 {
+                    var genderVarOperand = list[i - 1].operand;
                     yield return new CodeInstruction(OpCodes.Ldarg_S, 4);
-                    yield return new CodeInstruction(OpCodes.Ldloc_S, 15);
+                    yield return new CodeInstruction(OpCodes.Ldloc_S, genderVarOperand);
                     yield return CodeInstruction.Call(typeof(HeredityPatcher), nameof(SelectGender));
-                    yield return new CodeInstruction(OpCodes.Stloc_S, 15);
+                    yield return new CodeInstruction(OpCodes.Stloc_S, genderVarOperand);
                 }
             }
         }
