@@ -23,7 +23,6 @@
     <defName>Revia_SacrificePrisoner</defName>
     <ritualBehavior>Revia_SacrificePrisoner</ritualBehavior>
     <shortDescOverride>prisoner sacrifice</shortDescOverride>
-    <descOverride>A ritualistic prisoner sacrifice. The organizer will give a speech to excite the crowd, then cut the prisoner's throat. Once the prisoner is dead, organizer will speak some finishing words.</descOverride>
 		<iconPathOverride>Things/Item/Weapons/SerratedDagger</iconPathOverride>
     <patternGroupTag/>
     <ritualOutcomeEffect>Revia_Sacrifice</ritualOutcomeEffect>
@@ -36,10 +35,8 @@
 	<RitualPatternDef>
 		<defName>Revia_BleesingForSoulreap</defName>
 		<nameMaker>Revia_NamerRitualSacrifice</nameMaker>
-		<ritualExpectedDesc>Every year on {DATE}, {MEMBERS} can have a special celebration.</ritualExpectedDesc>
 		<ritualObligationTargetFilter>Revia_BleesingForSoulreap</ritualObligationTargetFilter>
 		<shortDescOverride>blessing ritual</shortDescOverride>
-		<descOverride>TODO.</descOverride>
 		<iconPathOverride>UI/icons/ReviaRituals/SoulreapBlessing</iconPathOverride>
 		<alwaysStartAnytime>true</alwaysStartAnytime>
 		<ritualBehavior>ReviaBlessingRitual</ritualBehavior>
@@ -50,9 +47,7 @@
 		<defName>Revia_XenotypeConversation</defName>
 		<nameMaker>Revia_NamerRitualSacrifice</nameMaker>
 		<ritualObligationTargetFilter>Revia_XenotypeConversation</ritualObligationTargetFilter>
-		<ritualExpectedDesc>Every year on {DATE}, {MEMBERS} can have a special celebration.</ritualExpectedDesc>
 		<shortDescOverride>revia conversation ritual</shortDescOverride>
-		<descOverride>TODO.</descOverride>
 		<iconPathOverride>UI/icons/Revia_XenotypeIcon</iconPathOverride>
 		<alwaysStartAnytime>true</alwaysStartAnytime>
 		<ritualBehavior>Revia_XenotypeConversation</ritualBehavior>
@@ -63,9 +58,7 @@
 		<defName>Revia_PsycastRitual</defName>
 		<nameMaker>Revia_NamerRitualSacrifice</nameMaker>
 		<ritualObligationTargetFilter>Revia_PsycastRitual</ritualObligationTargetFilter>
-		<ritualExpectedDesc>Every year on {DATE}, {MEMBERS} can have a special celebration.</ritualExpectedDesc>
 		<shortDescOverride>psycast blessing ritual</shortDescOverride>
-		<descOverride>TODO.</descOverride>
 		<iconPathOverride>UI/icons/ReviaRituals/ReviaPsycastBlessing</iconPathOverride>
 		<alwaysStartAnytime>true</alwaysStartAnytime>
 		<ritualBehavior>Revia_PsycastRitual</ritualBehavior>
