@@ -3,7 +3,6 @@
   
   <RitualPatternDef Abstract="True" Name="Revia_CelebrationPartyChat">
     <nameMaker>Revia_NamerRitualSacrifice</nameMaker>
-    <ritualExpectedDesc>Every year on {DATE}, {MEMBERS} can have a special celebration.</ritualExpectedDesc>
     <iconPathOverride>UI/Misc/BadTexture</iconPathOverride>
     <canStartAnytime>true</canStartAnytime>
     <ritualObligationTargetFilter>ReviaBloodSigil</ritualObligationTargetFilter>
