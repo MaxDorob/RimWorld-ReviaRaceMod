@@ -21,7 +21,7 @@
     <defName>Revia_PrisonerSacrification</defName>
     <label>sacrification</label>
     <tipLabelOverride>Sacrification</tipLabelOverride>
-    <description>An executioner will publicly execute a prisoner. The executioner will give a short speech, execute the prisoner by cutting, and say some closing words. Spectating slaves will become afraid and intimidated, and colonists will feel exhilarated or disgusted depending on their beliefs.</description>
+    <description>An executioner will publicly sacrifice a prisoner. The executioner will give a short speech, execute the prisoner by cutting.</description>
     <ritualPatternBase>Revia_SacrificePrisoner</ritualPatternBase>
   </PreceptDef>
 
@@ -29,7 +29,7 @@
 		<defName>Revia_BlessingForSoulreap</defName>
 		<label>soulreap blessing</label>
 		<tipLabelOverride>Soulreap blessing</tipLabelOverride>
-		<description>TODO.</description>
+		<description>A sacrificer will offer bloodstones to the Skarne for Her blessing.</description>
 		<ritualPatternBase>Revia_BleesingForSoulreap</ritualPatternBase>
 	</PreceptDef>
 
@@ -37,7 +37,7 @@
 		<defName>Revia_XenotypeConversation</defName>
 		<label>revia conversation</label>
 		<tipLabelOverride>Revia conversation</tipLabelOverride>
-		<description>TODO.</description>
+		<description>A sacrificer will offer bloodstones to the Skarne to become one of Her true followers.</description>
 		<ritualPatternBase>Revia_XenotypeConversation</ritualPatternBase>
 	</PreceptDef>
 
@@ -45,7 +45,7 @@
 		<defName>Revia_PsycastRitual</defName>
 		<label>revia psycast blessing</label>
 		<tipLabelOverride>Revia psycast blessing</tipLabelOverride>
-		<description>TODO.</description>
+		<description>A sacrificer will offer mystical stone to the Skarne to get some mystic power.</description>
 		<ritualPatternBase>Revia_PsycastRitual</ritualPatternBase>
 	</PreceptDef>
 
