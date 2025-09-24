@@ -42,22 +42,17 @@
 		<defName>Revia_Sacrifice</defName>
 		<description>Depending on ritual quality, Skarne may bless her participants with bloodstones.</description>
 		<workerClass>ReviaRace.Rituals.RitualOutcomeEffectWorker_Sacrificed</workerClass>
-		<!--<extraPredictedOutcomeDescriptions>
-      <li>If the {0} is satisfying, one of the participants might gain an inspiration.</li>
-    </extraPredictedOutcomeDescriptions>-->
 		<startingQuality>0.3</startingQuality>
 		<outcomeChances>
 			<li>
 				<label>Terrible</label>
 				<chance>0.05</chance>
-				<!--<memory>Revia_TerribleSacrifice</memory>--> <!--Don't use memory-->
 				<description>The {0} wasn't bloody enough...</description>
 				<positivityIndex>-1</positivityIndex>
 			</li>
 			<li>
 				<label>Bloody</label>
 				<chance>0.35</chance>
-				<!--<memory>Revia_BoringSacrifice</memory>--> <!--Don't use memory-->
 				<description>The {0} was bloody. More blood for our bloody Goddess.</description>
 				<positivityIndex>1</positivityIndex>
 			</li>

@@ -12,7 +12,7 @@ using Verse;
 
 namespace ReviaRace.Rituals
 {
-    public class RitualOutcomeEffectWorker_Sacrificed : RitualOutcomeEffectWorker_Consumable
+    public class RitualOutcomeEffectWorker_Sacrificed : RitualOutcomeEffectWorker_FromQuality
     {
 
         public RitualOutcomeEffectWorker_Sacrificed() : base() { }
