@@ -4,7 +4,7 @@
     <defName>ReviaRaceBlessedBySkarne</defName>
 		<hediffClass>HediffWithComps</hediffClass>
     <label>Blessed by Skarne</label>
-    <description>An indication of how many lives this Revia has taken. Revia grow stronger with the more lives that they take.</description>
+    <description>I've been touched by Skarne. I feel Her power.</description>
     <isBad>false</isBad>
     <countsAsAddedPartOrImplant>false</countsAsAddedPartOrImplant>
     <stages>
