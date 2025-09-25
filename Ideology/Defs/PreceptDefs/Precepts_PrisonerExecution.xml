@@ -59,7 +59,7 @@
     <defName>Revia_PrisonerSacrifice_Respected</defName>
 		<issue>Revia_PrisonerSacrifice</issue>
     <label>respected</label>
-    <description>Sacrificing prisoners is acceptable. We need it, we like it</description>
+    <description>Sacrificing prisoners in the name of Skarne is acceptable. We need it, we like it</description>
     <impact>Low</impact>
     <displayOrderInIssue>10</displayOrderInIssue>
     <displayOrderInImpact>1000</displayOrderInImpact>
