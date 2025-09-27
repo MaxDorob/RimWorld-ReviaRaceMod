@@ -22,6 +22,7 @@
     <tradeability>Sellable</tradeability>
     <comps>
       <li Class="CompProperties_Usable">
+				<compClass>ReviaRace.CompUsable_DisableableBySettings</compClass>
         <useJob>UseArtifact</useJob>
         <useLabel>Sanctify equipped weapon</useLabel>
       </li>

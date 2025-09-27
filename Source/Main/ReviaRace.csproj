@@ -76,6 +76,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Comps\CompSkarneStatue.cs" />
+    <Compile Include="Comps\CompUsable_DisableableBySettings.cs" />
     <Compile Include="Comps\GeneRejectionHediff.cs" />
     <Compile Include="Comps\RejectionType.cs" />
     <Compile Include="Comps\InvokeBlessing.cs" />

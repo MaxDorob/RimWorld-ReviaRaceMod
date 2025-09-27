@@ -158,10 +158,13 @@ namespace ReviaRace
             {
                 DrawTextFieldWithLabel(sacrificeList.GetRect(lineHeight), Strings.SettingsSoulReapSpawnFixed, ref Settings._soulReapSpawnFixed, ref _fixedTierBuf, 1, 9);
             }
-
+            Widgets.CheckboxLabeled(sacrificeList.GetRect(lineHeight), "ReviaRaceOldSoulreapBlessing".Translate(), ref Settings.oldInvokeBlessing);
             sacrificeList.Gap(10);
             DrawCostCalculationLabel(sacrificeList.GetRect(lineHeight), typeof(InvokeGreaterBlessing));
-            DrawCostCalculationLabel(sacrificeList.GetRect(lineHeight), typeof(InvokeLesserBlessing));
+            if (Settings.oldInvokeBlessing)
+            {
+                DrawCostCalculationLabel(sacrificeList.GetRect(lineHeight), typeof(InvokeLesserBlessing));
+            }
 
             Settings.bloodstoneFromCorpseChance = Widgets.HorizontalSlider(sacrificeList.GetRect(lineHeight), Settings.bloodstoneFromCorpseChance, 0.1f, 1f, label: "ReviaRaceCorpseProductChance".Translate(Settings.bloodstoneFromCorpseChance.ToStringPercent()), roundTo: 0.05f, leftAlignedLabel: 0.1f.ToStringPercent(), rightAlignedLabel: 1f.ToStringPercent());
 

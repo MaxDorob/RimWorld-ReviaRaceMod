@@ -147,6 +147,7 @@ namespace ReviaRace.PersistentData
         public BornSettingsEnum BornSettings { get=> _BornSettings; set=>_BornSettings=value; }
 
         public float bloodstoneFromCorpseChance = 0.4f;
+        public bool oldInvokeBlessing = false;
 
         public override void ExposeData()
         {
@@ -170,6 +171,7 @@ namespace ReviaRace.PersistentData
             Scribe_Values.Look(ref _BornSettings, GetLabel(nameof(BornSettings)), BornSettingsEnum.ForceBornRevia);
             Scribe_Values.Look(ref _noHybrid, GetLabel(nameof(NoHybrid)), false);
             Scribe_Values.Look(ref bloodstoneFromCorpseChance, nameof(bloodstoneFromCorpseChance), 0.4f);
+            Scribe_Values.Look(ref oldInvokeBlessing, nameof(oldInvokeBlessing), false);
             ApplySettings();
         }
 
