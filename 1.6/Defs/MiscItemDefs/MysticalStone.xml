@@ -3,7 +3,7 @@
   <ThingDef ParentName="ResourceBase" MayRequire="Ludeon.Rimworld.Royalty">
     <defName>Revia_MysticalStone</defName>
     <label>mystical stone</label>
-    <description>A mystical stone sent by Skarne contains a mystical power.</description>
+    <description>A mystical stone sent by Skarne that contains a mystical power.</description>
     <thingClass>ThingWithComps</thingClass>
     <techLevel>Neolithic</techLevel>
     <graphicData>
