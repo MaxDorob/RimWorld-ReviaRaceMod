@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using VanillaPsycastsExpanded;
-using VFECore.Abilities;
+using VEF.Abilities;
 
 namespace Revia_VanillaPsycastExpanded.Patches
 {

@@ -29,7 +29,7 @@ namespace Revia_VanillaPsycastExpanded
             },
 
             forPawn,
-            maxAttackDistance,
+            this.maxSearchDistance,
             true,
             true
             );
@@ -51,7 +51,7 @@ namespace Revia_VanillaPsycastExpanded
             }
             return currentTarget;
         }
-        public override Job TryGiveJob(Pawn pawn)
+        protected override Job TryGiveJob(Pawn pawn)
         {
             var target = FindAttackTarget(pawn);
             
@@ -75,5 +75,6 @@ namespace Revia_VanillaPsycastExpanded
             Log.Warning("Call base");
             return base.TryGiveJob(pawn);
         }
+        public float maxSearchDistance = 40f;
     }
 }

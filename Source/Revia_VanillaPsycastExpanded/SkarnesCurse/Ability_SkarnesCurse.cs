@@ -11,7 +11,7 @@ using Verse;
 using Verse.Sound;
 using Verse.AI;
 using ReviaRace.Helpers;
-using VFECore.Abilities;
+using VEF.Abilities;
 
 namespace Revia_VanillaPsycastExpanded
 {
@@ -19,7 +19,7 @@ namespace Revia_VanillaPsycastExpanded
     /// Skarne's curse ability
     /// </summary>
     /// <remarks>Mostly reworked <see cref="Ability_Killskip"/></remarks>
-    public class Ability_SkarnesCurse : VFECore.Abilities.Ability
+    public class Ability_SkarnesCurse : VEF.Abilities.Ability
     {
 
         public override void Cast(params GlobalTargetInfo[] targets)

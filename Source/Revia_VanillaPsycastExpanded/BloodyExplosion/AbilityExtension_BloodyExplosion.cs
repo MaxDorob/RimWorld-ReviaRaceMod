@@ -8,13 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
 using Verse;
-using VFECore.Abilities;
+using VEF.Abilities;
 
 namespace Revia_VanillaPsycastExpanded
 {
     public class AbilityExtension_BloodyExplosion : AbilityExtension_AbilityMod
     {
-        public override void Cast(GlobalTargetInfo[] targets, VFECore.Abilities.Ability ability)
+        public override void Cast(GlobalTargetInfo[] targets, VEF.Abilities.Ability ability)
         {
             base.Cast(targets, ability);
             foreach (var target in targets)

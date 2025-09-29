@@ -45,7 +45,7 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="VFECore">
-      <HintPath>..\ThirdPartyAssemblies\VFECore.dll</HintPath>
+      <HintPath>..\ThirdPartyAssemblies\VEF.dll</HintPath>
       <Private>False</Private>
     </Reference>
   </ItemGroup>
@@ -89,9 +89,6 @@
     </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <ItemGroup>
-    <Publicize Include="Assembly-CSharp" />
-  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Main\ReviaRace.csproj">
       <Project>{df2bd9db-9224-4eb0-a772-d1757c6dcae2}</Project>

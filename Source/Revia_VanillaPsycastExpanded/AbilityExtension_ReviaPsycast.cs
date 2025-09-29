@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using VanillaPsycastsExpanded;
-using VFECore.Abilities;
+using VEF.Abilities;
 using ReviaRace.Helpers;
 using Verse;
 

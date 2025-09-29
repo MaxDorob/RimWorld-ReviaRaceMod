@@ -61,6 +61,8 @@ Global
 		{B349CCA3-8A41-41D7-8DFC-AC43FB58E3D2}.Release 1.4|Any CPU.Build.0 = Release|Any CPU
 		{B349CCA3-8A41-41D7-8DFC-AC43FB58E3D2}.Release 1.5|Any CPU.ActiveCfg = Release|Any CPU
 		{B349CCA3-8A41-41D7-8DFC-AC43FB58E3D2}.Release 1.5|Any CPU.Build.0 = Release|Any CPU
+		{B349CCA3-8A41-41D7-8DFC-AC43FB58E3D2}.Release 1.6|Any CPU.ActiveCfg = Release|Any CPU
+		{B349CCA3-8A41-41D7-8DFC-AC43FB58E3D2}.Release 1.6|Any CPU.Build.0 = Release|Any CPU
 		{B349CCA3-8A41-41D7-8DFC-AC43FB58E3D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B349CCA3-8A41-41D7-8DFC-AC43FB58E3D2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection

@@ -8,7 +8,7 @@ using UnityEngine;
 using VanillaPsycastsExpanded;
 using Verse;
 using Verse.AI;
-using VFECore.Abilities;
+using VEF.Abilities;
 
 namespace Revia_VanillaPsycastExpanded
 {

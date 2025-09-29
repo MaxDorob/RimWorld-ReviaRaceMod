@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
 using Verse;
-using VFECore.Abilities;
+using VEF.Abilities;
 
 namespace Revia_VanillaPsycastExpanded
 {

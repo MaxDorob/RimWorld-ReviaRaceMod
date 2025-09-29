@@ -8,7 +8,7 @@ using Verse;
 
 namespace Revia_VanillaPsycastExpanded.Patches
 {
-    [HarmonyLib.HarmonyPatch(typeof(Pawn), nameof(Pawn.DoKillSideEffects))]
+    [HarmonyLib.HarmonyPatch(typeof(Pawn), "DoKillSideEffects")]
     internal static class PsyfocusGain_Patch
     {
         static void Postfix(DamageInfo? dinfo)
