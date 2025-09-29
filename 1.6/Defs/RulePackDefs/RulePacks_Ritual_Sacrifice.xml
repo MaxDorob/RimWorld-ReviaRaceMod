@@ -22,5 +22,25 @@
       </rulesStrings>
     </rulePack>
   </RulePackDef>
+
+	<RulePackDef>
+		<defName>Revia_NamerRitualOffering</defName>
+		<rulePack>
+			<rulesStrings>
+				<li>r_ritualName(p=2)->[memeAdjective] [offering]</li>
+				<li>r_ritualName->[offering] of [chosenTheme]</li>
+				<li>r_ritualName->[chosenAdjective] [offering]</li>
+				<li>r_ritualName->[keyDeity]'s [offering]</li>
+				<li>r_ritualName->[offering] of [keyDeity]</li>
+				<li>r_ritualName->[offering] of [memeConcept]</li>
+				<li>r_ritualName->[offering] of [chosenIdeoName]</li>
+
+				<li>offering->sacrifice</li>
+				<li>offering->offering</li>
+				<li>offering->oblation</li>
+
+			</rulesStrings>
+		</rulePack>
+	</RulePackDef>
   
 </Defs>

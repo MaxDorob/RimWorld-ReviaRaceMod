@@ -33,7 +33,7 @@
 
 	<RitualPatternDef>
 		<defName>Revia_BleesingForSoulreap</defName>
-		<nameMaker>Revia_NamerRitualSacrifice</nameMaker>
+		<nameMaker>Revia_NamerRitualOffering</nameMaker>
 		<ritualObligationTargetFilter>Revia_BleesingForSoulreap</ritualObligationTargetFilter>
 		<shortDescOverride>blessing ritual</shortDescOverride>
 		<iconPathOverride>UI/icons/ReviaRituals/SoulreapBlessing</iconPathOverride>
@@ -44,7 +44,7 @@
 
 	<RitualPatternDef ParentName="Revia_SacrificeBase">
 		<defName>Revia_XenotypeConversation</defName>
-		<nameMaker>Revia_NamerRitualSacrifice</nameMaker>
+		<nameMaker>Revia_NamerRitualOffering</nameMaker>
 		<ritualObligationTargetFilter>Revia_XenotypeConversation</ritualObligationTargetFilter>
 		<shortDescOverride>revia conversation ritual</shortDescOverride>
 		<iconPathOverride>UI/icons/Revia_XenotypeIcon</iconPathOverride>
@@ -55,7 +55,7 @@
 
 	<RitualPatternDef ParentName="Revia_SacrificeBase" MayRequire="Ludeon.RimWorld.Royalty">
 		<defName>Revia_PsycastRitual</defName>
-		<nameMaker>Revia_NamerRitualSacrifice</nameMaker>
+		<nameMaker>Revia_NamerRitualOffering</nameMaker>
 		<ritualObligationTargetFilter>Revia_PsycastRitual</ritualObligationTargetFilter>
 		<shortDescOverride>psycast blessing ritual</shortDescOverride>
 		<iconPathOverride>UI/icons/ReviaRituals/ReviaPsycastBlessing</iconPathOverride>
