@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
-	<VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+	<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
 		<defName>Revia_Bloodseek</defName>
 		<label>bloodseek</label>
 		<description>TODO. Teleport to a bleeding target.</description>
@@ -38,19 +38,19 @@
 				<clamorType>Ability</clamorType>
 				<clamorRadius>10</clamorRadius>
 			</li>
-			<li Class="VFECore.Abilities.AbilityExtension_Hediff">
+			<li Class="VEF.Abilities.AbilityExtension_Hediff">
 				<hediff>PsychicBurden</hediff>
 				<durationMultiplier>PsychicSensitivity</durationMultiplier>
 			</li>
 		</modExtensions>
-	</VFECore.Abilities.AbilityDef>
+	</VEF.Abilities.AbilityDef>
 
-	<VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+	<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
 		<defName>Revia_SkarneAvatar</defName>
 		<label>skarne avatar</label>
 		<description>TODO.</description>
 		<iconPath>Abilities/Bloodpath/SkarneAvatar</iconPath>
-		<abilityClass>VFECore.Abilities.Ability_Blank</abilityClass>
+		<abilityClass>VEF.Abilities.Ability_Blank</abilityClass>
 		<targetMode>Self</targetMode>
 		<castTime>150</castTime>
 		<durationTime>2700</durationTime>
@@ -74,9 +74,9 @@
 				<stateDef>Revia_SkarneAvatar</stateDef>
 			</li>
 		</modExtensions>
-	</VFECore.Abilities.AbilityDef>
+	</VEF.Abilities.AbilityDef>
 
-	<VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+	<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
 		<defName>Revia_Bloodbath</defName>
 		<label>bloodbath</label>
 		<description>TODO.</description>
@@ -86,7 +86,7 @@
 		<targetMode>Self</targetMode>
 		<castTime>15</castTime>
 		<durationTime>7200</durationTime>
-		<abilityClass>VFECore.Abilities.Ability_Blank</abilityClass>
+		<abilityClass>VEF.Abilities.Ability_Blank</abilityClass>
 		<modExtensions>
 			<li Class="Revia_VanillaPsycastExpanded.AbilityExtension_ReviaPsycast">
 				<path>Revia_BloodPath</path>
@@ -101,14 +101,14 @@
 					<li>Revia_VermilionHarvest</li>
 				</prerequisites>
 			</li>
-			<li Class="VFECore.Abilities.AbilityExtension_Hediff">
+			<li Class="VEF.Abilities.AbilityExtension_Hediff">
 				<hediff>Revia_Bloodbath</hediff>
 				<durationMultiplier>PsychicSensitivity</durationMultiplier>
 			</li>
 		</modExtensions>
-	</VFECore.Abilities.AbilityDef>
+	</VEF.Abilities.AbilityDef>
 
-	<VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+	<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
 		<defName>Revia_SkarnesProtection</defName>
 		<label>skarne's protection</label>
 		<description>TODO.</description>
@@ -116,7 +116,7 @@
 		<castTime>150</castTime>
 		<range>36</range>
 		<targetMode>Pawn</targetMode>
-		<abilityClass>VFECore.Abilities.Ability_Blank</abilityClass>
+		<abilityClass>VEF.Abilities.Ability_Blank</abilityClass>
 		<targetingParametersList>
 			<li>
 				<canTargetSelf>True</canTargetSelf>
@@ -143,9 +143,9 @@
 			<li Class="Revia_VanillaPsycastExpanded.AbilityExtension_SkarneProtection">
 			</li>
 		</modExtensions>
-	</VFECore.Abilities.AbilityDef>
+	</VEF.Abilities.AbilityDef>
 
-	<VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+	<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
 		<defName>Revia_SkarnesCurse</defName>
 		<label>skarne's curse</label>
 		<description>TODO.</description>
@@ -171,14 +171,14 @@
 					<li>Revia_SkarnesProtection</li>
 				</prerequisites>
 			</li>
-			<li Class="VFECore.Abilities.AbilityExtension_Hediff">
+			<li Class="VEF.Abilities.AbilityExtension_Hediff">
 				<hediff>Revia_SkarnesCurse</hediff>
 				<durationMultiplier>PsychicSensitivity</durationMultiplier>
 			</li>
 		</modExtensions>
-	</VFECore.Abilities.AbilityDef>
+	</VEF.Abilities.AbilityDef>
 
-	<VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+	<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
 		<defName>Revia_BloodyExplosion</defName>
 		<label>bloody explosion</label>
 		<description>TODO.</description>
@@ -188,7 +188,7 @@
 		<requireLineOfSight>true</requireLineOfSight>
 		<targetMode>Pawn</targetMode>
 
-		<abilityClass>VFECore.Abilities.Ability_Blank</abilityClass>
+		<abilityClass>VEF.Abilities.Ability_Blank</abilityClass>
 		<modExtensions>
 			<li Class="Revia_VanillaPsycastExpanded.AbilityExtension_ReviaPsycast">
 				<path>Revia_BloodPath</path>
@@ -214,16 +214,16 @@
 			</li>
 
 		</modExtensions>
-	</VFECore.Abilities.AbilityDef>
+	</VEF.Abilities.AbilityDef>
 
-	<VFECore.Abilities.AbilityDef ParentName="VPE_WordOfAbilityBase">
+	<VEF.Abilities.AbilityDef ParentName="VPE_WordOfAbilityBase">
 		<defName>Revia_ReavingReap</defName>
 		<label>reaving reap</label>
 		<description>TODO.</description>
 		<iconPath>Abilities/Bloodpath/SkarnesProtection</iconPath>
 		<!--<castTime>150</castTime>-->
 
-		<abilityClass>VFECore.Abilities.Ability_Blank</abilityClass>
+		<abilityClass>VEF.Abilities.Ability_Blank</abilityClass>
 		<castTime>600</castTime>
 		<targetMode>Self</targetMode>
 		<hasAoE>true</hasAoE>
@@ -255,9 +255,9 @@
 			<li Class="Revia_VanillaPsycastExpanded.AbilityExtension_ReavingReap">
 			</li>
 		</modExtensions>
-	</VFECore.Abilities.AbilityDef>
+	</VEF.Abilities.AbilityDef>
 
-	<VFECore.Abilities.AbilityDef ParentName="VPE_WordOfAbilityBase">
+	<VEF.Abilities.AbilityDef ParentName="VPE_WordOfAbilityBase">
 		<defName>Revia_VermilionHarvest</defName>
 		<label>vermilion harvest</label>
 		<description>TODO.</description>
@@ -265,7 +265,7 @@
 		<castTime>350</castTime>
 		<warmupMote></warmupMote>
 		<warmupSound></warmupSound>
-		<abilityClass>VFECore.Abilities.Ability_Blank</abilityClass>
+		<abilityClass>VEF.Abilities.Ability_Blank</abilityClass>
 		<modExtensions>
 			<li Class="Revia_VanillaPsycastExpanded.AbilityExtension_ReviaPsycast">
 				<path>Revia_BloodPath</path>
@@ -282,6 +282,6 @@
 				<effecterDef>Revia_BloodyExplosion</effecterDef>
 			</li>
 		</modExtensions>
-	</VFECore.Abilities.AbilityDef>
+	</VEF.Abilities.AbilityDef>
 
 </Defs>
