@@ -202,8 +202,21 @@
 					<li>Revia_Bloodseek</li>
 				</prerequisites>
 			</li>
-			<li Class="Revia_VanillaPsycastExpanded.AbilityExtension_BloodyExplosion_Effecter">
-				<effecterDef>Revia_BloodyExplosion</effecterDef>
+			<li Class="Revia_VanillaPsycastExpanded.AbilityExtension_EffecterOnTarget_ByBleedRate">
+				<bleedRateRange>0~0.4</bleedRateRange>
+				<effecterDef>Revia_BloodyExplosionSmall</effecterDef>
+			</li>
+			<li Class="Revia_VanillaPsycastExpanded.AbilityExtension_EffecterOnTarget_ByBleedRate">
+				<bleedRateRange>0.4~1</bleedRateRange>
+				<effecterDef>Revia_BloodyExplosionMedium</effecterDef>
+			</li>
+			<li Class="Revia_VanillaPsycastExpanded.AbilityExtension_EffecterOnTarget_ByBleedRate">
+				<bleedRateRange>1~2.5</bleedRateRange>
+				<effecterDef>Revia_BloodyExplosionBig</effecterDef>
+			</li>
+			<li Class="Revia_VanillaPsycastExpanded.AbilityExtension_EffecterOnTarget_ByBleedRate">
+				<bleedRateRange>2.5~9999</bleedRateRange>
+				<effecterDef>Revia_BloodyExplosionHuge</effecterDef>
 			</li>
 			<li Class="Revia_VanillaPsycastExpanded.AbilityExtension_BloodyExplosion">
 				<damageDef>Revia_BloodExplosionScratch</damageDef>
@@ -278,8 +291,17 @@
 			</li>
 			<li Class="Revia_VanillaPsycastExpanded.AbilityExtension_VermilionHarvest">
 			</li>
-			<li Class="Revia_VanillaPsycastExpanded.AbilityExtension_MultipliedEffecterOnTarget">
-				<effecterDef>Revia_BloodyExplosion</effecterDef>
+			<li Class="Revia_VanillaPsycastExpanded.AbilityExtension_EffecterOnTarget_ByBodySize">
+				<bodySizeRange>0~0.5</bodySizeRange>
+				<effecterDef>Revia_BloodyExplosionSmall</effecterDef>
+			</li>
+			<li Class="Revia_VanillaPsycastExpanded.AbilityExtension_EffecterOnTarget_ByBodySize">
+				<bodySizeRange>0.5~1.4</bodySizeRange>
+				<effecterDef>Revia_BloodyExplosionMedium</effecterDef>
+			</li>
+			<li Class="Revia_VanillaPsycastExpanded.AbilityExtension_EffecterOnTarget_ByBodySize">
+				<bodySizeRange>1.4~9999</bodySizeRange>
+				<effecterDef>Revia_BloodyExplosionBig</effecterDef>
 			</li>
 		</modExtensions>
 	</VEF.Abilities.AbilityDef>

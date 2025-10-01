@@ -50,11 +50,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AbilityExtension_MultipliedEffecterOnTarget.cs" />
+    <Compile Include="AbilityExtension_EffecterOnTarget_ByBleedRate.cs" />
+    <Compile Include="AbilityExtension_EffecterOnTarget_ByBodySize.cs" />
     <Compile Include="AbilityExtension_ReviaPsycast.cs" />
     <Compile Include="AttackTargetFinderEx.cs" />
     <Compile Include="Bloodseek\Ability_Bloodseek.cs" />
-    <Compile Include="BloodyExplosion\AbilityExtension_BloodyExplosion_Effecter.cs" />
     <Compile Include="BloodyExplosion\AbilityExtension_BloodyExplosion.cs" />
     <Compile Include="Defs.cs" />
     <Compile Include="HediffComp_EntropyIncrease.cs" />
