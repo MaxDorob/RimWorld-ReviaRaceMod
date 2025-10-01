@@ -43,7 +43,7 @@
 				<burstCount>5</burstCount>
 				<rotation>-150~150</rotation>
 				<positionRadius>0.5</positionRadius>
-				<speed>2~3</speed>
+				<speed>2.5~4</speed>
 				<fleckUsesAngleForVelocity>true</fleckUsesAngleForVelocity>
 				<spawnLocType>OnSource</spawnLocType>
 			</li>
@@ -91,7 +91,7 @@
 				<burstCount>5</burstCount>
 				<rotation>-150~150</rotation>
 				<positionRadius>0.5</positionRadius>
-				<speed>2~3</speed>
+				<speed>2.5~4</speed>
 				<fleckUsesAngleForVelocity>true</fleckUsesAngleForVelocity>
 				<spawnLocType>OnSource</spawnLocType>
 			</li>
@@ -139,7 +139,7 @@
 				<burstCount>5</burstCount>
 				<rotation>-150~150</rotation>
 				<positionRadius>0.5</positionRadius>
-				<speed>2~3</speed>
+				<speed>2.5~4</speed>
 				<fleckUsesAngleForVelocity>true</fleckUsesAngleForVelocity>
 				<spawnLocType>OnSource</spawnLocType>
 			</li>
@@ -187,7 +187,7 @@
 				<burstCount>5</burstCount>
 				<rotation>-150~150</rotation>
 				<positionRadius>0.5</positionRadius>
-				<speed>2~3</speed>
+				<speed>2.5~4</speed>
 				<fleckUsesAngleForVelocity>true</fleckUsesAngleForVelocity>
 				<spawnLocType>OnSource</spawnLocType>
 			</li>
