@@ -4,7 +4,7 @@
 		<defName>Revia_Bloodseek</defName>
 		<label>bloodseek</label>
 		<description>TODO. Teleport to a bleeding target.</description>
-		<iconPath>Abilities/Bloodpath/Bloodseek</iconPath>
+		<iconPath>UI/Bloodpath/Bloodseek</iconPath>
 		<abilityClass>Revia_VanillaPsycastExpanded.Ability_Bloodseek</abilityClass>
 		<castTime>30</castTime>
 		<durationTime>100</durationTime>
@@ -49,7 +49,7 @@
 		<defName>Revia_SkarneAvatar</defName>
 		<label>skarne avatar</label>
 		<description>TODO.</description>
-		<iconPath>Abilities/Bloodpath/SkarneAvatar</iconPath>
+		<iconPath>UI/Bloodpath/SkarneAvatar</iconPath>
 		<abilityClass>VEF.Abilities.Ability_Blank</abilityClass>
 		<targetMode>Self</targetMode>
 		<castTime>150</castTime>
@@ -80,7 +80,7 @@
 		<defName>Revia_Bloodbath</defName>
 		<label>bloodbath</label>
 		<description>TODO.</description>
-		<iconPath>Abilities/Bloodpath/Bloodbath</iconPath>
+		<iconPath>UI/Bloodpath/Bloodbath</iconPath>
 		<castSound>VPE_BladeFocus_Cast</castSound>
 		<!--TODO: Change to some other sound-->
 		<targetMode>Self</targetMode>
@@ -112,7 +112,7 @@
 		<defName>Revia_SkarnesProtection</defName>
 		<label>skarne's protection</label>
 		<description>TODO.</description>
-		<iconPath>Abilities/Bloodpath/SkarnesProtection</iconPath>
+		<iconPath>UI/Bloodpath/SkarnesProtection</iconPath>
 		<castTime>150</castTime>
 		<range>36</range>
 		<targetMode>Pawn</targetMode>
@@ -149,7 +149,7 @@
 		<defName>Revia_SkarnesCurse</defName>
 		<label>skarne's curse</label>
 		<description>TODO.</description>
-		<iconPath>Abilities/Bloodpath/SkarnesCurse</iconPath>
+		<iconPath>UI/Bloodpath/SkarnesCurse</iconPath>
 		<castTime>40</castTime>
 		<durationTime>1800</durationTime>
 		<needsTicking>true</needsTicking>
@@ -182,7 +182,7 @@
 		<defName>Revia_BloodyExplosion</defName>
 		<label>bloody explosion</label>
 		<description>TODO.</description>
-		<iconPath>Abilities/Bloodpath/BloodyExplosion</iconPath>
+		<iconPath>UI/Bloodpath/BloodyExplosion</iconPath>
 		<castTime>40</castTime>
 		<range>45</range>
 		<requireLineOfSight>true</requireLineOfSight>
@@ -233,7 +233,7 @@
 		<defName>Revia_ReavingReap</defName>
 		<label>reaving reap</label>
 		<description>TODO.</description>
-		<iconPath>Abilities/Bloodpath/SkarnesProtection</iconPath>
+		<iconPath>UI/Bloodpath/ReavingReap</iconPath>
 		<!--<castTime>150</castTime>-->
 
 		<abilityClass>VEF.Abilities.Ability_Blank</abilityClass>
@@ -274,7 +274,7 @@
 		<defName>Revia_VermilionHarvest</defName>
 		<label>vermilion harvest</label>
 		<description>TODO.</description>
-		<iconPath>Abilities/Bloodpath/SkarnesProtection</iconPath>
+		<iconPath>UI/Bloodpath/VermilionHarvest</iconPath>
 		<castTime>350</castTime>
 		<warmupMote></warmupMote>
 		<warmupSound></warmupSound>
