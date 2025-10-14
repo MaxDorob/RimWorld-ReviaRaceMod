@@ -18,7 +18,7 @@
 	<JobDef>
 		<defName>Revia_InvokeBlessing</defName>
 		<driverClass>ReviaRace.JobDrivers.JobDriver_InvokeBlessing</driverClass>
-		<reportString>TODO.</reportString>
+		<reportString>Invoking blessing.</reportString>
 		<casualInterruptible>false</casualInterruptible>
 	</JobDef>
 
