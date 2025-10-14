@@ -39,7 +39,7 @@
     <stages>
       <li>
         <label>satisfying sacrifice</label>
-        <description>We satisfied Skarne with that sacrifice. Bloody sacrifice.</description>
+        <description>We satisfied Skarne with that bloody sacrifice.</description>
         <baseMoodEffect>5</baseMoodEffect>
       </li>
     </stages>
