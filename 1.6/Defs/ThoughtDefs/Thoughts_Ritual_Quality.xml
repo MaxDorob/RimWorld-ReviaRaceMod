@@ -25,7 +25,7 @@
     <stages>
       <li>
         <label>boring sacrifice</label>
-        <description>That sacrifice wasn't bloody enough.</description>
+        <description>Dull, that sacrifice wasn't bloody enough.</description>
         <baseMoodEffect>-1</baseMoodEffect>
       </li>
     </stages>
