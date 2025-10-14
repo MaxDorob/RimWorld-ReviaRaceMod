@@ -3,7 +3,7 @@
   <MemeDef MayRequire="Ludeon.RimWorld.Ideology">
     <defName>ReviaRaceSkarniteMeme</defName>
     <label>skarnite</label>
-    <description>A person's greatest aspiration is to serve the bloody goddess, in all her forms. All hail Skarne!</description>
+    <description>The Bloody Goddess is exalted by bloodshed and sacrifice.</description>
     <iconPath>UI/Memes/Raider</iconPath>
     <groupDef>Misc</groupDef>
     <impact>3</impact>
