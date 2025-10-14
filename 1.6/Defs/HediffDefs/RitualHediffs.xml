@@ -4,7 +4,7 @@
     <defName>ReviaRaceBlessedBySkarne</defName>
 		<hediffClass>HediffWithComps</hediffClass>
     <label>Blessed by Skarne</label>
-    <description>I've been touched by Skarne. I feel Her power.</description>
+    <description>I feel Skarne in my blood like fire!</description>
     <isBad>false</isBad>
     <countsAsAddedPartOrImplant>false</countsAsAddedPartOrImplant>
     <stages>
