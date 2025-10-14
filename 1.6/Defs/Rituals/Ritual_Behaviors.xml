@@ -49,7 +49,7 @@
 					<li Class="StageFailTrigger_TargetPawnUnreachable">
 						<takerId>sacrificer</takerId>
 						<takeeId>prisoner</takeeId>
-						<desc>Prisoner is not reachable.</desc>
+						<desc>Prisoner is unreachable.</desc>
 					</li>
 					<li Class="StageFailTrigger_PawnAsleep">
 						<desc>escort asleep</desc>
@@ -207,7 +207,7 @@
 					<li Class="StageFailTrigger_TargetPawnUnreachable">
 						<takerId>sacrificer</takerId>
 						<takeeId>convertee</takeeId>
-						<desc>Prisoner is not reachable.</desc>
+						<desc>Prisoner is unreachable.</desc>
 					</li>
 					<li Class="StageFailTrigger_PawnAsleep">
 						<desc>escort asleep</desc>

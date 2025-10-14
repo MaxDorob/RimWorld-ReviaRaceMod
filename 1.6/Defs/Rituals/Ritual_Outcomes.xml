@@ -54,14 +54,14 @@
 			<li>
 				<label>Bloody</label>
 				<chance>0.35</chance>
-				<description>The {0} was bloody. More blood for our bloody Goddess.</description>
+				<description>The {0} was bloody. More blood for the Bloody Goddess.</description>
 				<positivityIndex>1</positivityIndex>
 			</li>
 			<li>
 				<label>Satisfying</label>
 				<chance>0.4</chance>
 				<memory>Revia_SatisfyingSacrifice</memory>
-				<description>We satisfied our obligation, all Blood is Skarne's by right.</description>
+				<description>We satisfied our obligation, all blood is Skarne's by right.</description>
 				<potentialExtraOutcomeDesc>Revia participant may recieve a bonus.</potentialExtraOutcomeDesc>
 				<positivityIndex>2</positivityIndex>
 			</li>
@@ -116,14 +116,14 @@
 			<li>
 				<label>Skarne satisfied</label>
 				<chance>0.70</chance>
-				<description>We were granted a blessing. We got Her power.</description>
+				<description>We were granted a blessing.</description>
 				<potentialExtraOutcomeDesc>There's a 33% chance that followers of Her path will get combat buffs.</potentialExtraOutcomeDesc>
 				<positivityIndex>1</positivityIndex>
 			</li>
 			<li>
 				<label>Skarne impressed</label>
 				<chance>0.2</chance>
-				<description>Skarne was impressed with the offering. You will feel Her in your blood like fire, an endless desire to kill!</description>
+				<description>Skarne was impressed with the offering. We feel power in our blood like fire, an endless desire to kill!</description>
 				<potentialExtraOutcomeDesc>Followers of Her path get combat buffs.</potentialExtraOutcomeDesc> <!--A combat buff-->
 				<positivityIndex>2</positivityIndex>
 			</li>
@@ -153,7 +153,7 @@
 			<li>
 				<label>Spectacular</label>
 				<chance>0.2</chance>
-				<description>The Queen of the blood has spoken. We will dance among the severed bodies of Skarne's enemies!</description>
+				<description>The Queen of Blood has spoken. We will dance among the severed bodies of our enemies!</description>
 				<positivityIndex>2</positivityIndex>
 			</li>
 		</outcomeChances>
@@ -176,7 +176,7 @@
 			<li>
 				<label>Good</label>
 				<chance>0.45</chance>
-				<description>We got attention. Let's prove we really deserve.</description>
+				<description>We got attention, let's prove we deserve it.</description>
 				<positivityIndex>1</positivityIndex>
 			</li>
 			<li>
@@ -189,7 +189,7 @@
 			<li>
 				<label>Spectacular</label>
 				<chance>0.2</chance>
-				<description>We can feel Skarne's touch, power flows like so much Blood!</description>
+				<description>Skarne's acuity and power flows through us like so much Blood!</description>
 				<potentialExtraOutcomeDesc>Sacrificer will get 2 additional psycast levels.</potentialExtraOutcomeDesc>
 				<positivityIndex>3</positivityIndex>
 			</li>
