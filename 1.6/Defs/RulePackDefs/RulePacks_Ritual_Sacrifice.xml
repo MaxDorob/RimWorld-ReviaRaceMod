@@ -3,15 +3,14 @@
 
   <RulePackDef>
     <defName>Revia_NamerRitualSacrifice</defName>
+		<directTestable>true</directTestable>
+		<include>
+			<li>ReviaHighNamerDeity</li>
+		</include>
     <rulePack>
       <rulesStrings>
-        <li>r_ritualName(p=2)->[memeAdjective] [sacrifice]</li>
-        <li>r_ritualName->[sacrifice] of [chosenTheme]</li>
-        <li>r_ritualName->[chosenAdjective] [sacrifice]</li>
-        <li>r_ritualName->[keyDeity]'s [sacrifice]</li>
-        <li>r_ritualName->[sacrifice] of [keyDeity]</li>
-        <li>r_ritualName->[sacrifice] of [memeConcept]</li>
-        <li>r_ritualName->[sacrifice] of [chosenIdeoName]</li>
+        <li>r_ritualName->[sacrifice] to [name]</li>
+        <li>r_ritualName->[sacrifice] for [name]</li>
 
         <li>sacrifice->sacrifice</li>
         <li>sacrifice->offering</li>
