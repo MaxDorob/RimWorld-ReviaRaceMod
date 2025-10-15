@@ -5,8 +5,8 @@
     <defName>Revia_BloodPath</defName>
     <label>bloodpath</label>
     <description>TODO.</description> 
-    <background>UI/Backgrounds/EmpathPath</background>
-    <altBackground>UI/AlternativeBackgrounds/PathBG_Empath</altBackground>
+    <background>UI/Bloodpath/Background</background>
+    <altBackground>UI/Bloodpath/Background</altBackground>
     <tab>Psycasts</tab>
     <tooltip>TODO tooltip.</tooltip>
 		<requiredGene>ReviaTail</requiredGene>
