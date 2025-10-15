@@ -46,7 +46,7 @@
 		<defName>Revia_XenotypeConversion</defName>
 		<nameMaker>Revia_NamerRitualConversion</nameMaker>
 		<ritualObligationTargetFilter>Revia_XenotypeConversion</ritualObligationTargetFilter>
-		<shortDescOverride>revia conversation ritual</shortDescOverride>
+		<shortDescOverride>revia conversion ritual</shortDescOverride>
 		<iconPathOverride>UI/icons/ReviaRituals/ReviaXenotypeConversion</iconPathOverride>
 		<alwaysStartAnytime>true</alwaysStartAnytime>
 		<ritualBehavior>Revia_XenotypeConversion</ritualBehavior>
