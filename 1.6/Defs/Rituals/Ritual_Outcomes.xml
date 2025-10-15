@@ -131,9 +131,9 @@
 	</RitualOutcomeEffectDef>
 
 	<RitualOutcomeEffectDef ParentName="ReviaOutcomeBase" MayRequire="Ludeon.Rimworld.Biotech">
-		<defName>Revia_XenotypeConversation</defName>
+		<defName>Revia_XenotypeConversion</defName>
 		<description>A convertee's xenotype will be changed to the Revia.</description>
-		<workerClass>ReviaRace.Rituals.RitualOutcomeEffectWorker_XenotypeConversation</workerClass>
+		<workerClass>ReviaRace.Rituals.RitualOutcomeEffectWorker_XenotypeConversion</workerClass>
 		<extraPredictedOutcomeDescriptions>
 			<li>The better {0}, the less the resulting coma will be for the converted pawn.</li>
 		</extraPredictedOutcomeDescriptions>

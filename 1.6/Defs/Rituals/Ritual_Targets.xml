@@ -28,7 +28,7 @@
 	</RitualObligationTargetFilterDef>
 
 	<RitualObligationTargetFilterDef>
-		<defName>Revia_XenotypeConversation</defName>
+		<defName>Revia_XenotypeConversion</defName>
 		<workerClass>ReviaRace.Rituals.RitualObligationTargetWorker_BloodstonesRequired</workerClass>
 		<thingDefs>
 			<li>ReviaBloodSigil</li>

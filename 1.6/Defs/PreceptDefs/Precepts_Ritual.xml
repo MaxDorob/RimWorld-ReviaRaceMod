@@ -34,11 +34,11 @@
 	</PreceptDef>
 
 	<PreceptDef ParentName="ReviaPreceptBase">
-		<defName>Revia_XenotypeConversation</defName>
-		<label>revia conversation</label>
-		<tipLabelOverride>Revia conversation</tipLabelOverride>
+		<defName>Revia_XenotypeConversion</defName>
+		<label>revia conversion</label>
+		<tipLabelOverride>Revia conversion</tipLabelOverride>
 		<description>A sacrificer will offer bloodstones to the Skarne to become a true Revia.</description>
-		<ritualPatternBase>Revia_XenotypeConversation</ritualPatternBase>
+		<ritualPatternBase>Revia_XenotypeConversion</ritualPatternBase>
 	</PreceptDef>
 
 	<PreceptDef ParentName="ReviaPreceptBase" MayRequire="Ludeon.RimWorld.Royalty">

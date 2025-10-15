@@ -43,14 +43,14 @@
 	</RitualPatternDef>
 
 	<RitualPatternDef ParentName="Revia_SacrificeBase">
-		<defName>Revia_XenotypeConversation</defName>
+		<defName>Revia_XenotypeConversion</defName>
 		<nameMaker>Revia_NamerRitualConversion</nameMaker>
-		<ritualObligationTargetFilter>Revia_XenotypeConversation</ritualObligationTargetFilter>
+		<ritualObligationTargetFilter>Revia_XenotypeConversion</ritualObligationTargetFilter>
 		<shortDescOverride>revia conversation ritual</shortDescOverride>
-		<iconPathOverride>UI/icons/ReviaRituals/ReviaXenotypeConversation</iconPathOverride>
+		<iconPathOverride>UI/icons/ReviaRituals/ReviaXenotypeConversion</iconPathOverride>
 		<alwaysStartAnytime>true</alwaysStartAnytime>
-		<ritualBehavior>Revia_XenotypeConversation</ritualBehavior>
-		<ritualOutcomeEffect>Revia_XenotypeConversation</ritualOutcomeEffect>
+		<ritualBehavior>Revia_XenotypeConversion</ritualBehavior>
+		<ritualOutcomeEffect>Revia_XenotypeConversion</ritualOutcomeEffect>
 	</RitualPatternDef>
 
 	<RitualPatternDef ParentName="Revia_SacrificeBase" MayRequire="Ludeon.RimWorld.Royalty">

@@ -181,7 +181,7 @@
 	</RitualBehaviorDef>
 
 	<RitualBehaviorDef ParentName="Revia_SacrificeBehaviorBase">
-		<defName>Revia_XenotypeConversation</defName>
+		<defName>Revia_XenotypeConversion</defName>
 		<roles>
 			<li Class="ReviaRace.RitualRoleWithReviaGene">
 				<label>convert</label>
