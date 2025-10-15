@@ -3,7 +3,7 @@
 	<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
 		<defName>Revia_Bloodseek</defName>
 		<label>bloodseek</label>
-		<description>TODO. Teleport to a bleeding target.</description>
+		<description>Teleports caster to the bleeding target.</description>
 		<iconPath>UI/Bloodpath/Bloodseek</iconPath>
 		<abilityClass>Revia_VanillaPsycastExpanded.Ability_Bloodseek</abilityClass>
 		<castTime>30</castTime>
@@ -47,8 +47,8 @@
 
 	<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
 		<defName>Revia_SkarneAvatar</defName>
-		<label>skarne avatar</label>
-		<description>TODO.</description>
+		<label>skarne's scion</label>
+		<description>Caster invokes to Skarne's real power. Caster becomes hungry for blood avatar of Skarne for short period.</description>
 		<iconPath>UI/Bloodpath/SkarneAvatar</iconPath>
 		<abilityClass>VEF.Abilities.Ability_Blank</abilityClass>
 		<targetMode>Self</targetMode>
@@ -79,7 +79,7 @@
 	<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
 		<defName>Revia_Bloodbath</defName>
 		<label>bloodbath</label>
-		<description>TODO.</description>
+		<description>Skarne guides caster through the battle.</description>
 		<iconPath>UI/Bloodpath/Bloodbath</iconPath>
 		<castSound>VPE_BladeFocus_Cast</castSound>
 		<!--TODO: Change to some other sound-->
@@ -111,7 +111,7 @@
 	<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
 		<defName>Revia_SkarnesProtection</defName>
 		<label>skarne's protection</label>
-		<description>TODO.</description>
+		<description>Skarne may be merciful, closing bleeding wounds, often leaving a scar, like a mark...</description>
 		<iconPath>UI/Bloodpath/SkarnesProtection</iconPath>
 		<castTime>150</castTime>
 		<range>36</range>
@@ -148,7 +148,7 @@
 	<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
 		<defName>Revia_SkarnesCurse</defName>
 		<label>skarne's curse</label>
-		<description>TODO.</description>
+		<description>Skarne curses the victim to bleed.</description>
 		<iconPath>UI/Bloodpath/SkarnesCurse</iconPath>
 		<castTime>40</castTime>
 		<durationTime>1800</durationTime>
@@ -181,7 +181,7 @@
 	<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
 		<defName>Revia_BloodyExplosion</defName>
 		<label>bloody explosion</label>
-		<description>TODO.</description>
+		<description>The victim's bleeding wounds explode.</description>
 		<iconPath>UI/Bloodpath/BloodyExplosion</iconPath>
 		<castTime>40</castTime>
 		<range>45</range>
@@ -232,7 +232,7 @@
 	<VEF.Abilities.AbilityDef ParentName="VPE_WordOfAbilityBase">
 		<defName>Revia_ReavingReap</defName>
 		<label>reaving reap</label>
-		<description>TODO.</description>
+		<description>Collect Skarne's rewards from corpses around.</description>
 		<iconPath>UI/Bloodpath/ReavingReap</iconPath>
 		<!--<castTime>150</castTime>-->
 
@@ -273,7 +273,7 @@
 	<VEF.Abilities.AbilityDef ParentName="VPE_WordOfAbilityBase">
 		<defName>Revia_VermilionHarvest</defName>
 		<label>vermilion harvest</label>
-		<description>TODO.</description>
+		<description>Spill blood of victim for Skarne's reward.</description>
 		<iconPath>UI/Bloodpath/VermilionHarvest</iconPath>
 		<castTime>350</castTime>
 		<warmupMote></warmupMote>

@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
-	<!--TODO: finish-->
   <VanillaPsycastsExpanded.PsycasterPathDef>
     <defName>Revia_BloodPath</defName>
     <label>bloodpath</label>
-    <description>TODO.</description> 
+    <description>Revia psycasts are focused on fighing, especially against flesh-based enemies.</description> 
     <background>UI/Bloodpath/Background</background>
     <altBackground>UI/Bloodpath/Background</altBackground>
     <tab>Psycasts</tab>
-    <tooltip>TODO tooltip.</tooltip>
+    <tooltip>Revia psycasts are focused on fighing, especially against flesh-based enemies. Skarne gives power Her scions.</tooltip>
 		<requiredGene>ReviaTail</requiredGene>
 		<lockedReason>MustBeRevia</lockedReason>
   </VanillaPsycastsExpanded.PsycasterPathDef>
