@@ -44,7 +44,7 @@
 
 	<RitualPatternDef ParentName="Revia_SacrificeBase">
 		<defName>Revia_XenotypeConversation</defName>
-		<nameMaker>Revia_NamerRitualOffering</nameMaker>
+		<nameMaker>Revia_NamerRitualConversion</nameMaker>
 		<ritualObligationTargetFilter>Revia_XenotypeConversation</ritualObligationTargetFilter>
 		<shortDescOverride>revia conversation ritual</shortDescOverride>
 		<iconPathOverride>UI/icons/ReviaRituals/ReviaXenotypeConversation</iconPathOverride>

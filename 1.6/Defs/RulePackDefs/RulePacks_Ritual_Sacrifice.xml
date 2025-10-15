@@ -43,4 +43,24 @@
 		</rulePack>
 	</RulePackDef>
   
+	<RulePackDef>
+		<defName>Revia_NamerRitualConversion</defName>
+		<directTestable>true</directTestable>
+		<include>
+			<li>ReviaHighNamerDeity</li>
+		</include>
+		<rulePack>
+			<rulesStrings>
+				<li>r_ritualName->True Revia Conversion</li>
+				<li>r_ritualName->Conversion Ritual</li>
+				<li>r_ritualName->[ritualType] for [name]</li>
+
+				<li>ritualType->Conversion</li>
+				<li>ritualType->Ascension</li>
+				<li>ritualType->Integration</li>
+
+			</rulesStrings>
+		</rulePack>
+	</RulePackDef>
+	
 </Defs>
