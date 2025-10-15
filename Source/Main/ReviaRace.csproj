@@ -143,7 +143,7 @@
     <Compile Include="Rituals\RitualOutcomeComp_TailsCount.cs" />
     <Compile Include="Rituals\RitualOutcomeEffectWorker_PsycastBlessing.cs" />
     <Compile Include="Rituals\RitualOutcomeEffectWorker_Sacrificed.cs" />
-    <Compile Include="Rituals\RitualOutcomeEffectWorker_XenotypeConversation.cs" />
+    <Compile Include="Rituals\RitualOutcomeEffectWorker_XenotypeConversion.cs" />
     <Compile Include="Rituals\RitualOutcomeEffectWorker_SkarnesBlessing.cs" />
     <Compile Include="Rituals\RitualPosition_OnInteractionCell.cs" />
     <Compile Include="RitualRole\RitualRoleWithReviaGene.cs" />

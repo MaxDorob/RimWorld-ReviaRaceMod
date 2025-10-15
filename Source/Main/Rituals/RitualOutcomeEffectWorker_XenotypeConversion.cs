@@ -9,10 +9,10 @@ using Verse;
 
 namespace ReviaRace.Rituals
 {
-    public class RitualOutcomeEffectWorker_XenotypeConversation : RitualOutcomeEffectWorker_FromQuality
+    public class RitualOutcomeEffectWorker_XenotypeConversion : RitualOutcomeEffectWorker_FromQuality
     {
-        public RitualOutcomeEffectWorker_XenotypeConversation() : base() { }
-        public RitualOutcomeEffectWorker_XenotypeConversation(RitualOutcomeEffectDef def) : base(def) { }
+        public RitualOutcomeEffectWorker_XenotypeConversion() : base() { }
+        public RitualOutcomeEffectWorker_XenotypeConversion(RitualOutcomeEffectDef def) : base(def) { }
         protected override void ApplyExtraOutcome(Dictionary<Pawn, int> totalPresence, LordJob_Ritual jobRitual, RitualOutcomePossibility outcome, out string extraOutcomeDesc, ref LookTargets letterLookTargets)
         {
             base.ApplyExtraOutcome(totalPresence, jobRitual, outcome, out extraOutcomeDesc, ref letterLookTargets);
