@@ -55,7 +55,7 @@
 
 	<RitualPatternDef ParentName="Revia_SacrificeBase" MayRequire="Ludeon.RimWorld.Royalty">
 		<defName>Revia_PsycastRitual</defName>
-		<nameMaker>Revia_NamerRitualOffering</nameMaker>
+		<nameMaker>Revia_NamerRitualPsycast</nameMaker>
 		<ritualObligationTargetFilter>Revia_PsycastRitual</ritualObligationTargetFilter>
 		<shortDescOverride>psycast blessing ritual</shortDescOverride>
 		<iconPathOverride>UI/icons/ReviaRituals/ReviaPsycastBlessing</iconPathOverride>

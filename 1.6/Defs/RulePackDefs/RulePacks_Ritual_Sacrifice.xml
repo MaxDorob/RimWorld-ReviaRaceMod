@@ -63,4 +63,29 @@
 		</rulePack>
 	</RulePackDef>
 	
+	<RulePackDef>
+		<defName>Revia_NamerRitualPsycast</defName>
+		<directTestable>true</directTestable>
+		<include>
+			<li>ReviaHighNamerDeity</li>
+		</include>
+		<rulePack>
+			<rulesStrings>
+				<li>r_ritualName->[blessing] [action]</li>
+				<li>r_ritualName->[blessing] [action] of [name]</li>
+
+				<li>blessing->Psionic</li>
+				<li>blessing->Mystical</li>
+				<li>blessing->Psychic</li>
+				<li>action->Integration</li>
+				<li>action->Connection</li>
+				<li>action->Sublimation</li>
+				<li>action->Blessing</li>
+				<li>action->Grand Sacrifice</li>
+				<li>action->Sacrifice</li>
+
+			</rulesStrings>
+		</rulePack>
+	</RulePackDef>
+	
 </Defs>
