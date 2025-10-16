@@ -3,7 +3,7 @@
   <HediffDef  ParentName="PsycastHediffBase">
     <defName>Revia_Bloodbath</defName>
     <label>bloodbath</label>
-    <description>TODO.</description>
+    <description>Skarne guides me through the battle...</description>
 		<hediffClass>HediffWithComps</hediffClass>
     <isBad>false</isBad>
     <defaultLabelColor>(0.8, 0.4, 0.4)</defaultLabelColor>

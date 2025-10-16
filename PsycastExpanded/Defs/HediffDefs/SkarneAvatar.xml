@@ -4,7 +4,7 @@
     <defName>Revia_SkarneAvatar</defName>
     <label>skarne avatar</label>
 		<hediffClass>HediffWithComps</hediffClass>
-    <description>TODO.</description>
+    <description>Skarne owns this body.</description>
     <isBad>false</isBad>
     <defaultLabelColor>(0.8, 0.4, 0.4)</defaultLabelColor>
     <countsAsAddedPartOrImplant>false</countsAsAddedPartOrImplant>
