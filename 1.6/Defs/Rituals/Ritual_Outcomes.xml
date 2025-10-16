@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<RitualOutcomeEffectDef Name="ReviaOutcomeBase" Abstract="True">
+		<workerClass>ReviaRace.Rituals.RitualOutcomeEffectWorker_Sacrificed</workerClass>
+		<allowAttachableOutcome>false</allowAttachableOutcome>
+		<comps>
+			<li Class="RitualOutcomeComp_ParticipantCount">
+				<label>participant count</label>
+				<curve>
+					<points>
+						<li>(1,  0.0)</li>
+						<li>(5,  0.02)</li>
+						<li>(10, 0.09)</li>
+					</points>
+				</curve>
+			</li>
+			<li Class="ReviaRace.Rituals.RitualOutcomeComp_ReviaCount">
+				<label>revia count</label>
+				<curve>
+					<points>
+						<li>(1,  0.0)</li>
+						<li>(5,  0.05)</li>
+						<li>(9, 0.125)</li>
+					</points>
+				</curve>
+			</li>
+			<li Class="RitualOutcomeComp_RitualTargetDefs">
+				<allowAltars>true</allowAltars>
+				<label>started at altar</label>
+				<qualityOffset>0.2</qualityOffset>
+				<expectedThingLabelTip>an altar</expectedThingLabelTip>
+			</li>
+			<li Class="RitualOutcomeComp_BuildingOfDefPresent">
+				<label>skarne's sculpture</label>
+				<qualityOffset>0.3</qualityOffset>
+				<def>ReviaSkarnesSculpture</def>
+			</li>
+		</comps>
+	</RitualOutcomeEffectDef>
+
+	<RitualOutcomeEffectDef ParentName="ReviaOutcomeBase">
+		<defName>Revia_Sacrifice</defName>
+		<description>Depending on ritual quality, Skarne may bless her participants with bloodstones.</description>
+		<workerClass>ReviaRace.Rituals.RitualOutcomeEffectWorker_Sacrificed</workerClass>
+		<startingQuality>0.3</startingQuality>
+		<outcomeChances>
+			<li>
+				<label>Terrible</label>
+				<chance>0.05</chance>
+				<description>The {0} wasn't bloody enough...</description>
+				<positivityIndex>-1</positivityIndex>
+			</li>
+			<li>
+				<label>Bloody</label>
+				<chance>0.35</chance>
+				<description>The {0} was bloody. More blood for the Bloody Goddess.</description>
+				<positivityIndex>1</positivityIndex>
+			</li>
+			<li>
+				<label>Satisfying</label>
+				<chance>0.4</chance>
+				<memory>Revia_SatisfyingSacrifice</memory>
+				<description>We satisfied our obligation, all blood is Skarne's by right.</description>
+				<potentialExtraOutcomeDesc>Revia participant may recieve a bonus.</potentialExtraOutcomeDesc>
+				<positivityIndex>2</positivityIndex>
+			</li>
+			<li>
+				<label>Spectacular</label>
+				<chance>0.2</chance>
+				<memory>Revia_SpectacularSacrifice</memory>
+				<description>We impressed Her with {0}! She deeply enjoyed this spectacular execution!</description>
+				<potentialExtraOutcomeDesc>Revia participants will get a bonus.</potentialExtraOutcomeDesc>
+				<positivityIndex>3</positivityIndex>
+			</li>
+		</outcomeChances>
+		<modExtensions>
+			<li Class="ReviaRace.Rituals.SacrificeBaseScore_Extension">
+				<baseScore>1.8</baseScore>
+			</li>
+		</modExtensions>
+	</RitualOutcomeEffectDef>
+
+	<RitualOutcomeEffectDef ParentName="ReviaOutcomeBase">
+		<defName>Revia_BlessingForSoulreap</defName>
+		<description>Sacrificer will be rewarded with a tail.</description>
+		<workerClass>ReviaRace.Rituals.RitualOutcomeEffectWorker_SkarnesBlessing</workerClass>
+		<comps>
+			<li Class="ReviaRace.Rituals.RitualOutcomeComp_TailsCount">
+				<label>{PAWN_labelShort}'s tails</label>
+				<roleId>sacrificer</roleId>
+				<curve>
+					<points>
+						<li>(1,  0.95)</li>
+						<li>(2,  0.79)</li>
+						<li>(3,  0.65)</li>
+						<li>(4,  0.22)</li>
+						<li>(5,  0)</li>
+						<li>(6, -0.1)</li>
+						<li>(7, -0.4)</li>
+						<li>(8, -0.85)</li>
+					</points>
+				</curve>
+			</li>
+			<li Class="ReviaRace.Rituals.RitualOutcomeComp_BloodstonesCount">
+				<label>Bloodstones count</label>
+			</li>
+		</comps>
+		<outcomeChances>
+			<li>
+				<label>Skarne disappointed</label>
+				<chance>0.10</chance>
+				<description>We disappoined Her. We hardly deserve attention...</description>
+				<positivityIndex>-1</positivityIndex>
+			</li>
+			<li>
+				<label>Skarne satisfied</label>
+				<chance>0.70</chance>
+				<description>We were granted a blessing.</description>
+				<potentialExtraOutcomeDesc>There's a 33% chance that followers of Her path will get combat buffs.</potentialExtraOutcomeDesc>
+				<positivityIndex>1</positivityIndex>
+			</li>
+			<li>
+				<label>Skarne impressed</label>
+				<chance>0.2</chance>
+				<description>Skarne was impressed with the offering. We feel power in our blood like fire, an endless desire to kill!</description>
+				<potentialExtraOutcomeDesc>Followers of Her path get combat buffs.</potentialExtraOutcomeDesc> <!--A combat buff-->
+				<positivityIndex>2</positivityIndex>
+			</li>
+		</outcomeChances>
+	</RitualOutcomeEffectDef>
+
+	<RitualOutcomeEffectDef ParentName="ReviaOutcomeBase" MayRequire="Ludeon.Rimworld.Biotech">
+		<defName>Revia_XenotypeConversion</defName>
+		<description>A convertee's xenotype will be changed to the Revia.</description>
+		<workerClass>ReviaRace.Rituals.RitualOutcomeEffectWorker_XenotypeConversion</workerClass>
+		<extraPredictedOutcomeDescriptions>
+			<li>The better {0}, the less the resulting coma will be for the converted pawn.</li>
+		</extraPredictedOutcomeDescriptions>
+		<outcomeChances>
+			<li>
+				<label>Terrible</label>
+				<chance>0.2</chance>
+				<description>We disappointed Skarne... We disappointed Her...</description>
+				<positivityIndex>-1</positivityIndex>
+			</li>
+			<li>
+				<label>Satisfying</label>
+				<chance>0.6</chance>
+				<description>We were blessed.</description>
+				<positivityIndex>1</positivityIndex>
+			</li>
+			<li>
+				<label>Spectacular</label>
+				<chance>0.2</chance>
+				<description>The Queen of Blood has spoken. We will dance among the severed bodies of our enemies!</description>
+				<positivityIndex>2</positivityIndex>
+			</li>
+		</outcomeChances>
+	</RitualOutcomeEffectDef>
+
+	<RitualOutcomeEffectDef ParentName="ReviaOutcomeBase" MayRequire="Ludeon.Rimworld.Royalty">
+		<defName>Revia_PsycastRitual</defName>
+		<description>The sacrificer will be blessed with psylink.</description>
+		<workerClass>ReviaRace.Rituals.RitualOutcomeEffectWorker_PsycastBlessing</workerClass>
+		<extraPredictedOutcomeDescriptions>
+			<li>The better {0}, the higher will be psycasts skills.</li>
+		</extraPredictedOutcomeDescriptions>
+		<outcomeChances>
+			<li>
+				<label>Terrible</label>
+				<chance>0.05</chance>
+				<description>We disappointed Skarne... We disappointed Her...</description>
+				<positivityIndex>-2</positivityIndex>
+			</li>
+			<li>
+				<label>Good</label>
+				<chance>0.45</chance>
+				<description>We got attention, let's prove we deserve it.</description>
+				<positivityIndex>1</positivityIndex>
+			</li>
+			<li>
+				<label>Satisfying</label>
+				<chance>0.3</chance>
+				<description>We satisfied Skarne.</description>
+				<potentialExtraOutcomeDesc>Sacrificer will get additional psycast level.</potentialExtraOutcomeDesc>
+				<positivityIndex>2</positivityIndex>
+			</li>
+			<li>
+				<label>Spectacular</label>
+				<chance>0.2</chance>
+				<description>Skarne's acuity and power flows through us like so much Blood!</description>
+				<potentialExtraOutcomeDesc>Sacrificer will get 2 additional psycast levels.</potentialExtraOutcomeDesc>
+				<positivityIndex>3</positivityIndex>
+			</li>
+		</outcomeChances>
+	</RitualOutcomeEffectDef>
+
+
+</Defs>

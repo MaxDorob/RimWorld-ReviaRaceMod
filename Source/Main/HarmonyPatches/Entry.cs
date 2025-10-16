@@ -10,6 +10,7 @@ using System.Reflection;
 using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
+using TMPro;
 using Verse;
 
 namespace ReviaRace.HarmonyPatches
@@ -47,6 +48,10 @@ namespace ReviaRace.HarmonyPatches
                             transpiler: new HarmonyMethod(patchType, nameof(GenerateParentTranspiler)));
             harmony.Patch(AccessTools.Method(typeof(PawnGenerator), nameof(PawnGenerator.AdjustXenotypeForFactionlessPawn)),
    postfix: new HarmonyMethod(patchType, nameof(AdjustXenotypeForFactionlessPawn_Postfix)));
+            harmony.Patch(AccessTools.Method(typeof(Precept_Ritual), nameof(Precept_Ritual.DrawIcon)),
+                transpiler: new HarmonyMethod(typeof(NoIconColor_Patch), nameof(NoIconColor_Patch.Transpiler)));
+            harmony.Patch(AccessTools.Constructor(typeof(Command_Ritual), [typeof(Precept_Ritual), typeof(TargetInfo), typeof(RitualObligation), typeof(Dictionary<string, Pawn>)]),
+                postfix: new HarmonyMethod(typeof(CommandIconColor_Patch), nameof(CommandIconColor_Patch.Postfix)));
 
 
 

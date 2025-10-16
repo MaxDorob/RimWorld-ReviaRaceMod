@@ -130,14 +130,32 @@ namespace ReviaRace
         {
             var cell = UI.MouseCell();
             Log.Message($"Spawning for score {score}");
-            var result = SacrificeHelper.ThingsForScore(score, human);
-            if (result.Count <= 0)
+            var parms = default(ThingSetMakerParams);
+            parms.custom ??= [];
+            parms.custom[ThingSetMaker_CountPerScore.paramName] = score;
+            var rewardDef = human ? ReviaDefOf.ReviaRaceHumanlikeSacrifice : ReviaDefOf.ReviaRaceAnimalSacrifice;
+            var generated = rewardDef.root.Generate(parms);
+            foreach (var thing in generated)
             {
-                return;
+                GenDrop.TryDropSpawn(thing, cell, Find.CurrentMap, ThingPlaceMode.Near, out _); 
             }
-            Thing thing = ThingMaker.MakeThing(result.ThingDef, null);
-            thing.stackCount = result.Count;
-            GenDrop.TryDropSpawn(thing, cell, Find.CurrentMap, ThingPlaceMode.Near, out _);
+        }
+        [DebugAction(category = "Revia debug", name = "Inspect cell", actionType = DebugActionType.ToolMap,
+    allowedGameStates = AllowedGameStates.PlayingOnMap)]
+        public static void InspectCell()
+        {
+            var cell = UI.MouseCell();
+            var map = Find.CurrentMap;
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine(cell.ToString());
+            sb.AppendLine($"Standable: {cell.Standable(map)}");
+            foreach (var thing in map.thingGrid.ThingsListAt(cell))
+            {
+                var interactionCell = thing.InteractionCell;
+                sb.AppendLine($"{thing} at {thing.Position} with passability {thing.def.passability}, where is interaction pos {interactionCell} with offset {thing.def.interactionCellOffset}");
+                sb.AppendLine($"Is inside rect: {CommonRitualCellPredicates.InsideRect(thing.OccupiedRect(), interactionCell)}");
+            }
+            Log.Message(sb.ToString());
         }
     }
 }

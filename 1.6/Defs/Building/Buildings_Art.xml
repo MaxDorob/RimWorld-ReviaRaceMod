@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs> 
+  <ThingDef ParentName="ArtBuildingBase">
+    <defName>ReviaSkarnesSculpture</defName>
+    <label>skarne's sculpture</label>
+    <description>A sculpture of the nine-tailed bloody Goddess.</description>
+		<drawerType>RealtimeOnly</drawerType>
+		<minifiedDef>MinifiedThingRealtimeDraw</minifiedDef>
+		<minifiedManualDraw>true</minifiedManualDraw>
+		<fillPercent>0.5</fillPercent>
+    <castEdgeShadows>true</castEdgeShadows>
+		<thingCategories>
+			<li>BuildingsArt</li>
+		</thingCategories>
+		<graphicData>
+			<texPath>Things/Building/GenericStatue</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<addTopAltitudeBias>true</addTopAltitudeBias>
+			<drawSize>(1.6,1.6)</drawSize>
+		</graphicData>
+    <fillPercent>0.5</fillPercent>
+    <rotatable>false</rotatable>
+    <statBases>
+      <MaxHitPoints>150</MaxHitPoints>
+      <Mass>7</Mass>
+      <Beauty>45</Beauty>
+      <WorkToMake>30000</WorkToMake>
+    </statBases>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Woody</li>
+      <li>Stony</li>
+    </stuffCategories>
+    <costStuffCount>100</costStuffCount>
+		<comps>
+			<li Class="CompProperties_Statue">
+				<compClass>ReviaRace.CompSkarneStatue</compClass>
+				<nameMaker>NamerStatue</nameMaker>
+				<canBeEnjoyedAsArt>true</canBeEnjoyedAsArt>
+				<statueBaseGraphic>
+					<texPath>Things/Building/StatueBase</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1.5, 1.5)</drawSize>
+				</statueBaseGraphic>
+			</li>
+		</comps>
+		<recipeMaker>
+			<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+			<workSkill>Artistic</workSkill>
+			<unfinishedThingDef>UnfinishedSculpture</unfinishedThingDef>
+			<effectWorking>Sculpt</effectWorking>
+			<soundWorking>Recipe_Sculpt</soundWorking>
+			<recipeUsers>
+				<li>TableSculpting</li>
+			</recipeUsers>
+			<skillRequirements>
+				<Artistic>7</Artistic>
+			</skillRequirements>
+			<defaultIngredientFilter>
+				<categories>
+					<li>Root</li>
+				</categories>
+				<disallowedThingDefs>
+					<li>Gold</li>
+					<li>Silver</li>
+					<li>Plasteel</li>
+					<li>Jade</li>
+					<li>Uranium</li>
+					<li MayRequire="Ludeon.RimWorld.Anomaly">Bioferrite</li>
+					<li MayRequire="Ludeon.RimWorld.Odyssey">Obsidian</li>
+				</disallowedThingDefs>
+			</defaultIngredientFilter>
+		</recipeMaker>
+		<building>
+			<paintable>true</paintable>
+		</building>
+  </ThingDef>
+</Defs>

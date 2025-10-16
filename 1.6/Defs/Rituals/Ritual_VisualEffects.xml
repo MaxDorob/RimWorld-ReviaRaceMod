@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <RitualVisualEffectDef>
+    <defName>Revia_SacrificePrisoner</defName>
+    <comps>
+      <li Class="CompProperties_RitualEffectSpawnOnRole">
+        <effecterDef>Revia_Damage_HitFleshGruesome</effecterDef>
+        <roleId>prisoner</roleId>
+        <maxBursts>1</maxBursts>
+        <delay>34</delay>
+      </li>
+    </comps>
+  </RitualVisualEffectDef>
+  
+</Defs>
