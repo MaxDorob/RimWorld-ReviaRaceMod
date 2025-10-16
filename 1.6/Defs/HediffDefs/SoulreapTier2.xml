@@ -9,6 +9,8 @@
     <countsAsAddedPartOrImplant>false</countsAsAddedPartOrImplant>
     <stages>
       <li>
+				<statOffsets>
+				</statOffsets>
       </li>
     </stages>
     <renderNodeProperties>

@@ -18,12 +18,14 @@ namespace ReviaRace.FA_Compat
 {
 
     [StaticConstructorOnStartup]
+    [Obsolete]
     public static class HarmonyPatch_FacialAnimation
     {
         static Harmony harmony = new Harmony("ReviaRace_FA");
 
         static HarmonyPatch_FacialAnimation()
         {
+            Log.Warning($"New version of Facial Animation released and this patch is not actual anymore");
             LongEventHandler.ExecuteWhenFinished(() => harmony.PatchAll());
         }
         public static IEnumerable<T> GetFaceTypeDefsForPawn<T>(Pawn pawn, bool includeDefault = true) where T : FaceTypeDef, new()
