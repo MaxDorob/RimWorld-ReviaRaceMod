@@ -8,12 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using Verse;
 using VEF.Abilities;
+using RimWorld;
 
 namespace Revia_VanillaPsycastExpanded
 {
     public class AbilityExtension_ReavingReap : AbilityExtension_AbilityMod
     {
-        public override void Cast(GlobalTargetInfo[] targets, Ability ability)
+        public override void Cast(GlobalTargetInfo[] targets, VEF.Abilities.Ability ability)
         {
             base.Cast(targets, ability);
             var humans = targets.Select(x => x.Thing).OfType<Corpse>().Select(x => x.InnerPawn).Where(x => x.RaceProps.Humanlike && x.RaceProps.IsFlesh).ToList();
@@ -37,14 +38,14 @@ namespace Revia_VanillaPsycastExpanded
         protected virtual float Multiplier(Pawn pawn) => 0.7f + (0.5f * pawn.GetSoulReapTier()) / 9;
         protected virtual void SpawnReward(Map map, IntVec3 pos, float score, bool human)
         {
-            var reward = SacrificeHelper.ThingsForScore(score, human);
-            if (reward.Count <= 0)
+            var thingMakerSet = human ? ReviaDefOf.ReviaRaceHumanlikeSacrifice : ReviaDefOf.ReviaRaceAnimalSacrifice;
+            var parms = default(ThingSetMakerParams);
+            parms.custom ??= [];
+            parms.custom[ThingSetMaker_CountPerScore.paramName] = score;
+            foreach (var thing in thingMakerSet.root.Generate(parms))
             {
-                return;
+                GenPlace.TryPlaceThing(thing, pos, map, ThingPlaceMode.Near);
             }
-            var thing = ThingMaker.MakeThing(reward.ThingDef);
-            thing.stackCount = reward.Count;
-            GenPlace.TryPlaceThing(thing, pos, map, ThingPlaceMode.Near);
         }
     }
 }

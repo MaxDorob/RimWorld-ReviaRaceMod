@@ -53,13 +53,15 @@ namespace Revia_VanillaPsycastExpanded
         protected virtual float Multiplier(Pawn pawn) => 0.9f + (0.7f * pawn.GetSoulReapTier()) / 9;
         protected virtual void SpawnReward(Pawn victim)
         {
-            bool isAnimal = victim.RaceProps.Animal;
-            var reward = SacrificeHelper.ThingsForScore(score.RandomInRange * Multiplier(victim), !isAnimal);
-            if (reward.Count > 0)
+            bool isHuman = !victim.RaceProps.Animal;
+            var score = this.score.RandomInRange * Multiplier(victim);
+            var thingMakerSet = isHuman ? ReviaDefOf.ReviaRaceHumanlikeSacrifice : ReviaDefOf.ReviaRaceAnimalSacrifice;
+            var parms = default(ThingSetMakerParams);
+            parms.custom ??= [];
+            parms.custom[ThingSetMaker_CountPerScore.paramName] = score;
+            foreach (var thing in thingMakerSet.root.Generate(parms))
             {
-                var thing = ThingMaker.MakeThing(reward.ThingDef);
-                thing.stackCount = reward.Count;
-                GenPlace.TryPlaceThing(thing, victim.Position, victim.Map, ThingPlaceMode.Near);
+                GenPlace.TryPlaceThing(thing, victim.PositionHeld, victim.MapHeld, ThingPlaceMode.Near);
             }
         }
         public float bleedLoss = 0.75f;
