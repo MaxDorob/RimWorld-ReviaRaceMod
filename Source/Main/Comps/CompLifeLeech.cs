@@ -88,9 +88,9 @@ namespace ReviaRace.Comps
 #endif
                 return;
             }
-
-            var healAmount = bleedRate * 2.0f * LeechStrength;
-            var bloodRegenAmount = bleedRate * 0.05f * LeechStrength;
+            var multiplier = pawn.GetStatValue(ReviaDefOf.Revia_LifeLeechImpact);
+            var healAmount = bleedRate * 2.0f * LeechStrength * multiplier;
+            var bloodRegenAmount = bleedRate * 0.05f * LeechStrength * multiplier;
 
 #if DEBUG
             Log.Message($"Bleed Rate = {bleedRate}, Leech Strength = {LeechStrength}");

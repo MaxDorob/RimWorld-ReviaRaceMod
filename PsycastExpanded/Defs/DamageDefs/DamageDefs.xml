@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <DamageDef Name="Revia_MysticalScratch" ParentName="Scratch">
+    <defName>Revia_MysticalScratch</defName>
+  </DamageDef>
+
+	<DamageDef ParentName="Revia_MysticalScratch">
+		<defName>Revia_MysticalMediumBleedingScratch</defName>
+		<hediff>MediumBleeding_Scratch</hediff>
+		<hediffSolid>Crack</hediffSolid>
+	</DamageDef>
+
+	<DamageDef ParentName="Revia_MysticalScratch">
+		<defName>Revia_MysticalHeavyBleedingScratch</defName>
+		<hediff>HeavyBleeding_Scratch</hediff>
+		<hediffSolid>Crack</hediffSolid>
+	</DamageDef>
+
+	<DamageDef>
+		<defName>Revia_BloodExplosionScratch</defName>
+		<label>scratch</label>
+		<workerClass>DamageWorker_AddInjury</workerClass>
+		<externalViolence>true</externalViolence>
+		<hediff>Scratch</hediff>
+		<hediffSolid>Crack</hediffSolid>
+		<harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+		<impactSoundType>Tornado</impactSoundType>
+		<armorCategory>Sharp</armorCategory>
+	</DamageDef>
+
+</Defs>

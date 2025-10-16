@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+	<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+		<defName>Revia_Bloodseek</defName>
+		<label>bloodseek</label>
+		<description>Teleports caster to the bleeding target.</description>
+		<iconPath>UI/Bloodpath/Bloodseek</iconPath>
+		<abilityClass>Revia_VanillaPsycastExpanded.Ability_Bloodseek</abilityClass>
+		<castTime>30</castTime>
+		<durationTime>100</durationTime>
+		<!--Slow down time-->
+		<needsTicking>true</needsTicking>
+		<targetMode>Pawn</targetMode>
+		<range>99999</range>
+		<targetingParametersList>
+			<li>
+				<canTargetSelf>False</canTargetSelf>
+				<canTargetPawns>True</canTargetPawns>
+				<canTargetBuildings>False</canTargetBuildings>
+				<canTargetItems>False</canTargetItems>
+				<canTargetPlants>false</canTargetPlants>
+				<mapObjectTargetsMustBeAutoAttackable>false</mapObjectTargetsMustBeAutoAttackable>
+			</li>
+		</targetingParametersList>
+		<modExtensions>
+			<li Class="Revia_VanillaPsycastExpanded.AbilityExtension_ReviaPsycast">
+				<path>Revia_BloodPath</path>
+				<level>3</level>
+				<order>1</order>
+				<psyfocusCost>0.02</psyfocusCost>
+				<entropyGain>25</entropyGain>
+				<soulReapLevel>5</soulReapLevel>
+				<prerequisites>
+					<li>Revia_Bloodbath</li>
+				</prerequisites>
+			</li>
+			<li Class="VanillaPsycastsExpanded.Skipmaster.AbilityExtension_Clamor">
+				<clamorType>Ability</clamorType>
+				<clamorRadius>10</clamorRadius>
+			</li>
+			<li Class="VEF.Abilities.AbilityExtension_Hediff">
+				<hediff>PsychicBurden</hediff>
+				<durationMultiplier>PsychicSensitivity</durationMultiplier>
+			</li>
+		</modExtensions>
+	</VEF.Abilities.AbilityDef>
+
+	<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+		<defName>Revia_SkarneAvatar</defName>
+		<label>skarne's scion</label>
+		<description>Caster invokes to Skarne's real power. Caster becomes hungry for blood avatar of Skarne for short period.</description>
+		<iconPath>UI/Bloodpath/SkarneAvatar</iconPath>
+		<abilityClass>VEF.Abilities.Ability_Blank</abilityClass>
+		<targetMode>Self</targetMode>
+		<castTime>150</castTime>
+		<durationTime>2700</durationTime>
+		<targetingParameters>
+			<canTargetSelf>True</canTargetSelf>
+		</targetingParameters>
+		<modExtensions>
+			<li Class="Revia_VanillaPsycastExpanded.AbilityExtension_ReviaPsycast">
+				<path>Revia_BloodPath</path>
+				<level>5</level>
+				<order>1</order>
+				<psyfocusCost>0.80</psyfocusCost>
+				<entropyGain>60</entropyGain>
+				<soulReapLevel>9</soulReapLevel>
+				<prerequisites>
+					<li>Revia_BloodyExplosion</li>
+					<li>Revia_SkarnesCurse</li>
+				</prerequisites>
+			</li>
+			<li Class="VanillaPsycastsExpanded.AbilityExtension_GiveMentalState">
+				<stateDef>Revia_SkarneAvatar</stateDef>
+			</li>
+		</modExtensions>
+	</VEF.Abilities.AbilityDef>
+
+	<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+		<defName>Revia_Bloodbath</defName>
+		<label>bloodbath</label>
+		<description>Skarne guides caster through the battle.</description>
+		<iconPath>UI/Bloodpath/Bloodbath</iconPath>
+		<castSound>VPE_BladeFocus_Cast</castSound>
+		<!--TODO: Change to some other sound-->
+		<targetMode>Self</targetMode>
+		<castTime>15</castTime>
+		<durationTime>7200</durationTime>
+		<abilityClass>VEF.Abilities.Ability_Blank</abilityClass>
+		<modExtensions>
+			<li Class="Revia_VanillaPsycastExpanded.AbilityExtension_ReviaPsycast">
+				<path>Revia_BloodPath</path>
+				<level>2</level>
+				<order>1</order>
+				<psyfocusCost>0.08</psyfocusCost>
+				<entropyGain>5</entropyGain>
+				<psychic>true</psychic>
+				<soulReapLevel>3</soulReapLevel>
+				<prerequisites>
+					<li>Revia_ReavingReap</li>
+					<li>Revia_VermilionHarvest</li>
+				</prerequisites>
+			</li>
+			<li Class="VEF.Abilities.AbilityExtension_Hediff">
+				<hediff>Revia_Bloodbath</hediff>
+				<durationMultiplier>PsychicSensitivity</durationMultiplier>
+			</li>
+		</modExtensions>
+	</VEF.Abilities.AbilityDef>
+
+	<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+		<defName>Revia_SkarnesProtection</defName>
+		<label>skarne's protection</label>
+		<description>Skarne may be merciful, closing bleeding wounds, often leaving a scar, like a mark...</description>
+		<iconPath>UI/Bloodpath/SkarnesProtection</iconPath>
+		<castTime>150</castTime>
+		<range>36</range>
+		<targetMode>Pawn</targetMode>
+		<abilityClass>VEF.Abilities.Ability_Blank</abilityClass>
+		<targetingParametersList>
+			<li>
+				<canTargetSelf>True</canTargetSelf>
+				<canTargetPawns>True</canTargetPawns>
+				<canTargetBuildings>False</canTargetBuildings>
+				<canTargetItems>False</canTargetItems>
+				<canTargetPlants>false</canTargetPlants>
+				<mapObjectTargetsMustBeAutoAttackable>false</mapObjectTargetsMustBeAutoAttackable>
+			</li>
+		</targetingParametersList>
+		<modExtensions>
+			<li Class="Revia_VanillaPsycastExpanded.AbilityExtension_ReviaPsycast">
+				<path>Revia_BloodPath</path>
+				<level>3</level>
+				<order>2</order>
+				<psyfocusCost>0.15</psyfocusCost>
+				<entropyGain>15</entropyGain>
+				<psychic>true</psychic>
+				<soulReapLevel>5</soulReapLevel>
+				<prerequisites>
+					<li>Revia_Bloodbath</li>
+				</prerequisites>
+			</li>
+			<li Class="Revia_VanillaPsycastExpanded.AbilityExtension_SkarneProtection">
+			</li>
+		</modExtensions>
+	</VEF.Abilities.AbilityDef>
+
+	<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+		<defName>Revia_SkarnesCurse</defName>
+		<label>skarne's curse</label>
+		<description>Skarne curses the victim to bleed.</description>
+		<iconPath>UI/Bloodpath/SkarnesCurse</iconPath>
+		<castTime>40</castTime>
+		<durationTime>1800</durationTime>
+		<needsTicking>true</needsTicking>
+		<power>1</power>
+		<range>99999</range>
+		<requireLineOfSight>true</requireLineOfSight>
+		<targetMode>Pawn</targetMode>
+		<abilityClass>Revia_VanillaPsycastExpanded.Ability_SkarnesCurse</abilityClass>
+		<modExtensions>
+			<li Class="Revia_VanillaPsycastExpanded.AbilityExtension_ReviaPsycast">
+				<path>Revia_BloodPath</path>
+				<level>4</level>
+				<order>2</order>
+				<psyfocusCost>0.15</psyfocusCost>
+				<entropyGain>45</entropyGain>
+				<psychic>true</psychic>
+				<soulReapLevel>7</soulReapLevel>
+				<prerequisites>
+					<li>Revia_SkarnesProtection</li>
+				</prerequisites>
+			</li>
+			<li Class="VEF.Abilities.AbilityExtension_Hediff">
+				<hediff>Revia_SkarnesCurse</hediff>
+				<durationMultiplier>PsychicSensitivity</durationMultiplier>
+			</li>
+		</modExtensions>
+	</VEF.Abilities.AbilityDef>
+
+	<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+		<defName>Revia_BloodyExplosion</defName>
+		<label>bloody explosion</label>
+		<description>The victim's bleeding wounds explode.</description>
+		<iconPath>UI/Bloodpath/BloodyExplosion</iconPath>
+		<castTime>40</castTime>
+		<range>45</range>
+		<requireLineOfSight>true</requireLineOfSight>
+		<targetMode>Pawn</targetMode>
+
+		<abilityClass>VEF.Abilities.Ability_Blank</abilityClass>
+		<modExtensions>
+			<li Class="Revia_VanillaPsycastExpanded.AbilityExtension_ReviaPsycast">
+				<path>Revia_BloodPath</path>
+				<level>4</level>
+				<order>1</order>
+				<psyfocusCost>0.15</psyfocusCost>
+				<entropyGain>15</entropyGain>
+				<psychic>true</psychic>
+				<soulReapLevel>7</soulReapLevel>
+				<prerequisites>
+					<li>Revia_Bloodseek</li>
+				</prerequisites>
+			</li>
+			<li Class="Revia_VanillaPsycastExpanded.AbilityExtension_EffecterOnTarget_ByBleedRate">
+				<bleedRateRange>0~0.4</bleedRateRange>
+				<effecterDef>Revia_BloodyExplosionSmall</effecterDef>
+			</li>
+			<li Class="Revia_VanillaPsycastExpanded.AbilityExtension_EffecterOnTarget_ByBleedRate">
+				<bleedRateRange>0.4~1</bleedRateRange>
+				<effecterDef>Revia_BloodyExplosionMedium</effecterDef>
+			</li>
+			<li Class="Revia_VanillaPsycastExpanded.AbilityExtension_EffecterOnTarget_ByBleedRate">
+				<bleedRateRange>1~2.5</bleedRateRange>
+				<effecterDef>Revia_BloodyExplosionBig</effecterDef>
+			</li>
+			<li Class="Revia_VanillaPsycastExpanded.AbilityExtension_EffecterOnTarget_ByBleedRate">
+				<bleedRateRange>2.5~9999</bleedRateRange>
+				<effecterDef>Revia_BloodyExplosionHuge</effecterDef>
+			</li>
+			<li Class="Revia_VanillaPsycastExpanded.AbilityExtension_BloodyExplosion">
+				<damageDef>Revia_BloodExplosionScratch</damageDef>
+				<radius>3.9</radius>
+				<damageAmount>8~12</damageAmount>
+				<penetration>7.5</penetration>
+				<requireLOS>true</requireLOS>
+			</li>
+
+		</modExtensions>
+	</VEF.Abilities.AbilityDef>
+
+	<VEF.Abilities.AbilityDef ParentName="VPE_WordOfAbilityBase">
+		<defName>Revia_ReavingReap</defName>
+		<label>reaving reap</label>
+		<description>Collect Skarne's rewards from corpses around.</description>
+		<iconPath>UI/Bloodpath/ReavingReap</iconPath>
+		<!--<castTime>150</castTime>-->
+
+		<abilityClass>VEF.Abilities.Ability_Blank</abilityClass>
+		<castTime>600</castTime>
+		<targetMode>Self</targetMode>
+		<hasAoE>true</hasAoE>
+		<radius>8.9</radius>
+		<needsTicking>true</needsTicking>
+		<targetingParametersForAoE>
+			<canTargetLocations>False</canTargetLocations>
+			<canTargetSelf>False</canTargetSelf>
+			<canTargetAnimals>False</canTargetAnimals>
+			<canTargetPawns>False</canTargetPawns>
+			<canTargetHumans>False</canTargetHumans>
+			<canTargetItems>true</canTargetItems>
+			<thingCategory>Item</thingCategory>
+			<mapObjectTargetsMustBeAutoAttackable>False</mapObjectTargetsMustBeAutoAttackable>
+		</targetingParametersForAoE>
+		<reserveTargets>true</reserveTargets>
+		<castSound>VPE_ConsumeBodies_Cast</castSound>
+		<!--<castSound>VPE_CorpseTalk_Cast</castSound>-->
+		<modExtensions>
+			<li Class="Revia_VanillaPsycastExpanded.AbilityExtension_ReviaPsycast">
+				<path>Revia_BloodPath</path>
+				<level>1</level>
+				<order>1</order>
+				<psyfocusCost>0.15</psyfocusCost>
+				<entropyGain>15</entropyGain>
+				<psychic>true</psychic>
+				<soulReapLevel>1</soulReapLevel>
+			</li>
+			<li Class="Revia_VanillaPsycastExpanded.AbilityExtension_ReavingReap">
+			</li>
+		</modExtensions>
+	</VEF.Abilities.AbilityDef>
+
+	<VEF.Abilities.AbilityDef ParentName="VPE_WordOfAbilityBase">
+		<defName>Revia_VermilionHarvest</defName>
+		<label>vermilion harvest</label>
+		<description>Spill blood of victim for Skarne's reward.</description>
+		<iconPath>UI/Bloodpath/VermilionHarvest</iconPath>
+		<castTime>350</castTime>
+		<warmupMote></warmupMote>
+		<warmupSound></warmupSound>
+		<abilityClass>VEF.Abilities.Ability_Blank</abilityClass>
+		<modExtensions>
+			<li Class="Revia_VanillaPsycastExpanded.AbilityExtension_ReviaPsycast">
+				<path>Revia_BloodPath</path>
+				<level>1</level>
+				<order>2</order>
+				<psyfocusCost>0.10</psyfocusCost>
+				<entropyGain>10</entropyGain>
+				<psychic>true</psychic>
+				<soulReapLevel>1</soulReapLevel>
+			</li>
+			<li Class="Revia_VanillaPsycastExpanded.AbilityExtension_VermilionHarvest">
+			</li>
+			<li Class="Revia_VanillaPsycastExpanded.AbilityExtension_EffecterOnTarget_ByBodySize">
+				<bodySizeRange>0~0.5</bodySizeRange>
+				<effecterDef>Revia_BloodyExplosionSmall</effecterDef>
+			</li>
+			<li Class="Revia_VanillaPsycastExpanded.AbilityExtension_EffecterOnTarget_ByBodySize">
+				<bodySizeRange>0.5~1.4</bodySizeRange>
+				<effecterDef>Revia_BloodyExplosionMedium</effecterDef>
+			</li>
+			<li Class="Revia_VanillaPsycastExpanded.AbilityExtension_EffecterOnTarget_ByBodySize">
+				<bodySizeRange>1.4~9999</bodySizeRange>
+				<effecterDef>Revia_BloodyExplosionBig</effecterDef>
+			</li>
+		</modExtensions>
+	</VEF.Abilities.AbilityDef>
+
+</Defs>
