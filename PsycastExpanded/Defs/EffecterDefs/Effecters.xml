@@ -116,9 +116,9 @@
 				<!--Blood on the ground-->
 				<subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
 				<fleckDef>Revia_MeatExplosionSplatter</fleckDef>
-				<burstCount>5</burstCount>
+				<burstCount>8~11</burstCount>
 				<rotation>-150~150</rotation>
-				<positionRadius>1.3</positionRadius>
+				<positionRadius>1.9</positionRadius>
 				<speed>0.6~1.1</speed>
 				<fleckUsesAngleForVelocity>true</fleckUsesAngleForVelocity>
 				<spawnLocType>OnSource</spawnLocType>
@@ -130,16 +130,17 @@
 				<burstCount>12</burstCount>
 				<rotation>-150~150</rotation>
 				<positionRadius>1.3</positionRadius>
+				<scale>1.5~3</scale>
 				<spawnLocType>OnSource</spawnLocType>
 			</li>
 			<li>
 				<!--Big blood/meat pieces-->
 				<subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
 				<moteDef>Revia_Mote_MeatExplosionFlyingSplatter</moteDef>
-				<burstCount>3</burstCount>
+				<burstCount>7~10</burstCount>
 				<rotation>-150~150</rotation>
 				<positionRadius>0.6</positionRadius>
-				<speed>0.8~1.2</speed>
+				<speed>2.3~5.2</speed>
 				<spawnLocType>OnSource</spawnLocType>
 			</li>
 			<li>
