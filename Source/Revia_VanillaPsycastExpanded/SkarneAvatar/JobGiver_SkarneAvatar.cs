@@ -15,7 +15,7 @@ namespace Revia_VanillaPsycastExpanded
         private new Thing FindAttackTarget(Pawn forPawn)
         {
             Thing alternativeTarget = null;
-            Thing target = (Thing)AttackTargetFinderEx.FindBestReachableMeleeTarget((thing) =>
+            Thing target = (Thing)AttackTargetFinder.FindBestReachableMeleeTarget((thing) =>
             {
                 if (thing != forPawn && thing is Pawn pawn)
                 {
