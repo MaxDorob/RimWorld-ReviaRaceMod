@@ -77,7 +77,7 @@ namespace ReviaRace.Helpers
                 }
             }
         }
-        internal static int GetSoulReapTier(Pawn pawn)
+        internal static int GetSoulReapTier(this Pawn pawn)
         {
             if (pawn.SoulReapHediff() != null)
             {

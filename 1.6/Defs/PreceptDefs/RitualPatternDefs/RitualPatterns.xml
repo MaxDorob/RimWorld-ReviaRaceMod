@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  
+  <RitualPatternDef Abstract="True" Name="Revia_CelebrationPartyChat">
+    <nameMaker>Revia_NamerRitualSacrifice</nameMaker>
+    <iconPathOverride>UI/Misc/BadTexture</iconPathOverride>
+    <canStartAnytime>true</canStartAnytime>
+    <ritualObligationTargetFilter>ReviaBloodSigil</ritualObligationTargetFilter>
+		<ritualOnlyForIdeoMembers>false</ritualOnlyForIdeoMembers>
+  </RitualPatternDef>
+
+  <RitualPatternDef Abstract="True" Name="Revia_SacrificeBase" ParentName="Revia_CelebrationPartyChat">
+    <nameMaker>Revia_NamerRitualSacrifice</nameMaker>
+    <canStartAnytime>true</canStartAnytime>
+    <ritualObligationTargetFilter>ReviaBloodSigil</ritualObligationTargetFilter>
+    <tags>
+      <li>Sacrifice</li>
+    </tags>
+  </RitualPatternDef>
+  
+  <RitualPatternDef ParentName="Revia_SacrificeBase">
+    <defName>Revia_SacrificePrisoner</defName>
+    <ritualBehavior>Revia_SacrificePrisoner</ritualBehavior>
+    <shortDescOverride>prisoner sacrifice</shortDescOverride>
+		<iconPathOverride>UI/icons/ReviaRituals/ReviaSacrifice</iconPathOverride>
+    <patternGroupTag/>
+    <ritualOutcomeEffect>Revia_Sacrifice</ritualOutcomeEffect>
+		<ritualObligationTargetFilter>ReviaBloodSigilOrSpot</ritualObligationTargetFilter>
+		<alwaysStartAnytime>true</alwaysStartAnytime>
+  </RitualPatternDef>
+
+
+
+	<RitualPatternDef>
+		<defName>Revia_BleesingForSoulreap</defName>
+		<nameMaker>Revia_NamerRitualOffering</nameMaker>
+		<ritualObligationTargetFilter>Revia_BleesingForSoulreap</ritualObligationTargetFilter>
+		<shortDescOverride>blessing ritual</shortDescOverride>
+		<iconPathOverride>UI/icons/ReviaRituals/SoulreapBlessing</iconPathOverride>
+		<alwaysStartAnytime>true</alwaysStartAnytime>
+		<ritualBehavior>ReviaBlessingRitual</ritualBehavior>
+		<ritualOutcomeEffect>Revia_BlessingForSoulreap</ritualOutcomeEffect>
+	</RitualPatternDef>
+
+	<RitualPatternDef ParentName="Revia_SacrificeBase">
+		<defName>Revia_XenotypeConversion</defName>
+		<nameMaker>Revia_NamerRitualConversion</nameMaker>
+		<ritualObligationTargetFilter>Revia_XenotypeConversion</ritualObligationTargetFilter>
+		<shortDescOverride>revia conversion ritual</shortDescOverride>
+		<iconPathOverride>UI/icons/ReviaRituals/ReviaXenotypeConversion</iconPathOverride>
+		<alwaysStartAnytime>true</alwaysStartAnytime>
+		<ritualBehavior>Revia_XenotypeConversion</ritualBehavior>
+		<ritualOutcomeEffect>Revia_XenotypeConversion</ritualOutcomeEffect>
+	</RitualPatternDef>
+
+	<RitualPatternDef ParentName="Revia_SacrificeBase" MayRequire="Ludeon.RimWorld.Royalty">
+		<defName>Revia_PsycastRitual</defName>
+		<nameMaker>Revia_NamerRitualPsycast</nameMaker>
+		<ritualObligationTargetFilter>Revia_PsycastRitual</ritualObligationTargetFilter>
+		<shortDescOverride>psycast blessing ritual</shortDescOverride>
+		<iconPathOverride>UI/icons/ReviaRituals/ReviaPsycastBlessing</iconPathOverride>
+		<alwaysStartAnytime>true</alwaysStartAnytime>
+		<ritualBehavior>Revia_PsycastRitual</ritualBehavior>
+		<ritualOutcomeEffect>Revia_PsycastRitual</ritualOutcomeEffect>
+	</RitualPatternDef>
+	
+</Defs>

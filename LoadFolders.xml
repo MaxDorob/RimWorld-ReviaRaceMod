@@ -15,6 +15,7 @@
 	<v1.6>
 		<li>/</li>
 		<li>1.6</li>
+		<li IfModActive="Ludeon.RimWorld.Ideology">Ideology</li>
 		<li IfModActive="Vinzero.Revia.FacialAnimation">FA_Compat/1.6.2</li>
 		<li IfModActive="StatistNo1.personabond">PersonBondForge</li>
 	</v1.6>
