@@ -30,37 +30,6 @@ namespace ReviaRace.JobDrivers
                         this.pawn.carryTracker.TryStartCarry(thing, this.job.count, true);
                     }
                 });
-                toil.AddFinishAction(() =>
-                {
-                    var totalCountToRemove = this.job.count;
-                    var carriedThing = this.pawn.carryTracker.CarriedThing;
-                    if (carriedThing.def == job.thingDefToCarry)
-                    {
-                        var countToRemove = Mathf.Min(totalCountToRemove, carriedThing.stackCount);
-                        carriedThing.stackCount -= countToRemove;
-                        if (carriedThing.stackCount <= 0)
-                        {
-                            carriedThing.Destroy();
-                        }
-                        totalCountToRemove -= countToRemove;
-                    }
-                    while (totalCountToRemove > 0)
-                    {
-                        var thing = pawn.inventory.innerContainer.FirstOrDefault(x=>x.def == job.thingDefToCarry);
-                        if (thing == null)
-                        {
-                            Log.Error($"Can't find enough {job.thingDefToCarry}. Left to remove {totalCountToRemove}");
-                            break;
-                        }
-                        var countToRemove = Mathf.Min(totalCountToRemove, thing.stackCount);
-                        thing.stackCount -= countToRemove;
-                        if (thing.stackCount <= 0)
-                        {
-                            thing.Destroy();
-                        }
-                        totalCountToRemove -= countToRemove;
-                    }
-                });
                 return toil;
             }
         }

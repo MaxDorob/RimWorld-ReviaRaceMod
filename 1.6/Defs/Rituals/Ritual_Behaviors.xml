@@ -170,7 +170,7 @@
 				<essential>True</essential>
 				<endTriggers>
 					<li Class="StageEndTrigger_DurationPercentage">
-						<percentage>0.999</percentage>
+						<percentage>1</percentage>
 					</li>
 				</endTriggers>
 				<failTriggers>
@@ -188,14 +188,6 @@
 						</customPositions>
 					</li>
 				</roleBehaviors>
-			</li>
-			<li>
-				<defaultDuty>Spectate</defaultDuty>
-				<endTriggers>
-					<li Class="StageEndTrigger_DurationPercentage">
-						<percentage>0.001</percentage>
-					</li>
-				</endTriggers>
 			</li>
 		</stages>
 	</RitualBehaviorDef>

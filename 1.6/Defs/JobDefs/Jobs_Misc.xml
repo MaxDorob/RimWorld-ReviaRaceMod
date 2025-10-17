@@ -20,6 +20,7 @@
 		<driverClass>ReviaRace.JobDrivers.JobDriver_InvokeBlessing</driverClass>
 		<reportString>Invoking blessing.</reportString>
 		<casualInterruptible>false</casualInterruptible>
+		<carryThingAfterJob>true</carryThingAfterJob>
 	</JobDef>
 
 	<JobDef>
