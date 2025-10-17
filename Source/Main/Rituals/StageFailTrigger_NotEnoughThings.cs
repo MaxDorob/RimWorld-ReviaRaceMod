@@ -44,7 +44,7 @@ namespace ReviaRace.Rituals
             {
                 return false;
             }
-            if (spot.Map.listerThings.ThingsOfDef(Defs.Bloodstone).Where(thing => !thing.IsForbidden(pawn)).Sum(x => x.stackCount) >= count)
+            if (spot.Map.listerThings.ThingsOfDef(def).Where(thing => !thing.IsForbidden(pawn)).Sum(x => x.stackCount) >= count)
             {
                 return false;
             }

@@ -22,12 +22,30 @@ namespace ReviaRace.Rituals
         protected override void ApplyExtraOutcome(Dictionary<Pawn, int> totalPresence, LordJob_Ritual jobRitual, RitualOutcomePossibility outcome, out string extraOutcomeDesc, ref LookTargets letterLookTargets)
         {
             base.ApplyExtraOutcome(totalPresence, jobRitual, outcome, out extraOutcomeDesc, ref letterLookTargets);
+            var sacrificer = jobRitual.PawnWithRole("sacrificer");
+            if (sacrificer.carryTracker.CarriedThing?.def == ReviaDefOf.Revia_MysticalStone)
+            {
+                sacrificer.carryTracker.DestroyCarriedThing();
+            }
+            else
+            {
+                var thingToRemove = sacrificer.inventory.innerContainer.FirstOrDefault(x=>x.def == ReviaDefOf.Revia_MysticalStone);
+                if (thingToRemove != null)
+                {
+                    thingToRemove.Destroy();
+                }
+                else
+                {
+                    Log.Error("Can't find a mystical stone to remove");
+                }
+            }
+
+
             if (outcome.Positive)
             {
-                var blessedPawn = jobRitual.PawnWithRole("sacrificer");
-                if (blessedPawn.IsRevia())
+                if (sacrificer.IsRevia())
                 {
-                    blessedPawn.ChangePsylinkLevel(outcome.positivityIndex);
+                    sacrificer.ChangePsylinkLevel(outcome.positivityIndex);
                 }
             }
         }

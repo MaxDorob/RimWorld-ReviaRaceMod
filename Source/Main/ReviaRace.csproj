@@ -150,6 +150,7 @@
     <Compile Include="RitualRole\RitualRoleWithReviaGene.cs" />
     <Compile Include="Rituals\SacrificeBaseScore_Extension.cs" />
     <Compile Include="Rituals\StageEndTrigger_CollectedBloodstones.cs" />
+    <Compile Include="Rituals\StageEndTrigger_CollectedMysticalStone.cs" />
     <Compile Include="Rituals\StageEndTrigger_PawnDeliveredOrNotValidAndBloodstonesCollected.cs" />
     <Compile Include="Rituals\StageFailTrigger_NotEnoughCarriedThings.cs" />
     <Compile Include="Rituals\StageFailTrigger_NotEnoughThings.cs" />

@@ -275,12 +275,34 @@
 				<defaultDuty>Spectate</defaultDuty>
 				<essential>True</essential>
 				<endTriggers>
-					<li Class="StageEndTrigger_DurationPercentage">
-						<percentage>0.999</percentage>
+					<li Class="ReviaRace.Rituals.StageEndTrigger_CollectedMysticalStone">
+						<roleId>sacrificer</roleId>
 					</li>
 				</endTriggers>
-								<failTriggers>
+				<failTriggers>
 					<li Class="ReviaRace.Rituals.StageFailTrigger_NotEnoughThings">
+						<def>Revia_MysticalStone</def>
+						<count>1</count>
+						<desc>missing mystical stone</desc>
+					</li>
+				</failTriggers>
+				<roleBehaviors>
+					<li>
+						<roleId>sacrificer</roleId>
+						<dutyDef>CollectThingsForPsycastBlessing</dutyDef>
+					</li>
+				</roleBehaviors>
+			</li>
+			<li>
+				<defaultDuty>Spectate</defaultDuty>
+				<essential>True</essential>
+				<endTriggers>
+					<li Class="StageEndTrigger_DurationPercentage">
+						<percentage>1</percentage>
+					</li>
+				</endTriggers>
+				<failTriggers>
+					<li Class="ReviaRace.Rituals.StageFailTrigger_NotEnoughCarriedThings">
 						<def>Revia_MysticalStone</def>
 						<count>1</count>
 						<desc>missing mystical stone</desc>
@@ -296,14 +318,6 @@
 						</customPositions>
 					</li>
 				</roleBehaviors>
-			</li>
-			<li>
-				<defaultDuty>Spectate</defaultDuty>
-				<endTriggers>
-					<li Class="StageEndTrigger_DurationPercentage">
-						<percentage>0.001</percentage>
-					</li>
-				</endTriggers>
 			</li>
 		</stages>
 	</RitualBehaviorDef>
