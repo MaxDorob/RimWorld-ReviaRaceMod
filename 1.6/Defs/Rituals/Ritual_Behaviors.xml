@@ -149,12 +149,32 @@
 				<defaultDuty>Spectate</defaultDuty>
 				<essential>True</essential>
 				<endTriggers>
+					<li Class="ReviaRace.Rituals.StageEndTrigger_CollectedBloodstones">
+						<roleId>sacrificer</roleId>
+					</li>
+				</endTriggers>
+				<failTriggers>
+					<li Class="ReviaRace.Rituals.StageFailTrigger_NotEnoughThings">
+						<desc>not enough bloodstones</desc>
+					</li>
+				</failTriggers>
+				<roleBehaviors>
+					<li>
+						<roleId>sacrificer</roleId>
+						<dutyDef>CollectBloodstonesForSoulreapBlessing</dutyDef>
+					</li>
+				</roleBehaviors>
+			</li>
+			<li>
+				<defaultDuty>Spectate</defaultDuty>
+				<essential>True</essential>
+				<endTriggers>
 					<li Class="StageEndTrigger_DurationPercentage">
 						<percentage>0.999</percentage>
 					</li>
 				</endTriggers>
 				<failTriggers>
-					<li Class="ReviaRace.Rituals.StageFailTrigger_NotEnoughThings">
+					<li Class="ReviaRace.Rituals.StageFailTrigger_NotEnoughCarriedThings">
 						<desc>not enough bloodstones</desc>
 					</li>
 				</failTriggers>

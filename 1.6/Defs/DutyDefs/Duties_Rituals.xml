@@ -54,11 +54,20 @@
 	</DutyDef>
 
 	<DutyDef>
-		<defName>InvokeBlessingForSoulreap</defName>
+		<defName>CollectBloodstonesForSoulreapBlessing</defName>
 		<hook>HighPriority</hook>
 		<thinkNode Class="ThinkNode_Priority">
 			<subNodes>
 				<li Class="ReviaRace.JobGiver.JobGiver_TakeBloodstonesForBlessingRitual"/>
+			</subNodes>
+		</thinkNode>
+	</DutyDef>
+	
+	<DutyDef>
+		<defName>InvokeBlessingForSoulreap</defName>
+		<hook>HighPriority</hook>
+		<thinkNode Class="ThinkNode_Priority">
+			<subNodes>
 
 				<li Class="JobGiver_GotoTravelDestination">
 					<exactCell>true</exactCell>
