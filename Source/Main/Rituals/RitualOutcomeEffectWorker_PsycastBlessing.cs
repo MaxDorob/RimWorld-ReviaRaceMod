@@ -11,6 +11,7 @@ namespace ReviaRace.Rituals
 {
     public class RitualOutcomeEffectWorker_PsycastBlessing : RitualOutcomeEffectWorker_FromQuality
     {
+        public static event Action<Pawn> BlessedWithPsycast;
         public RitualOutcomeEffectWorker_PsycastBlessing()
         {
         }
@@ -46,6 +47,7 @@ namespace ReviaRace.Rituals
                 if (sacrificer.IsRevia())
                 {
                     sacrificer.ChangePsylinkLevel(outcome.positivityIndex);
+                    BlessedWithPsycast?.Invoke(sacrificer);
                 }
             }
         }

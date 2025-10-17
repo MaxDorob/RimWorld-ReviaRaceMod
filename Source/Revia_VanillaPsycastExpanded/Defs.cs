@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using VanillaPsycastsExpanded;
 using Verse;
 
 namespace Revia_VanillaPsycastExpanded
@@ -16,5 +17,6 @@ namespace Revia_VanillaPsycastExpanded
         public static DamageDef Revia_MysticalScratch;
         public static DamageDef Revia_MysticalMediumBleedingScratch;
         public static DamageDef Revia_MysticalHeavyBleedingScratch;
+        public static PsycasterPathDef Revia_BloodPath;
     }
 }
