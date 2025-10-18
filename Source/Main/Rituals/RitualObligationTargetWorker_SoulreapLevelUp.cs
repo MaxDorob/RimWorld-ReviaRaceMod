@@ -21,5 +21,25 @@ namespace ReviaRace.Rituals
         public RitualObligationTargetWorker_SoulreapLevelUp(RitualObligationTargetFilterDef def) : base(def)
         {
         }
+        public override IEnumerable<string> GetBlockingIssues(TargetInfo target, RitualRoleAssignments assignments)
+        {
+            var pawn = assignments.FirstAssignedPawn("sacrificer");
+            if (pawn != null)
+            {
+                var minimalCount = InvokeGreaterBlessing.GetAdvanceCost(pawn.GetSoulReapTier()) / 3;
+
+                List<Thing> list = target.Map.listerThings.ThingsOfDef(Defs.Bloodstone).Where(thing => !thing.IsForbidden(pawn) && pawn.CanReserveAndReach(thing, PathEndMode.Touch, pawn.NormalMaxDanger())).ToList();
+                int requiredBloodstones = Count(assignments, pawn);
+                if (minimalCount > 0 && requiredBloodstones < minimalCount)
+                {
+                    yield return "ReviaMinimalBloodstonesCount".Translate(pawn, minimalCount);
+                } 
+            }
+
+            foreach (var issue in base.GetBlockingIssues(target, assignments))
+            {
+                yield return issue;
+            }
+        }
     }
 }
