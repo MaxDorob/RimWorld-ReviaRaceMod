@@ -86,7 +86,6 @@
     <Compile Include="Comps\CompLifeLeech.cs" />
     <Compile Include="Comps\SacrificeSpotComp.cs" />
     <Compile Include="Comps\SacrificeTracker.cs" />
-    <Compile Include="Comps\StartRitual_Comp.cs" />
     <Compile Include="DebugActions.cs" />
     <Compile Include="Enums\BornSettingsEnum.cs" />
     <Compile Include="Genes\ReviaBaseGene.cs" />
