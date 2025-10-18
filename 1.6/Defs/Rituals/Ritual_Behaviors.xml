@@ -251,6 +251,12 @@
 						<percentage>1</percentage>
 					</li>
 				</endTriggers>
+				<failTriggers>
+					<li Class="ReviaRace.Rituals.StageFailTrigger_NotEnoughCarriedThings">
+						<count>10</count>
+						<desc>missing bloodstones</desc>
+					</li>
+				</failTriggers>
 				<roleBehaviors>
 					<li>
 						<roleId>sacrificer</roleId>
