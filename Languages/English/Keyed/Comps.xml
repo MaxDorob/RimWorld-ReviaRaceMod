@@ -46,6 +46,6 @@
   <ReviaRejectionType>Revia genes rejection type</ReviaRejectionType>
   <InstaKill>Instant kills pawn</InstaKill>
   <NoRejection>No rejection</NoRejection>
-	<ReviaRaceOldSoulreapBlessing>Use the old blessing system</ReviaRaceOldSoulreapBlessing>
+	<ReviaRaceOldSoulreapBlessing>Use the old blessing and sacrifice system</ReviaRaceOldSoulreapBlessing>
 	<RequireReviaGene>Require any revia gene for conversion ritual</RequireReviaGene>
 </LanguageData>
