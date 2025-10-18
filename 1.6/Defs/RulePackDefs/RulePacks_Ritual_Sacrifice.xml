@@ -13,10 +13,9 @@
         <li>r_ritualName->[sacrifice] for [name]</li>
 
         <li>sacrifice->sacrifice</li>
-        <li>sacrifice->offering</li>
-        <li>sacrifice->immolation</li>
-        <li>sacrifice->oblation</li>
-        <li>sacrifice->slaughtering</li>
+        <li>sacrifice->Immolation</li>
+        <li>sacrifice->Oblation</li>
+        <li>sacrifice->Slaughtering</li>
         
       </rulesStrings>
     </rulePack>
