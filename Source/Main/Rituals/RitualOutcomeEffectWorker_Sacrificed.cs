@@ -47,6 +47,14 @@ namespace ReviaRace.Rituals
                 GenPlace.TryPlaceThing(thing, position, map, ThingPlaceMode.Near);
 
             }
+            var sortedOutcomes = jobRitual.Ritual.outcomeEffect.def.outcomeChances.OrderBy(x => x.positivityIndex).ToList();
+            if (outcome.BestPositiveOutcome(jobRitual) || (outcome.positivityIndex == sortedOutcomes[sortedOutcomes.Count - 2].positivityIndex && Rand.Chance(0.33f)))
+            {
+                foreach (var pawn in totalPresence.Keys.Where(x => x.IsRevia()))
+                {
+                    pawn.health.AddHediff(ReviaDefOf.ReviaRaceBlessedBySkarne);
+                }
+            }
             Find.World.GetComponent<SacrificeTracker>().SacrificePerformed(Faction.OfPlayer);
         }
     }
