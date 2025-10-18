@@ -12,7 +12,7 @@
         <li>r_ritualName->[sacrifice] to [name]</li>
         <li>r_ritualName->[sacrifice] for [name]</li>
 
-        <li>sacrifice->sacrifice</li>
+        <li>sacrifice->Sacrifice</li>
         <li>sacrifice->Immolation</li>
         <li>sacrifice->Oblation</li>
         <li>sacrifice->Slaughtering</li>
