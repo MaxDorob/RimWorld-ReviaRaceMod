@@ -20,7 +20,7 @@ namespace ReviaRace.Rituals
         protected override void ApplyExtraOutcome(Dictionary<Pawn, int> totalPresence, LordJob_Ritual jobRitual, RitualOutcomePossibility outcome, out string extraOutcomeDesc, ref LookTargets letterLookTargets)
         {
             base.ApplyExtraOutcome(totalPresence, jobRitual, outcome, out extraOutcomeDesc, ref letterLookTargets);
-            var multiplier = outcome.positivityIndex;
+            var multiplier = outcome.positivityIndex / 10f;
             if (multiplier <= 0)
             {
                 return;

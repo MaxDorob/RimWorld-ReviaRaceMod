@@ -43,35 +43,35 @@
 		<defName>Revia_Sacrifice</defName>
 		<description>Depending on ritual quality, Skarne may bless her participants with bloodstones.</description>
 		<workerClass>ReviaRace.Rituals.RitualOutcomeEffectWorker_Sacrificed</workerClass>
-		<startingQuality>0.3</startingQuality>
+		<startingQuality>0.15</startingQuality>
 		<outcomeChances>
 			<li>
 				<label>Terrible</label>
-				<chance>0.05</chance>
+				<chance>0.15</chance>
 				<description>The {0} wasn't bloody enough...</description>
 				<positivityIndex>-1</positivityIndex>
 			</li>
 			<li>
 				<label>Bloody</label>
-				<chance>0.35</chance>
+				<chance>0.50</chance>
 				<description>The {0} was bloody. More blood for the Bloody Goddess.</description>
-				<positivityIndex>1</positivityIndex>
+				<positivityIndex>9</positivityIndex> <!--Modifier-->
 			</li>
 			<li>
 				<label>Satisfying</label>
-				<chance>0.4</chance>
+				<chance>0.25</chance>
 				<memory>Revia_SatisfyingSacrifice</memory>
 				<description>We satisfied our obligation, all blood is Skarne's by right.</description>
 				<potentialExtraOutcomeDesc>Revia participant may recieve a bonus.</potentialExtraOutcomeDesc>
-				<positivityIndex>2</positivityIndex>
+				<positivityIndex>17</positivityIndex>
 			</li>
 			<li>
 				<label>Spectacular</label>
-				<chance>0.2</chance>
+				<chance>0.1</chance>
 				<memory>Revia_SpectacularSacrifice</memory>
 				<description>We impressed Her with {0}! She deeply enjoyed this spectacular execution!</description>
 				<potentialExtraOutcomeDesc>Revia participants will get a bonus.</potentialExtraOutcomeDesc>
-				<positivityIndex>3</positivityIndex>
+				<positivityIndex>27</positivityIndex>
 			</li>
 		</outcomeChances>
 		<modExtensions>
