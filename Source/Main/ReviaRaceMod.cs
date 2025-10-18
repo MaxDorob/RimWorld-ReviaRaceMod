@@ -141,6 +141,7 @@ namespace ReviaRace
             DrawCheckBoxWithLabel(sacrificeList.GetRect(lineHeight), Strings.SettingsDisableUncompleteDebuff_Claws, ref Settings._DisableUncompleteDebuff_Claws);
             DrawCheckBoxWithLabel(sacrificeList.GetRect(lineHeight), Strings.SettingsReviaNoProjectLimitaions, ref Settings._NoProjectLimitations);
             DrawCheckBoxWithLabel(sacrificeList.GetRect(lineHeight), Strings.SettingsReviaNoCraftLimitaions, ref Settings._NoCraftLimitations);
+            DrawCheckBoxWithLabel(sacrificeList.GetRect(lineHeight), "RequireReviaGene".Translate(), ref Settings.requireReviaGene);
             if (Settings.EnableBloodthirstNeed)
             {
                 DrawTextFieldWithLabel<float>(sacrificeList.GetRect(lineHeight), Strings.SettingsBloodthirstDaysToEmpty, ref Settings._bloodthirstDaysToEmpty, ref _bloodthirstDaysToEmptyBuf, 1, 60);

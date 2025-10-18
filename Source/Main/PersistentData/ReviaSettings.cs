@@ -148,6 +148,7 @@ namespace ReviaRace.PersistentData
 
         public float bloodstoneFromCorpseChance = 0.4f;
         public bool oldInvokeBlessing = false;
+        public bool requireReviaGene = true;
 
         public override void ExposeData()
         {
@@ -172,6 +173,7 @@ namespace ReviaRace.PersistentData
             Scribe_Values.Look(ref _noHybrid, GetLabel(nameof(NoHybrid)), false);
             Scribe_Values.Look(ref bloodstoneFromCorpseChance, nameof(bloodstoneFromCorpseChance), 0.4f);
             Scribe_Values.Look(ref oldInvokeBlessing, nameof(oldInvokeBlessing), false);
+            Scribe_Values.Look(ref requireReviaGene, nameof(requireReviaGene), true);
             ApplySettings();
         }
 

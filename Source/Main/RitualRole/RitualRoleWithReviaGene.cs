@@ -26,6 +26,10 @@ namespace ReviaRace
                 reason = "MessageRitualRolePawnIsAlreadyRevia".Translate();
                 return false;
             }
+            if (!ReviaRaceMod.Settings.requireReviaGene)
+            {
+                return true;
+            }
             bool pawnCanBeConverted = p?.genes?.GenesListForReading.Any(g => g.def.defName.Contains("Revia")) ?? false;
             if (!pawnCanBeConverted)
             {
