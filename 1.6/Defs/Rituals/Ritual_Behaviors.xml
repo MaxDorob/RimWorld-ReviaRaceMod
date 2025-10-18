@@ -14,7 +14,7 @@
 				<id>sacrificer</id>
 				<precept>Revia_PrisonerSacrification</precept>
 				<required>True</required>
-				<substitutable>true</substitutable>
+				<substitutable>false</substitutable>
 				<maxCount>1</maxCount>
 				<countsAsParticipant>False</countsAsParticipant>
 				<mustBeAbleToReachTarget>True</mustBeAbleToReachTarget>
