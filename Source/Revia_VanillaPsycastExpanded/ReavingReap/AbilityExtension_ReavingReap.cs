@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using Verse;
 using VEF.Abilities;
 using RimWorld;
+using Verse.Sound;
 
 namespace Revia_VanillaPsycastExpanded
 {
@@ -30,8 +31,10 @@ namespace Revia_VanillaPsycastExpanded
             {
                 SpawnReward(ability.pawn.Map, cells.RandomElement(), animalsScore, false);
             }
-            foreach (var thing in targets.Select(x => x.Thing).OfType<Corpse>())
+            foreach (var thing in targets.Select(x => x.Thing).OfType<Corpse>().Where(x=>x.InnerPawn.RaceProps.IsFlesh))
             {
+                FleckMaker.Static(thing.PositionHeld.ToVector3Shifted(), thing.Map, FleckDefOf.PsycastSkipFlashEntry, 1f);
+                SoundDefOf.Psycast_Skip_Entry.PlayOneShot(new TargetInfo(thing.PositionHeld, thing.Map, false));
                 thing.Destroy(DestroyMode.KillFinalize);
             }
         }
