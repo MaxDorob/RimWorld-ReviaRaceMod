@@ -22,7 +22,8 @@
 					<MeleeCooldownFactor>0.3</MeleeCooldownFactor>
 					<MeleeArmorPenetration>2.5</MeleeArmorPenetration>
 					<MeleeHitChance>1.6</MeleeHitChance>
-					<MeleeDodgeChance>2.2</MeleeDodgeChance>
+					<Revia_LifeLeechImpact>0.9</Revia_LifeLeechImpact>
+					<StaggerDurationFactor>0</StaggerDurationFactor>
 					<PawnTrapSpringChance>0</PawnTrapSpringChance>
 					<IncomingDamageFactor>0.12</IncomingDamageFactor>
 					<Suppressability MayRequire="CETeam.CombatExtended">0</Suppressability>
