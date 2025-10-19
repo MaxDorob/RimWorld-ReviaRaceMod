@@ -112,7 +112,7 @@ By channeling a surge of psychic energy in a circuit through each of her tails, 
 	<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
 		<defName>Revia_SkarnesProtection</defName>
 		<label>skarne's protection</label>
-		<description>Skarne enjoys blood flowing freely, but may be merciful to her supplicants and their allies. Manipulating fresh blood on open wounds allows for their immediate healing, often leaving scars like a mark of her influence.</description>
+		<description>Skarne enjoys blood flowing freely, but may be merciful to her supplicants and their allies. Manipulating fresh blood on open wounds allows for their immediate healing at a range, often leaving scars like a mark of her influence.</description>
 		<iconPath>UI/Bloodpath/SkarnesProtection</iconPath>
 		<castTime>150</castTime>
 		<range>36</range>
@@ -149,7 +149,7 @@ By channeling a surge of psychic energy in a circuit through each of her tails, 
 	<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
 		<defName>Revia_SkarnesCurse</defName>
 		<label>skarne's curse</label>
-		<description>By channeling the bloodthirsty viciousness that is integral to the Revia, the caster wills a curse on the target, not only vastly increasing vulnerability to bleeding and hemorrhaging , but causing open wounds to bursting out the victim over a short period dependent on how powerful the psychic connection.</description>
+		<description>By channeling the bloodthirsty viciousness that is integral to the Revia, the caster wills a curse on the target, not only vastly increasing vulnerability to bleeding and hemorrhaging, but causing open wounds to bursting out the victim over a short period dependent onthe victim's psychic sensitivity.</description>
 		<iconPath>UI/Bloodpath/SkarnesCurse</iconPath>
 		<castTime>40</castTime>
 		<durationTime>1800</durationTime>
