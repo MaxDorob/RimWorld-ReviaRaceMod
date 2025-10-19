@@ -86,7 +86,7 @@ By channeling a surge of psychic energy in a circuit through each of her tails, 
 		<!--TODO: Change to some other sound-->
 		<targetMode>Self</targetMode>
 		<castTime>15</castTime>
-		<durationTime>7200</durationTime>
+		<durationTime>1800</durationTime>
 		<abilityClass>VEF.Abilities.Ability_Blank</abilityClass>
 		<modExtensions>
 			<li Class="Revia_VanillaPsycastExpanded.AbilityExtension_ReviaPsycast">
