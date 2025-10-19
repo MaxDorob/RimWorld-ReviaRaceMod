@@ -12,8 +12,10 @@ namespace Revia_VanillaPsycastExpanded
 {
     public class AbilityExtension_SkarneProtection : AbilityExtension_AbilityMod
     {
-        float scarChance = 0.33f;
+        float scarChance = 0.23f;
+        int maxScarsCount = 4;
         FloatRange severityForPermanent = new FloatRange(0.06f, 0.2f);
+        FloatRange severityHealingMultiplier = new FloatRange(0.2f, 0.8f);
         FloatRange tendQuality = new FloatRange(0.2f, 0.65f);
         public override void Cast(GlobalTargetInfo[] targets, Ability ability)
         {
@@ -22,17 +24,20 @@ namespace Revia_VanillaPsycastExpanded
             {
                 if (target.Thing is Pawn pawn)
                 {
+                    var countOfPermanent = 0;
                     foreach (var injury in pawn.health.hediffSet.hediffs.Where(x=>x.Bleeding))
                     {
                         var permanentComp = injury.TryGetComp<HediffComp_GetsPermanent>();
-                        if (permanentComp != null && Rand.Chance(scarChance))
+                        if (countOfPermanent < maxScarsCount && permanentComp != null && Rand.Chance(scarChance))
                         {
                             injury.Severity = Mathf.Min(injury.Severity, severityForPermanent.RandomInRange);
                             permanentComp.IsPermanent = true;
+                            countOfPermanent++;
                         }
                         else
                         {
                             injury.Tended(tendQuality.RandomInRange, tendQuality.max);
+                            injury.Severity *= severityForPermanent.RandomInRange;
                         }
                     }
                 }
