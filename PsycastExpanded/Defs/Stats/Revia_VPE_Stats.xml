@@ -4,7 +4,7 @@
   <StatDef>
     <defName>Revia_PsyfocusPerKill</defName>
     <label>psyfocus gain</label>
-    <description>Amount of psyfocus gain per kill.</description>
+    <description>Psyfocus on kill.</description>
     <category>PawnCombat</category>
     <toStringStyle>PercentZero</toStringStyle>
     <defaultBaseValue>0</defaultBaseValue>

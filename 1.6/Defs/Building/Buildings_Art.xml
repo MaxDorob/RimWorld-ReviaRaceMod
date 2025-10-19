@@ -3,7 +3,7 @@
   <ThingDef ParentName="ArtBuildingBase">
     <defName>ReviaSkarnesSculpture</defName>
     <label>skarne's sculpture</label>
-    <description>A sculpture of the nine-tailed bloody Goddess.</description>
+    <description>A sculpture of the nine-tailed Bloody Goddess.</description>
 		<drawerType>RealtimeOnly</drawerType>
 		<minifiedDef>MinifiedThingRealtimeDraw</minifiedDef>
 		<minifiedManualDraw>true</minifiedManualDraw>

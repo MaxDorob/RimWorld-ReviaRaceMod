@@ -289,7 +289,7 @@
 					<li Class="ReviaRace.Rituals.StageFailTrigger_NotEnoughThings">
 						<def>Revia_MysticalStone</def>
 						<count>1</count>
-						<desc>missing mystical stone</desc>
+						<desc>missing mystical bloodstone</desc>
 					</li>
 				</failTriggers>
 				<roleBehaviors>

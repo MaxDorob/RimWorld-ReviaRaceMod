@@ -45,7 +45,7 @@
 		<defName>Revia_PsycastRitual</defName>
 		<label>revia psycast blessing</label>
 		<tipLabelOverride>Revia psycast blessing</tipLabelOverride>
-		<description>A sacrificer will offer a mystical stone to Skarne for a connection to psychic powers.</description>
+		<description>A sacrificer will offer a mystical bloodstone to Skarne for a link to psychic powers.</description>
 		<ritualPatternBase>Revia_PsycastRitual</ritualPatternBase>
 	</PreceptDef>
 

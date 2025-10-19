@@ -3,7 +3,7 @@
 	<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
 		<defName>Revia_Bloodseek</defName>
 		<label>bloodseek</label>
-		<description>Teleports caster to the bleeding target.</description>
+		<description>Attuning to nearby flowing blood and honing into to the location where it flows from, the caster may teleport to any currently bleeding target in the map.</description>
 		<iconPath>UI/Bloodpath/Bloodseek</iconPath>
 		<abilityClass>Revia_VanillaPsycastExpanded.Ability_Bloodseek</abilityClass>
 		<castTime>30</castTime>
@@ -48,7 +48,7 @@
 	<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
 		<defName>Revia_SkarneAvatar</defName>
 		<label>skarne's scion</label>
-		<description>Caster invokes to Skarne's real power. Caster becomes hungry for blood avatar of Skarne for short period.</description>
+		<description>Starting a chant and building up the fury, this advanced form of the Bloodbath Circuit supercharges a Revia's already powerful connection to the Bloody Goddess through all nine of her tails, causing possession for a short time, becoming a berserk and extremely blood hungry avatar of Skarne. Slaying all who would dare oppose her viscous will, a true born scion of Skarne will slaughter all they can while under the influence, old allies being the last to be targeted for death. This extremely powerful and dangerous state of connection lasts psychic heat collapses this connection, the body becoming to damaged to fight, or simple time degrading the connection.</description>
 		<iconPath>UI/Bloodpath/SkarneAvatar</iconPath>
 		<abilityClass>VEF.Abilities.Ability_Blank</abilityClass>
 		<targetMode>Self</targetMode>
@@ -79,7 +79,8 @@
 	<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
 		<defName>Revia_Bloodbath</defName>
 		<label>bloodbath</label>
-		<description>Skarne guides caster through the battle.</description>
+		<description>The most direct application of psychic power for any Revia is empowering her tails, her connection to Skarne. It being an obvious decision does not make it any less powerful.
+By channeling a surge of psychic energy in a circuit through each of her tails, a Revia may leverage her that circuit at a moments notice to bathe in the blood of her adversaries. While active this technique immensely increases speed and allows for significantly more rapid attacks, with enough tails even allowing and then further empowering, the benefits of sanctified weaponry on any attack! The ensuing bloodbath becomes significantly bloodier the greater the level of Soul Reap.</description>
 		<iconPath>UI/Bloodpath/Bloodbath</iconPath>
 		<castSound>VPE_BladeFocus_Cast</castSound>
 		<!--TODO: Change to some other sound-->
@@ -111,7 +112,7 @@
 	<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
 		<defName>Revia_SkarnesProtection</defName>
 		<label>skarne's protection</label>
-		<description>Skarne may be merciful, closing bleeding wounds, often leaving a scar, like a mark...</description>
+		<description>Skarne enjoys blood flowing freely, but may be merciful to her supplicants and their allies. Manipulating fresh blood on open wounds allows for their immediate healing, often leaving scars like a mark of her influence.</description>
 		<iconPath>UI/Bloodpath/SkarnesProtection</iconPath>
 		<castTime>150</castTime>
 		<range>36</range>
@@ -148,7 +149,7 @@
 	<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
 		<defName>Revia_SkarnesCurse</defName>
 		<label>skarne's curse</label>
-		<description>Skarne curses the victim to bleed.</description>
+		<description>By channeling the bloodthirsty viciousness that is integral to the Revia, the caster wills a curse on the target, not only vastly increasing vulnerability to bleeding and hemorrhaging , but causing open wounds to bursting out the victim over a short period dependent on how powerful the psychic connection.</description>
 		<iconPath>UI/Bloodpath/SkarnesCurse</iconPath>
 		<castTime>40</castTime>
 		<durationTime>1800</durationTime>
@@ -181,7 +182,7 @@
 	<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
 		<defName>Revia_BloodyExplosion</defName>
 		<label>bloody explosion</label>
-		<description>The victim's bleeding wounds explode.</description>
+		<description>Manipulate energy in blood flowing from open wounds, snap your finger, and watch an explosion of gore fly out in all directions! The efficacy of which depends on how much the victim is bleeding at that point.</description>
 		<iconPath>UI/Bloodpath/BloodyExplosion</iconPath>
 		<castTime>40</castTime>
 		<range>45</range>
@@ -232,7 +233,7 @@
 	<VEF.Abilities.AbilityDef ParentName="VPE_WordOfAbilityBase">
 		<defName>Revia_ReavingReap</defName>
 		<label>reaving reap</label>
-		<description>Collect Skarne's rewards from corpses around.</description>
+		<description>Skarne recognizes effort, and by expending psychic energy you will collect all nearby bloodstones or palestones from corpses as if you sacrificed them through labor. Simple, and time efficient.</description>
 		<iconPath>UI/Bloodpath/ReavingReap</iconPath>
 		<!--<castTime>150</castTime>-->
 
@@ -273,7 +274,7 @@
 	<VEF.Abilities.AbilityDef ParentName="VPE_WordOfAbilityBase">
 		<defName>Revia_VermilionHarvest</defName>
 		<label>vermilion harvest</label>
-		<description>Spill blood of victim for Skarne's reward.</description>
+		<description>There is power in blood, and the Bloody Goddess of all entities certainly knows how to use it. Converting blood directly into psyfocus is a harrowing and possibly fatal process... for whoever is being harvested. The larger the creature, the more blood that is taken, and killing the target all increase the reward. Friend, foe or even the caster herself, Skarne cares not how blood flows, only that it does.</description>
 		<iconPath>UI/Bloodpath/VermilionHarvest</iconPath>
 		<castTime>350</castTime>
 		<warmupMote></warmupMote>

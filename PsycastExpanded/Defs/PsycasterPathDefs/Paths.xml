@@ -3,11 +3,12 @@
   <VanillaPsycastsExpanded.PsycasterPathDef>
     <defName>Revia_BloodPath</defName>
     <label>bloodpath</label>
-    <description>Revia psycasts are focused on fighing, especially against flesh-based enemies.</description> 
+    <description>Revia psycasts are focused on exalting the Bloody Goddess Skarne, fighting and wounding, especially against that which can bleed. 
+ Those on the bloodpath are uniquely attached to Skarne through the Soul Reap, much like how normal psycasters are attached to their archotech networks. Bloodpath psycasters are usually psychically linked Revia seeking nothing less than the total reverence of the Bloody Goddess and their own strength. The powers granted by the Bloodpath tend to scale not only with Psychic sensitivity, but also with the amount of tails the Revia have acquired through the Soul Reap. Blood! Blood! Blood!</description> 
     <background>UI/Bloodpath/Background</background>
     <altBackground>UI/Bloodpath/Background</altBackground>
     <tab>Psycasts</tab>
-    <tooltip>Revia psycasts are focused on fighing, especially against flesh-based enemies. Skarne gives power Her scions.</tooltip>
+    <tooltip>Revia psycasts are focused on exalting the Bloody Goddess Skarne, fighting and wounding, especially against that which can bleed.</tooltip>
 		<requiredGene>ReviaTail</requiredGene>
 		<lockedReason>MustBeRevia</lockedReason>
   </VanillaPsycastsExpanded.PsycasterPathDef>
