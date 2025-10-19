@@ -3,7 +3,7 @@
   <HediffDef  ParentName="PsycastHediffBase">
     <defName>Revia_Bloodbath</defName>
     <label>bloodbath</label>
-    <description>Skarne guides me through the battle...</description>
+    <description>I will bathe my empowered tails in blood!</description>
 		<hediffClass>HediffWithComps</hediffClass>
     <isBad>false</isBad>
     <defaultLabelColor>(0.8, 0.4, 0.4)</defaultLabelColor>
@@ -18,11 +18,11 @@
         <capMods>
           <li>
             <capacity>Moving</capacity>
-						<postFactor>1.05</postFactor>
+						<postFactor>1.1</postFactor>
           </li>
         </capMods>
 				<statFactors>
-					<MeleeDodgeChance>1.02</MeleeDodgeChance>
+					<MeleeArmorPenetration>1.1</MeleeArmorPenetration>
 					<MeleeCooldownFactor>0.97</MeleeCooldownFactor>
 				</statFactors>
       </li>
@@ -31,11 +31,11 @@
 				<capMods>
 					<li>
 						<capacity>Moving</capacity>
-						<postFactor>1.10</postFactor>
+						<postFactor>1.20</postFactor>
 					</li>
 				</capMods>
 				<statFactors>
-					<MeleeDodgeChance>1.06</MeleeDodgeChance>
+					<MeleeArmorPenetration>1.2</MeleeArmorPenetration>
 					<MeleeCooldownFactor>0.96</MeleeCooldownFactor>
 					<RangedCooldownFactor>0.98</RangedCooldownFactor>
 				</statFactors>
@@ -45,11 +45,11 @@
         <capMods>
           <li>
             <capacity>Moving</capacity>
-						<postFactor>1.15</postFactor>
+						<postFactor>1.3</postFactor>
           </li>
         </capMods>
 				<statFactors>
-					<MeleeDodgeChance>1.11</MeleeDodgeChance>
+					<MeleeArmorPenetration>1.3</MeleeArmorPenetration>
 					<MeleeCooldownFactor>0.93</MeleeCooldownFactor>
 					<RangedCooldownFactor>0.96</RangedCooldownFactor>
 				</statFactors>
@@ -59,11 +59,11 @@
         <capMods>
           <li>
             <capacity>Moving</capacity>
-						<postFactor>1.18</postFactor>
+						<postFactor>1.4</postFactor>
           </li>
         </capMods>
 				<statFactors>
-					<MeleeDodgeChance>1.16</MeleeDodgeChance>
+					<MeleeArmorPenetration>1.4</MeleeArmorPenetration>
 					<MeleeCooldownFactor>0.87</MeleeCooldownFactor>
 					<RangedCooldownFactor>0.93</RangedCooldownFactor>
 				</statFactors>
@@ -73,11 +73,11 @@
         <capMods>
           <li>
             <capacity>Moving</capacity>
-						<postFactor>1.22</postFactor>
+						<postFactor>1.5</postFactor>
           </li>
         </capMods>
 				<statFactors>
-					<MeleeDodgeChance>1.20</MeleeDodgeChance>
+					<MeleeArmorPenetration>1.5</MeleeArmorPenetration>
 					<MeleeCooldownFactor>0.82</MeleeCooldownFactor>
 					<RangedCooldownFactor>0.90</RangedCooldownFactor>
 				</statFactors>
@@ -87,11 +87,11 @@
         <capMods>
           <li>
             <capacity>Moving</capacity>
-						<postFactor>1.28</postFactor>
+						<postFactor>1.6</postFactor>
           </li>
         </capMods>
 				<statFactors>
-					<MeleeDodgeChance>1.25</MeleeDodgeChance>
+					<MeleeArmorPenetration>1.6</MeleeArmorPenetration>
 					<MeleeCooldownFactor>0.77</MeleeCooldownFactor>
 					<RangedCooldownFactor>0.85</RangedCooldownFactor>
 				</statFactors>
@@ -104,11 +104,11 @@
 				<capMods>
 					<li>
 						<capacity>Moving</capacity>
-						<postFactor>1.35</postFactor>
+						<postFactor>1.7</postFactor>
 					</li>
 				</capMods>
 				<statFactors>
-					<MeleeDodgeChance>1.30</MeleeDodgeChance>
+					<MeleeArmorPenetration>1.7</MeleeArmorPenetration>
 					<MeleeCooldownFactor>0.73</MeleeCooldownFactor>
 					<RangedCooldownFactor>0.8</RangedCooldownFactor>
 				</statFactors>
@@ -122,11 +122,11 @@
 				<capMods>
 					<li>
 						<capacity>Moving</capacity>
-						<postFactor>1.40</postFactor>
+						<postFactor>1.80</postFactor>
 					</li>
 				</capMods>
 				<statFactors>
-					<MeleeDodgeChance>1.35</MeleeDodgeChance>
+					<MeleeArmorPenetration>1.8</MeleeArmorPenetration>
 					<MeleeCooldownFactor>0.66</MeleeCooldownFactor>
 					<RangedCooldownFactor>0.75</RangedCooldownFactor>
 				</statFactors>
@@ -140,11 +140,11 @@
         <capMods>
           <li>
             <capacity>Moving</capacity>
-						<postFactor>1.45</postFactor>
+						<postFactor>1.9</postFactor>
           </li>
         </capMods>
 				<statFactors>
-					<MeleeDodgeChance>1.4</MeleeDodgeChance>
+					<MeleeArmorPenetration>1.9</MeleeArmorPenetration>
 					<MeleeCooldownFactor>0.59</MeleeCooldownFactor>
 					<RangedCooldownFactor>0.65</RangedCooldownFactor>
 				</statFactors>
