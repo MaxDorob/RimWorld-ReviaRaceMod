@@ -36,7 +36,7 @@
 			</li>
 			<li Class="VanillaPsycastsExpanded.Skipmaster.AbilityExtension_Clamor">
 				<clamorType>Ability</clamorType>
-				<clamorRadius>10</clamorRadius>
+				<clamorRadius>9</clamorRadius>
 			</li>
 			<li Class="VEF.Abilities.AbilityExtension_Hediff">
 				<hediff>PsychicBurden</hediff>
@@ -62,8 +62,8 @@
 				<path>Revia_BloodPath</path>
 				<level>5</level>
 				<order>1</order>
-				<psyfocusCost>0.80</psyfocusCost>
-				<entropyGain>60</entropyGain>
+				<psyfocusCost>0.90</psyfocusCost>
+				<entropyGain>90</entropyGain>
 				<soulReapLevel>9</soulReapLevel>
 				<prerequisites>
 					<li>Revia_BloodyExplosion</li>
@@ -72,6 +72,10 @@
 			</li>
 			<li Class="VanillaPsycastsExpanded.AbilityExtension_GiveMentalState">
 				<stateDef>Revia_SkarneAvatar</stateDef>
+			</li>
+			<li Class="VEF.Abilities.AbilityExtension_Hediff">
+				<hediff>Revia_SkarneAvatar</hediff>
+				<durationMultiplier>PsychicSensitivity</durationMultiplier>
 			</li>
 		</modExtensions>
 	</VEF.Abilities.AbilityDef>
@@ -85,15 +89,15 @@ By channeling a surge of psychic energy in a circuit through each of her tails, 
 		<castSound>VPE_BladeFocus_Cast</castSound>
 		<!--TODO: Change to some other sound-->
 		<targetMode>Self</targetMode>
-		<castTime>15</castTime>
-		<durationTime>1800</durationTime>
+		<castTime>30</castTime>
+		<durationTime>7200</durationTime>
 		<abilityClass>VEF.Abilities.Ability_Blank</abilityClass>
 		<modExtensions>
 			<li Class="Revia_VanillaPsycastExpanded.AbilityExtension_ReviaPsycast">
 				<path>Revia_BloodPath</path>
 				<level>2</level>
 				<order>1</order>
-				<psyfocusCost>0.08</psyfocusCost>
+				<psyfocusCost>0.1</psyfocusCost>
 				<entropyGain>5</entropyGain>
 				<psychic>true</psychic>
 				<soulReapLevel>3</soulReapLevel>
@@ -184,7 +188,7 @@ By channeling a surge of psychic energy in a circuit through each of her tails, 
 		<label>bloody explosion</label>
 		<description>Manipulate energy in blood flowing from open wounds, snap your finger, and watch an explosion of gore fly out in all directions! The efficacy of which depends on how much the victim is bleeding at that point.</description>
 		<iconPath>UI/Bloodpath/BloodyExplosion</iconPath>
-		<castTime>40</castTime>
+		<castTime>30</castTime>
 		<range>45</range>
 		<requireLineOfSight>true</requireLineOfSight>
 		<targetMode>Pawn</targetMode>
@@ -195,8 +199,8 @@ By channeling a surge of psychic energy in a circuit through each of her tails, 
 				<path>Revia_BloodPath</path>
 				<level>4</level>
 				<order>1</order>
-				<psyfocusCost>0.15</psyfocusCost>
-				<entropyGain>15</entropyGain>
+				<psyfocusCost>0.1</psyfocusCost>
+				<entropyGain>30</entropyGain>
 				<psychic>true</psychic>
 				<soulReapLevel>7</soulReapLevel>
 				<prerequisites>
@@ -222,7 +226,7 @@ By channeling a surge of psychic energy in a circuit through each of her tails, 
 			<li Class="Revia_VanillaPsycastExpanded.AbilityExtension_BloodyExplosion">
 				<damageDef>Revia_BloodExplosionScratch</damageDef>
 				<radius>3.9</radius>
-				<damageAmount>8~12</damageAmount>
+				<damageAmount>9~12</damageAmount>
 				<penetration>7.5</penetration>
 				<requireLOS>true</requireLOS>
 			</li>
@@ -261,8 +265,8 @@ By channeling a surge of psychic energy in a circuit through each of her tails, 
 				<path>Revia_BloodPath</path>
 				<level>1</level>
 				<order>1</order>
-				<psyfocusCost>0.15</psyfocusCost>
-				<entropyGain>15</entropyGain>
+				<psyfocusCost>0.05</psyfocusCost>
+				<entropyGain>30</entropyGain>
 				<psychic>true</psychic>
 				<soulReapLevel>1</soulReapLevel>
 			</li>
@@ -285,8 +289,8 @@ By channeling a surge of psychic energy in a circuit through each of her tails, 
 				<path>Revia_BloodPath</path>
 				<level>1</level>
 				<order>2</order>
-				<psyfocusCost>0.10</psyfocusCost>
-				<entropyGain>10</entropyGain>
+				<psyfocusCost>0.03</psyfocusCost>
+				<entropyGain>50</entropyGain>
 				<psychic>true</psychic>
 				<soulReapLevel>1</soulReapLevel>
 			</li>
