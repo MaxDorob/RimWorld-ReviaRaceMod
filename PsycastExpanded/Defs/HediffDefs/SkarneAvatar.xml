@@ -10,7 +10,7 @@
     <countsAsAddedPartOrImplant>false</countsAsAddedPartOrImplant>
     <stages>
 			<li>
-				<painFactor>0.13</painFactor>
+				<painFactor>0.2</painFactor>
 				<capMods>
 					<li>
 						<capacity>Moving</capacity>
@@ -18,14 +18,14 @@
 					</li>
 				</capMods>
 				<statFactors>
-					<MeleeDamageFactor>1.8</MeleeDamageFactor>
-					<MeleeCooldownFactor>0.3</MeleeCooldownFactor>
-					<MeleeArmorPenetration>2.5</MeleeArmorPenetration>
-					<MeleeHitChance>1.6</MeleeHitChance>
-					<Revia_LifeLeechImpact>0.9</Revia_LifeLeechImpact>
+					<MeleeDamageFactor>2</MeleeDamageFactor>
+					<MeleeHitChance>2</MeleeHitChance>
+					<MeleeCooldownFactor>0.4</MeleeCooldownFactor>
+					<MeleeArmorPenetration>2.3</MeleeArmorPenetration>
+					<Revia_LifeLeechImpact>1.9</Revia_LifeLeechImpact>
+					<IncomingDamageFactor>0.2</IncomingDamageFactor>
 					<StaggerDurationFactor>0</StaggerDurationFactor>
 					<PawnTrapSpringChance>0</PawnTrapSpringChance>
-					<IncomingDamageFactor>0.12</IncomingDamageFactor>
 					<Suppressability MayRequire="CETeam.CombatExtended">0</Suppressability>
 				</statFactors>
 			</li>
