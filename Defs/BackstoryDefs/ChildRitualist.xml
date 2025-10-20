@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+	<BackstoryDef>
+		<defName>ReviaRaceBackstoryChildRitualist</defName>
+		<title>Revian Ritualist</title>
+		<titleShort>Ritualist</titleShort>
+		<baseDesc>[PAWN_nameDef] worked directly under Revian Priestesses doing a variety of tasks, from menial tasks like cleaning altars and stocking shelves, to more involved assistance in the many, often bloody, ceremonies that took place. Years of proximity to these practices has passively attuned her to the Bloody Goddess of the Revia.</baseDesc>
+		<bodyTypeGlobal>Thin</bodyTypeGlobal>
+		<bodyTypeMale>Thin</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+		<slot>Childhood</slot>
+		<spawnCategories>
+			<li>ReviaRaceBackstory</li>
+			<li>ReviaRaceTemplar</li>
+		</spawnCategories>
+		<skillGains>
+			<Social>3</Social>
+			<Melee>2</Melee>
+		</skillGains>
+		<forcedTraits>
+			<PsychicSensitivity>2</PsychicSensitivity>
+			<PsychicSensitivity>1</PsychicSensitivity>
+		</forcedTraits>
+	</BackstoryDef>
+</Defs>

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<BackstoryDef>
+		<defName>ReviaRaceBackstoryAdultMarauder</defName>
+		<title>Revian Marauder</title>
+		<titleShort>Marauder</titleShort>
+		<baseDesc>Partaking in countless raids, excursions, and slaughters ordered by her priestesses, [PAWN_nameDef] became a terror on the battlefield. In truth, she found little joy in anything but combat.</baseDesc>
+		<bodyTypeMale>Thin</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+		<slot>Adulthood</slot>
+		<spawnCategories>
+			<li>ReviaRaceBackstory</li>
+			<li>ReviaMarauder</li>
+		</spawnCategories>
+		<skillGains>
+			<Melee>6</Melee>
+			<Shooting>2</Shooting>
+		</skillGains>
+	</BackstoryDef>
+</Defs>

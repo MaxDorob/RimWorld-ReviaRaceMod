@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+	<BackstoryDef>
+		<defName>ReviaRaceBackstoryAdultMachinist</defName>
+		<title>Revian Machinist</title>
+		<titleShort>Machinist</titleShort>
+		<baseDesc>[PAWN_nameDef] had a knack for machinery. She was exceptionally diligent and excitable when it came to creating implements of warfare and mass slaughter, which are in high demand in Revian worlds. Despite being technically aligned, [PAWN_nameDef] found it easy to articulate her morbid ideas to others, and delighted in learning of those that slaughter with her equipment.</baseDesc>
+		<bodyTypeMale>Thin</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+		<slot>Adulthood</slot>
+		<spawnCategories>
+			<li>ReviaRaceBackstory</li>
+			<li>ReviaRaceTemplar</li>
+		</spawnCategories>
+		<skillGains>
+			<Crafting>5</Crafting>
+			<Social>3</Social>
+			<Intellectual>2</Intellectual>
+		</skillGains>
+		<forcedTraits>
+			<Industriousness>2</Industriousness>
+			<Industriousness>1</Industriousness>
+		</forcedTraits>
+	</BackstoryDef>
+</Defs>
