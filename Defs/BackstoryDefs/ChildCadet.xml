@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<BackstoryDef>
+		<defName>ReviaRaceBackstoryChildCadet</defName>
+		<title>Revian Cadet</title>
+		<titleShort>Cadet</titleShort>
+		<baseDesc>[PAWN_nameDef] was raised from a young age to serve the Revian war machine. She later lived in barracks with other young Revia, learning pain, weapons, victory, and bloodshed.</baseDesc>
+		<bodyTypeGlobal>Thin</bodyTypeGlobal>
+		<bodyTypeMale>Thin</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+		<slot>Childhood</slot>
+		<spawnCategories>
+			<li>ReviaRaceBackstory</li>
+			<li>ReviaRaceTemplar</li>
+		</spawnCategories>
+		<skillGains>
+			<Shooting>3</Shooting>
+			<Melee>3</Melee>
+			<Cooking>1</Cooking>
+		</skillGains>
+	</BackstoryDef>
+</Defs>

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+	<BackstoryDef>
+		<defName>ReviaRaceBackstoryChildCarver</defName>
+		<title>Revian Carver</title>
+		<titleShort>Carver</titleShort>
+		<baseDesc>[PAWN_nameDef] was a loner with an active imagination despite her deep desire to see others bleed. She’d paint walls in gore one day and carve adorable, pristine figurines the next.</baseDesc>
+		<bodyTypeGlobal>Thin</bodyTypeGlobal>
+		<bodyTypeMale>Thin</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+		<slot>Childhood</slot>
+		<spawnCategories>
+			<li>ReviaRaceBackstory</li>
+			<li>ReviaRaceMarauder</li>
+		</spawnCategories>
+		<skillGains>
+			<Artistic>6</Artistic>
+			<Melee>3</Melee>
+		</skillGains>
+	</BackstoryDef>
+</Defs>

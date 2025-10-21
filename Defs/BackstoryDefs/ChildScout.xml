@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<BackstoryDef>
+		<defName>ReviaRaceBackstoryChildScout</defName>
+		<title>Revian Scout</title>
+		<titleShort>Scout</titleShort>
+		<baseDesc>[PAWN_nameDef] was trained by Revian Priestesses to track game, gather rare herbs, and scout fertile sites for settlement or conquest. She quickly learned how to survive in the wild and hunt down prey.</baseDesc>
+		<bodyTypeGlobal>Thin</bodyTypeGlobal>
+		<bodyTypeMale>Thin</bodyTypeMale>
+		<bodyTypeFemale>Thin</bodyTypeFemale>
+		<slot>Childhood</slot>
+		<spawnCategories>
+			<li>ReviaRaceBackstory</li>
+			<li>ReviaMarauder</li>
+		</spawnCategories>
+		<skillGains>
+			<Animals>3</Animals>
+			<Plants>3</Plants>
+			<Shooting>2</Shooting>
+		</skillGains>
+	</BackstoryDef>
+</Defs>

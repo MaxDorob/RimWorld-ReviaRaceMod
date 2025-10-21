@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<BackstoryDef>
+		<defName>ReviaRaceBackstoryAdultHuntress</defName>
+		<title>Revian Huntress</title>
+		<titleShort>Huntress</titleShort>
+		<baseDesc>[PAWN_nameDef] hunted to sustain her community. She learned how to take down and prepare large game such as Muffalos, Horses, Wolves, and People.</baseDesc>
+		<bodyTypeMale>Thin</bodyTypeMale>
+		<bodyTypeFemale>Thin</bodyTypeFemale>
+		<slot>Adulthood</slot>
+		<spawnCategories>
+			<li>ReviaRaceBackstory</li>
+			<li>ReviaMarauder</li>
+		</spawnCategories>
+		<skillGains>
+			<Cooking>4</Cooking>
+			<Animals>3</Animals>
+			<Shooting>3</Shooting>
+		</skillGains>
+	</BackstoryDef>
+</Defs>
