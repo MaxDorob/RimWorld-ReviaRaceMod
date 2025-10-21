@@ -133,6 +133,20 @@ namespace ReviaRace
             DrawTextFieldWithLabel(sacrificeList.GetRect(lineHeight), Strings.SettingsSacrificeCostBase, ref Settings._costBase, ref _baseCostBuf, 1, 10);
             DrawTextFieldWithLabel(sacrificeList.GetRect(lineHeight), Strings.SettingsSacrificeCostGrowthFactor, ref Settings._costGrowthFactor, ref _growthFactorBuf, 0, 10);
             DrawTextFieldWithLabel(sacrificeList.GetRect(lineHeight), Strings.SettingsSacrificeCostGrowthStartTier, ref Settings._costGrowthStartTier, ref _growthStartTierBuf, 1, 8);
+            #Moved up here, it gets scrunched at old location, this really should be on by default, to avoid the endless complaints from old players, your new system works WITH the old well, the old can't give buffs!
+            DrawCostCalculationLabel(sacrificeList.GetRect(lineHeight), typeof(InvokeGreaterBlessing));
+            if (Settings.oldInvokeBlessing)
+            {
+                DrawCostCalculationLabel(sacrificeList.GetRect(lineHeight), typeof(InvokeLesserBlessing));
+            }
+
+            Settings.bloodstoneFromCorpseChance = Widgets.HorizontalSlider(sacrificeList.GetRect(lineHeight), Settings.bloodstoneFromCorpseChance, 0.1f, 1f, label: "ReviaRaceCorpseProductChance".Translate(Settings.bloodstoneFromCorpseChance.ToStringPercent()), roundTo: 0.05f, leftAlignedLabel: 0.1f.ToStringPercent(), rightAlignedLabel: 1f.ToStringPercent());
+
+            sacrificeList.End();
+            #this setting is an arbitrary and fairly rough difficulty slider, which has it's purpose, and really I know why you like it yet it REALLY should be defaulted at 0 for the same reasons I put above (it defaults to 40 as is).
+            #Reject this specific push, and then code it right if I made errors.
+            #Please?
+            #No Matter what else though, for settings menu design stuff, this should be above the normal random soul reap tier part of the checklist.
             DrawCheckBoxWithLabel(sacrificeList.GetRect(lineHeight), Strings.SettingsSacrificeEnableRandomSoulReapTier, ref Settings._enableRandomSoulReapTier);
             DrawCheckBoxWithLabel(sacrificeList.GetRect(lineHeight), Strings.SettingsSacrificeEnableStripOnSacrifice, ref Settings._enableCorpseStripOnSacrifice);
             DrawCheckBoxWithLabel(sacrificeList.GetRect(lineHeight), Strings.SettingsEnableBloodthirstNeed, ref Settings._enableBloodthirstNeed);
@@ -161,15 +175,6 @@ namespace ReviaRace
             }
             Widgets.CheckboxLabeled(sacrificeList.GetRect(lineHeight), "ReviaRaceOldSoulreapBlessing".Translate(), ref Settings.oldInvokeBlessing);
             sacrificeList.Gap(10);
-            DrawCostCalculationLabel(sacrificeList.GetRect(lineHeight), typeof(InvokeGreaterBlessing));
-            if (Settings.oldInvokeBlessing)
-            {
-                DrawCostCalculationLabel(sacrificeList.GetRect(lineHeight), typeof(InvokeLesserBlessing));
-            }
-
-            Settings.bloodstoneFromCorpseChance = Widgets.HorizontalSlider(sacrificeList.GetRect(lineHeight), Settings.bloodstoneFromCorpseChance, 0.1f, 1f, label: "ReviaRaceCorpseProductChance".Translate(Settings.bloodstoneFromCorpseChance.ToStringPercent()), roundTo: 0.05f, leftAlignedLabel: 0.1f.ToStringPercent(), rightAlignedLabel: 1f.ToStringPercent());
-
-            sacrificeList.End();
         }
         private void DrawSacrificeDropDown(Rect elemRect)
         {
