@@ -35,6 +35,7 @@
 		<defName>Revia_BleesingForSoulreap</defName>
 		<nameMaker>Revia_NamerRitualOffering</nameMaker>
 		<ritualObligationTargetFilter>Revia_BleesingForSoulreap</ritualObligationTargetFilter>
+		<descOverride>A Revia will offer up bloodstones to increase her Soulreap level and earn another tail, alongside other rewards should it be bloody enough.</descOverride>
 		<shortDescOverride>blessing ritual</shortDescOverride>
 		<iconPathOverride>UI/icons/ReviaRituals/SoulreapBlessing</iconPathOverride>
 		<alwaysStartAnytime>true</alwaysStartAnytime>
@@ -58,6 +59,7 @@
 		<nameMaker>Revia_NamerRitualPsycast</nameMaker>
 		<ritualObligationTargetFilter>Revia_PsycastRitual</ritualObligationTargetFilter>
 		<shortDescOverride>psycast blessing ritual</shortDescOverride>
+		<descOverride>A sacrificer will offer a mystical bloodstone to Skarne, to gain or strengthen their psychic powers.</descOverride>
 		<iconPathOverride>UI/icons/ReviaRituals/ReviaPsycastBlessing</iconPathOverride>
 		<alwaysStartAnytime>true</alwaysStartAnytime>
 		<ritualBehavior>Revia_PsycastRitual</ritualBehavior>
