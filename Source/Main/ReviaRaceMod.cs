@@ -167,8 +167,6 @@ namespace ReviaRace
                 DrawCostCalculationLabel(sacrificeList.GetRect(lineHeight), typeof(InvokeLesserBlessing));
             }
 
-            Settings.bloodstoneFromCorpseChance = Widgets.HorizontalSlider(sacrificeList.GetRect(lineHeight), Settings.bloodstoneFromCorpseChance, 0.1f, 1f, label: "ReviaRaceCorpseProductChance".Translate(Settings.bloodstoneFromCorpseChance.ToStringPercent()), roundTo: 0.05f, leftAlignedLabel: 0.1f.ToStringPercent(), rightAlignedLabel: 1f.ToStringPercent());
-
             sacrificeList.End();
         }
         private void DrawSacrificeDropDown(Rect elemRect)
