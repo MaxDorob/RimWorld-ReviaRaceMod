@@ -16,10 +16,11 @@ namespace ReviaRace.PersistentData
 {
     public class ReviaSettings : Verse.ModSettings
     {
+        private const float defaulGrowthFactor = 2.4f;
         public ReviaSettings()
         {
             CostBase = 1;
-            CostGrowthFactor = 2;
+            CostGrowthFactor = defaulGrowthFactor;
             CostGrowthStartTier = 1;
             CostGrowthMode = SacrificeCostGrowth.Exponential;
             EnableRandomSoulReapTier = true;
@@ -54,14 +55,32 @@ namespace ReviaRace.PersistentData
             StaticModVariables.NoHybrid = NoHybrid;
             Log.Message("Settings applied");
         }
-
+        internal void UpdateIfNeeded()
+        {
+            var previousVersion = new Version(version ?? "0.0.0.0");
+            if (previousVersion == ReviaRaceMod.currentVersion)
+            {
+                return;
+            }
+            Log.Warning($"[Revia Race] Updating from {previousVersion} to {ReviaRaceMod.currentVersion}...");
+            if (previousVersion < new Version(1, 6, 2, 1))
+            {
+                Log.Message("[Revia Race] Resetting bloodstones count");
+                this.CostGrowthFactor = defaulGrowthFactor;
+                this.CostGrowthMode = SacrificeCostGrowth.Exponential;
+                this.CostGrowthStartTier = 1;
+                this.CostBase = 1;
+            }
+            version = ReviaRaceMod.currentVersion.ToString();
+            Mod.WriteSettings();
+        }
         public float CostBase
         {
             get => _costBase;
             set => _costBase = value;
         }
         internal float _costBase;
-        public float CostGrowthFactor 
+        public float CostGrowthFactor
         {
             get => _costGrowthFactor;
             set => _costGrowthFactor = value;
@@ -74,7 +93,7 @@ namespace ReviaRace.PersistentData
             set => _costGrowthStartTier = value;
         }
         internal int _costGrowthStartTier;
-        public SacrificeCostGrowth CostGrowthMode 
+        public SacrificeCostGrowth CostGrowthMode
         {
             get => _costGrowthMode;
             set => _costGrowthMode = value;
@@ -135,20 +154,21 @@ namespace ReviaRace.PersistentData
         }
         internal float _bloodthirstDaysToEmpty;
 
-        internal bool _DisableUncompleteDebuff_Ears, _DisableUncompleteDebuff_Claws, _DisableUncompleteDebuff_Teeth, _NoProjectLimitations,_NoCraftLimitations;
+        internal bool _DisableUncompleteDebuff_Ears, _DisableUncompleteDebuff_Claws, _DisableUncompleteDebuff_Teeth, _NoProjectLimitations, _NoCraftLimitations;
         private BornSettingsEnum _BornSettings;
         internal bool _noHybrid;
         public bool NoHybrid { get => _noHybrid; set => _noHybrid = value; }
-        public bool DisableUncompleteDebuff_Ears { get=> _DisableUncompleteDebuff_Ears; set=>_DisableUncompleteDebuff_Ears=value; }
-        public bool DisableUncompleteDebuff_Claws { get=>_DisableUncompleteDebuff_Claws; set=>_DisableUncompleteDebuff_Claws=value; }
-        public bool DisableUncompleteDebuff_Teeth { get=>_DisableUncompleteDebuff_Teeth; set=>_DisableUncompleteDebuff_Teeth=value; }
+        public bool DisableUncompleteDebuff_Ears { get => _DisableUncompleteDebuff_Ears; set => _DisableUncompleteDebuff_Ears = value; }
+        public bool DisableUncompleteDebuff_Claws { get => _DisableUncompleteDebuff_Claws; set => _DisableUncompleteDebuff_Claws = value; }
+        public bool DisableUncompleteDebuff_Teeth { get => _DisableUncompleteDebuff_Teeth; set => _DisableUncompleteDebuff_Teeth = value; }
         public bool NoProjectLimitations { get => _NoProjectLimitations; set => _NoProjectLimitations = value; }
         public bool NoCraftLimitations { get => _NoCraftLimitations; set => _NoCraftLimitations = value; }
-        public BornSettingsEnum BornSettings { get=> _BornSettings; set=>_BornSettings=value; }
+        public BornSettingsEnum BornSettings { get => _BornSettings; set => _BornSettings = value; }
 
         public float bloodstoneFromCorpseChance = 0.4f;
         public bool oldInvokeBlessing = false;
         public bool requireReviaGene = true;
+        public string version;
 
         public override void ExposeData()
         {
@@ -160,10 +180,10 @@ namespace ReviaRace.PersistentData
             Scribe_Values.Look(ref _enableCorpseStripOnSacrifice, GetLabel(nameof(EnableCorpseStripOnSacrifice)), true);
             Scribe_Values.Look(ref _enableBloodthirstNeed, GetLabel(nameof(EnableBloodthirstNeed)), true);
             Scribe_Values.Look(ref _bloodthirstDaysToEmpty, GetLabel(nameof(BloodthirstDaysToEmpty)), 7.0f);
-            Scribe_Values.Look(ref _soulReapSpawnRange, GetLabel(nameof(SoulReapSpawnRange)), new IntRange(1,3));
+            Scribe_Values.Look(ref _soulReapSpawnRange, GetLabel(nameof(SoulReapSpawnRange)), new IntRange(1, 3));
             Scribe_Values.Look(ref _soulReapSpawnByAge, GetLabel(nameof(SoulReapSpawnByAge)), true);
             Scribe_Values.Look(ref _soulReapSpawnFixed, GetLabel(nameof(SoulReapSpawnFixed)), 2);
-            Scribe_Values.Look(ref _DisableUncompleteDebuff_Ears, GetLabel(nameof(DisableUncompleteDebuff_Ears)),false);
+            Scribe_Values.Look(ref _DisableUncompleteDebuff_Ears, GetLabel(nameof(DisableUncompleteDebuff_Ears)), false);
             Scribe_Values.Look(ref _DisableUncompleteDebuff_Claws, GetLabel(nameof(DisableUncompleteDebuff_Claws)), false);
             Scribe_Values.Look(ref _DisableUncompleteDebuff_Teeth, GetLabel(nameof(DisableUncompleteDebuff_Teeth)), false);
             Scribe_Values.Look(ref _NoProjectLimitations, GetLabel(nameof(NoProjectLimitations)), false);
@@ -174,7 +194,11 @@ namespace ReviaRace.PersistentData
             Scribe_Values.Look(ref bloodstoneFromCorpseChance, nameof(bloodstoneFromCorpseChance), 0.4f);
             Scribe_Values.Look(ref oldInvokeBlessing, nameof(oldInvokeBlessing), false);
             Scribe_Values.Look(ref requireReviaGene, nameof(requireReviaGene), true);
-            ApplySettings();
+            Scribe_Values.Look(ref version, nameof(version));
+            if (Scribe.mode == LoadSaveMode.PostLoadInit)
+            {
+                ApplySettings();
+            }
         }
 
         private string GetLabel(string nameOfVar) => $"ReviaRace_{nameOfVar}";
