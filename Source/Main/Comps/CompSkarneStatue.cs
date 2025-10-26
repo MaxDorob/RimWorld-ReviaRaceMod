@@ -43,7 +43,12 @@ namespace ReviaRace
             hediffsWhichAffectRendering.Clear();
             hediffsWhichAffectRendering.Add(new SavedHediffProps(null, DefDatabase<HediffDef>.GetNamed("ReviaRaceSoulreapTier9"), 1f));
             InitFakePawn();
+            titleInt = NameGenerator.GenerateName(this.Props.nameMaker);
         }
-        
+        public override string TransformLabel(string label)
+        {
+            return this.Title ?? base.TransformLabel(label);
+        }
+
     }
 }
