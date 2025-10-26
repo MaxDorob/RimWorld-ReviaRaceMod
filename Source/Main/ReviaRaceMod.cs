@@ -16,6 +16,7 @@ namespace ReviaRace
 {
     public class ReviaRaceMod : Verse.Mod
     {
+        public static readonly Version currentVersion = new Version(1, 6, 2, 1);
         public override void WriteSettings()
         {
             base.WriteSettings();
@@ -26,6 +27,7 @@ namespace ReviaRace
             Settings = base.GetSettings<ReviaSettings>();
             Settings.ApplySettings();
 
+            LongEventHandler.ExecuteWhenFinished(Settings.UpdateIfNeeded);
             LongEventHandler.ExecuteWhenFinished(AddLifeLeechComp);
         }
 
@@ -170,6 +172,13 @@ namespace ReviaRace
             }
             Widgets.CheckboxLabeled(sacrificeList.GetRect(lineHeight), "ReviaRaceOldSoulreapBlessing".Translate(), ref Settings.);
             sacrificeList.Gap(10);
+            DrawCostCalculationLabel(sacrificeList.GetRect(lineHeight), typeof(InvokeGreaterBlessing));
+            if (Settings.oldInvokeBlessing)
+            {
+                DrawCostCalculationLabel(sacrificeList.GetRect(lineHeight), typeof(InvokeLesserBlessing));
+            }
+
+            sacrificeList.End();
         }
         private void DrawSacrificeDropDown(Rect elemRect)
         {

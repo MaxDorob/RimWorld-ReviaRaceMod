@@ -83,8 +83,8 @@
 	<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
 		<defName>Revia_Bloodbath</defName>
 		<label>bloodbath</label>
-		<description>The most direct application of psychic power for any Revia is empowering her tails, her connection to Skarne. It being an obvious decision does not make it any less powerful.
-By channeling a surge of psychic energy in a circuit through each of her tails, a Revia may leverage her that circuit at a moments notice to bathe in the blood of her adversaries. While active this technique immensely increases speed and allows for significantly more rapid attacks, with enough tails even allowing and then further empowering, the benefits of sanctified weaponry on any attack! The ensuing bloodbath becomes significantly bloodier the greater the level of Soul Reap.</description>
+		<description>The most direct application of psychic power for any Revia is empowering her tails, her connection to Skarne.
+		By channeling psychic energy in a circuit through each of her tails, a Revia may leverage that power in a moments notice to bathe in the blood of her adversaries. While active this technique immensely increases speed of movement and rapidity of attacks, with enough tails even allowing and then further empowering, the benefits of sanctified weaponry while active!</description>
 		<iconPath>UI/Bloodpath/Bloodbath</iconPath>
 		<castSound>VPE_BladeFocus_Cast</castSound>
 		<!--TODO: Change to some other sound-->
@@ -153,7 +153,7 @@ By channeling a surge of psychic energy in a circuit through each of her tails, 
 	<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
 		<defName>Revia_SkarnesCurse</defName>
 		<label>skarne's curse</label>
-		<description>By channeling the bloodthirsty viciousness that is integral to the Revia, the caster wills a curse on the target, not only vastly increasing vulnerability to bleeding and hemorrhaging, but causing open wounds to bursting out the victim over a short period dependent onthe victim's psychic sensitivity.</description>
+		<description>By channeling the bloodthirsty viciousness that is integral to the Revia, force a curse onto a living victim. Increasing their vulnerability to damage and hemmorhaging, all while causing open wounds to burst out of them for the duration of the curse.</description>
 		<iconPath>UI/Bloodpath/SkarnesCurse</iconPath>
 		<castTime>40</castTime>
 		<durationTime>1800</durationTime>
@@ -186,7 +186,7 @@ By channeling a surge of psychic energy in a circuit through each of her tails, 
 	<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
 		<defName>Revia_BloodyExplosion</defName>
 		<label>bloody explosion</label>
-		<description>Manipulate energy in blood flowing from open wounds, snap your finger, and watch an explosion of gore fly out in all directions! The efficacy of which depends on how much the victim is bleeding at that point.</description>
+		<description>Manipulate energy in blood flowing from open wounds, snap your clawed fingers, and watch an explosion of gore fly out in all directions. The more blood flowing, the greater the explosion!</description>
 		<iconPath>UI/Bloodpath/BloodyExplosion</iconPath>
 		<castTime>30</castTime>
 		<range>45</range>
@@ -242,7 +242,7 @@ By channeling a surge of psychic energy in a circuit through each of her tails, 
 		<!--<castTime>150</castTime>-->
 
 		<abilityClass>VEF.Abilities.Ability_Blank</abilityClass>
-		<castTime>600</castTime>
+		<castTime>400</castTime>
 		<targetMode>Self</targetMode>
 		<hasAoE>true</hasAoE>
 		<radius>8.9</radius>
@@ -278,9 +278,10 @@ By channeling a surge of psychic energy in a circuit through each of her tails, 
 	<VEF.Abilities.AbilityDef ParentName="VPE_WordOfAbilityBase">
 		<defName>Revia_VermilionHarvest</defName>
 		<label>vermilion harvest</label>
-		<description>There is power in blood, and the Bloody Goddess of all entities certainly knows how to use it. Converting blood directly into psyfocus is a harrowing and possibly fatal process... for whoever is being harvested. The larger the creature, the more blood that is taken, and killing the target all increase the reward. Friend, foe or even the caster herself, Skarne cares not how blood flows, only that it does.</description>
+		<description>There is power in blood, and converting blood directly into psyfocus is a harrowing and possibly fatal process... for whoever is being harvested. 
+		The larger the creature, and the more blood that is taken, the greater the reward. The Bloody Goddess cares not how blood flows, only that it does.</description>
 		<iconPath>UI/Bloodpath/VermilionHarvest</iconPath>
-		<castTime>350</castTime>
+		<castTime>200</castTime>
 		<warmupMote></warmupMote>
 		<warmupSound></warmupSound>
 		<abilityClass>VEF.Abilities.Ability_Blank</abilityClass>

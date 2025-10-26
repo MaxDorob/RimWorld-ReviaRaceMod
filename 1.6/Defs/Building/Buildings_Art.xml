@@ -13,8 +13,8 @@
 			<li>BuildingsArt</li>
 		</thingCategories>
 		<graphicData>
-			<texPath>Things/Building/GenericStatue</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
+			<graphicClass>Graphic_Random</graphicClass>
+			<texPath>Things/Building/Art/SculptureSmall</texPath>
 			<addTopAltitudeBias>true</addTopAltitudeBias>
 			<drawSize>(1.6,1.6)</drawSize>
 		</graphicData>
@@ -35,10 +35,10 @@
 		<comps>
 			<li Class="CompProperties_Statue">
 				<compClass>ReviaRace.CompSkarneStatue</compClass>
-				<nameMaker>NamerStatue</nameMaker>
+				<nameMaker>ReviaRace_SkarneNamerStatue</nameMaker>
 				<canBeEnjoyedAsArt>true</canBeEnjoyedAsArt>
 				<statueBaseGraphic>
-					<texPath>Things/Building/StatueBase</texPath>
+					<texPath>Things/Building/ReviaStatueBase</texPath>
 					<graphicClass>Graphic_Single</graphicClass>
 					<drawSize>(1.5, 1.5)</drawSize>
 				</statueBaseGraphic>
@@ -75,4 +75,48 @@
 			<paintable>true</paintable>
 		</building>
   </ThingDef>
+
+
+	<RulePackDef>
+		<defName>ReviaRace_SkarneNamerStatue</defName>
+		<include>
+			<li>ReviaHighNamerDeity</li>
+		</include>
+		<rulePack>
+			<rulesStrings>
+				<li>r_statue_name->[r_deityName]</li>
+				<li>r_statue_name->[r_deityName]'s statue</li>
+				<li>r_statue_name->[statueAdj] [r_deityName]</li>
+				<li>r_statue_name->[r_deityName], the [statueAdj]</li>
+				<li>r_statue_name->The [statueAdj] [subjectNoun]</li>
+				<li>r_statue_name->[statueAdj] [subjectNoun]</li>
+				<li>r_statue_name->Figure of [statueIdea]</li>
+
+				<li>statueAdj->Silent</li>
+				<li>statueAdj->Eternal</li>
+				<li>statueAdj->Perfect</li>
+				<li>statueAdj->Timeless</li>
+				<li>statueAdj->Unbroken</li>
+				<li>statueAdj->Echoing</li>
+				<li>statueAdj->Ideal</li>
+				<li>statueAdj->Bloody</li>
+				<li>statueAdj->Echoing</li>
+				<li>statueAdj->Ruthless</li>
+
+				<li>subjectNoun->Legend</li>
+				<li>subjectNoun->Spirit</li>
+				<li>subjectNoun->Soul</li>
+				<li>subjectNoun->Vermilion</li>
+				<li>subjectNoun->Contemplation</li>
+
+				<li>statueIdea->Strength</li>
+				<li>statueIdea->Wisdom</li>
+				<li>statueIdea->Battle</li>
+				<li>statueIdea->Spirit</li>
+				<li>statueIdea->Bloody Night</li>
+				<li>statueIdea->Bloody Rain</li>
+				<li>statueIdea->Sunrise</li>
+			</rulesStrings>
+		</rulePack>
+	</RulePackDef>
 </Defs>
