@@ -38,7 +38,7 @@
 				<nameMaker>ReviaRace_SkarneNamerStatue</nameMaker>
 				<canBeEnjoyedAsArt>true</canBeEnjoyedAsArt>
 				<statueBaseGraphic>
-					<texPath>Things/Building/StatueBase</texPath>
+					<texPath>Things/Building/ReviaStatueBase</texPath>
 					<graphicClass>Graphic_Single</graphicClass>
 					<drawSize>(1.5, 1.5)</drawSize>
 				</statueBaseGraphic>
