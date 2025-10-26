@@ -170,7 +170,7 @@ namespace ReviaRace
             {
                 DrawTextFieldWithLabel(sacrificeList.GetRect(lineHeight), Strings.SettingsSoulReapSpawnFixed, ref Settings._soulReapSpawnFixed, ref _fixedTierBuf, 1, 9);
             }
-            Widgets.CheckboxLabeled(sacrificeList.GetRect(lineHeight), "ReviaRaceOldSoulreapBlessing".Translate(), ref Settings.);
+            Widgets.CheckboxLabeled(sacrificeList.GetRect(lineHeight), "ReviaRaceOldSoulreapBlessing".Translate(), ref Settings.oldInvokeBlessing);
             sacrificeList.Gap(10);
             DrawCostCalculationLabel(sacrificeList.GetRect(lineHeight), typeof(InvokeGreaterBlessing));
             if (Settings.oldInvokeBlessing)
