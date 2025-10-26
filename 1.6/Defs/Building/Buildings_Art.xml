@@ -13,8 +13,8 @@
 			<li>BuildingsArt</li>
 		</thingCategories>
 		<graphicData>
-			<graphicClass>Graphic_Random</graphicClass>
-			<texPath>Things/Building/Art/SculptureSmall</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<texPath>Things/Building/Art/sculpturesmall/SculptureSmallBustA</texPath>
 			<addTopAltitudeBias>true</addTopAltitudeBias>
 			<drawSize>(1.6,1.6)</drawSize>
 		</graphicData>
