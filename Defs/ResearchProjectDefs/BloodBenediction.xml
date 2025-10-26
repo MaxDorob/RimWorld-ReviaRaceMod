@@ -3,7 +3,7 @@
   <ResearchProjectDef>
     <defName>ReviaRaceBloodBenediction</defName>
     <label>Blood benediction</label>
-    <description>Learn the rites to invoke the blood god's blessings for an upcoming battle.</description>
+    <description>Learn the rites to invoke the Skarne's blessings for an upcoming battle.</description>
     <baseCost>1500</baseCost>
     <techLevel>Medieval</techLevel>
     <tab>ReviaRaceResearchTab</tab>

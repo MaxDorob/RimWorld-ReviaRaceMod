@@ -135,6 +135,15 @@ namespace ReviaRace
             DrawTextFieldWithLabel(sacrificeList.GetRect(lineHeight), Strings.SettingsSacrificeCostBase, ref Settings._costBase, ref _baseCostBuf, 1, 10);
             DrawTextFieldWithLabel(sacrificeList.GetRect(lineHeight), Strings.SettingsSacrificeCostGrowthFactor, ref Settings._costGrowthFactor, ref _growthFactorBuf, 0, 10);
             DrawTextFieldWithLabel(sacrificeList.GetRect(lineHeight), Strings.SettingsSacrificeCostGrowthStartTier, ref Settings._costGrowthStartTier, ref _growthStartTierBuf, 1, 8);
+            DrawCostCalculationLabel(sacrificeList.GetRect(lineHeight), typeof(InvokeGreaterBlessing));
+            if (Settings.oldInvokeBlessing)
+            {
+                DrawCostCalculationLabel(sacrificeList.GetRect(lineHeight), typeof(InvokeLesserBlessing));
+            }
+
+            Settings.bloodstoneFromCorpseChance = Widgets.HorizontalSlider(sacrificeList.GetRect(lineHeight), Settings.bloodstoneFromCorpseChance, 0.1f, 1f, label: "ReviaRaceCorpseProductChance".Translate(Settings.bloodstoneFromCorpseChance.ToStringPercent()), roundTo: 0.05f, leftAlignedLabel: 0.1f.ToStringPercent(), rightAlignedLabel: 1f.ToStringPercent());
+
+            sacrificeList.End();
             DrawCheckBoxWithLabel(sacrificeList.GetRect(lineHeight), Strings.SettingsSacrificeEnableRandomSoulReapTier, ref Settings._enableRandomSoulReapTier);
             DrawCheckBoxWithLabel(sacrificeList.GetRect(lineHeight), Strings.SettingsSacrificeEnableStripOnSacrifice, ref Settings._enableCorpseStripOnSacrifice);
             DrawCheckBoxWithLabel(sacrificeList.GetRect(lineHeight), Strings.SettingsEnableBloodthirstNeed, ref Settings._enableBloodthirstNeed);

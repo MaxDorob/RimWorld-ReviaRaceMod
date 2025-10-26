@@ -3,7 +3,7 @@
   <ResearchProjectDef>
     <defName>ReviaRaceReligionBase</defName>
     <label>Revian religious ceremonies</label>
-    <description>Learn the fundamentals of giving proper offerings to the Revian gods.</description>
+    <description>Learn the fundamentals of giving proper offerings to the Revian goddess.</description>
     <baseCost>500</baseCost>
     <techLevel>Neolithic</techLevel>
     <tab>ReviaRaceResearchTab</tab>

@@ -136,7 +136,7 @@
 		<workerClass>ReviaRace.Rituals.RitualOutcomeEffectWorker_XenotypeConversion</workerClass>
 		<startingQuality>0.2</startingQuality>
 		<extraPredictedOutcomeDescriptions>
-			<li>The better {0}, the less the resulting coma will be for the converted pawn.</li>
+			<li>The better {0}, the shorter the resulting coma will be for the converted pawn.</li>
 		</extraPredictedOutcomeDescriptions>
 		<outcomeChances>
 			<li>

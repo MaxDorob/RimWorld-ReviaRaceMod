@@ -3,7 +3,7 @@
   <ThingDef ParentName="ResourceBase" MayRequire="Ludeon.Rimworld.Royalty">
     <defName>Revia_MysticalStone</defName>
     <label>mystical bloodstone</label>
-    <description>A mystical bloodstone sent by Skarne that contains a mystical, psychic power.</description>
+    <description>A bloodstone supposedly sent by the Revian blood goddess Skarne that contains a mystical, psychic power.</description>
     <thingClass>ThingWithComps</thingClass>
     <techLevel>Neolithic</techLevel>
     <graphicData>
