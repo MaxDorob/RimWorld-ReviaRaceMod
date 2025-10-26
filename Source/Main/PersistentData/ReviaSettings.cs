@@ -16,11 +16,11 @@ namespace ReviaRace.PersistentData
 {
     public class ReviaSettings : Verse.ModSettings
     {
-        private const float defaulGrowthFactor = 2.4f;
+        private const float defaultGrowthFactor = 2.21f;
         public ReviaSettings()
         {
             CostBase = 1;
-            CostGrowthFactor = defaulGrowthFactor;
+            CostGrowthFactor = defaultGrowthFactor;
             CostGrowthStartTier = 1;
             CostGrowthMode = SacrificeCostGrowth.Exponential;
             EnableRandomSoulReapTier = true;
@@ -66,7 +66,7 @@ namespace ReviaRace.PersistentData
             if (previousVersion < new Version(1, 6, 2, 1))
             {
                 Log.Message("[Revia Race] Resetting bloodstones count");
-                this.CostGrowthFactor = defaulGrowthFactor;
+                this.CostGrowthFactor = defaultGrowthFactor;
                 this.CostGrowthMode = SacrificeCostGrowth.Exponential;
                 this.CostGrowthStartTier = 1;
                 this.CostBase = 1;
