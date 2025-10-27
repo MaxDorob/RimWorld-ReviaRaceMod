@@ -36,4 +36,45 @@
 			</li>
 		</comps>
   </HediffDef>
+
+	<HediffDef>
+		<defName>ReviaRace_SoulTax</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>soul tax</label>
+		<description>This body can't handle all power of Skarne.</description>
+		<isBad>false</isBad>
+		<countsAsAddedPartOrImplant>false</countsAsAddedPartOrImplant>
+		<stages>
+			<li>
+				<painOffset>0.2</painOffset>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<setMax>0.6</setMax>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>60000~120000</disappearsAfterTicks> <!--1~2 days-->
+			</li>
+		</comps>
+	</HediffDef>
+
+	<ThoughtDef>
+		<defName>ReviaRace_SoulTax</defName>
+		<workerClass>ThoughtWorker_Hediff</workerClass>
+		<hediff>ReviaRace_SoulTax</hediff>
+		<validWhileDespawned>true</validWhileDespawned>
+		<developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+		<stages>
+			<li>
+				<label>soul tax</label>
+				<description>I was a vessel for Skarne herself!</description>
+				<baseMoodEffect>9</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
 </Defs>

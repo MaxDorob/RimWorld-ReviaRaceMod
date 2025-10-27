@@ -13,6 +13,7 @@ namespace Revia_VanillaPsycastExpanded
     public static class Defs
     {
         public static HediffDef Revia_SkarneAvatar;
+        public static HediffDef ReviaRace_SoulTax;
         public static StatDef Revia_PsyfocusPerKill;
         public static DamageDef Revia_MysticalScratch;
         public static DamageDef Revia_MysticalMediumBleedingScratch;
