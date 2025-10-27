@@ -141,7 +141,6 @@ namespace ReviaRace
                 DrawCostCalculationLabel(sacrificeList.GetRect(lineHeight), typeof(InvokeLesserBlessing));
             }
 
-            sacrificeList.End();
             DrawCheckBoxWithLabel(sacrificeList.GetRect(lineHeight), Strings.SettingsSacrificeEnableRandomSoulReapTier, ref Settings._enableRandomSoulReapTier);
             DrawCheckBoxWithLabel(sacrificeList.GetRect(lineHeight), Strings.SettingsSacrificeEnableStripOnSacrifice, ref Settings._enableCorpseStripOnSacrifice);
             DrawCheckBoxWithLabel(sacrificeList.GetRect(lineHeight), Strings.SettingsEnableBloodthirstNeed, ref Settings._enableBloodthirstNeed);
@@ -169,12 +168,7 @@ namespace ReviaRace
                 DrawTextFieldWithLabel(sacrificeList.GetRect(lineHeight), Strings.SettingsSoulReapSpawnFixed, ref Settings._soulReapSpawnFixed, ref _fixedTierBuf, 1, 9);
             }
             Widgets.CheckboxLabeled(sacrificeList.GetRect(lineHeight), "ReviaRaceOldSoulreapBlessing".Translate(), ref Settings.oldInvokeBlessing);
-            sacrificeList.Gap(10);
-            DrawCostCalculationLabel(sacrificeList.GetRect(lineHeight), typeof(InvokeGreaterBlessing));
-            if (Settings.oldInvokeBlessing)
-            {
-                DrawCostCalculationLabel(sacrificeList.GetRect(lineHeight), typeof(InvokeLesserBlessing));
-            }
+            
 
             sacrificeList.End();
         }
