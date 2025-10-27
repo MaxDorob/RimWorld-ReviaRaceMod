@@ -63,10 +63,12 @@
     <Compile Include="HediffComp_EntropyIncrease.cs" />
     <Compile Include="HediffComp_SoulReapSeverity.cs" />
     <Compile Include="Patches\AbilityToolTip_Patch.cs" />
+    <Compile Include="Patches\AIFightEnemy_GetAbilityJob_Patch.cs" />
     <Compile Include="Patches\Psycast_PrereqsCompleted_Patch.cs" />
     <Compile Include="Patches\PsyfocusGain_Patch.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReavingReap\AbilityExtension_ReavingReap.cs" />
+    <Compile Include="ReviaAbilityDefs.cs" />
     <Compile Include="SkarneAvatar\JobGiver_SkarneAvatar.cs" />
     <Compile Include="SkarneAvatar\MentalState_SkarneAvatar.cs" />
     <Compile Include="SkarnesCurse\Ability_SkarnesCurse.cs" />
@@ -101,5 +103,8 @@
   </ItemGroup>
   <ItemGroup>
     <Publicize Include="Assembly-CSharp:Verse.AI.AttackTargetFinder.FindBestReachableMeleeTarget" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Bloodbath\" />
   </ItemGroup>
 </Project>
