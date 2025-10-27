@@ -23,6 +23,7 @@ namespace Revia_VanillaPsycastExpanded.Patches
                 {
                     skarneAvatarAbility.CreateCastJob(new GlobalTargetInfo(pawn));
                     __result = pawn.CurJob;
+                    pawn.jobs.curJob = null;
                     return false;
                 }
                 var bloodbathAbility = comp.LearnedAbilities.FirstOrDefault(x => x.def == ReviaAbilityDefs.Revia_Bloodbath);
@@ -30,6 +31,7 @@ namespace Revia_VanillaPsycastExpanded.Patches
                 {
                     bloodbathAbility.CreateCastJob(new GlobalTargetInfo(pawn));
                     __result = pawn.CurJob;
+                    pawn.jobs.curJob = null;
                     return false;
                 }
             }
