@@ -88,6 +88,7 @@
         <options>
           <ReviaRaceInitiate>5</ReviaRaceInitiate>
           <ReviaRaceTemplar>2</ReviaRaceTemplar>
+					<ReviaRaceHighTemplarPsycaster MayRequire="VanillaExpanded.VPsycastsE">0.055</ReviaRaceHighTemplarPsycaster>
         </options>
       </li>
       <li>
@@ -97,6 +98,7 @@
           <ReviaRaceInitiate>20</ReviaRaceInitiate>
           <ReviaRaceTemplar>10</ReviaRaceTemplar>
           <ReviaRaceHighTemplar>1</ReviaRaceHighTemplar>
+					<ReviaRaceHighTemplarPsycaster MayRequire="VanillaExpanded.VPsycastsE">0.032</ReviaRaceHighTemplarPsycaster>
         </options>
       </li>
       <li>
@@ -123,6 +125,7 @@
           <ReviaRaceInitiate>20</ReviaRaceInitiate>
           <ReviaRaceTemplar>20</ReviaRaceTemplar>
           <ReviaRaceHighTemplar>3</ReviaRaceHighTemplar>
+					<ReviaRaceHighTemplarPsycaster MayRequire="VanillaExpanded.VPsycastsE">0.21</ReviaRaceHighTemplarPsycaster>
         </options>
       </li>
     </pawnGroupMakers>

@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <PawnKindDef ParentName="ReviaPawnBase">
+    <defName>ReviaRacePsycaster</defName>
+    <label>revia psycaster</label>
+    <race>Human</race>
+    <defaultFactionType>ReviaMarauderFaction</defaultFactionType>
+    <combatPower>1200</combatPower>
+		<minGenerationAge>48</minGenerationAge>
+    <itemQuality>Good</itemQuality>
+    <gearHealthRange>0.8~1.0</gearHealthRange>
+    <apparelTags>
+      <li>Neolithic</li>
+			<li>Medieval</li>
+    </apparelTags>
+    <apparelRequired>
+      <li>Apparel_PlateArmor</li>
+    </apparelRequired>
+    <apparelMoney>600~1000</apparelMoney>
+    <weaponTags>
+      <li>ReviaMeleeAdvanced</li>
+    </weaponTags>
+    <initialWillRange>6.8~9.0</initialWillRange>
+    <initialResistanceRange>40~65</initialResistanceRange>
+    <weaponMoney>2500~3000</weaponMoney>
+    <techHediffsChance>0</techHediffsChance>
+    <invNutrition>5</invNutrition>
+    <inventoryOptions>
+      <skipChance>0</skipChance>
+      <subOptionsChooseOne>
+        <li>
+          <choiceChance>50</choiceChance>
+          <thingDef>MedicineHerbal</thingDef>
+          <countRange>0~1</countRange>
+        </li>
+        <li>
+          <choiceChance>50</choiceChance>
+          <thingDef>Luciferium</thingDef>
+          <countRange>1~1</countRange>
+        </li>
+      </subOptionsChooseOne>
+    </inventoryOptions>
+    <xenotypeSet Inherit="False">
+      <xenotypeChances>
+        <RevianXenotype>999</RevianXenotype>
+      </xenotypeChances>
+    </xenotypeSet>
+		<modExtensions>
+			<li Class="VanillaPsycastsExpanded.PawnKindAbilityExtension_Psycasts">
+				<implantDef>VPE_PsycastAbilityImplant</implantDef>
+				<initialLevel>1</initialLevel>
+				<statUpgradePoints>2~3</statUpgradePoints>
+				<unlockedPaths>
+					<Revia_BloodPath>1~5|4~7</Revia_BloodPath>
+				</unlockedPaths>
+			</li>
+		</modExtensions>
+  </PawnKindDef>
+</Defs>

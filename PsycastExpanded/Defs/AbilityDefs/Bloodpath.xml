@@ -12,6 +12,7 @@
 		<needsTicking>true</needsTicking>
 		<targetMode>Pawn</targetMode>
 		<range>99999</range>
+		<chance>0.2</chance>
 		<targetingParametersList>
 			<li>
 				<canTargetSelf>False</canTargetSelf>
@@ -122,6 +123,7 @@
 		<range>36</range>
 		<targetMode>Pawn</targetMode>
 		<abilityClass>VEF.Abilities.Ability_Blank</abilityClass>
+		<chance>0</chance>
 		<targetingParametersList>
 			<li>
 				<canTargetSelf>True</canTargetSelf>
@@ -193,7 +195,7 @@
 		<requireLineOfSight>true</requireLineOfSight>
 		<targetMode>Pawn</targetMode>
 
-		<abilityClass>VEF.Abilities.Ability_Blank</abilityClass>
+		<abilityClass>Revia_VanillaPsycastExpanded.Ability_BloodyExplosion</abilityClass>
 		<modExtensions>
 			<li Class="Revia_VanillaPsycastExpanded.AbilityExtension_ReviaPsycast">
 				<path>Revia_BloodPath</path>
@@ -247,6 +249,7 @@
 		<hasAoE>true</hasAoE>
 		<radius>8.9</radius>
 		<needsTicking>true</needsTicking>
+		<chance>0</chance>
 		<targetingParametersForAoE>
 			<canTargetLocations>False</canTargetLocations>
 			<canTargetSelf>False</canTargetSelf>
@@ -285,6 +288,7 @@
 		<warmupMote></warmupMote>
 		<warmupSound></warmupSound>
 		<abilityClass>VEF.Abilities.Ability_Blank</abilityClass>
+		<chance>0</chance>
 		<modExtensions>
 			<li Class="Revia_VanillaPsycastExpanded.AbilityExtension_ReviaPsycast">
 				<path>Revia_BloodPath</path>

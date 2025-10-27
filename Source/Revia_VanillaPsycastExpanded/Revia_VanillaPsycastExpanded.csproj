@@ -31,9 +31,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-	<PropertyGroup>
-		<LangVersion>latest</LangVersion>
-	</PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -58,6 +58,7 @@
     <Compile Include="AbilityExtension_ReviaPsycast.cs" />
     <Compile Include="Bloodseek\Ability_Bloodseek.cs" />
     <Compile Include="BloodyExplosion\AbilityExtension_BloodyExplosion.cs" />
+    <Compile Include="BloodyExplosion\Ability_BloodyExplosion.cs" />
     <Compile Include="Defs.cs" />
     <Compile Include="HediffComp_EntropyIncrease.cs" />
     <Compile Include="HediffComp_SoulReapSeverity.cs" />
