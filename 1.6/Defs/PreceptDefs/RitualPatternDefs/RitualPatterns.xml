@@ -7,6 +7,7 @@
     <canStartAnytime>true</canStartAnytime>
     <ritualObligationTargetFilter>ReviaBloodSigil</ritualObligationTargetFilter>
 		<ritualOnlyForIdeoMembers>false</ritualOnlyForIdeoMembers>
+		<playsIdeoMusic>false</playsIdeoMusic>
   </RitualPatternDef>
 
   <RitualPatternDef Abstract="True" Name="Revia_SacrificeBase" ParentName="Revia_CelebrationPartyChat">

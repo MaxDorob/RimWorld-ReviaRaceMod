@@ -15,6 +15,7 @@
 		<iconIgnoresIdeoColor>true</iconIgnoresIdeoColor>
 		<ignoreNameUniqueness>true</ignoreNameUniqueness>
 		<isNonIdeoRitual>true</isNonIdeoRitual>
+		<usesIdeoVisualEffects>false</usesIdeoVisualEffects>
 	</PreceptDef>
 	
   <PreceptDef ParentName="ReviaPreceptBase">
