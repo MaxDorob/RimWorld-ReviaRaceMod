@@ -54,6 +54,9 @@
 					<Revia_BloodPath>1~5|4~7</Revia_BloodPath>
 				</unlockedPaths>
 			</li>
+			<li Class="ReviaRace.SoulreapLevel_Extension">
+				<level>5~9</level>
+			</li>
 		</modExtensions>
   </PawnKindDef>
 </Defs>

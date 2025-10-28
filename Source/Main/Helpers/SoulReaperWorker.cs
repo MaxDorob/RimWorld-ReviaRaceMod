@@ -38,7 +38,12 @@ namespace ReviaRace.Helpers
             }
             if (pawn != null && GetSoulReapTier(pawn) == -1)
             {
-                if (pawn.kindDef == Defs.MarauderSkullshatterer ||
+                var ext = pawn.kindDef.GetModExtension<SoulreapLevel_Extension>();
+                if (ext != null)
+                {
+                    pawn.AddSoulReapTier(ext.level.RandomInRange);
+                }
+                else if (pawn.kindDef == Defs.MarauderSkullshatterer ||
                     pawn.kindDef == Defs.TemplarHighTemplar)
                 {
                     pawn.AddSoulReapTier(9);

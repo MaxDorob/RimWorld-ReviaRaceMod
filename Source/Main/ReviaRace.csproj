@@ -88,6 +88,7 @@
     <Compile Include="Comps\SacrificeTracker.cs" />
     <Compile Include="DebugActions.cs" />
     <Compile Include="Enums\BornSettingsEnum.cs" />
+    <Compile Include="Extensions\SoulreapLevel_Extension.cs" />
     <Compile Include="Genes\ReviaBaseGene.cs" />
     <Compile Include="Genes\ReviaClawsGene.cs" />
     <Compile Include="Genes\ReviaEarGene.cs" />
