@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+	<BackstoryDef>
+		<defName>ReviaRaceBackstoryAdultArtillerist</defName>
+		<title>Revian Artillerist</title>
+		<titleShort>Artillerist</titleShort>
+		<baseDesc>[PAWN_nameDef] loaded shells and armed artillery to tear apart her enemies from afar for the Revian war machine. She often complains about the lack of close-quarters action, but at least she loves explosions.</baseDesc>
+		<bodyTypeMale>Thin</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+		<slot>Adulthood</slot>
+		<spawnCategories>
+			<li>ReviaRaceBackstory</li>
+			<li>ReviaRaceTemplar</li>
+		</spawnCategories>
+		<skillGains>
+			<Shooting>4</Shooting>
+			<Crafting>2</Crafting>
+			<Social>-1</Social>
+		</skillGains>
+	</BackstoryDef>
+</Defs>

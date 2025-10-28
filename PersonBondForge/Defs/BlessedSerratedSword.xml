@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <PersonaBondForge.ThingDef_Weapon ParentName="PersonaBondForge_BaseWeapon">
+    <baseWeaponDefName>ReviaBlessedSerratedSword</baseWeaponDefName>
+    <statBases>
+      <MarketValue>3000</MarketValue>
+      <Mass>1.50</Mass>
+    </statBases>
+		<equippedStatOffsets>
+			<Revia_PsyfocusPerKill>0.03</Revia_PsyfocusPerKill>
+		</equippedStatOffsets>
+    <tools>
+      <li>
+        <label>handle</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>10</power>
+        <cooldownTime>1.5</cooldownTime>
+        <armorPenetration>0.12</armorPenetration>
+      </li>
+      <li>
+        <label>point</label>
+        <capacities>
+          <li>Gash</li>
+        </capacities>
+        <power>28</power>
+        <cooldownTime>1.75</cooldownTime>
+        <armorPenetration>0.30</armorPenetration>
+      </li>
+      <li>
+        <label>edge</label>
+        <capacities>
+          <li>Gash</li>
+        </capacities>
+        <power>32</power>
+        <cooldownTime>1.75</cooldownTime>
+        <armorPenetration>0.30</armorPenetration>
+      </li>
+    </tools>
+  </PersonaBondForge.ThingDef_Weapon>
+</Defs>

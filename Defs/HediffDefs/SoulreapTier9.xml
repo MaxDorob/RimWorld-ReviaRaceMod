@@ -7,6 +7,7 @@
     <isBad>false</isBad>
     <defaultLabelColor>(0.8, 0.4, 0.4)</defaultLabelColor>
     <causesNeed>ReviaRaceBloodthirstNeed</causesNeed>
+    <countsAsAddedPartOrImplant>false</countsAsAddedPartOrImplant>
     <stages>
       <li>
         <capMods>
@@ -30,6 +31,7 @@
           <MarketValue>3000</MarketValue>
           <PainShockThreshold>0.40</PainShockThreshold>
         </statOffsets>
+        <hungerRateFactorOffset>0.50</hungerRateFactorOffset>
       </li>
     </stages>
   </HediffDef>

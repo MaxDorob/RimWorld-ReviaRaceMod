@@ -3,7 +3,7 @@
   <ResearchProjectDef>
     <defName>ReviaRaceConsecratedWeaponry</defName>
     <label>Revian consecrated weaponry</label>
-    <description>Invoking the blessings of the blood god to imbue weapons with greater capacity for carnage.</description>
+    <description>Invoking the blessings of the blood goddess to imbue weapons with greater capacity for carnage.</description>
     <baseCost>1000</baseCost>
     <techLevel>Medieval</techLevel>
     <tab>ReviaRaceResearchTab</tab>

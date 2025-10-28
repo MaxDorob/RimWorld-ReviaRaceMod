@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+  <BackstoryDef>
+    <defName>ReviaRaceBackstoryAdultApothecary</defName>
+    <title>Revian Apothecary</title>
+    <titleShort>Apothecary</titleShort>
+    <baseDesc>[PAWN_nameDef] managed and produced medicine for her community, often applying treatments herself. In the world she grew up in, and especially in her case, rest was a luxury offered only to the injured.</baseDesc>
+    <bodyTypeMale>Thin</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>ReviaRaceBackstory</li>
+      <li>ReviaRaceTemplar</li>
+    </spawnCategories>
+    <skillGains>
+	  <Plants>6</Plants>
+	  <Medicine>5</Medicine>
+	  <Shooting>-2</Shooting>
+    </skillGains>
+  </BackstoryDef>
+</Defs>

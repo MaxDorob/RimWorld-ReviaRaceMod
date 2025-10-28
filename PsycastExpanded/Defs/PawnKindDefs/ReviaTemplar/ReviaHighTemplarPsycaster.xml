@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <PawnKindDef ParentName="ReviaHighTemplar">
+    <defName>ReviaRaceHighTemplarPsycaster</defName>
+		<label>Revia Blessed Templar</label>
+    <combatPower>1450</combatPower>
+    <minGenerationAge>50</minGenerationAge>
+    <weaponTags>
+			<li>VPE_EltexMelee</li>
+    </weaponTags>
+    <initialWillRange>8.0~9.0</initialWillRange>
+    <initialResistanceRange>70~75</initialResistanceRange>
+		<modExtensions>
+			<li Class="VanillaPsycastsExpanded.PawnKindAbilityExtension_Psycasts">
+				<implantDef>VPE_PsycastAbilityImplant</implantDef>
+				<initialLevel>1</initialLevel>
+				<statUpgradePoints>3~8</statUpgradePoints>
+				<unlockedPaths>
+					<Revia_BloodPath>1~6|6~10</Revia_BloodPath>
+				</unlockedPaths>
+			</li>
+			<li Class="ReviaRace.SoulreapLevel_Extension">
+				<level>8~9</level>
+			</li>
+		</modExtensions>
+  </PawnKindDef>
+</Defs>

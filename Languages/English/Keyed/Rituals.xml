@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+	<RitualPredictedOutcomeDescReviaCount>Revia count</RitualPredictedOutcomeDescReviaCount>
+	<MessageRitualRolePawnIsAlreadyRevia>Already revia</MessageRitualRolePawnIsAlreadyRevia>
+	<MessageRitualRoleAnyRevianGeneRequired>Revian gene required</MessageRitualRoleAnyRevianGeneRequired>
+	<RitualTargetMysticalStoneInfo>Mystical bloodstone required</RitualTargetMysticalStoneInfo>
+	<SacrificerNotSelected>Sacrifcer is not selected</SacrificerNotSelected>
+	<RitualTargetBloodstonesInfo>Bloodstones required: {0}</RitualTargetBloodstonesInfo>
+	<ReviaMinimalBloodstonesCount>Minimal bloodstones required for {0}: {1}</ReviaMinimalBloodstonesCount>
+</LanguageData>

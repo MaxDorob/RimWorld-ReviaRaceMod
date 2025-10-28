@@ -7,16 +7,17 @@
     <isBad>false</isBad>
     <defaultLabelColor>(0.8, 0.4, 0.4)</defaultLabelColor>
     <causesNeed>ReviaRaceBloodthirstNeed</causesNeed>
+    <countsAsAddedPartOrImplant>false</countsAsAddedPartOrImplant>
     <stages>
       <li>
         <capMods>
           <li>
             <capacity>Moving</capacity>
-            <offset>-0.10</offset>
+            <offset>-0.05</offset>
           </li>
           <li>
             <capacity>Manipulation</capacity>
-            <offset>-0.10</offset>
+            <offset>-0.05</offset>
           </li>
         </capMods>
         <statOffsets>

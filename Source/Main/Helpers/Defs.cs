@@ -57,8 +57,6 @@ namespace ReviaRace.Helpers
         private static JobDef _convertXenotype;
 
         // Ideology
-        internal static MemeDef Skarnite => _skarnite ??= DefDatabase<MemeDef>.GetNamed("ReviaRaceSkarniteMeme");
-        private static MemeDef _skarnite;
 
         internal static GeneDef Tail => _tail??=DefDatabase<GeneDef>.GetNamed("ReviaTail");
         private static GeneDef _tail;

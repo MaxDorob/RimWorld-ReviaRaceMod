@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<RitualObligationTargetFilterDef>
+		<defName>ReviaBloodSigil</defName>
+		<workerClass>RitualObligationTargetWorker_ThingDef</workerClass>
+		<thingDefs>
+			<li>ReviaBloodSigil</li>
+		</thingDefs>
+	</RitualObligationTargetFilterDef>
+	
+		<RitualObligationTargetFilterDef>
+		<defName>ReviaBloodSigilOrSpot</defName>
+		<workerClass>RitualObligationTargetWorker_ThingDef</workerClass>
+		<thingDefs>
+			<li>ReviaBloodSigil</li>
+			<li>ReviaSacrificeSpot</li>
+		</thingDefs>
+	</RitualObligationTargetFilterDef>
+
+	<RitualObligationTargetFilterDef>
+		<defName>Revia_BleesingForSoulreap</defName>
+		<workerClass>ReviaRace.Rituals.RitualObligationTargetWorker_SoulreapLevelUp</workerClass>
+		<thingDefs>
+			<li>ReviaBloodSigil</li>
+			<li>ReviaSacrificeSpot</li>
+		</thingDefs>
+	</RitualObligationTargetFilterDef>
+
+	<RitualObligationTargetFilterDef>
+		<defName>Revia_XenotypeConversion</defName>
+		<workerClass>ReviaRace.Rituals.RitualObligationTargetWorker_BloodstonesRequired</workerClass>
+		<thingDefs>
+			<li>ReviaBloodSigil</li>
+		</thingDefs>
+		<woodPerParticipant>10</woodPerParticipant> <!--count of bloodstones-->
+	</RitualObligationTargetFilterDef>
+
+	<RitualObligationTargetFilterDef>
+		<defName>Revia_PsycastRitual</defName>
+		<workerClass>ReviaRace.Rituals.RitualObligationTargetWorker_MysticalStone</workerClass>
+		<thingDefs>
+			<li>ReviaBloodSigil</li>
+		</thingDefs>
+	</RitualObligationTargetFilterDef>
+	
+</Defs>

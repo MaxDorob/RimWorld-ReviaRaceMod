@@ -2,9 +2,9 @@
 <Defs>
   <ThoughtDef>
     <defName>ReviaRaceThoughtSacrificedNegative</defName>
-    <durationDays>6</durationDays>
+    <durationDays>4</durationDays>
     <stackLimit>4</stackLimit>
-    <stackedEffectMultiplier>0.65</stackedEffectMultiplier>
+    <stackedEffectMultiplier>0.35</stackedEffectMultiplier>
     <nullifyingTraits>
       <li>Psychopath</li>
       <li>Bloodlust</li>
@@ -14,6 +14,24 @@
       <li>
         <label>Sacrificed corpse</label>
         <description>One of our colonists sacrificed a corpse to the blood god. This is disturbing.</description>
+        <baseMoodEffect>-6</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>ReviaRaceThoughtSacrificedNegativePrisoner</defName>
+    <durationDays>4</durationDays>
+    <stackLimit>2</stackLimit>
+    <stackedEffectMultiplier>0.65</stackedEffectMultiplier>
+    <nullifyingTraits>
+      <li>Psychopath</li>
+      <li>Bloodlust</li>
+      <li>Cannibal</li>
+    </nullifyingTraits>
+    <stages>
+      <li>
+        <label>Sacrificed corpse</label>
+        <description>My captors sacrificed a corpse to the blood god. Am I next?</description>
         <baseMoodEffect>-6</baseMoodEffect>
       </li>
     </stages>

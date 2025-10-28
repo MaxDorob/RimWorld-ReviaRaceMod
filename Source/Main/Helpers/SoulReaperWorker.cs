@@ -8,7 +8,7 @@ using Verse;
 
 namespace ReviaRace.Helpers
 {
-    internal static class SoulReaperWorker
+    public static class SoulReaperWorker
     {
         #region variables
         internal static bool EnableRandomSoulReapTier { get; set; }
@@ -38,16 +38,21 @@ namespace ReviaRace.Helpers
             }
             if (pawn != null && GetSoulReapTier(pawn) == -1)
             {
-                if (pawn.kindDef == Defs.MarauderSkullshatterer ||
+                var ext = pawn.kindDef.GetModExtension<SoulreapLevel_Extension>();
+                if (ext != null)
+                {
+                    pawn.AddSoulReapTier(ext.level.RandomInRange);
+                }
+                else if (pawn.kindDef == Defs.MarauderSkullshatterer ||
                     pawn.kindDef == Defs.TemplarHighTemplar)
                 {
                     pawn.AddSoulReapTier(9);
                     pawn.skills.GetSkill(SkillDefOf.Melee).Level = 20;
                     pawn.skills.GetSkill(SkillDefOf.Shooting).Level = 20;
 
-                    if (!pawn.story.traits.HasTrait(TraitDefOf.Tough))
+                    if (!pawn.story.traits.HasTrait(ReviaDefOf.Tough))
                     {
-                        pawn.story.traits.allTraits.AddDistinct(new Trait(TraitDefOf.Tough));
+                        pawn.story.traits.allTraits.AddDistinct(new Trait(ReviaDefOf.Tough));
                     }
                 }
                 else
@@ -77,7 +82,7 @@ namespace ReviaRace.Helpers
                 }
             }
         }
-        internal static int GetSoulReapTier(Pawn pawn)
+        public static int GetSoulReapTier(this Pawn pawn)
         {
             if (pawn.SoulReapHediff() != null)
             {
@@ -99,6 +104,11 @@ namespace ReviaRace.Helpers
 
             HediffDef toAdd = HediffDef.Named($"ReviaRaceSoulreapTier{tier}");
             toAdd.initialSeverity = float.Epsilon;
+            if (pawn.kindDef == null)
+            {
+                pawn.kindDef = PawnKindDefOf.Colonist;
+                Log.Warning($"KindDef of {pawn} was null, \"Colonist\" assigned to avoid errors. Will be fixed in next Rimworld patches.");
+            }
             pawn.health.AddHediff(toAdd);
         }
         internal static void RemoveSoulReapHediffs(this Pawn pawn)

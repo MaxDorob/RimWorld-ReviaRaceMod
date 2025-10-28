@@ -18,12 +18,14 @@ namespace ReviaRace.FA_Compat
 {
 
     [StaticConstructorOnStartup]
+    [Obsolete]
     public static class HarmonyPatch_FacialAnimation
     {
         static Harmony harmony = new Harmony("ReviaRace_FA");
 
         static HarmonyPatch_FacialAnimation()
         {
+            Log.Warning($"New version of Facial Animation released and this patch is not actual anymore");
             LongEventHandler.ExecuteWhenFinished(() => harmony.PatchAll());
         }
         public static IEnumerable<T> GetFaceTypeDefsForPawn<T>(Pawn pawn, bool includeDefault = true) where T : FaceTypeDef, new()
@@ -68,7 +70,7 @@ namespace ReviaRace.FA_Compat
         }
     }
 
-    [HarmonyPatch(typeof(ControllerBaseComp<FaceTypeDef, BrowShapeDef>), "InitIfNeed")]
+    [HarmonyPatch(typeof(ControllerBaseComp<FaceTypeDef, BrowShapeDef>), "InitializeIfNeed")]
     internal static class ControllerBaseComp_Patch
     {
         public static bool Prefix(ThingComp __instance, ref Pawn ___pawn, ref Gender ___prevGender, ref Color ___color, ref FaceTypeDef ___faceType, Thing ___parent)

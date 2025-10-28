@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <RulePackDef>
+    <defName>Revia_NamerRitualSacrifice</defName>
+		<directTestable>true</directTestable>
+		<include>
+			<li>ReviaHighNamerDeity</li>
+		</include>
+    <rulePack>
+      <rulesStrings>
+        <li>r_ritualName->[sacrifice] to [name]</li>
+        <li>r_ritualName->[sacrifice] for [name]</li>
+
+        <li>sacrifice->Sacrifice</li>
+        <li>sacrifice->Immolation</li>
+        <li>sacrifice->Oblation</li>
+        <li>sacrifice->Slaughtering</li>
+        
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+	<RulePackDef>
+		<defName>Revia_NamerRitualOffering</defName>
+		<directTestable>true</directTestable>
+		<include>
+			<li>ReviaHighNamerDeity</li>
+		</include>
+		<rulePack>
+			<rulesStrings>
+				<li>r_ritualName->The Soulreap Ritual</li>
+				<li>r_ritualName->Offering to [name]</li>
+			</rulesStrings>
+		</rulePack>
+	</RulePackDef>
+  
+	<RulePackDef>
+		<defName>Revia_NamerRitualConversion</defName>
+		<directTestable>true</directTestable>
+		<include>
+			<li>ReviaHighNamerDeity</li>
+		</include>
+		<rulePack>
+			<rulesStrings>
+				<li>r_ritualName->True Revia Conversion</li>
+				<li>r_ritualName->Conversion Ritual</li>
+				<li>r_ritualName->[ritualType] for [name]</li>
+
+				<li>ritualType->Conversion</li>
+				<li>ritualType->Ascension</li>
+				<li>ritualType->Integration</li>
+
+			</rulesStrings>
+		</rulePack>
+	</RulePackDef>
+	
+	<RulePackDef>
+		<defName>Revia_NamerRitualPsycast</defName>
+		<directTestable>true</directTestable>
+		<include>
+			<li>ReviaHighNamerDeity</li>
+		</include>
+		<rulePack>
+			<rulesStrings>
+				<li>r_ritualName->[blessing] [action]</li>
+				<li>r_ritualName->[blessing] [action] of [name]</li>
+
+				<li>blessing->Psionic</li>
+				<li>blessing->Mystical</li>
+				<li>blessing->Psychic</li>
+				<li>action->Integration</li>
+				<li>action->Connection</li>
+				<li>action->Sublimation</li>
+				<li>action->Blessing</li>
+				<li>action->Grand Sacrifice</li>
+				<li>action->Sacrifice</li>
+
+			</rulesStrings>
+		</rulePack>
+	</RulePackDef>
+	
+</Defs>

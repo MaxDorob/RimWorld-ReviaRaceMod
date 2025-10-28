@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="ResourceBase" MayRequire="Ludeon.Rimworld.Royalty">
+    <defName>Revia_MysticalStone</defName>
+    <label>mystical bloodstone</label>
+    <description>A bloodstone supposedly sent by the Revian blood goddess Skarne that contains a mystical, psychic power.</description>
+    <thingClass>ThingWithComps</thingClass>
+    <techLevel>Neolithic</techLevel>
+    <graphicData>
+      <texPath>Things/Item/MysticalStone</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.80</drawSize>
+      <color>(200, 70, 0)</color>
+    </graphicData>
+    <stackLimit>1</stackLimit>
+    <thingCategories>
+      <li>Artifacts</li>
+    </thingCategories>
+    <tradeability>None</tradeability>
+    <statBases>
+      <Mass>0.01</Mass>
+      <MarketValue>7000</MarketValue>
+      <MaxHitPoints>1000</MaxHitPoints>
+      <Flammability>0.0</Flammability>
+      <DeteriorationRate>0.0</DeteriorationRate>
+      <Beauty>4</Beauty>
+    </statBases>
+    <altitudeLayer>Item</altitudeLayer>
+    <tickerType>Never</tickerType>
+  </ThingDef>
+</Defs>

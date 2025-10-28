@@ -60,7 +60,7 @@ namespace ReviaRace.Genes
                 if (pawn.health.hediffSet.HasHediff(Defs.GeneRejection))
                 {
                     if(Entry.GeneCanBeAdded(this.pawn,this.def))
-                    if (RejectionType==RejectionType.NoRejection||((DisableUncompleteDebuff_Teeth || !pawn.genes.HasGene(Defs.Teeth))
+                    if (((DisableUncompleteDebuff_Teeth || !pawn.genes.HasGene(Defs.Teeth))
                     && (DisableUncompleteDebuff_Claws || !pawn.genes.HasGene(Defs.Claws))
                     && (DisableUncompleteDebuff_Ears || !pawn.genes.HasGene(Defs.Ears))
                     && !pawn.genes.HasGene(Defs.Tail)))

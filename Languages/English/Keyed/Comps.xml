@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-  <NonSkarniteOrReviaSacrificing>Pawn is not skarnite or revia</NonSkarniteOrReviaSacrificing>
+  <NonSkarniteOrReviaSacrificing>Pawn is neither Skarnite nor a Revia</NonSkarniteOrReviaSacrificing>
   <ReviaRaceSacrificePrisonerNone>No prisoners to be sacrificed.</ReviaRaceSacrificePrisonerNone>
   <ReviaRaceSacrificePrisonerName>Sacrifice {0}</ReviaRaceSacrificePrisonerName>
-  <ReviaRaceSacrificeRejected>{0}'s offering was accepted, but deemed insufficient. The blood god demands more blood.</ReviaRaceSacrificeRejected>
+  <ReviaRaceSacrificeRejected>{0}'s offering was accepted, but deemed insufficient. The bloody goddess demands more blood.</ReviaRaceSacrificeRejected>
   <ReviaRaceBloodStuffCountDemand>An additional {0} {1}s were demanded</ReviaRaceBloodStuffCountDemand>
   <ReviaRaceBloodStuffCountConsumed>{0} {1}(s) were consumed in {2}'s offering.</ReviaRaceBloodStuffCountConsumed>
   <ReviaRaceSacrificeSuccess>The sacrifice was found worthy, and {0} has grown stronger.</ReviaRaceSacrificeSuccess>
-  <ReviaRaceOfferingStart>{0} offers some {1}s to the blood god.</ReviaRaceOfferingStart>
-  <ReviaRaceOfferingInvalidPawn>The blood god spurns the unitiated's plea.</ReviaRaceOfferingInvalidPawn>
+  <ReviaRaceOfferingStart>{0} offers some {1}s to the bloody goddess.</ReviaRaceOfferingStart>
+  <ReviaRaceOfferingInvalidPawn>The bloody goddess spurns the unitiated's plea.</ReviaRaceOfferingInvalidPawn>
   <ReviaRaceOfferingMaxLevel>{0} is already at the height of {1} power!</ReviaRaceOfferingMaxLevel>
   <ReviaRaceModName>Revia Race</ReviaRaceModName>
   <ReviaRaceSettingsSacrificeCostHeader>Sacrifice Options</ReviaRaceSettingsSacrificeCostHeader>
@@ -32,17 +32,19 @@
   <ReviaDisableUncompleteDebuff_Teeth>Disable debuff for teeth</ReviaDisableUncompleteDebuff_Teeth>
   <ReviaDisableUncompleteDebuff_Ears>Disable debuff for ears</ReviaDisableUncompleteDebuff_Ears>
   <ReviaDisableUncompleteDebuff_Claws>Disable debuff for claws</ReviaDisableUncompleteDebuff_Claws>
-  <ReviaNoProjectLimitaions>No limitations for revia projects</ReviaNoProjectLimitaions>
-  <ReviaNoCraftLimitaions>No limitations for revia crafts</ReviaNoCraftLimitaions>
-  <ReviaRaceSettingsNoHybrid>No hybrids with revia</ReviaRaceSettingsNoHybrid>
+  <ReviaNoProjectLimitaions>No limitations for Revia projects</ReviaNoProjectLimitaions>
+  <ReviaNoCraftLimitaions>No limitations for Revia crafts</ReviaNoCraftLimitaions>
+  <ReviaRaceSettingsNoHybrid>No hybrids with Revia</ReviaRaceSettingsNoHybrid>
   <Linear>Linear</Linear>
   <Quadratic>Quadratic</Quadratic>
   <Exponential>Exponential</Exponential>
   <ReviaRaceConvertName>Change xenotype for {0}</ReviaRaceConvertName>
   <ReviaRaceSettingsBornType>Born type</ReviaRaceSettingsBornType>
   <NoMaleBorn>Revia born only female</NoMaleBorn>
-  <ForceBornRevia>Revia born only revia</ForceBornRevia>
+  <ForceBornRevia>Revia born only Revia</ForceBornRevia>
   <ReviaRejectionType>Revia genes rejection type</ReviaRejectionType>
   <InstaKill>Instant kills pawn</InstaKill>
   <NoRejection>No rejection</NoRejection>
+  <ReviaRaceOldSoulreapBlessing>Allow for manual, non-ritual, offerings for Soul Reap levels</ReviaRaceOldSoulreapBlessing>
+  <RequireReviaGene>Require any Revia gene for conversion ritual</RequireReviaGene>
 </LanguageData>
