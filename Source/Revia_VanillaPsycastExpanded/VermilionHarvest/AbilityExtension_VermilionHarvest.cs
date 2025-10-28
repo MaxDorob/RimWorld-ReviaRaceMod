@@ -65,7 +65,7 @@ namespace Revia_VanillaPsycastExpanded
             }
         }
         public float bleedLoss = 0.75f;
-        public float psyfocusPerKill = 0.03f;
+        public float psyfocusPerKill = 0.15f;
         public float multiplierForBloodthirst = 0.4f;
         public FloatRange score = new FloatRange(0.7f, 2.5f);
         IntRange filthCount = new IntRange(2,6);
