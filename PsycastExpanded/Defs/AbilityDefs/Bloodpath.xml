@@ -12,7 +12,8 @@
 		<needsTicking>true</needsTicking>
 		<targetMode>Pawn</targetMode>
 		<range>99999</range>
-		<chance>0.2</chance>
+		<!--Revia AI are REALLY silly with how they use this-->
+		<chance>0</chance>
 		<targetingParametersList>
 			<li>
 				<canTargetSelf>False</canTargetSelf>
@@ -28,8 +29,8 @@
 				<path>Revia_BloodPath</path>
 				<level>3</level>
 				<order>1</order>
-				<psyfocusCost>0.02</psyfocusCost>
-				<entropyGain>25</entropyGain>
+				<psyfocusCost>0.03</psyfocusCost>
+				<entropyGain>30</entropyGain>
 				<soulReapLevel>5</soulReapLevel>
 				<prerequisites>
 					<li>Revia_Bloodbath</li>
@@ -49,14 +50,16 @@
 	<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
 		<defName>Revia_SkarneAvatar</defName>
 		<label>skarne's scion</label>
-		<description>Starting a chant and building up the fury, this advanced form of the Bloodbath Circuit supercharges a Revia's already powerful connection to the Bloody Goddess through all nine of her tails, causing possession for a short time, becoming a berserk and extremely blood hungry avatar of Skarne. Slaying all who would dare oppose her viscous will, a true born scion of Skarne will slaughter all they can while under the influence, old allies being the last to be targeted for death. This extremely powerful and dangerous state of connection lasts psychic heat collapses this connection, the body becoming to damaged to fight, or simple time degrading the connection.</description>
+		<description>Starting a chant and building up the fury, this advanced form of the Bloodbath Circuit supercharges a Revia's already powerful connection to the Bloody Goddess through all nine of her tails, causing possession for a short time, becoming a berserk and extremely powerful, Avatar of Skarne.
+Skarne will attack anyone, but will always prioritize enemies over allies.
+This extremely powerful and dangerous state of connection lasts until psychic heat collapses this connection, the body becomes to damaged to fight, or simple time degrades the connection.</description>
 		<iconPath>UI/Bloodpath/SkarneAvatar</iconPath>
 		<abilityClass>VEF.Abilities.Ability_Blank</abilityClass>
 		<targetMode>Self</targetMode>
 		<castTime>150</castTime>
 		<durationTime>2700</durationTime>
 		<targetingParameters>
-			<canTargetSelf>True</canTargetSelf>
+		<canTargetSelf>True</canTargetSelf>
 		</targetingParameters>
 		<modExtensions>
 			<li Class="Revia_VanillaPsycastExpanded.AbilityExtension_ReviaPsycast">
@@ -84,8 +87,8 @@
 	<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
 		<defName>Revia_Bloodbath</defName>
 		<label>bloodbath</label>
-		<description>The most direct application of psychic power for any Revia is empowering her tails, her connection to Skarne.
-		By channeling psychic energy in a circuit through each of her tails, a Revia may leverage that power in a moments notice to bathe in the blood of her adversaries. While active this technique immensely increases speed of movement and rapidity of attacks, with enough tails even allowing and then further empowering, the benefits of sanctified weaponry while active!</description>
+		<description>The most direct application of psychic power for any Revia is empowering her tails, her connection to Skarne, and the Bloodbath Circuit, or simply Bloodbath is that direct technique.
+By channeling psychic energy in a circuit through each of her tails, a Revia leverages that power in a moments notice to bathe in the blood of her adversaries. While active, this technique immensely increases speed of movement and rapidity of attacks, with enough tails even allowing for the benefits of sanctified weaponry at all times!</description>
 		<iconPath>UI/Bloodpath/Bloodbath</iconPath>
 		<castSound>VPE_BladeFocus_Cast</castSound>
 		<!--TODO: Change to some other sound-->
@@ -155,7 +158,7 @@
 	<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
 		<defName>Revia_SkarnesCurse</defName>
 		<label>skarne's curse</label>
-		<description>By channeling the bloodthirsty viciousness that is integral to the Revia, force a curse onto a living victim. Increasing their vulnerability to damage and hemmorhaging, all while causing open wounds to burst out of them for the duration of the curse.</description>
+		<description>Channel the bloodthirsty viciousness that is integral to the Revia, and force a curse onto a living victim. Increasing their vulnerability to damage and hemmorhaging, all while causing open wounds to burst out of them!</description>
 		<iconPath>UI/Bloodpath/SkarnesCurse</iconPath>
 		<castTime>40</castTime>
 		<durationTime>1800</durationTime>
@@ -170,8 +173,8 @@
 				<path>Revia_BloodPath</path>
 				<level>4</level>
 				<order>2</order>
-				<psyfocusCost>0.15</psyfocusCost>
-				<entropyGain>45</entropyGain>
+				<psyfocusCost>0.1</psyfocusCost>
+				<entropyGain>50</entropyGain>
 				<psychic>true</psychic>
 				<soulReapLevel>7</soulReapLevel>
 				<prerequisites>
@@ -188,7 +191,7 @@
 	<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
 		<defName>Revia_BloodyExplosion</defName>
 		<label>bloody explosion</label>
-		<description>Manipulate energy in blood flowing from open wounds, snap your clawed fingers, and watch an explosion of gore fly out in all directions. The more blood flowing, the greater the explosion!</description>
+		<description>Manipulate energy in blood flowing from open wounds, and with a snap of your clawed fingers, and watch an explosion of gore fly out in all directions! The more blood flowing out, the greater the explosion!</description>
 		<iconPath>UI/Bloodpath/BloodyExplosion</iconPath>
 		<castTime>30</castTime>
 		<range>45</range>
@@ -239,7 +242,7 @@
 	<VEF.Abilities.AbilityDef ParentName="VPE_WordOfAbilityBase">
 		<defName>Revia_ReavingReap</defName>
 		<label>reaving reap</label>
-		<description>Skarne recognizes effort, and by expending psychic energy you will collect all nearby bloodstones or palestones from corpses as if you sacrificed them through labor. Simple, and time efficient.</description>
+		<description>Sacrifice all nearby corpses for bloodstones or palestones as if you sacrificed them through labor. Simple, and time efficient.</description>
 		<iconPath>UI/Bloodpath/ReavingReap</iconPath>
 		<!--<castTime>150</castTime>-->
 
@@ -281,10 +284,10 @@
 	<VEF.Abilities.AbilityDef ParentName="VPE_WordOfAbilityBase">
 		<defName>Revia_VermilionHarvest</defName>
 		<label>vermilion harvest</label>
-		<description>There is power in blood, and converting blood directly into psyfocus is a harrowing and possibly fatal process... for whoever is being harvested. 
-		The larger the creature, and the more blood that is taken, the greater the reward. The Bloody Goddess cares not how blood flows, only that it does.</description>
+		<description>Revia love a good sacrifice, especially with living victims. This particularly gruesome way of sacrificng is very satisfying for a Revia's bloodthirst, offers additional bloodstones, grants a moderate psyfocus Boon, and will burst the body in a shower of blood! 
+The larger the creature, and the more blood that is flowing, the greater the reward.</description>
 		<iconPath>UI/Bloodpath/VermilionHarvest</iconPath>
-		<castTime>200</castTime>
+		<castTime>300</castTime>
 		<warmupMote></warmupMote>
 		<warmupSound></warmupSound>
 		<abilityClass>VEF.Abilities.Ability_Blank</abilityClass>
@@ -295,7 +298,7 @@
 				<level>1</level>
 				<order>2</order>
 				<psyfocusCost>0.03</psyfocusCost>
-				<entropyGain>50</entropyGain>
+				<entropyGain>90</entropyGain>
 				<psychic>true</psychic>
 				<soulReapLevel>1</soulReapLevel>
 			</li>
