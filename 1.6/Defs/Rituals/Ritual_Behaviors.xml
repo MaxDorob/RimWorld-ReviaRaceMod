@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<RitualBehaviorDef Name="Revia_SacrificeBehaviorBase" Abstract="True">
+		<preceptRequirements>
+			<li Class="PreceptRequirement_Altar"/>
+		</preceptRequirements>
+		<durationTicks>2000</durationTicks>
+		<spectatorsLabel>Participants</spectatorsLabel>
+		<spectatorGerund>participate</spectatorGerund>
+		<roles>
+			<li Class="ReviaRace.RitualRoleReviaOrSkarnite">
+				<label>sacrificer</label>
+				<id>sacrificer</id>
+				<precept>Revia_PrisonerSacrification</precept>
+				<required>True</required>
+				<substitutable>false</substitutable>
+				<maxCount>1</maxCount>
+				<countsAsParticipant>False</countsAsParticipant>
+				<mustBeAbleToReachTarget>True</mustBeAbleToReachTarget>
+			</li>
+		</roles>
+	</RitualBehaviorDef>
+
+	<RitualBehaviorDef ParentName="Revia_SacrificeBehaviorBase">
+		<defName>Revia_SacrificePrisoner</defName>
+		<workerClass>RitualBehaviorWorker_PrisonerSacrifice</workerClass>
+		<durationTicks>4000</durationTicks>
+		<roles>
+			<li Class="RitualRolePrisoner">
+				<label>sacrifice</label>
+				<missingDesc>a prisoner</missingDesc>
+				<id>prisoner</id>
+				<maxCount>1</maxCount>
+				<required>True</required>
+				<countsAsParticipant>False</countsAsParticipant>
+				<ignoreBleeding>true</ignoreBleeding>
+				<allowDowned>true</allowDowned>
+				<removeFromAssignmentsOnDeath>false</removeFromAssignmentsOnDeath>
+			</li>
+		</roles>
+		<stages Inherit="False">
+			<li Class="RitualStage_InteractWithPrisoner">
+				<defaultDuty>Spectate</defaultDuty>
+				<endTriggers>
+					<li Class="StageEndTrigger_PawnDeliveredOrNotValid"/>
+				</endTriggers>
+				<failTriggers>
+					<li Class="StageFailTrigger_TargetPawnUnreachable">
+						<takerId>sacrificer</takerId>
+						<takeeId>prisoner</takeeId>
+						<desc>Prisoner is unreachable.</desc>
+					</li>
+					<li Class="StageFailTrigger_PawnAsleep">
+						<desc>escort asleep</desc>
+						<pawnId>sacrificer</pawnId>
+					</li>
+				</failTriggers>
+				<roleBehaviors>
+					<li>
+						<roleId>sacrificer</roleId>
+						<dutyDef>Revia_DeliverPawnToAltar</dutyDef>
+					</li>
+					<li>
+						<roleId>prisoner</roleId>
+						<dutyDef>Idle</dutyDef>
+					</li>
+				</roleBehaviors>
+			</li>
+			<li>
+				<defaultDuty>Spectate</defaultDuty>
+				<endTriggers>
+					<li Class="StageEndTrigger_DurationPercentage">
+						<percentage>0.999</percentage>
+					</li>
+				</endTriggers>
+				<roleBehaviors>
+					<li>
+						<roleId>sacrificer</roleId>
+						<dutyDef>Revia_SpeakOnCellFacingSpectators</dutyDef>
+						<speakerInteraction>Revia_Speech_Sacrifice</speakerInteraction>
+						<customPositions>
+							<li Class="ReviaRace.Rituals.RitualPosition_OnInteractionCell" />
+						</customPositions>
+					</li>
+					<li>
+						<roleId>prisoner</roleId>
+						<dutyDef>Revia_LayDownAwake</dutyDef>
+					</li>
+				</roleBehaviors>
+			</li>
+			<li Class="RitualStage_InteractWithPrisoner">
+				<defaultDuty>Spectate</defaultDuty>
+				<essential>True</essential>
+				<endTriggers>
+					<li Class="StageEndTrigger_PawnDead">
+						<roleId>prisoner</roleId>
+					</li>
+				</endTriggers>
+				<roleBehaviors>
+					<li>
+						<roleId>sacrificer</roleId>
+						<dutyDef>Revia_Sacrifice</dutyDef>
+						<customPositions>
+							<li Class="ReviaRace.Rituals.RitualPosition_OnInteractionCell" />
+						</customPositions>
+					</li>
+					<li>
+						<roleId>prisoner</roleId>
+						<dutyDef>LayDownAwake</dutyDef>
+					</li>
+				</roleBehaviors>
+				<visualEffectDef>Revia_SacrificePrisoner</visualEffectDef>
+			</li>
+			<li>
+				<defaultDuty>Spectate</defaultDuty>
+				<endTriggers>
+					<li Class="StageEndTrigger_DurationPercentage">
+						<percentage>0.001</percentage>
+					</li>
+				</endTriggers>
+				<failTriggers>
+					<li Class="StageFailTrigger_PawnAlive">
+						<pawnId>prisoner</pawnId>
+						<desc>sacrifice no longer dead</desc>
+					</li>
+				</failTriggers>
+				<roleBehaviors>
+					<li>
+						<roleId>sacrificer</roleId>
+						<dutyDef>Revia_SpeakOnCellFacingSpectators</dutyDef>
+						<speakerInteraction>Revia_Speech_Sacrifice</speakerInteraction>
+						<customPositions>
+							<li Class="ReviaRace.Rituals.RitualPosition_OnInteractionCell" />
+						</customPositions>
+					</li>
+				</roleBehaviors>
+			</li>
+		</stages>
+	</RitualBehaviorDef>
+
+
+
+	<RitualBehaviorDef ParentName="Revia_SacrificeBehaviorBase">
+		<defName>ReviaBlessingRitual</defName>
+		<workerClass>ReviaRace.Rituals.RitualBehaviorWorker_InvokeBlessingForSoulreap</workerClass>
+		<stages>
+			<li>
+				<defaultDuty>Spectate</defaultDuty>
+				<essential>True</essential>
+				<endTriggers>
+					<li Class="ReviaRace.Rituals.StageEndTrigger_CollectedBloodstones">
+						<roleId>sacrificer</roleId>
+					</li>
+				</endTriggers>
+				<failTriggers>
+					<li Class="ReviaRace.Rituals.StageFailTrigger_NotEnoughThings">
+						<desc>not enough bloodstones</desc>
+					</li>
+				</failTriggers>
+				<roleBehaviors>
+					<li>
+						<roleId>sacrificer</roleId>
+						<dutyDef>CollectBloodstonesForSoulreapBlessing</dutyDef>
+					</li>
+				</roleBehaviors>
+			</li>
+			<li>
+				<defaultDuty>Spectate</defaultDuty>
+				<essential>True</essential>
+				<endTriggers>
+					<li Class="StageEndTrigger_DurationPercentage">
+						<percentage>1</percentage>
+					</li>
+				</endTriggers>
+				<failTriggers>
+					<li Class="ReviaRace.Rituals.StageFailTrigger_NotEnoughCarriedThings">
+						<desc>not enough bloodstones</desc>
+					</li>
+				</failTriggers>
+				<roleBehaviors>
+					<li>
+						<roleId>sacrificer</roleId>
+						<dutyDef>InvokeBlessingForSoulreap</dutyDef>
+						<speakerInteraction>Revia_Speech_Sacrifice</speakerInteraction>
+						<customPositions>
+							<li Class="ReviaRace.Rituals.RitualPosition_OnInteractionCell" />
+						</customPositions>
+					</li>
+				</roleBehaviors>
+			</li>
+		</stages>
+	</RitualBehaviorDef>
+
+	<RitualBehaviorDef ParentName="Revia_SacrificeBehaviorBase">
+		<defName>Revia_XenotypeConversion</defName>
+		<roles>
+			<li Class="ReviaRace.RitualRoleWithReviaGene">
+				<label>convert</label>
+				<missingDesc>a convertee</missingDesc>
+				<id>convertee</id>
+				<maxCount>1</maxCount>
+				<required>True</required>
+				<countsAsParticipant>False</countsAsParticipant>
+				<ignoreBleeding>true</ignoreBleeding>
+				<allowDowned>true</allowDowned>
+			</li>
+		</roles>
+		<stages>
+			<li Class="RitualStage_InteractWithRole">
+				<defaultDuty>Spectate</defaultDuty>
+				<targetId>convertee</targetId>
+				<endTriggers>
+					<li Class="ReviaRace.Rituals.StageEndTrigger_PawnDeliveredOrNotValidAndBloodstonesCollected">
+						<count>10</count>
+					</li>
+				</endTriggers>
+				<failTriggers>
+					<li Class="StageFailTrigger_TargetPawnUnreachable">
+						<takerId>sacrificer</takerId>
+						<takeeId>convertee</takeeId>
+						<desc>Prisoner is unreachable.</desc>
+					</li>
+					<li Class="StageFailTrigger_PawnAsleep">
+						<desc>escort asleep</desc>
+						<pawnId>sacrificer</pawnId>
+					</li>
+					<li Class="ReviaRace.Rituals.StageFailTrigger_NotEnoughThings">
+						<count>10</count>
+						<desc>not enough bloodstones</desc>
+					</li>
+				</failTriggers>
+				<roleBehaviors>
+					<li>
+						<roleId>sacrificer</roleId>
+						<dutyDef>Revia_TakeBloodstonesAndDeliverPawnToAltar</dutyDef>
+					</li>
+					<li>
+						<roleId>convertee</roleId>
+						<dutyDef>ArriveToCell</dutyDef>
+						<customPositions>
+							<li Class="ReviaRace.Rituals.RitualPosition_OnInteractionCell" />
+						</customPositions>
+					</li>
+				</roleBehaviors>
+			</li>
+			<li>
+				<defaultDuty>Spectate</defaultDuty>
+				<endTriggers>
+					<li Class="StageEndTrigger_DurationPercentage">
+						<percentage>1</percentage>
+					</li>
+				</endTriggers>
+				<failTriggers>
+					<li Class="ReviaRace.Rituals.StageFailTrigger_NotEnoughCarriedThings">
+						<count>10</count>
+						<desc>missing bloodstones</desc>
+					</li>
+				</failTriggers>
+				<roleBehaviors>
+					<li>
+						<roleId>sacrificer</roleId>
+						<dutyDef>Revia_ProcessXenotypeConversion</dutyDef>
+						<customPositions>
+							<li Class="ReviaRace.Rituals.RitualPosition_OnInteractionCell" />
+						</customPositions>
+					</li>
+					<li>
+						<roleId>convertee</roleId>
+						<dutyDef>Revia_LayDownAwake</dutyDef>
+					</li>
+				</roleBehaviors>
+			</li>
+		</stages>
+	</RitualBehaviorDef>
+
+	<RitualBehaviorDef ParentName="Revia_SacrificeBehaviorBase" MayRequire="Ludeon.Rimworld.Royalty">
+		<defName>Revia_PsycastRitual</defName>
+		<stages>
+			<li>
+				<defaultDuty>Spectate</defaultDuty>
+				<essential>True</essential>
+				<endTriggers>
+					<li Class="ReviaRace.Rituals.StageEndTrigger_CollectedMysticalStone">
+						<roleId>sacrificer</roleId>
+					</li>
+				</endTriggers>
+				<failTriggers>
+					<li Class="ReviaRace.Rituals.StageFailTrigger_NotEnoughThings">
+						<def>Revia_MysticalStone</def>
+						<count>1</count>
+						<desc>missing mystical bloodstone</desc>
+					</li>
+				</failTriggers>
+				<roleBehaviors>
+					<li>
+						<roleId>sacrificer</roleId>
+						<dutyDef>CollectThingsForPsycastBlessing</dutyDef>
+					</li>
+				</roleBehaviors>
+			</li>
+			<li>
+				<defaultDuty>Spectate</defaultDuty>
+				<essential>True</essential>
+				<endTriggers>
+					<li Class="StageEndTrigger_DurationPercentage">
+						<percentage>1</percentage>
+					</li>
+				</endTriggers>
+				<failTriggers>
+					<li Class="ReviaRace.Rituals.StageFailTrigger_NotEnoughCarriedThings">
+						<def>Revia_MysticalStone</def>
+						<count>1</count>
+						<desc>missing mystical bloodstone</desc>
+					</li>
+				</failTriggers>
+				<roleBehaviors>
+					<li>
+						<roleId>sacrificer</roleId>
+						<dutyDef>InvokeBlessingForPsycast</dutyDef>
+						<speakerInteraction>Revia_Speech_Sacrifice</speakerInteraction>
+						<customPositions>
+							<li Class="ReviaRace.Rituals.RitualPosition_OnInteractionCell" />
+						</customPositions>
+					</li>
+				</roleBehaviors>
+			</li>
+		</stages>
+	</RitualBehaviorDef>
+
+</Defs>

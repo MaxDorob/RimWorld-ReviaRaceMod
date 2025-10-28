@@ -6,6 +6,9 @@
       <MarketValue>3000</MarketValue>
       <Mass>1.50</Mass>
     </statBases>
+		<equippedStatOffsets>
+			<Revia_PsyfocusPerKill>0.03</Revia_PsyfocusPerKill>
+		</equippedStatOffsets>
     <tools>
       <li>
         <label>handle</label>

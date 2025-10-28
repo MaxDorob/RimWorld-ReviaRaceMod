@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <RecipeDef>
+    <defName>ReviaRacePalestoneToBloodstone</defName>
+    <label>Convert palestones to bloodstones</label>
+    <description>Bless palestones.</description>
+    <jobString>Blessing palestones.</jobString>
+    <workAmount>100</workAmount>
+    <workSpeedStat>ButcheryFleshSpeed</workSpeedStat>
+    <workSkill>Cooking</workSkill>
+    <effectWorking>Smelt</effectWorking>
+    <soundWorking>Recipe_Smelt</soundWorking>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ReviaRaceBloodstone</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ReviaRacePalestone</li>
+					</thingDefs>
+				</filter>
+				<count>14</count>
+			</li>
+    </ingredients>
+    <products>
+			<ReviaRaceBloodstone>2</ReviaRaceBloodstone>
+    </products>
+    <recipeUsers>
+      <li>ReviaSacrificeSpot</li>
+      <li>ReviaBloodSigil</li>
+    </recipeUsers>
+  </RecipeDef>
+</Defs>

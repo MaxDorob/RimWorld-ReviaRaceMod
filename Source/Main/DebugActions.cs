@@ -107,5 +107,55 @@ namespace ReviaRace
                     Log.Error("qPartChoices is empty!");
             }
         }
+
+        [DebugAction(category = "Revia debug", name = "Spawn random reward", actionType = DebugActionType.Action)]
+        public static void SpawnRandomReward()
+        {
+            Find.WindowStack.Add(new Dialog_DebugOptionListLister(SpawnRandomRewardOptions(true).ToList(), null));
+        }
+        [DebugAction(category = "Revia debug", name = "Spawn random reward (non-human)", actionType = DebugActionType.Action)]
+        public static void SpawnRandomRewardNonHuman()
+        {
+            Find.WindowStack.Add(new Dialog_DebugOptionListLister(SpawnRandomRewardOptions(false).ToList(), null));
+        }
+        private static IEnumerable<DebugMenuOption> SpawnRandomRewardOptions(bool human)
+        {
+            for (float i = 0.25f; i < 101; i += 0.25f)
+            {
+                float local = i;
+                yield return new DebugMenuOption(i.ToString(), DebugMenuOptionMode.Tool, () => SpawnRandomReward(human, local));
+            }
+        }
+        private static void SpawnRandomReward(bool human, float score)
+        {
+            var cell = UI.MouseCell();
+            Log.Message($"Spawning for score {score}");
+            var parms = default(ThingSetMakerParams);
+            parms.custom ??= [];
+            parms.custom[ThingSetMaker_CountPerScore.paramName] = score;
+            var rewardDef = human ? ReviaDefOf.ReviaRaceHumanlikeSacrifice : ReviaDefOf.ReviaRaceAnimalSacrifice;
+            var generated = rewardDef.root.Generate(parms);
+            foreach (var thing in generated)
+            {
+                GenDrop.TryDropSpawn(thing, cell, Find.CurrentMap, ThingPlaceMode.Near, out _); 
+            }
+        }
+        [DebugAction(category = "Revia debug", name = "Inspect cell", actionType = DebugActionType.ToolMap,
+    allowedGameStates = AllowedGameStates.PlayingOnMap)]
+        public static void InspectCell()
+        {
+            var cell = UI.MouseCell();
+            var map = Find.CurrentMap;
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine(cell.ToString());
+            sb.AppendLine($"Standable: {cell.Standable(map)}");
+            foreach (var thing in map.thingGrid.ThingsListAt(cell))
+            {
+                var interactionCell = thing.InteractionCell;
+                sb.AppendLine($"{thing} at {thing.Position} with passability {thing.def.passability}, where is interaction pos {interactionCell} with offset {thing.def.interactionCellOffset}");
+                sb.AppendLine($"Is inside rect: {CommonRitualCellPredicates.InsideRect(thing.OccupiedRect(), interactionCell)}");
+            }
+            Log.Message(sb.ToString());
+        }
     }
 }

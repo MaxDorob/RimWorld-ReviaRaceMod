@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<RulePackDef>
+		<defName>Revia_SpeechUtility</defName>
+		<rulePack>
+			<rulesStrings>
+				<li>spokeof->spoke about</li>
+				<li>spokeof->talked about</li>
+				<li>spokeof->offered thoughts on</li>
+				<li>spokeof->discussed</li>
+				<li>spokeof->explained</li>
+				<li>spokeof->described</li>
+
+				<li>praised->gave a speech about</li>
+				<li>praised->spoke about</li>
+				<li>praised->talked about</li>
+				<li>praised->praised</li>
+				<li>praised->extolled the virtues of</li>
+				<li>praised->acclaimed</li>
+				<li>praised->heaped glory on</li>
+				<li>praised->raved about</li>
+			</rulesStrings>
+		</rulePack>
+	</RulePackDef>
+  
+  <InteractionDef>
+    <defName>Revia_Speech_Sacrifice</defName>
+    <label>sacrifice speech</label>
+    <workerClass>InteractionWorker</workerClass>
+    <ignoreTimeSinceLastInteraction>True</ignoreTimeSinceLastInteraction>
+    <symbol>Things/Mote/SpeechSymbols/Speech</symbol>
+    <logRulesInitiator>
+      <include><li>Revia_SpeechUtility</li></include>
+      <rulesStrings>
+        <li>r_logentry->[INITIATOR_nameDef] [spokeof] [speechtopic].</li>
+        <li>r_logentry(p=0.2)->[INITIATOR_nameDef] [crazy].</li>
+
+        <li>speechtopic->the meaning and true value of death</li>
+        <li>speechtopic->controlled cruelty</li>
+        <li>speechtopic->the warmth of blood</li>
+        <li>speechtopic->Her wish</li>
+        <li>speechtopic->love and death</li>
+        <li>speechtopic->blades and flesh</li>
+        <li>speechtopic->the art of cutting</li>
+        <li>speechtopic->the seduction of blood</li>
+        <li>speechtopic->the music of screams</li>
+        <li>speechtopic->blood on the floor</li>
+
+        <li>crazy->screamed maniacally</li>
+        <li>crazy->broke into a chant</li>
+        <li>crazy->chanted towards the Skarne</li>
+        <li>crazy->spat in the sacrifice's eye</li>
+        <li>crazy->cackled</li>
+        <li>crazy->brandished a blade</li>
+        <li>crazy->muttered repetitively</li>
+      </rulesStrings>
+    </logRulesInitiator>
+  </InteractionDef>
+
+</Defs>

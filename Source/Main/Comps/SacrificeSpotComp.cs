@@ -15,6 +15,10 @@ namespace ReviaRace.Comps
         public static int neededCount = 10;
         public override IEnumerable<FloatMenuOption> CompFloatMenuOptions(Pawn pawn)
         {
+            if (!ReviaRaceMod.Settings.oldInvokeBlessing)
+            {
+                yield break;
+            }
             if (!pawn.CanReserve(parent))
             {
                 yield break;

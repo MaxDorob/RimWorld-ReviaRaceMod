@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <JobDef>
+    <defName>Revia_DeliverToAltar</defName>
+    <driverClass>ReviaRace.JobDriver_DeliverPawnToAltar</driverClass>
+    <reportString>delivering TargetA to altar.</reportString>
+    <casualInterruptible>false</casualInterruptible>
+  </JobDef>
+  
+  <JobDef>
+    <defName>Revia_Sacrifice</defName>
+    <driverClass>ReviaRace.JobDriver_Sacrifice</driverClass>
+    <reportString>Sacrificing TargetA.</reportString>
+    <casualInterruptible>false</casualInterruptible>
+  </JobDef>
+
+	<JobDef>
+		<defName>Revia_InvokeBlessing</defName>
+		<driverClass>ReviaRace.JobDrivers.JobDriver_InvokeBlessing</driverClass>
+		<reportString>Invoking blessing.</reportString>
+		<casualInterruptible>false</casualInterruptible>
+		<carryThingAfterJob>true</carryThingAfterJob>
+	</JobDef>
+
+	<JobDef>
+		<defName>Revia_GiveSpeech</defName>
+		<driverClass>ReviaRace.JobDrivers.JobDriver_GiveSpeech_NoReservations</driverClass>
+		<reportString>talking.</reportString>
+		<casualInterruptible>false</casualInterruptible>
+	</JobDef>
+
+	<JobDef>
+		<defName>Revia_LayDownAwake</defName>
+		<driverClass>ReviaRace.JobDrivers.JobDriver_LayDownAwake</driverClass>
+		<reportString>lying down.</reportString>
+		<casualInterruptible>false</casualInterruptible>
+		<allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+		<neverShowWeapon>true</neverShowWeapon>
+		<isCrawlingIfDowned>false</isCrawlingIfDowned>
+	</JobDef>
+  
+</Defs>

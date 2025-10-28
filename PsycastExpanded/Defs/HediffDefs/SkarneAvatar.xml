@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <HediffDef>
+    <defName>Revia_SkarneAvatar</defName>
+    <label>skarne avatar</label>
+		<hediffClass>HediffWithComps</hediffClass>
+    <description>Skarne owns this body.</description>
+    <isBad>false</isBad>
+    <defaultLabelColor>(0.8, 0.4, 0.4)</defaultLabelColor>
+    <countsAsAddedPartOrImplant>false</countsAsAddedPartOrImplant>
+    <stages>
+			<li>
+				<painFactor>0.2</painFactor>
+				<capMods>
+					<li>
+						<capacity>Moving</capacity>
+						<postFactor>2.0</postFactor>
+					</li>
+				</capMods>
+				<statFactors>
+					<MeleeDamageFactor>2</MeleeDamageFactor>
+					<MeleeHitChance>2</MeleeHitChance>
+					<MeleeCooldownFactor>0.4</MeleeCooldownFactor>
+					<MeleeArmorPenetration>2.3</MeleeArmorPenetration>
+					<Revia_LifeLeechImpact>1.9</Revia_LifeLeechImpact>
+					<IncomingDamageFactor>0.2</IncomingDamageFactor>
+					<StaggerDurationFactor>0</StaggerDurationFactor>
+					<PawnTrapSpringChance>0</PawnTrapSpringChance>
+					<Suppressability MayRequire="CETeam.CombatExtended">0</Suppressability>
+				</statFactors>
+			</li>
+    </stages>
+		<comps>
+			<li>
+				<compClass>ReviaRace.HediffComp_EntropyIncrease</compClass>
+			</li>
+		</comps>
+  </HediffDef>
+
+	<HediffDef>
+		<defName>ReviaRace_SoulTax</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>soul tax</label>
+		<description>Being an Incarnation of a Bloody Goddess has its consequences.</description>
+		<isBad>false</isBad>
+		<countsAsAddedPartOrImplant>false</countsAsAddedPartOrImplant>
+		<stages>
+			<li>
+				<painOffset>0.2</painOffset>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<setMax>0.6</setMax>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>60000~120000</disappearsAfterTicks> <!--1~2 days-->
+			</li>
+		</comps>
+	</HediffDef>
+
+	<ThoughtDef>
+		<defName>ReviaRace_SoulTax</defName>
+		<workerClass>ThoughtWorker_Hediff</workerClass>
+		<hediff>ReviaRace_SoulTax</hediff>
+		<validWhileDespawned>true</validWhileDespawned>
+		<developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+		<stages>
+			<li>
+				<label>soul tax</label>
+				<description>I was a vessel for Skarne herself!</description>
+				<baseMoodEffect>9</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+</Defs>

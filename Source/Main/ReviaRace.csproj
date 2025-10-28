@@ -75,6 +75,8 @@
     <Reference Include="System.Net.Http" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Comps\CompSkarneStatue.cs" />
+    <Compile Include="Comps\CompUsable_DisableableBySettings.cs" />
     <Compile Include="Comps\GeneRejectionHediff.cs" />
     <Compile Include="Comps\RejectionType.cs" />
     <Compile Include="Comps\InvokeBlessing.cs" />
@@ -83,32 +85,75 @@
     <Compile Include="Comps\InvokeSanctify.cs" />
     <Compile Include="Comps\CompLifeLeech.cs" />
     <Compile Include="Comps\SacrificeSpotComp.cs" />
+    <Compile Include="Comps\SacrificeTracker.cs" />
     <Compile Include="DebugActions.cs" />
     <Compile Include="Enums\BornSettingsEnum.cs" />
+    <Compile Include="Extensions\SoulreapLevel_Extension.cs" />
     <Compile Include="Genes\ReviaBaseGene.cs" />
     <Compile Include="Genes\ReviaClawsGene.cs" />
     <Compile Include="Genes\ReviaEarGene.cs" />
     <Compile Include="Genes\ReviaTailGene.cs" />
     <Compile Include="Genes\ReviaTeethGene.cs" />
     <Compile Include="HarmonyPatches\AlphaGenes_Patch.cs" />
+    <Compile Include="HarmonyPatches\BleedRate_Patch.cs" />
     <Compile Include="HarmonyPatches\DamageWorker_AddInjury.cs" />
     <Compile Include="HarmonyPatches\Entry.cs" />
     <Compile Include="HarmonyPatches\HeredityPatcher.cs" />
+    <Compile Include="HarmonyPatches\NoIconColor_Patch.cs" />
+    <Compile Include="HarmonyPatches\PsyfocusGain_Patch.cs" />
     <Compile Include="Helpers\ReviaDefOf.cs" />
     <Compile Include="Helpers\Defs.cs" />
     <Compile Include="Helpers\PawnHelpers.cs" />
+    <Compile Include="Helpers\SacrificeHelper.cs" />
     <Compile Include="Helpers\SoulReaperWorker.cs" />
     <Compile Include="Helpers\StaticModVariables.cs" />
     <Compile Include="Helpers\Strings.cs" />
+    <Compile Include="Helpers\ThingSetMaker_CountPerScore.cs" />
     <Compile Include="JobDrivers\ConversationRitualJobDriver.cs" />
+    <Compile Include="JobDrivers\JobDriver_DeliverPawnToAltar.cs" />
+    <Compile Include="JobDrivers\JobDriver_GiveSpeech_NoReservations.cs" />
+    <Compile Include="JobDrivers\JobDriver_InvokeBlessing.cs" />
+    <Compile Include="JobDrivers\JobDriver_LayDownAwake.cs" />
+    <Compile Include="JobDrivers\JobDriver_Sacrifice.cs" />
     <Compile Include="JobDrivers\SacrificePrisonerJobDriver.cs" />
     <Compile Include="JobDrivers\WaitPrisonerJobDriver.cs" />
+    <Compile Include="JobGiver\JobGiver_DeliverPawnToAltar.cs" />
+    <Compile Include="JobGiver\JobGiver_GiveSpeechFacingTarget.cs" />
+    <Compile Include="JobGiver\JobGiver_InvokeBlessing.cs" />
+    <Compile Include="JobGiver\JobGiver_LayDownAwake.cs" />
+    <Compile Include="JobGiver\JobGiver_ProcessXenotypeConversion.cs" />
+    <Compile Include="JobGiver\JobGiver_Sacrifice.cs" />
+    <Compile Include="JobGiver\JobGiver_TakeBloodstonesForBlessingRitual.cs" />
+    <Compile Include="JobGiver\JobGiver_TakeCountToInventory.cs" />
     <Compile Include="Needs\BloodthirstNeed.cs" />
     <Compile Include="PersistentData\ReviaSettings.cs" />
+    <Compile Include="Precept\PreceptComp_KnowsMemoryThought_ExceptRevia.cs" />
+    <Compile Include="Precept\ThoughtWorker_Precept_NoRecentSacrifice.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Render\PawnRenderNodeProperties_BodyPart.cs" />
     <Compile Include="Render\PawnRenderNode_HeadBodyPart.cs" />
     <Compile Include="ReviaRaceMod.cs" />
+    <Compile Include="RitualRole\RitualRoleRevia.cs" />
+    <Compile Include="RitualRole\RitualRoleReviaOrSkarnite.cs" />
+    <Compile Include="Rituals\RitualBehaviorWorker_InvokeBlessingForSoulreap.cs" />
+    <Compile Include="Rituals\RitualObligationTargetWorker_BloodstonesRequired.cs" />
+    <Compile Include="Rituals\RitualObligationTargetWorker_MysticalStone.cs" />
+    <Compile Include="Rituals\RitualObligationTargetWorker_SoulreapLevelUp.cs" />
+    <Compile Include="Rituals\RitualOutcomeComp_BloodstonesCount.cs" />
+    <Compile Include="Rituals\RitualOutcomeComp_ReviaCount.cs" />
+    <Compile Include="Rituals\RitualOutcomeComp_TailsCount.cs" />
+    <Compile Include="Rituals\RitualOutcomeEffectWorker_PsycastBlessing.cs" />
+    <Compile Include="Rituals\RitualOutcomeEffectWorker_Sacrificed.cs" />
+    <Compile Include="Rituals\RitualOutcomeEffectWorker_XenotypeConversion.cs" />
+    <Compile Include="Rituals\RitualOutcomeEffectWorker_SkarnesBlessing.cs" />
+    <Compile Include="Rituals\RitualPosition_OnInteractionCell.cs" />
+    <Compile Include="RitualRole\RitualRoleWithReviaGene.cs" />
+    <Compile Include="Rituals\SacrificeBaseScore_Extension.cs" />
+    <Compile Include="Rituals\StageEndTrigger_CollectedBloodstones.cs" />
+    <Compile Include="Rituals\StageEndTrigger_CollectedMysticalStone.cs" />
+    <Compile Include="Rituals\StageEndTrigger_PawnDeliveredOrNotValidAndBloodstonesCollected.cs" />
+    <Compile Include="Rituals\StageFailTrigger_NotEnoughCarriedThings.cs" />
+    <Compile Include="Rituals\StageFailTrigger_NotEnoughThings.cs" />
     <Compile Include="RoomRoleWorkers\SkarneChapel.cs" />
     <Compile Include="Utils.cs" />
     <Compile Include="Workers\SacrificeWorker.cs" />
@@ -121,16 +166,31 @@
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
     <PackageReference Include="Krafs.Rimworld.Ref">
-      <Version>1.6.4490-beta</Version>
+      <Version>1.6.4543</Version>
     </PackageReference>
     <PackageReference Include="Lib.Harmony">
       <Version>2.2.2</Version>
-			<IncludeAssets>compile</IncludeAssets>
-			<PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>compile</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="WorkGivers\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Publicize Include="Assembly-CSharp:RimWorld.CompStatue.bodyType" />
+    <Publicize Include="Assembly-CSharp:RimWorld.CompStatue.headType" />
+    <Publicize Include="Assembly-CSharp:RimWorld.CompStatue.hairDef" />
+    <Publicize Include="Assembly-CSharp:RimWorld.CompStatue.xenotype" />
+    <Publicize Include="Assembly-CSharp:RimWorld.CompStatue.hairColor" />
+    <Publicize Include="Assembly-CSharp:RimWorld.CompStatue.apparel" />
+    <Publicize Include="Assembly-CSharp:RimWorld.CompStatue.hediffsWhichAffectRendering" />
+    <Publicize Include="Assembly-CSharp:RimWorld.CompStatue.name" />
+    <Publicize Include="Assembly-CSharp:RimWorld.CompStatue.gender" />
+    <Publicize Include="Assembly-CSharp:RimWorld.CompStatue.lifestageIndex" />
+    <Publicize Include="Assembly-CSharp:RimWorld.CompStatue.InitFakePawn" />
+    <Publicize Include="Assembly-CSharp:RimWorld.Dialog_BeginRitual.outcome" />
+    <Publicize Include="Assembly-CSharp:RimWorld.Dialog_BeginRitual.ritual" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

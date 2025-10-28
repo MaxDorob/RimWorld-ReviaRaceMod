@@ -16,6 +16,7 @@ namespace ReviaRace
 {
     public class ReviaRaceMod : Verse.Mod
     {
+        public static readonly Version currentVersion = new Version(1, 6, 2, 1);
         public override void WriteSettings()
         {
             base.WriteSettings();
@@ -26,10 +27,11 @@ namespace ReviaRace
             Settings = base.GetSettings<ReviaSettings>();
             Settings.ApplySettings();
 
+            LongEventHandler.ExecuteWhenFinished(Settings.UpdateIfNeeded);
             LongEventHandler.ExecuteWhenFinished(AddLifeLeechComp);
         }
 
-        public ReviaSettings Settings { get; set; }
+        public static ReviaSettings Settings { get; set; }
         private string _baseCostBuf;
         private string _growthFactorBuf;
         private string _growthStartTierBuf;
@@ -91,7 +93,7 @@ namespace ReviaRace
 
         public override void DoSettingsWindowContents(Rect inRect)
         {
-            const int numRows = 20;
+            const int numRows = 23;
 
             var headerState = new GUIStyleState
             {
@@ -133,6 +135,12 @@ namespace ReviaRace
             DrawTextFieldWithLabel(sacrificeList.GetRect(lineHeight), Strings.SettingsSacrificeCostBase, ref Settings._costBase, ref _baseCostBuf, 1, 10);
             DrawTextFieldWithLabel(sacrificeList.GetRect(lineHeight), Strings.SettingsSacrificeCostGrowthFactor, ref Settings._costGrowthFactor, ref _growthFactorBuf, 0, 10);
             DrawTextFieldWithLabel(sacrificeList.GetRect(lineHeight), Strings.SettingsSacrificeCostGrowthStartTier, ref Settings._costGrowthStartTier, ref _growthStartTierBuf, 1, 8);
+            DrawCostCalculationLabel(sacrificeList.GetRect(lineHeight), typeof(InvokeGreaterBlessing));
+            if (Settings.oldInvokeBlessing)
+            {
+                DrawCostCalculationLabel(sacrificeList.GetRect(lineHeight), typeof(InvokeLesserBlessing));
+            }
+
             DrawCheckBoxWithLabel(sacrificeList.GetRect(lineHeight), Strings.SettingsSacrificeEnableRandomSoulReapTier, ref Settings._enableRandomSoulReapTier);
             DrawCheckBoxWithLabel(sacrificeList.GetRect(lineHeight), Strings.SettingsSacrificeEnableStripOnSacrifice, ref Settings._enableCorpseStripOnSacrifice);
             DrawCheckBoxWithLabel(sacrificeList.GetRect(lineHeight), Strings.SettingsEnableBloodthirstNeed, ref Settings._enableBloodthirstNeed);
@@ -141,6 +149,7 @@ namespace ReviaRace
             DrawCheckBoxWithLabel(sacrificeList.GetRect(lineHeight), Strings.SettingsDisableUncompleteDebuff_Claws, ref Settings._DisableUncompleteDebuff_Claws);
             DrawCheckBoxWithLabel(sacrificeList.GetRect(lineHeight), Strings.SettingsReviaNoProjectLimitaions, ref Settings._NoProjectLimitations);
             DrawCheckBoxWithLabel(sacrificeList.GetRect(lineHeight), Strings.SettingsReviaNoCraftLimitaions, ref Settings._NoCraftLimitations);
+            DrawCheckBoxWithLabel(sacrificeList.GetRect(lineHeight), "RequireReviaGene".Translate(), ref Settings.requireReviaGene);
             if (Settings.EnableBloodthirstNeed)
             {
                 DrawTextFieldWithLabel<float>(sacrificeList.GetRect(lineHeight), Strings.SettingsBloodthirstDaysToEmpty, ref Settings._bloodthirstDaysToEmpty, ref _bloodthirstDaysToEmptyBuf, 1, 60);
@@ -158,10 +167,8 @@ namespace ReviaRace
             {
                 DrawTextFieldWithLabel(sacrificeList.GetRect(lineHeight), Strings.SettingsSoulReapSpawnFixed, ref Settings._soulReapSpawnFixed, ref _fixedTierBuf, 1, 9);
             }
-
-            sacrificeList.Gap(10);
-            DrawCostCalculationLabel(sacrificeList.GetRect(lineHeight), typeof(InvokeGreaterBlessing));
-            DrawCostCalculationLabel(sacrificeList.GetRect(lineHeight), typeof(InvokeLesserBlessing));
+            Widgets.CheckboxLabeled(sacrificeList.GetRect(lineHeight), "ReviaRaceOldSoulreapBlessing".Translate(), ref Settings.oldInvokeBlessing);
+            
 
             sacrificeList.End();
         }

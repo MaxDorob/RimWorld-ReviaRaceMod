@@ -8,7 +8,7 @@ using Verse;
 
 namespace ReviaRace.Helpers
 {
-    internal static class SoulReaperWorker
+    public static class SoulReaperWorker
     {
         #region variables
         internal static bool EnableRandomSoulReapTier { get; set; }
@@ -38,7 +38,12 @@ namespace ReviaRace.Helpers
             }
             if (pawn != null && GetSoulReapTier(pawn) == -1)
             {
-                if (pawn.kindDef == Defs.MarauderSkullshatterer ||
+                var ext = pawn.kindDef.GetModExtension<SoulreapLevel_Extension>();
+                if (ext != null)
+                {
+                    pawn.AddSoulReapTier(ext.level.RandomInRange);
+                }
+                else if (pawn.kindDef == Defs.MarauderSkullshatterer ||
                     pawn.kindDef == Defs.TemplarHighTemplar)
                 {
                     pawn.AddSoulReapTier(9);
@@ -77,7 +82,7 @@ namespace ReviaRace.Helpers
                 }
             }
         }
-        internal static int GetSoulReapTier(Pawn pawn)
+        public static int GetSoulReapTier(this Pawn pawn)
         {
             if (pawn.SoulReapHediff() != null)
             {

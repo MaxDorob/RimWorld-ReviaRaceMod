@@ -21,9 +21,17 @@ namespace ReviaRace.Helpers
             //.ToLower().Contains("revia");
             .genes?.HasGene(Defs.Tail)??false;
         internal static bool IsHumanlike(this Pawn pawn) => pawn.RaceProps.Humanlike;
-        internal static bool IsSkarnite(this Pawn pawn) => ModLister.IdeologyInstalled && (pawn?.ideo?.Ideo?.HasMeme(Defs.Skarnite) ?? false);
+        internal static bool IsSkarnite(this Pawn pawn) => ReviaDefOf.ReviaRaceSkarniteMeme != null && (pawn?.ideo?.Ideo?.HasMeme(ReviaDefOf.ReviaRaceSkarniteMeme) ?? false);
         internal static bool IsHediffActive(this Pawn pawn) => pawn.health.hediffSet.hediffs.Any(x => x.def.label.StartsWith("ReviaRaceSoulreap"));
         internal static Hediff SoulReapHediff(this Pawn pawn)=>pawn?.health.hediffSet.hediffs
                                          .FirstOrDefault(hediff => hediff.def.defName.StartsWith("ReviaRaceSoulreapTier"));
+
+        public static IEnumerable<PreceptDef> ReviaPrecepts
+        {
+            get
+            {
+                yield return ReviaDefOf.Revia_PrisonerSacrification;
+            }
+        }
     }
 }
