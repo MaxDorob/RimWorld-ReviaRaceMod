@@ -71,7 +71,7 @@
 				</li>
 
 				<!-- Mystical stone -->
-				<li>
+				<li MayRequire="Ludeon.Rimworld.Royalty">
 					<weight>0.8</weight>
 					<thingSetMaker Class="ReviaRace.ThingSetMaker_CountPerScore">
 						<fixedParams>
