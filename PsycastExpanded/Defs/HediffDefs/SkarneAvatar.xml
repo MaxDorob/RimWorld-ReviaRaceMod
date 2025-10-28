@@ -41,7 +41,7 @@
 		<defName>ReviaRace_SoulTax</defName>
 		<hediffClass>HediffWithComps</hediffClass>
 		<label>soul tax</label>
-		<description>This body can't handle all power of Skarne.</description>
+		<description>Being an Incarnation of a Bloody Goddess has its consequences.</description>
 		<isBad>false</isBad>
 		<countsAsAddedPartOrImplant>false</countsAsAddedPartOrImplant>
 		<stages>
