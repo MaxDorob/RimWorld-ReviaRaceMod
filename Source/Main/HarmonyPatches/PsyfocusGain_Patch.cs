@@ -1,4 +1,5 @@
-﻿using RimWorld;
+﻿using ReviaRace.Helpers;
+using RimWorld;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Verse;
 
-namespace Revia_VanillaPsycastExpanded.Patches
+namespace ReviaRace.HarmonyPatches
 {
     [HarmonyLib.HarmonyPatch(typeof(Pawn), "DoKillSideEffects")]
     internal static class PsyfocusGain_Patch
@@ -16,7 +17,7 @@ namespace Revia_VanillaPsycastExpanded.Patches
             var killer = dinfo?.Instigator as Pawn;
             if (killer != null && killer.HasPsylink)
             {
-                var value = killer.GetStatValue(Defs.Revia_PsyfocusPerKill);
+                var value = killer.GetStatValue(ReviaDefOf.Revia_PsyfocusPerKill);
                 if (value > float.Epsilon)
                 {
                     killer.psychicEntropy?.OffsetPsyfocusDirectly(value);

@@ -31,5 +31,6 @@ namespace ReviaRace.Helpers
         public static RecipeDef ReviaRaceSacrificeCorpse;
         public static ThingSetMakerDef ReviaRaceHumanlikeSacrifice;
         public static ThingSetMakerDef ReviaRaceAnimalSacrifice;
+        public static StatDef Revia_PsyfocusPerKill;
     }
 }
