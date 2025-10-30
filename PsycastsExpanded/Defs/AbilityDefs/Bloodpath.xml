@@ -168,6 +168,7 @@ By channeling psychic energy in a circuit through each of her tails, a Revia lev
 		<requireLineOfSight>true</requireLineOfSight>
 		<targetMode>Pawn</targetMode>
 		<abilityClass>Revia_VanillaPsycastExpanded.Ability_SkarnesCurse</abilityClass>
+		<goodwillImpact>-40</goodwillImpact>
 		<modExtensions>
 			<li Class="Revia_VanillaPsycastExpanded.AbilityExtension_ReviaPsycast">
 				<path>Revia_BloodPath</path>
@@ -197,7 +198,7 @@ By channeling psychic energy in a circuit through each of her tails, a Revia lev
 		<range>45</range>
 		<requireLineOfSight>true</requireLineOfSight>
 		<targetMode>Pawn</targetMode>
-
+		<goodwillImpact>-40</goodwillImpact>
 		<abilityClass>Revia_VanillaPsycastExpanded.Ability_BloodyExplosion</abilityClass>
 		<modExtensions>
 			<li Class="Revia_VanillaPsycastExpanded.AbilityExtension_ReviaPsycast">
