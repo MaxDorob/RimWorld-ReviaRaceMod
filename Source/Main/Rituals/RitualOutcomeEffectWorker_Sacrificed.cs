@@ -1,5 +1,6 @@
 ﻿using ReviaRace.Comps;
 using ReviaRace.Helpers;
+using ReviaRace.Needs;
 using RimWorld;
 using System;
 using System.Collections.Generic;
@@ -55,6 +56,23 @@ namespace ReviaRace.Rituals
                     pawn.health.AddHediff(ReviaDefOf.ReviaRaceBlessedBySkarne);
                 }
             }
+            if (outcome.Positive)
+            {
+                foreach (var pawn in totalPresence.Keys)
+                {
+                    var need = pawn.needs.AllNeeds.OfType<BloodthirstNeed>().FirstOrDefault();
+                    if (need != null && need.PawnAffected)
+                    {
+                        var amount = 0.03f * outcome.positivityIndex;
+                        if (jobRitual.RoleFor(pawn).id == "sacrificer")
+                        {
+                            amount += 0.5f;
+                        }
+                        need.CurLevel += amount;
+                    }
+                }
+            }
+
             Find.World.GetComponent<SacrificeTracker>().SacrificePerformed(Faction.OfPlayer);
         }
     }
