@@ -60,11 +60,11 @@ namespace ReviaRace.Rituals
             {
                 foreach (var pawn in totalPresence.Keys)
                 {
-                    var need = pawn.needs.AllNeeds.OfType<BloodthirstNeed>().FirstOrDefault();
+                    var need = pawn.needs?.AllNeeds.OfType<BloodthirstNeed>().FirstOrDefault();
                     if (need != null && need.PawnAffected)
                     {
                         var amount = 0.03f * outcome.positivityIndex;
-                        if (jobRitual.RoleFor(pawn).id == "sacrificer")
+                        if (jobRitual.RoleFor(pawn)?.id == "sacrificer")
                         {
                             amount += 0.5f;
                         }
