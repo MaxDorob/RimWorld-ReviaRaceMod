@@ -62,7 +62,7 @@ namespace ReviaRace.HarmonyPatches
         }
         public static Gender? SelectGender(Pawn mother, Gender? gender)
         {
-            if (mother.IsRevia() && gender == null && StaticModVariables.BornSettings != BornSettingsEnum.Default)
+            if (mother.IsRevia() && gender == null && StaticModVariables.BornSettings != BornSettingsEnum.BiotechDefault)
                 gender = Gender.Female;
             return gender;
         }

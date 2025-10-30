@@ -5,7 +5,7 @@ namespace ReviaRace.Enums
 {
     public enum BornSettingsEnum 
     {
-       Default,
+       BiotechDefault,
        NoMaleBorn,
        ForceBornRevia
     }

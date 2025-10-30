@@ -241,7 +241,7 @@ namespace ReviaRace
             Widgets.Label(rectLabel, Translator.Translate(Strings.SettingsBornType));
             Widgets.Dropdown<BornSettingsEnum, BornSettingsEnum>(
                 rectComboBox,
-                BornSettingsEnum.NoMaleBorn,
+                BornSettingsEnum.ForceBornRevia,
                 mode => mode,
                 (s) =>
                 {

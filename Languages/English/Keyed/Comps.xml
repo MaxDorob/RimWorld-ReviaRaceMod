@@ -40,6 +40,7 @@
   <Exponential>Exponential</Exponential>
   <ReviaRaceConvertName>Change xenotype for {0}</ReviaRaceConvertName>
   <ReviaRaceSettingsBornType>Born type</ReviaRaceSettingsBornType>
+	<BiotechDefault>Biotech default</BiotechDefault>
   <NoMaleBorn>Revia born only female</NoMaleBorn>
   <ForceBornRevia>Revia born only Revia</ForceBornRevia>
   <ReviaRejectionType>Revia genes rejection type</ReviaRejectionType>
