@@ -20,6 +20,11 @@ namespace ReviaRace
             {
                 return false;
             }
+            if (p.gender != Gender.Female && ReviaRaceMod.Settings.RejectionType != Comps.RejectionType.NoRejection)
+            {
+                reason = "ReviaRaceMessageRitualPawnMustBeFemale".Translate();
+                return false;
+            }
             bool ritualWillChangeSomething = p?.genes?.Xenotype != Defs.XenotypeDef;
             if (!ritualWillChangeSomething)
             {

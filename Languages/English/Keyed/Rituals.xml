@@ -7,4 +7,5 @@
 	<SacrificerNotSelected>Sacrifcer is not selected</SacrificerNotSelected>
 	<RitualTargetBloodstonesInfo>Bloodstones required: {0}</RitualTargetBloodstonesInfo>
 	<ReviaMinimalBloodstonesCount>Minimal bloodstones required for {0}: {1}</ReviaMinimalBloodstonesCount>
+	<ReviaRaceMessageRitualPawnMustBeFemale>Must be female</ReviaRaceMessageRitualPawnMustBeFemale>
 </LanguageData>
