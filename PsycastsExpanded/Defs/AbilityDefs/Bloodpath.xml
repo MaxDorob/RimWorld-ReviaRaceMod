@@ -293,6 +293,7 @@ The larger the creature, and the more blood that is flowing, the greater the rew
 		<warmupSound></warmupSound>
 		<abilityClass>VEF.Abilities.Ability_Blank</abilityClass>
 		<chance>0</chance>
+		<goodwillImpact>-40</goodwillImpact>
 		<modExtensions>
 			<li Class="Revia_VanillaPsycastExpanded.AbilityExtension_ReviaPsycast">
 				<path>Revia_BloodPath</path>
