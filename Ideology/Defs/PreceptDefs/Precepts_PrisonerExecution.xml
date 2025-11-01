@@ -17,8 +17,16 @@
         <nullifyingTraits>
           <li>Bloodlust</li>
           <li>Psychopath</li>
-					<li>Cannibal</li>
+		  <li>Cannibal</li>
         </nullifyingTraits>
+		<nullifyingPrecepts>
+	  	  <li MayRequire="Ludeon.RimWorld.Ideology">Cannibalism_Acceptable</li>
+      	  <li MayRequire="Ludeon.RimWorld.Ideology">Cannibalism_Preferred</li>
+    	  <li MayRequire="Ludeon.RimWorld.Ideology">Cannibalism_RequiredStrong</li>
+     	  <li MayRequire="Ludeon.RimWorld.Ideology">Cannibalism_RequiredRavenous</li>
+	      <li MayRequire="Ludeon.RimWorld.Ideology">Execution_Required</li>
+     	  <li MayRequire="Ludeon.RimWorld.Ideology">Raiding_Required</li>
+   		</nullifyingPrecepts>
         <nullifyingHediffs>
           <li MayRequire="Ludeon.RimWorld.Anomaly">Inhumanized</li>
         </nullifyingHediffs>
@@ -37,12 +45,12 @@
         <description>Sacrificed prisoner</description>
       </li>
 
-			<!-- know mood -->
-			<li Class="PreceptComp_KnowsMemoryThought">
-				<eventDef>Revia_PrisonerSacrificed</eventDef>
-				<thought>Revia_SacrificedPrisoner_Know_Abhorrent_Mood</thought>
-				<description>Sacrificed prisoner</description>
-			</li>
+	 <!-- know mood -->
+	 <li Class="PreceptComp_KnowsMemoryThought">
+	    <eventDef>Revia_PrisonerSacrificed</eventDef>
+		<thought>Revia_SacrificedPrisoner_Know_Abhorrent_Mood</thought>
+		<description>Sacrificed prisoner</description>
+	 </li>
     </comps>
   </PreceptDef>
 
@@ -59,7 +67,7 @@
     <defName>Revia_PrisonerSacrifice_Respected</defName>
 		<issue>Revia_PrisonerSacrifice</issue>
     <label>respected</label>
-    <description>Sacrificing prisoners in the name of Skarne is acceptable. We need it, we like it</description>
+    <description>Sacrificing prisoners in the name of Skarne is acceptable.</description>
     <impact>Low</impact>
     <displayOrderInIssue>10</displayOrderInIssue>
     <displayOrderInImpact>1000</displayOrderInImpact>
@@ -75,10 +83,10 @@
         <eventDef>Revia_PrisonerSacrificed</eventDef>
         <thought>Revia_SacrificedPrisoner_Know_Respected</thought>
       </li>
-			<li Class="PreceptComp_KnowsMemoryThought">
-				<eventDef>Revia_PrisonerSacrificed</eventDef>
-				<thought>Revia_SacrificedPrisoner_Know_Respected_Mood</thought>
-			</li>
+	  <li Class="PreceptComp_KnowsMemoryThought">
+		<eventDef>Revia_PrisonerSacrificed</eventDef>
+		<thought>Revia_SacrificedPrisoner_Know_Respected_Mood</thought>
+	  </li>
       <li Class="PreceptComp_DevelopmentPoints">
         <eventDef>Revia_PrisonerSacrificed</eventDef>
         <eventLabel>sacrificed someone</eventLabel>
@@ -89,7 +97,7 @@
 
   <PreceptDef>
     <defName>Revia_PrisonerSacrifice_Required</defName>
-		<issue>Revia_PrisonerSacrifice</issue>
+	<issue>Revia_PrisonerSacrifice</issue>
     <label>required</label>
     <description>Prisoners must be sacrificed on a regular basis. For the glory of Her name.</description>
     <impact>Medium</impact>
@@ -145,14 +153,23 @@
 		<nullifyingTraits>
 			<li>Psychopath</li>
 			<li>Bloodlust</li>
+			<li>Cannibal</li>
 		</nullifyingTraits>
 		<nullifyingHediffs>
 			<li MayRequire="Ludeon.RimWorld.Anomaly">Inhumanized</li>
 		</nullifyingHediffs>
+		<nullifyingPrecepts>
+	       <li MayRequire="Ludeon.RimWorld.Ideology">Cannibalism_Acceptable</li>
+           <li MayRequire="Ludeon.RimWorld.Ideology">Cannibalism_Preferred</li>
+           <li MayRequire="Ludeon.RimWorld.Ideology">Cannibalism_RequiredStrong</li>
+           <li MayRequire="Ludeon.RimWorld.Ideology">Cannibalism_RequiredRavenous</li>
+	       <li MayRequire="Ludeon.RimWorld.Ideology">Raiding_Required</li>
+	       <li MayRequire="Ludeon.RimWorld.Ideology">Execution_Required</li>
+        </nullifyingPrecepts>
 		<stages>
 			<li>
 				<label>sacrificed prisoner</label>
-				<description>I sacrificed a prisoner for ruthless god</description>
+				<description>I sacrificed a prisoner for a ruthless goddess.</description>
 				<baseMoodEffect>-7</baseMoodEffect>
 			</li>
 		</stages>
@@ -163,7 +180,7 @@
     <thoughtClass>Thought_MemorySocial</thoughtClass>
     <durationDays>20</durationDays>
     <stackLimit>100</stackLimit>
-    <stackLimitForSameOtherPawn>3</stackLimitForSameOtherPawn>
+    <stackLimitForSameOtherPawn>1</stackLimitForSameOtherPawn>
     <nullifyingTraits>
       <li>Psychopath</li>
       <li>Bloodlust</li>
@@ -184,17 +201,26 @@
     <durationDays>6</durationDays>
     <stackLimit>5</stackLimit>
     <doNotApplyToQuestLodgers>true</doNotApplyToQuestLodgers>
-    <nullifyingTraits>
-      <li>Psychopath</li>
-      <li>Bloodlust</li>
-    </nullifyingTraits>
-    <nullifyingHediffs>
-      <li MayRequire="Ludeon.RimWorld.Anomaly">Inhumanized</li>
-    </nullifyingHediffs>
+	<nullifyingTraits>
+	  <li>Psychopath</li>
+	  <li>Bloodlust</li>
+	  <li>Cannibal</li>
+	</nullifyingTraits>
+	<nullifyingHediffs>
+	  <li MayRequire="Ludeon.RimWorld.Anomaly">Inhumanized</li>
+	</nullifyingHediffs>
+	<nullifyingPrecepts>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Cannibalism_Acceptable</li>
+    	<li MayRequire="Ludeon.RimWorld.Ideology">Cannibalism_Preferred</li>
+    	<li MayRequire="Ludeon.RimWorld.Ideology">Cannibalism_RequiredStrong</li>
+    	<li MayRequire="Ludeon.RimWorld.Ideology">Cannibalism_RequiredRavenous</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Raiding_Required</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Execution_Required</li>
+    </nullifyingPrecepts>
     <stages>
       <li>
         <label>innocent prisoner was sacrificed</label>
-        <description>One of our prisoners died at the whim of some bloody god.</description>
+        <description>One of our prisoners died at the whim of some bloody goddess.</description>
         <baseMoodEffect>-7</baseMoodEffect>
       </li>
     </stages>
@@ -206,7 +232,7 @@
     <stages>
       <li>
         <label>sacrificed prisoner</label>
-        <description>I sacrificed prisoner. I'm proud to serve Skarne!</description>
+        <description>I sacrificed a prisoner. I'm proud to serve Skarne!</description>
         <baseMoodEffect>10</baseMoodEffect>
       </li>
     </stages>
@@ -232,7 +258,7 @@
     <stages>
       <li>
         <label>execution</label>
-        <description>We sacrificed a prisoner. Blood, blood, blood!</description>
+        <description>Blood! Blood! Blood!</description>
         <baseMoodEffect>3</baseMoodEffect>
       </li>
     </stages>
@@ -245,8 +271,8 @@
     <doNotApplyToQuestLodgers>true</doNotApplyToQuestLodgers>
     <stages>
       <li>
-        <label>no execution</label>
-        <description>It has been too long since we sacrificed a prisoner. We disappoint Skarne...</description>
+        <label>no recent execution</label>
+        <description>It has been too long since we sacrificed a prisoner. We'll disappoint Skarne!</description>
         <baseMoodEffect>-3</baseMoodEffect>
       </li>
     </stages>
