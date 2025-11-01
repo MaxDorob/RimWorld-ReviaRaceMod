@@ -14,14 +14,6 @@
 		<comps>
 			<li Class="PreceptComp_UnwillingToDo">
 				<eventDef>Revia_PrisonerSacrificed</eventDef>
-				<nullifyingPrecepts>
-					<li MayRequire="Ludeon.RimWorld.Ideology">Cannibalism_Acceptable</li>
-					<li MayRequire="Ludeon.RimWorld.Ideology">Cannibalism_Preferred</li>
-					<li MayRequire="Ludeon.RimWorld.Ideology">Cannibalism_RequiredStrong</li>
-					<li MayRequire="Ludeon.RimWorld.Ideology">Cannibalism_RequiredRavenous</li>
-					<li MayRequire="Ludeon.RimWorld.Ideology">Execution_Required</li>
-					<li MayRequire="Ludeon.RimWorld.Ideology">Raiding_Required</li>
-				</nullifyingPrecepts>
 				<nullifyingHediffs>
 					<li MayRequire="Ludeon.RimWorld.Anomaly">Inhumanized</li>
 				</nullifyingHediffs>
