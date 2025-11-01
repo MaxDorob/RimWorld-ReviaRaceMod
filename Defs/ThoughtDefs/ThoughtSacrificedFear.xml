@@ -8,11 +8,17 @@
     <nullifyingTraits>
       <li>Masochist</li>
     </nullifyingTraits>
+    <nullifyingHediffs>
+      <li MayRequire="Ludeon.RimWorld.Anomaly">Inhumanized</li>
+    </nullifyingHediffs>
+    <nullifyingPrecepts>
+	    <li MayRequire="Ludeon.RimWorld.Ideology">Pain_Idealized</li>
+    </nullifyingPrecepts>	
     <stages>
       <li>
         <label>other prisoner sacrificed</label>
         <description>One of the other prisoners were sacrificed. I could hear their screams from my cell...</description>
-        <baseMoodEffect>-15</baseMoodEffect>
+        <baseMoodEffect>-12</baseMoodEffect>
       </li>
     </stages>
   </ThoughtDef>
