@@ -21,12 +21,12 @@
       </li>
       <li>
         <label>itching for a fight</label>
-        <description>I should be looking for my next offering.</description>
+        <description>I should be looking for the next offering.</description>
         <baseMoodEffect>-2</baseMoodEffect>
       </li>
       <li>
         <label>bloodthirst sated</label>
-        <description>Skarne must be pleased with my latest offerings!</description>
+        <description>Skarne is pleased!</description>
         <baseMoodEffect>3</baseMoodEffect>
       </li>
     </stages>
