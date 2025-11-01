@@ -8,8 +8,8 @@
     <stages>
       <li>
         <label>Something missing</label>
-        <description>Something makes me feel imperfect.</description>
-        <baseMoodEffect>-12</baseMoodEffect>
+        <description>I feel imperfect, we need to do a conversion ritual or acquire the rest of my Revia genes.</description>
+        <baseMoodEffect>-10</baseMoodEffect>
       </li>
     </stages>
   </ThoughtDef>
