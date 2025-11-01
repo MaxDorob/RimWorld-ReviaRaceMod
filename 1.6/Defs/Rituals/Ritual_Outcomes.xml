@@ -69,7 +69,7 @@
 				<label>Spectacular</label>
 				<chance>0.1</chance>
 				<memory>Revia_SpectacularSacrifice</memory>
-				<description>We impressed Her with {0}! She deeply enjoyed this spectacular execution!</description>
+				<description>We impressed her with {0}! This was a spectacular execution!</description>
 				<potentialExtraOutcomeDesc>Revia participants will get a bonus.</potentialExtraOutcomeDesc>
 				<positivityIndex>27</positivityIndex>
 			</li>
@@ -83,7 +83,7 @@
 
 	<RitualOutcomeEffectDef ParentName="ReviaOutcomeBase">
 		<defName>Revia_BlessingForSoulreap</defName>
-		<description>Sacrificer will be rewarded with a tail.</description>
+		<description>A Revia will be rewarded with another tail for her sacrifices.</description>
 		<workerClass>ReviaRace.Rituals.RitualOutcomeEffectWorker_SkarnesBlessing</workerClass>
 		<comps>
 			<li Class="ReviaRace.Rituals.RitualOutcomeComp_TailsCount">
@@ -132,7 +132,7 @@
 
 	<RitualOutcomeEffectDef ParentName="ReviaOutcomeBase" MayRequire="Ludeon.Rimworld.Biotech">
 		<defName>Revia_XenotypeConversion</defName>
-		<description>A convertee's xenotype will be changed to the Revia.</description>
+		<description>A partial or hybrid Revia's xenotype will be purified by conversion to a true Revia.</description>
 		<workerClass>ReviaRace.Rituals.RitualOutcomeEffectWorker_XenotypeConversion</workerClass>
 		<startingQuality>0.2</startingQuality>
 		<extraPredictedOutcomeDescriptions>
@@ -142,19 +142,19 @@
 			<li>
 				<label>Terrible</label>
 				<chance>0.2</chance>
-				<description>We disappointed Skarne... We disappointed Her...</description>
+				<description>We disappointed Skarne... What does this mean for the purified?</description>
 				<positivityIndex>-1</positivityIndex>
 			</li>
 			<li>
 				<label>Satisfying</label>
 				<chance>0.6</chance>
-				<description>We were blessed.</description>
+				<description>We were blessed, she is one of ours.</description>
 				<positivityIndex>1</positivityIndex>
 			</li>
 			<li>
 				<label>Spectacular</label>
 				<chance>0.2</chance>
-				<description>The Queen of Blood has spoken. We will dance among the severed bodies of our enemies!</description>
+				<description>The Queen of Blood has spoken. We will dance with her among the severed bodies of our enemies!</description>
 				<positivityIndex>2</positivityIndex>
 			</li>
 		</outcomeChances>
