@@ -3,8 +3,7 @@
   <JobDef>
     <defName>ReviaRaceXenotypeConversation</defName>
     <driverClass>ReviaRace.JobDrivers.ConversationRitualJobDriver</driverClass>
-    <reportString>Converting to revia.</reportString>
+    <reportString>Converting a partial or hybrid Revia into a true, pureblood Revia.</reportString>
     <casualInterruptible>false</casualInterruptible>
   </JobDef>
-
 </Defs>
