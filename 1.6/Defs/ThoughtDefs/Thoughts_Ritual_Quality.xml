@@ -11,7 +11,7 @@
     <stages>
       <li>
         <label>terrible sacrifice</label>
-        <description>Terrible and deeply disappointing...</description>
+        <description>Deeply unsatisfying...</description>
         <baseMoodEffect>-3</baseMoodEffect>
       </li>
     </stages>
@@ -25,7 +25,7 @@
     <stages>
       <li>
         <label>boring sacrifice</label>
-        <description>Dull, that sacrifice wasn't bloody enough.</description>
+        <description>Dull, but properly done. That sacrifice wasn't nearly bloody enough.</description>
         <baseMoodEffect>-1</baseMoodEffect>
       </li>
     </stages>
@@ -39,8 +39,8 @@
     <stages>
       <li>
         <label>satisfying sacrifice</label>
-        <description>We satisfied Skarne with that bloody sacrifice.</description>
-        <baseMoodEffect>5</baseMoodEffect>
+        <description>We satisfied Skarne with a proper bloody sacrifice.</description>
+        <baseMoodEffect>4</baseMoodEffect>
       </li>
     </stages>
   </ThoughtDef>
