@@ -14,11 +14,6 @@
     <comps>
       <li Class="PreceptComp_UnwillingToDo">
         <eventDef>Revia_PrisonerSacrificed</eventDef>
-        <nullifyingTraits>
-          <li>Bloodlust</li>
-          <li>Psychopath</li>
-		  <li>Cannibal</li>
-        </nullifyingTraits>
 		<nullifyingPrecepts>
 	  	  <li MayRequire="Ludeon.RimWorld.Ideology">Cannibalism_Acceptable</li>
       	  <li MayRequire="Ludeon.RimWorld.Ideology">Cannibalism_Preferred</li>
