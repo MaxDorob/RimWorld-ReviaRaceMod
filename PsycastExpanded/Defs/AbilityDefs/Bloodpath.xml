@@ -12,7 +12,7 @@
 		<needsTicking>true</needsTicking>
 		<targetMode>Pawn</targetMode>
 		<range>99999</range>
-		<!--Revia AI are REALLY silly with how they use this-->
+		<!--Revia Pawn AI are REALLY silly with how they use this, enable at your own risk-->
 		<chance>0</chance>
 		<targetingParametersList>
 			<li>
@@ -159,6 +159,7 @@ By channeling psychic energy in a circuit through each of her tails, a Revia lev
 		<defName>Revia_SkarnesCurse</defName>
 		<label>skarne's curse</label>
 		<description>Channel the bloodthirsty viciousness that is integral to the Revia, and force a curse onto a living victim. Increasing their vulnerability to damage and hemmorhaging, all while causing open wounds to burst out of them!</description>
+		<description>Channel the bloodthirst that is integral in all Revia, and teleport to strike multiple targets in a chain before returning to your starting position, forcing a weakening curse on surviving victims that bursts out open wounds!</description>
 		<iconPath>UI/Bloodpath/SkarnesCurse</iconPath>
 		<castTime>40</castTime>
 		<durationTime>1800</durationTime>
@@ -276,7 +277,7 @@ By channeling psychic energy in a circuit through each of her tails, a Revia lev
 				<psychic>true</psychic>
 				<soulReapLevel>1</soulReapLevel>
 			</li>
-			<li Class="Revia_VanillaPsycastExpanded.AbilityExtension_ReavingReap">
+			    <li Class="Revia_VanillaPsycastExpanded.AbilityExtension_ReavingReap">
 			</li>
 		</modExtensions>
 	</VEF.Abilities.AbilityDef>
@@ -284,8 +285,7 @@ By channeling psychic energy in a circuit through each of her tails, a Revia lev
 	<VEF.Abilities.AbilityDef ParentName="VPE_WordOfAbilityBase">
 		<defName>Revia_VermilionHarvest</defName>
 		<label>vermilion harvest</label>
-		<description>Revia love a good sacrifice, especially with living victims. This particularly gruesome way of sacrificng is very satisfying for a Revia's bloodthirst, offers additional bloodstones, grants a moderate psyfocus Boon, and will burst the body in a shower of blood! 
-The larger the creature, and the more blood that is flowing, the greater the reward.</description>
+		<description>Revia love a good sacrifice, especially with living victims. This gruesome way of sacrificing is very satisfying for a Revia's bloodthirst, offers additional bloodstones, a moderate psyfocus boon, and will burst the body in a shower of blood on kill!</description>
 		<iconPath>UI/Bloodpath/VermilionHarvest</iconPath>
 		<castTime>300</castTime>
 		<warmupMote></warmupMote>
