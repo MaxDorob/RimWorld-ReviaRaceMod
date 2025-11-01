@@ -3,13 +3,27 @@
   <ThoughtDef>
     <defName>ReviaRaceThoughtSacrificedNegative</defName>
     <durationDays>4</durationDays>
-    <stackLimit>4</stackLimit>
+    <stackLimit>1</stackLimit>
     <stackedEffectMultiplier>0.35</stackedEffectMultiplier>
     <nullifyingTraits>
       <li>Psychopath</li>
       <li>Bloodlust</li>
       <li>Cannibal</li>
     </nullifyingTraits>
+    <nullifyingHediffs>
+      <li MayRequire="Ludeon.RimWorld.Anomaly">Inhumanized</li>
+    </nullifyingHediffs>
+    <nullifyingPrecepts>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Cannibalism_Acceptable</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Cannibalism_Preferred</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Cannibalism_RequiredStrong</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Cannibalism_RequiredRavenous</li>
+	    <li MayRequire="Ludeon.RimWorld.Ideology">OrganUse_Acceptable</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Execution_Required</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Raiding_Respected</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Raiding_Required</li>
+	    <li MayRequire="Ludeon.RimWorld.Ideology">Corpses_DontCare</li>
+    </nullifyingPrecepts>	
     <stages>
       <li>
         <label>Sacrificed corpse</label>
@@ -21,7 +35,7 @@
   <ThoughtDef>
     <defName>ReviaRaceThoughtSacrificedNegativePrisoner</defName>
     <durationDays>4</durationDays>
-    <stackLimit>2</stackLimit>
+    <stackLimit>1</stackLimit>
     <stackedEffectMultiplier>0.65</stackedEffectMultiplier>
     <nullifyingTraits>
       <li>Psychopath</li>
