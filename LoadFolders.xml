@@ -19,5 +19,6 @@
 		<li IfModActive="Vinzero.Revia.FacialAnimation">FA_Compat/1.6.2</li>
 		<li IfModActive="StatistNo1.personabond">PersonBondForge</li>
 		<li IfModActive="VanillaExpanded.VPsycastsE">PsycastExpanded</li>
+		<li IfModActive="Barbariank.Hoomancute">HoomanCute</li>
 	</v1.6>
 </loadFolders>
