@@ -1,4 +1,5 @@
 ﻿using ReviaRace.Helpers;
+using RimWorld;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,8 +20,16 @@ namespace ReviaRace
                 {
                     return 0;
                 }
-                return pawn.BodySize * (pawn.IsHumanlike() ? 1 : 0.33f);
-
+                var score = pawn.BodySize;
+                if (!pawn.IsHumanlike())
+                {
+                    score *= 0.33f;
+                }
+                var corpse = pawn.Corpse;
+                if (corpse != null)
+                {
+                    score /= (float)corpse.CurRotDrawMode;
+                }
             }
             return 0f;
         }
