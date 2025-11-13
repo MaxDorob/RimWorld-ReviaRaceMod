@@ -26,6 +26,7 @@ namespace ReviaRace.Rituals
                 return;
             }
             var prisoner = jobRitual.PawnWithRole("prisoner");
+            var sacrificer = jobRitual.PawnWithRole("sacrificer");
             if (!prisoner.Dead)//Vanilla Expanded Archon?
             {
                 return;
@@ -39,6 +40,40 @@ namespace ReviaRace.Rituals
             score *= SacrificeHelper.GetScore(prisoner) * multiplier;
             var position = prisoner.Corpse?.PositionHeld ?? prisoner.PositionHeld;
             var map = prisoner.Corpse?.MapHeld ?? prisoner.MapHeld;
+
+            if (map.GameConditionManager.ConditionIsActive(Defs.Eclipse))
+            {
+                var missingParts = sacrificer.health.hediffSet.GetMissingPartsCommonAncestors();
+                if (missingParts.Count > 0)
+                {
+                    var missing = missingParts.RandomElement();
+                    sacrificer.health.hediffSet.hediffs.Remove(missing);
+                    var maxHp = missing.Part.def.GetMaxHealth(sacrificer);
+
+                    var injuryHediff = sacrificer.health.AddHediff(HediffDefOf.Cut, missing.Part, new DamageInfo(DamageDefOf.Rotting, 1.0f, 10000.00f));
+                    var permHediffComp = injuryHediff.TryGetComp<HediffComp_GetsPermanent>();
+                    injuryHediff.Severity = maxHp / 2.0f;
+                    permHediffComp.IsPermanent = true;
+                }
+                else
+                {
+                    score *= 1.5f;
+                }
+            }
+            else if (map.GameConditionManager.ConditionIsActive(Defs.SolarFlare))
+            {
+                var permInjuries = sacrificer.health.hediffSet.hediffs.Where(h => h.IsPermanent() && !(h is Hediff_MissingPart)).ToList();
+                if (permInjuries.Count > 0)
+                {
+                    var randomInjury = permInjuries.RandomElement();
+                    randomInjury.Severity -= randomInjury.Part.depth == BodyPartDepth.Inside ? 2.0f : 4.0f;
+                }
+                else
+                {
+                    score *= 1.2f;
+                }
+            }
+
             var parms = default(ThingSetMakerParams);
             parms.custom ??= [];
             parms.custom[ThingSetMaker_CountPerScore.paramName] = score;
