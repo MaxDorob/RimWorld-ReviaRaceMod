@@ -3,6 +3,7 @@ using ReviaRace.Enums;
 using ReviaRace.HarmonyPatches;
 using ReviaRace.Helpers;
 using ReviaRace.Needs;
+using ReviaRace.Rituals;
 using ReviaRace.Workers;
 using System;
 using System.Collections.Generic;
@@ -17,7 +18,7 @@ namespace ReviaRace.PersistentData
     public class ReviaSettings : Verse.ModSettings
     {
         private const float defaultGrowthFactor = 2.21f;
-        public ReviaSettings()
+        public ReviaSettings() : base()
         {
             CostBase = 1;
             CostGrowthFactor = defaultGrowthFactor;
@@ -30,6 +31,7 @@ namespace ReviaRace.PersistentData
             SoulReapSpawnRange = new IntRange(1, 3);
             SoulReapSpawnFixed = 2;
             SoulReapSpawnByAge = true;
+            ReviaRaceMod.Settings = this;
         }
 
         public void ApplySettings()
@@ -53,6 +55,7 @@ namespace ReviaRace.PersistentData
             Entry.NoProjectLimitations = NoProjectLimitations;
             StaticModVariables.BornSettings = BornSettings;
             StaticModVariables.NoHybrid = NoHybrid;
+            RitualOutcomeComp_BloodstonesCount.InitCurve();
             Log.Message("Settings applied");
         }
         internal void UpdateIfNeeded()

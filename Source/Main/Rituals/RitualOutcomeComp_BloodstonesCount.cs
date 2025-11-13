@@ -14,6 +14,30 @@ namespace ReviaRace.Rituals
 {
     public class RitualOutcomeComp_BloodstonesCount : RitualOutcomeComp_Quality
     {
+        private static readonly SimpleCurve bloodstonesCurve = new SimpleCurve(); 
+        internal static SimpleCurve BloodstonesCurve
+        {
+            get
+            {
+                return bloodstonesCurve;
+            }
+        }
+        internal static void InitCurve()
+        {
+            var maxCost = InvokeGreaterBlessing.GetAdvanceCost(8);
+            var points = new List<CurvePoint>();
+            for (int i = 1; i < 8; i++)
+            {
+                var count = (float)InvokeGreaterBlessing.GetAdvanceCost(i);
+                points.Add(new CurvePoint(count, 1f / (maxCost - count)));
+            }
+            points.Add(new CurvePoint(maxCost, 1f));
+            bloodstonesCurve.SetPoints(points);
+        }
+        public RitualOutcomeComp_BloodstonesCount() : base()
+        {
+            curve = bloodstonesCurve;
+        }
         [HarmonyLib.HarmonyPatch(typeof(Dialog_BeginRitual), nameof(Dialog_BeginRitual.DoRightColumn))]
         internal static class DialogBeginRitual_Patch
         {
@@ -43,14 +67,7 @@ namespace ReviaRace.Rituals
         {
             get
             {
-                var maxCost = InvokeGreaterBlessing.GetAdvanceCost(8);
-                var curve = new SimpleCurve();
-                for (int i = 1; i < 8; i++)
-                {
-                    var count = (float)InvokeGreaterBlessing.GetAdvanceCost(i);
-                    curve.Add(count, 1f / (maxCost - count));
-                }
-                curve.Add(maxCost, 1f);
+                
                 return curve;
             }
         }
@@ -67,6 +84,11 @@ namespace ReviaRace.Rituals
         public override float Count(LordJob_Ritual ritual, RitualOutcomeComp_Data data)
         {
             return ((RitualOutcomeComp_DataBloodstonesCount)data).selectedCount;
+        }
+        public override float QualityOffset(LordJob_Ritual ritual, RitualOutcomeComp_Data data)
+        {
+            var count = ((RitualOutcomeComp_DataBloodstonesCount)data).selectedCount;
+            return this.Curve.Evaluate(count);
         }
         public override QualityFactor GetQualityFactor(Precept_Ritual ritual, TargetInfo ritualTarget, RitualObligation obligation, RitualRoleAssignments assignments, RitualOutcomeComp_Data data)
         {
