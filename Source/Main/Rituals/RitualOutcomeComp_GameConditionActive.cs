@@ -20,7 +20,11 @@ namespace ReviaRace
 
         public override bool Applies(LordJob_Ritual ritual)
         {
-            return true;
+            if (ritual.Map != null && ritual.Map.GameConditionManager.ConditionIsActive(condition))
+            {
+                return true;
+            }
+            return false;
         }
 
         public override float Count(LordJob_Ritual ritual, RitualOutcomeComp_Data data)
