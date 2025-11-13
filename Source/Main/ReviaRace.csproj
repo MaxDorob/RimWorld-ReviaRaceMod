@@ -140,6 +140,7 @@
     <Compile Include="Rituals\RitualObligationTargetWorker_MysticalStone.cs" />
     <Compile Include="Rituals\RitualObligationTargetWorker_SoulreapLevelUp.cs" />
     <Compile Include="Rituals\RitualOutcomeComp_BloodstonesCount.cs" />
+    <Compile Include="Rituals\RitualOutcomeComp_GameConditionActive.cs" />
     <Compile Include="Rituals\RitualOutcomeComp_ReviaCount.cs" />
     <Compile Include="Rituals\RitualOutcomeComp_TailsCount.cs" />
     <Compile Include="Rituals\RitualOutcomeEffectWorker_PsycastBlessing.cs" />

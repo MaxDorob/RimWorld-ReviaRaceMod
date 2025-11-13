@@ -36,6 +36,11 @@
 				<qualityOffset>0.3</qualityOffset>
 				<def>ReviaSkarnesSculpture</def>
 			</li>
+			<li Class="ReviaRace.RitualOutcomeComp_GameConditionActive">
+				<label>eclipse</label>
+				<qualityOffset>0.09</qualityOffset>
+				<condition>Eclipse</condition>
+			</li>
 		</comps>
 	</RitualOutcomeEffectDef>
 
@@ -79,6 +84,13 @@
 				<baseScore>1.8</baseScore>
 			</li>
 		</modExtensions>
+		<comps>
+			<li Class="ReviaRace.RitualOutcomeComp_GameConditionActive">
+				<label>solar flare</label>
+				<qualityOffset>0.05</qualityOffset>
+				<condition>SolarFlare</condition>
+			</li>
+		</comps>
 	</RitualOutcomeEffectDef>
 
 	<RitualOutcomeEffectDef ParentName="ReviaOutcomeBase">
