@@ -24,6 +24,10 @@ namespace Revia_VanillaPsycastExpanded
                 if (target.Thing is Pawn victim && victim.health.CanBleed)
                 {
                     var amount = bleedLoss * victim.GetStatValue(StatDefOf.PsychicSensitivity) / victim.BodySize;
+                    var bodyPart = victim.health.hediffSet.GetBodyPartRecord(BodyPartDefOf.Torso);
+                    var damageInfo = new DamageInfo(DamageDefOf.Cut, 10, hitPart: bodyPart);
+                    damageInfo.SetIgnoreArmor(true);
+                    victim.TakeDamage(damageInfo);
                     SpawnReward(victim);
                     HealthUtility.AdjustSeverity(victim, HediffDefOf.BloodLoss, amount);
                     var bloodLoss = victim.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.BloodLoss);
