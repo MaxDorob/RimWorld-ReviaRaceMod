@@ -11,6 +11,7 @@
     <effectWorking>Smelt</effectWorking>
     <soundWorking>Recipe_Smelt</soundWorking>
     <unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
+		<researchPrerequisite>ReviaRaceReligionBase</researchPrerequisite>
     <skillRequirements>
       <Artistic>12</Artistic>
     </skillRequirements>
