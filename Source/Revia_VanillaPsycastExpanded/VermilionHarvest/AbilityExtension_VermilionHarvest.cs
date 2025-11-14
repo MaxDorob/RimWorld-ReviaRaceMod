@@ -55,7 +55,7 @@ namespace Revia_VanillaPsycastExpanded
         {
             bool isHuman = !victim.RaceProps.Animal;
             var score = this.score.RandomInRange * Multiplier(victim);
-            var thingMakerSet = isHuman ? ReviaDefOf.ReviaRaceHumanlikeSacrifice : ReviaDefOf.ReviaRaceAnimalSacrifice;
+            var thingMakerSet = isHuman ? Defs.ReviaRaceHumanlikePsycastSacrifice : Defs.ReviaRaceAnimalPsycastSacrifice;
             var parms = default(ThingSetMakerParams);
             parms.custom ??= [];
             parms.custom[ThingSetMaker_CountPerScore.paramName] = score;

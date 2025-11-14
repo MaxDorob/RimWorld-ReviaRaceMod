@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<ThingSetMakerDef>
+		<defName>ReviaRaceHumanlikePsycastSacrifice</defName>
+		<root Class="ThingSetMaker_RandomOption">
+			<options>
+
+				<!-- Bloodstone -->
+				<li>
+					<weight>10</weight>
+					<thingSetMaker Class="ReviaRace.ThingSetMaker_CountPerScore">
+						<fixedParams>
+							<filter>
+								<thingDefs>
+									<li>ReviaRaceBloodstone</li>
+								</thingDefs>
+							</filter>
+						</fixedParams>
+						<countPerScore>
+							<points>
+								<li>(0, 0)</li>
+								<li>(1, 1)</li>
+								<li>(3, 3)</li>
+								<li>(12, 14)</li>
+								<li>(20, 32)</li>
+								<li>(32, 64)</li>
+							</points>
+						</countPerScore>
+					</thingSetMaker>
+				</li>
+
+				<!-- Small blood rune -->
+				<li>
+					<weight>0.08</weight>
+					<thingSetMaker Class="ReviaRace.ThingSetMaker_CountPerScore">
+						<fixedParams>
+							<filter>
+								<thingDefs>
+									<li>ReviaLesserBloodRune</li>
+								</thingDefs>
+							</filter>
+						</fixedParams>
+						<countPerScore>
+							<points>
+								<li>(0, 1)</li>
+								<li>(1000, 1)</li>
+							</points>
+						</countPerScore>
+					</thingSetMaker>
+				</li>
+
+				<!-- Blood rune -->
+				<li>
+					<weight>0.03</weight>
+					<thingSetMaker Class="ReviaRace.ThingSetMaker_CountPerScore">
+						<fixedParams>
+							<filter>
+								<thingDefs>
+									<li>ReviaBloodRune</li>
+								</thingDefs>
+							</filter>
+						</fixedParams>
+						<countPerScore>
+							<points>
+								<li>(0, 0)</li>
+								<li>(2.99, 0)</li>
+								<li>(3, 1)</li>
+								<li>(1000, 1)</li>
+							</points>
+						</countPerScore>
+					</thingSetMaker>
+				</li>
+
+				<!-- Mystical stone -->
+				<li MayRequire="Ludeon.Rimworld.Royalty">
+					<weight>0.15</weight>
+					<thingSetMaker Class="ReviaRace.ThingSetMaker_CountPerScore">
+						<fixedParams>
+							<filter>
+								<thingDefs>
+									<li>Revia_MysticalStone</li>
+								</thingDefs>
+							</filter>
+						</fixedParams>
+						<countPerScore>
+							<points>
+								<li>(0, 0)</li>
+								<li>(21,99, 0)</li>
+								<li>(22, 1)</li>
+								<li>(1000, 1)</li>
+							</points>
+						</countPerScore>
+					</thingSetMaker>
+				</li>
+
+			</options>
+		</root>
+	</ThingSetMakerDef>
+
+	<ThingSetMakerDef>
+		<defName>ReviaRaceAnimalPsycastSacrifice</defName>
+		<root Class="ThingSetMaker_RandomOption">
+			<options>
+
+				<!-- Palestone -->
+				<li>
+					<weight>10</weight>
+					<thingSetMaker Class="ReviaRace.ThingSetMaker_CountPerScore">
+						<fixedParams>
+							<filter>
+								<thingDefs>
+									<li>ReviaRacePalestone</li>
+								</thingDefs>
+							</filter>
+						</fixedParams>
+						<countPerScore>
+							<points>
+								<li>(0, 0)</li>
+								<li>(1, 16)</li>
+								<li>(3, 80)</li>
+								<li>(8, 224)</li>
+								<li>(16, 512)</li>
+								<li>(32, 1024)</li>
+							</points>
+						</countPerScore>
+					</thingSetMaker>
+				</li>
+
+				<!-- Small blood rune -->
+				<li>
+					<weight>0.03</weight>
+					<thingSetMaker Class="ReviaRace.ThingSetMaker_CountPerScore">
+						<fixedParams>
+							<filter>
+								<thingDefs>
+									<li>ReviaLesserBloodRune</li>
+								</thingDefs>
+							</filter>
+						</fixedParams>
+						<countPerScore>
+							<points>
+								<li>(0, 1)</li>
+								<li>(1000, 1)</li>
+							</points>
+						</countPerScore>
+					</thingSetMaker>
+				</li>
+				
+			</options>
+		</root>
+	</ThingSetMakerDef>
+</Defs>

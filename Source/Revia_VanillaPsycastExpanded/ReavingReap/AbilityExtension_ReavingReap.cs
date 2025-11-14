@@ -41,7 +41,7 @@ namespace Revia_VanillaPsycastExpanded
         protected virtual float Multiplier(Pawn pawn) => 0.7f + (0.5f * pawn.GetSoulReapTier()) / 9;
         protected virtual void SpawnReward(Map map, IntVec3 pos, float score, bool human)
         {
-            var thingMakerSet = human ? ReviaDefOf.ReviaRaceHumanlikeSacrifice : ReviaDefOf.ReviaRaceAnimalSacrifice;
+            var thingMakerSet = human ? Defs.ReviaRaceHumanlikePsycastSacrifice : Defs.ReviaRaceAnimalPsycastSacrifice;
             var parms = default(ThingSetMakerParams);
             parms.custom ??= [];
             parms.custom[ThingSetMaker_CountPerScore.paramName] = score;

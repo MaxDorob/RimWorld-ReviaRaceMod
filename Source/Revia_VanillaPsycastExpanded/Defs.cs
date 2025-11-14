@@ -19,5 +19,7 @@ namespace Revia_VanillaPsycastExpanded
         public static DamageDef Revia_MysticalMediumBleedingScratch;
         public static DamageDef Revia_MysticalHeavyBleedingScratch;
         public static PsycasterPathDef Revia_BloodPath;
+        public static ThingSetMakerDef ReviaRaceHumanlikePsycastSacrifice;
+        public static ThingSetMakerDef ReviaRaceAnimalPsycastSacrifice;
     }
 }
