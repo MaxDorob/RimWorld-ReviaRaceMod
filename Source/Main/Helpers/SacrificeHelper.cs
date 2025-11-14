@@ -30,6 +30,7 @@ namespace ReviaRace
                 {
                     score /= (float)corpse.CurRotDrawMode;
                 }
+                return score;
             }
             return 0f;
         }
