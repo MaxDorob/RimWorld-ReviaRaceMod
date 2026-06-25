@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-	<RitualOutcomeEffectDef Name="ReviaOutcomeBase" Abstract="True">
+	<RitualOutcomeEffectDef Name="ReviaOutcomeNoEclipse" Abstract="True">
 		<workerClass>ReviaRace.Rituals.RitualOutcomeEffectWorker_Sacrificed</workerClass>
 		<allowAttachableOutcome>false</allowAttachableOutcome>
 		<comps>
@@ -36,6 +36,11 @@
 				<qualityOffset>0.3</qualityOffset>
 				<def>ReviaSkarnesSculpture</def>
 			</li>
+		</comps>
+	</RitualOutcomeEffectDef>
+
+	<RitualOutcomeEffectDef Name="ReviaOutcomeBase" ParentName="ReviaOutcomeNoEclipse" Abstract="True">
+		<comps>
 			<li Class="ReviaRace.RitualOutcomeComp_GameConditionActive">
 				<label>eclipse</label>
 				<qualityOffset>0.09</qualityOffset>
@@ -44,7 +49,8 @@
 		</comps>
 	</RitualOutcomeEffectDef>
 
-	<RitualOutcomeEffectDef ParentName="ReviaOutcomeBase">
+
+	<RitualOutcomeEffectDef ParentName="ReviaOutcomeNoEclipse">
 		<defName>Revia_Sacrifice</defName>
 		<description>Depending on ritual quality, Skarne may bless her participants with bloodstones.</description>
 		<workerClass>ReviaRace.Rituals.RitualOutcomeEffectWorker_Sacrificed</workerClass>
@@ -86,9 +92,16 @@
 		</modExtensions>
 		<comps>
 			<li Class="ReviaRace.RitualOutcomeComp_GameConditionActive">
+				<label>eclipse</label>
+				<qualityOffset>0.09</qualityOffset>
+				<condition>Eclipse</condition>
+				<tooltip>During an eclipse, sacrificing restores one random missing body part. If no body parts are missing, ritual quality is increased.</tooltip>
+			</li>
+			<li Class="ReviaRace.RitualOutcomeComp_GameConditionActive">
 				<label>solar flare</label>
 				<qualityOffset>0.05</qualityOffset>
 				<condition>SolarFlare</condition>
+				<tooltip>During a solar flare, sacrificing heals one random permanent injury. If no permanent injuries exist, ritual quality is increased.</tooltip>
 			</li>
 		</comps>
 	</RitualOutcomeEffectDef>
