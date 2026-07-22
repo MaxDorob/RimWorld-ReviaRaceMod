@@ -31,9 +31,9 @@ namespace ReviaRace.Comps
                 : null;
         }
 
-        public override void PostSpawnSetup(bool respawningAfterLoad)
+        public override void PostPostMake()
         {
-            base.PostSpawnSetup(respawningAfterLoad);
+            base.PostPostMake();
 
             var defaultLeech = ReviaRaceMod.GetDefaultLifeLeech(parent.def.defName);
             if (defaultLeech > 0 &&
