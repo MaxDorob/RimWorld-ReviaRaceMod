@@ -56,9 +56,12 @@ namespace ReviaRace
                 quality = quality,
                 present = active,
                 positive = true,
-                priority = 0f
+                priority = 0f,
+                toolTip = this.tooltip
             };
         }
         public GameConditionDef condition;
+        [MustTranslate]
+        public string tooltip;
     }
 }
