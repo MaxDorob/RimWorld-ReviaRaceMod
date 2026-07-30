@@ -16,9 +16,9 @@
 		<stages>
 			<li>
 				<statFactors>
-					<Revia_BleedRate>2</Revia_BleedRate>
 					<IncomingDamageFactor>1.5</IncomingDamageFactor>
 				</statFactors>
+				<totalBleedFactor>2</totalBleedFactor>
 			</li>
 		</stages>
 	</HediffDef>
