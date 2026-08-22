@@ -34,6 +34,10 @@
   <ReviaRaceBackstoryAdultWayfarer.title>Revian Wayfarer</ReviaRaceBackstoryAdultWayfarer.title>
   <ReviaRaceBackstoryAdultWayfarer.titleShort>Wayfarer</ReviaRaceBackstoryAdultWayfarer.titleShort>
   <ReviaRaceBackstoryAdultWayfarer.baseDescription>[PAWN_nameDef] wanders the forests, hills and deserts. The wilderness is [PAWN_possessive] home.</ReviaRaceBackstoryAdultWayfarer.baseDescription>
+
+  <ReviaRaceBackstoryAdultApothecary.title>Revian Apothecary/ReviaRaceBackstoryAdultApothecary.title>
+  <ReviaRaceBackstoryAdultApothecary.titleShort>Apothecary</ReviaRaceBackstoryAdultApothecary.titleShort>
+  <ReviaRaceBackstoryAdultApothecary.baseDescription>[PAWN_nameDef] managed and produced medicine for her community, often applying treatments herself. In the world she grew up in, and especially in her case, rest was a luxury offered only to the injured.</ReviaRaceBackstoryAdultApothecary.baseDescription>
   
   <!-- ================= -->
   <!-- Child Backstories -->
