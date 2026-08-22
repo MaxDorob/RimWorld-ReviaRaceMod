@@ -19,6 +19,7 @@
 					<IncomingDamageFactor>1.5</IncomingDamageFactor>
 				</statFactors>
 				<totalBleedFactor>2</totalBleedFactor>
+				<lifeThreatening>true</lifeThreatening>
 			</li>
 		</stages>
 	</HediffDef>
