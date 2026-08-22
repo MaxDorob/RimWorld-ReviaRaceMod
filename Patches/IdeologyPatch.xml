@@ -12,8 +12,6 @@
     </match>
     <success>Always</success>
   </Operation>
-</Patch>
-<Patch>
     <Operation Class="PatchOperationConditional">
         <xpath>/Defs/PreceptDef[defName="IdeoRole_ShootingSpecialist"]/requiredMemes</xpath>
         <match Class="PatchOperationAdd">
@@ -23,8 +21,6 @@
             </value>
         </match>
     </Operation>
-</Patch>
-<Patch>
     <Operation Class="PatchOperationConditional">
         <xpath>/Defs/PreceptDef[defName="IdeoRole_MeleeSpecialist"]/requiredMemes</xpath>
         <match Class="PatchOperationAdd">
