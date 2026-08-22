@@ -24,6 +24,11 @@ namespace Revia_VanillaPsycastExpanded
             {
                 if (target.Thing is Pawn pawn)
                 {
+                    var curse = pawn.health.hediffSet.GetFirstHediffOfDef(Defs.Revia_SkarnesCurse);
+                    if (curse != null)
+                    {
+                        HealthUtility.Cure(curse);
+                    }
                     var countOfPermanent = 0;
                     foreach (var injury in pawn.health.hediffSet.hediffs.Where(x=>x.Bleeding))
                     {
