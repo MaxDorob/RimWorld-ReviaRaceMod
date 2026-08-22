@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
   <RulePackDef>
     <defName>NamerPersonRevia</defName>
@@ -10,6 +10,8 @@
         <li>tribeName->[animal]-[interactionLiving]</li>
         <li>tribeName->[object]-[interactionNonLiving]</li>
         
+		
+		<!--Original -->
         <li>firstName->Red</li>
         <li>firstName->Crimson</li>
         <li>firstName->Carmine</li>
@@ -30,32 +32,165 @@
         <li>firstName->Ocean</li>
         <li>firstName->Stream</li>
         <li>firstName->Sapphire</li>
+		<!--Original End-->
+		<!-- Below is the name density update, by DrNolegs, Theoretically I could've turned them into their own categories, but this should work either way. Feel Free to edit out the comments and sort it anew, but this works in game.-->
+		<!--Additions Exlcude their originals-->
+		
+		<!--Foxu-->
+		    <li>firstName->Vixen</li>
+		    <li>firstName->Rena</li> <!--As in Rennard-->
+		    <li>firstName->Ren</li> <!--As in Rennard, but with no a!-->
+		    <li>firstName->Fennec</li>
+		    <li>firstName->Kitsu</li> <!--As in Kitsune-->
+		    <li>firstName->Kumiho</li> <!--Korean Nine-tails, much closer to the Revia honestly-->
+		    <li>firstName->Kumi</li> <!--Korean Nine-tails, much closer to the Revia honestly-->
+		    <li>firstName->Kasumi</li>
+		    <li>firstName->Vulpine</li>
+		    <li>firstName->Fera</li>
+		    <li>firstName->Vex</li>
+		    <li>firstName->Kyubi</li> <!--Literally 'Nine-tails'-->
+		    <li>firstName->Kuzunoha</li> <!--This should be super rare, since it's a legendary fox spirit-->
+		    <li>firstName->Tamamo</li> <!--This should also be super rare, since it's a legendary fox spirit-->
+		
+		<!--Reds-->
+		    <li>firstName->Rouge</li>
+		    <li>firstName->Roselle</li>
+		    <li>firstName->Poppy</li>
+		    <li>firstName->Cherry</li>
+		    <li>firstName->Garnet</li>
+		    <li>firstName->Rose</li>
+		    <li>firstName->Carmela</li>
+		    <li>firstName->Sienna</li>
+		    <li>firstName->Kurenai</li>
+		    <li>firstName->Akane</li>
+		    <li>firstName->Cerise</li>
+		
+		<!--Oranges Yellows and Golds-->
+		    <li>firstName->Amber</li>
+		    <li>firstName->Ember</li>
+		    <li>firstName->Blaze</li>
+		    <li>firstName->Aurelia</li>
+		    <li>firstName->Sorrel</li>
+		    <li>firstName->Dahlia</li>
+		    <li>firstName->Autumn</li>
+		
+		<!--Greens and Nature -->
+		    <li>firstName->Jade</li>
+		    <li>firstName->Olive</li>
+		    <li>firstName->Ivy</li>
+		    <li>firstName->Sage</li>
+		    <li>firstName->Clover</li>
+		
+		<!--Blues, Waters, Purples and Violets-->
+		    <li>firstName->Azure</li>
+		    <li>firstName->Rain</li>
+		    <li>firstName->River</li>
+		    <li>firstName->Delta</li>
+  		  <li>firstName->Misty</li>
+  		  <li>firstName->Violet</li>
+  		  <li>firstName->Iris</li>
+  		  <li>firstName->Lavender</li>
+  		  <li>firstName->Lilac</li>
+  		  <li>firstName->Amethyst</li>
+    		<li>firstName->Orchid</li>
+  		  <li>firstName->Wisteria</li>
+  	    <li>firstName->Mauve</li>
+		
+		<!--Blacks, Darks and Shadows-->
+  		  <li>firstName->Onyx</li>
+  		  <li>firstName->Raven</li>
+  		  <li>firstName->Sable</li>
+  		  <li>firstName->Noir</li>
+  		  <li>firstName->Umbra</li>
+  		  <li>firstName->Velvet</li>
+  		  <li>firstName->Dusk</li>
+		
+		<!--Whites and Silvers-->
+  		  <li>firstName->Pearl</li>
+  		  <li>firstName->Snow</li>
+  		  <li>firstName->Winter</li>
+  		  <li>firstName->Silver</li>
+  		  <li>firstName->Moon</li>
+  		  <li>firstName->Opal</li>
+  		  <li>firstName->Frost</li>
+  		  <li>firstName->Shiro</li>
+		
+		<!--The Celestial Plane-->
+  		  <li>firstName->Luna</li>
+  		  <li>firstName->Nova</li>
+  		  <li>firstName->Aurora</li>
+  		  <li>firstName->Lyra</li>
+  		  <li>firstName->Celeste</li>
+  		  <li>firstName->Stella</li>
+  		  <li>firstName->Zenith</li>
+  		  <li>firstName->Celica</li>
+  		  <li>firstName->Cecilia</li>
+  		  <li>firstName->Titania</li>
+  		  <li>firstName->Crescent</li>
+		
+		<!--End First Name Additions-->
+		
+		<!--Original-->
+          <li>animal->Leopard</li>
+          <li>animal->Jaguar</li>
+          <li>animal->Serpent</li>
+          <li>animal->Snake</li>
+          <li>animal->Fox</li>
+          <li>animal->Anaconda</li>
+          <li>animal->Eagle</li>
+          <li>animal->Tiger</li>
+          <li>animal->Wolf</li>
+          <li>animal->Coyote</li>
+          <li>animal->Badger</li>
+          <li>animal->Alligator</li>
+          <li>animal->Crocodile</li>
+          <li>animal->Piranha</li>
+		
+		<!--Animal Additions-->
+    		<li>animal->Warg</li>
+  		  <li>animal->Thrumbo</li>
+  		  <li>animal->Hyena</li>
+  		  <li>animal->Dragon</li>
+  		  <li>animal->Wyvern</li>
+  		  <li>animal->Lion</li>
+  		  <li>animal->Cougar</li>
+  		  <li>animal->Cobra</li>
+  		  <li>animal->Fennec</li>
+  		  <li>animal->Panther</li>
+  		  <li>animal->Otter</li>
+  		  <li>animal->Falcon</li>
+  		  <li>animal->Vulture</li>
+  	  	<li>animal->Shark</li>
 
-        <li>animal->Leopard</li>
-        <li>animal->Jaguar</li>
-        <li>animal->Serpent</li>
-        <li>animal->Snake</li>
-        <li>animal->Fox</li>
-        <li>animal->Anaconda</li>
-        <li>animal->Eagle</li>
-        <li>animal->Tiger</li>
-        <li>animal->Wolf</li>
-        <li>animal->Coyote</li>
-        <li>animal->Badger</li>
-        <li>animal->Alligator</li>
-        <li>animal->Crocodile</li>
-        <li>animal->Piranha</li>
-
-        <li>object->Stone</li>
-        <li>object->Obsidian</li>
-        <li>object->Sapphire</li>
-        <li>object->Emerald</li>
-        <li>object->Gold</li>
-        <li>object->Iron</li>
-        <li>object->Steel</li>
-        <li>object->Skull</li>
-        <li>object->Bone</li>
-
+		<!--Original-->
+          <li>object->Stone</li>
+          <li>object->Obsidian</li>
+          <li>object->Sapphire</li>
+          <li>object->Emerald</li>
+          <li>object->Gold</li>
+          <li>object->Iron</li>
+          <li>object->Steel</li>
+          <li>object->Skull</li>
+          <li>object->Bone</li>
+		
+		<!--Misc/Material Additions-->
+  		  <li>object->Gore</li>
+  		  <li>object->Viscera</li>
+  	    <li>object->Platinum</li>
+  		  <li>object->Titanium</li>
+  		  <li>object->Garnet</li>
+  		  <li>object->Uranium</li>
+  		  <li>object->Blood</li>
+  		  <li>object->Marrow</li>
+  		  <li>object->Doom</li>
+  		  <li>object->Moon</li>
+  		  <li>object->Star</li>
+  		  <li>object->Heart</li> <!--Slay the Princess!-->
+  		  <li>object->Lungs</li> <!--Slay the Princess!-->
+  		  <li>object->Liver</li> <!--Slay the Princess!-->
+  		  <li>object->Nerves</li> <!--Slay the Princess!-->
+		<!--Misc/Material Additions End-->
+  
         <li>interactionLiving->tamer</li>
         <li>interactionLiving->beater</li>
         <li>interactionLiving->bearer</li>
@@ -63,13 +198,30 @@
         <li>interactionLiving->slayer</li>
         <li>interactionLiving->flayer</li>
         <li>interactionLiving->scourge</li>
-        
+		<!--interactionLiving Additions-->
+  		  <li>interactionLiving->slicer</li>
+  		  <li>interactionLiving->scourer</li>
+  		  <li>interactionLiving->smiter</li>
+  		  <li>interactionLiving->chaser</li>
+  		  <li>interactionLiving->maimer</li>
+  		  <li>interactionLiving->devourer</li>
+    <!--interactionLiving Additions End-->
+		
         <li>interactionNonLiving->breaker</li>
         <li>interactionNonLiving->carver</li>
         <li>interactionNonLiving->shatterer</li>
         <li>interactionNonLiving->crusher</li>
         <li>interactionNonLiving->smasher</li>
         <li>interactionNonLiving->shaper</li>
+		
+		<!--interactionNonLiving Additions-->
+  		  <li>interactionLiving->splitter</li>
+  		  <li>interactionLiving->obliterator</li>
+  		  <li>interactionLiving->devastator</li>
+  		  <li>interactionLiving->ravager</li>
+  		  <li>interactionLiving->cleaver</li>
+  		  <li>interactionLiving->marrer</li>
+		<!--interactionLiving Additions End-->
       </rulesStrings>
     </rulePack>
   </RulePackDef>
