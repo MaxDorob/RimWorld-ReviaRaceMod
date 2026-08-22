@@ -124,7 +124,7 @@ By channeling psychic energy each of her tails, a Revia leverages that power in 
 		<label>skarne's protection</label>
 		<description>Skarne enjoys blood flowing freely, but may be merciful to her supplicants and their allies. Manipulating fresh blood on open wounds allows for their immediate healing at a range, often leaving scars like a mark of her influence.</description>
 		<iconPath>UI/Bloodpath/SkarnesProtection</iconPath>
-		<castTime>30</castTime>
+		<castTime>150</castTime>
 		<range>36</range>
 		<targetMode>Pawn</targetMode>
 		<abilityClass>VEF.Abilities.Ability_Blank</abilityClass>
