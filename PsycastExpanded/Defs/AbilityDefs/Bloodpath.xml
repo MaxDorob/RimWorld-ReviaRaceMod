@@ -56,7 +56,7 @@ This extremely powerful and dangerous state of connection lasts until psychic he
 		<iconPath>UI/Bloodpath/SkarneAvatar</iconPath>
 		<abilityClass>VEF.Abilities.Ability_Blank</abilityClass>
 		<targetMode>Self</targetMode>
-		<castTime>150</castTime>
+		<castTime>200</castTime>
 		<durationTime>2700</durationTime>
 		<targetingParameters>
 		<canTargetSelf>True</canTargetSelf>
@@ -87,14 +87,16 @@ This extremely powerful and dangerous state of connection lasts until psychic he
 	<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
 		<defName>Revia_Bloodbath</defName>
 		<label>bloodbath</label>
-		<description>The most direct application of psychic power for any Revia is empowering her tails, her connection to Skarne, and the Bloodbath Circuit, or simply Bloodbath is that direct technique.
-By channeling psychic energy in a circuit through each of her tails, a Revia leverages that power in a moments notice to bathe in the blood of her adversaries. While active, this technique immensely increases speed of movement and rapidity of attacks, with enough tails even allowing for the benefits of sanctified weaponry at all times!</description>
+		<description>The most direct application of psychic power for any Revia is empowering her tails, her connection to Skarne, creating the Bloodbath Circuit, or simply the Bloodbath.
+By channeling psychic energy each of her tails, a Revia leverages that power in a moments notice to bathe in the blood of her adversaries. This technique increases speed of movement and rapidity of attacks, scaling with the amount of tails a Revia has, with enough tails even allowing for the benefits of sanctified weaponry at all times!</description>
 		<iconPath>UI/Bloodpath/Bloodbath</iconPath>
 		<castSound>VPE_BladeFocus_Cast</castSound>
 		<!--TODO: Change to some other sound-->
 		<targetMode>Self</targetMode>
 		<castTime>30</castTime>
 		<durationTime>7200</durationTime>
+		<cooldownTime>7000</cooldownTime> <!--AI Sanity-->
+		<chance>100</chance> <!--AI Should prioritize casting this, if they can-->
 		<abilityClass>VEF.Abilities.Ability_Blank</abilityClass>
 		<modExtensions>
 			<li Class="Revia_VanillaPsycastExpanded.AbilityExtension_ReviaPsycast">
@@ -102,7 +104,7 @@ By channeling psychic energy in a circuit through each of her tails, a Revia lev
 				<level>2</level>
 				<order>1</order>
 				<psyfocusCost>0.1</psyfocusCost>
-				<entropyGain>5</entropyGain>
+				<entropyGain>10</entropyGain>
 				<psychic>true</psychic>
 				<soulReapLevel>3</soulReapLevel>
 				<prerequisites>
@@ -122,7 +124,7 @@ By channeling psychic energy in a circuit through each of her tails, a Revia lev
 		<label>skarne's protection</label>
 		<description>Skarne enjoys blood flowing freely, but may be merciful to her supplicants and their allies. Manipulating fresh blood on open wounds allows for their immediate healing at a range, often leaving scars like a mark of her influence.</description>
 		<iconPath>UI/Bloodpath/SkarnesProtection</iconPath>
-		<castTime>150</castTime>
+		<castTime>30</castTime>
 		<range>36</range>
 		<targetMode>Pawn</targetMode>
 		<abilityClass>VEF.Abilities.Ability_Blank</abilityClass>
@@ -142,8 +144,8 @@ By channeling psychic energy in a circuit through each of her tails, a Revia lev
 				<path>Revia_BloodPath</path>
 				<level>3</level>
 				<order>2</order>
-				<psyfocusCost>0.15</psyfocusCost>
-				<entropyGain>15</entropyGain>
+				<psyfocusCost>0.18</psyfocusCost>
+				<entropyGain>18</entropyGain>
 				<psychic>true</psychic>
 				<soulReapLevel>5</soulReapLevel>
 				<prerequisites>
@@ -157,11 +159,11 @@ By channeling psychic energy in a circuit through each of her tails, a Revia lev
 
 	<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
 		<defName>Revia_SkarnesCurse</defName>
-		<label>skarne's curse</label>
-		<description>Channel the bloodthirsty viciousness that is integral to the Revia, and force a curse onto a living victim. Increasing their vulnerability to damage and hemmorhaging, all while causing open wounds to burst out of them!</description>
-		<description>Channel the bloodthirst that is integral in all Revia, and teleport to strike multiple targets in a chain before returning to your starting position, forcing a weakening curse on surviving victims that bursts out open wounds!</description>
+		<label>slashing curse</label>
+		<description>Channel the bloodthirsty viciousness that is integral to the Revia, and force bloodshed onto living victims. Increase their vulnerability to damage and hemmorhaging, causing open wounds to burst out of them periodically as if they were slashed!</description>
+		<description>Channel the bloodthirst that is integral in all Revia, and teleport to strike multiple targets in a chain before returning to your starting position, forcing a hemmorhaging curse on surviving victims that bursts out into open wounds!</description>
 		<iconPath>UI/Bloodpath/SkarnesCurse</iconPath>
-		<castTime>40</castTime>
+		<castTime>30</castTime>
 		<durationTime>1800</durationTime>
 		<needsTicking>true</needsTicking>
 		<power>1</power>
@@ -205,8 +207,8 @@ By channeling psychic energy in a circuit through each of her tails, a Revia lev
 				<path>Revia_BloodPath</path>
 				<level>4</level>
 				<order>1</order>
-				<psyfocusCost>0.1</psyfocusCost>
-				<entropyGain>30</entropyGain>
+				<psyfocusCost>0.15</psyfocusCost>
+				<entropyGain>50</entropyGain>
 				<psychic>true</psychic>
 				<soulReapLevel>7</soulReapLevel>
 				<prerequisites>
@@ -214,26 +216,26 @@ By channeling psychic energy in a circuit through each of her tails, a Revia lev
 				</prerequisites>
 			</li>
 			<li Class="Revia_VanillaPsycastExpanded.AbilityExtension_EffecterOnTarget_ByBleedRate">
-				<bleedRateRange>0~0.4</bleedRateRange>
+				<bleedRateRange>0~0.2</bleedRateRange>
 				<effecterDef>Revia_BloodyExplosionSmall</effecterDef>
 			</li>
 			<li Class="Revia_VanillaPsycastExpanded.AbilityExtension_EffecterOnTarget_ByBleedRate">
-				<bleedRateRange>0.4~1</bleedRateRange>
+				<bleedRateRange>0.2~0.6</bleedRateRange>
 				<effecterDef>Revia_BloodyExplosionMedium</effecterDef>
 			</li>
 			<li Class="Revia_VanillaPsycastExpanded.AbilityExtension_EffecterOnTarget_ByBleedRate">
-				<bleedRateRange>1~2.5</bleedRateRange>
+				<bleedRateRange>0.6~1.5</bleedRateRange>
 				<effecterDef>Revia_BloodyExplosionBig</effecterDef>
 			</li>
 			<li Class="Revia_VanillaPsycastExpanded.AbilityExtension_EffecterOnTarget_ByBleedRate">
-				<bleedRateRange>2.5~9999</bleedRateRange>
+				<bleedRateRange>1.5~9999</bleedRateRange>
 				<effecterDef>Revia_BloodyExplosionHuge</effecterDef>
 			</li>
 			<li Class="Revia_VanillaPsycastExpanded.AbilityExtension_BloodyExplosion">
 				<damageDef>Revia_BloodExplosionScratch</damageDef>
-				<radius>3.9</radius>
-				<damageAmount>9~12</damageAmount>
-				<penetration>7.5</penetration>
+				<radius>4.9</radius>
+				<damageAmount>9~18</damageAmount>
+				<penetration>9</penetration>
 				<requireLOS>true</requireLOS>
 			</li>
 
@@ -248,10 +250,10 @@ By channeling psychic energy in a circuit through each of her tails, a Revia lev
 		<!--<castTime>150</castTime>-->
 
 		<abilityClass>VEF.Abilities.Ability_Blank</abilityClass>
-		<castTime>400</castTime>
+		<castTime>500</castTime>
 		<targetMode>Self</targetMode>
 		<hasAoE>true</hasAoE>
-		<radius>8.9</radius>
+		<radius>9.9</radius>
 		<needsTicking>true</needsTicking>
 		<chance>0</chance>
 		<targetingParametersForAoE>
@@ -285,35 +287,36 @@ By channeling psychic energy in a circuit through each of her tails, a Revia lev
 	<VEF.Abilities.AbilityDef ParentName="VPE_WordOfAbilityBase">
 		<defName>Revia_VermilionHarvest</defName>
 		<label>vermilion harvest</label>
-		<description>Revia love a good sacrifice, especially with living victims. This gruesome way of sacrificing is very satisfying for a Revia's bloodthirst, offers additional bloodstones, a moderate psyfocus boon, and will burst the body in a shower of blood on kill!</description>
+		<description>Revia love a good sacrifice, especially with living victims. This gruesome way of sacrificing through a bloodthirsty psychic cut is very satisfying for a Revia's bloodthirst, offers additional bloodstones, a moderate psyfocus boon, and will burst the body in a shower of blood on kill!</description>
 		<iconPath>UI/Bloodpath/VermilionHarvest</iconPath>
-		<castTime>300</castTime>
+		<castTime>50</castTime>
 		<warmupMote></warmupMote>
 		<warmupSound></warmupSound>
 		<abilityClass>VEF.Abilities.Ability_Blank</abilityClass>
+		<cooldownTime>60000</cooldownTime>
 		<chance>0</chance>
 		<modExtensions>
 			<li Class="Revia_VanillaPsycastExpanded.AbilityExtension_ReviaPsycast">
 				<path>Revia_BloodPath</path>
 				<level>1</level>
 				<order>2</order>
-				<psyfocusCost>0.03</psyfocusCost>
-				<entropyGain>90</entropyGain>
+				<psyfocusCost>0.05</psyfocusCost>
+				<entropyGain>50</entropyGain>
 				<psychic>true</psychic>
 				<soulReapLevel>1</soulReapLevel>
 			</li>
 			<li Class="Revia_VanillaPsycastExpanded.AbilityExtension_VermilionHarvest">
 			</li>
 			<li Class="Revia_VanillaPsycastExpanded.AbilityExtension_EffecterOnTarget_ByBodySize">
-				<bodySizeRange>0~0.5</bodySizeRange>
+				<bodySizeRange>0~0.3</bodySizeRange>
 				<effecterDef>Revia_BloodyExplosionSmall</effecterDef>
 			</li>
 			<li Class="Revia_VanillaPsycastExpanded.AbilityExtension_EffecterOnTarget_ByBodySize">
-				<bodySizeRange>0.5~1.4</bodySizeRange>
+				<bodySizeRange>0.3~1.1</bodySizeRange>
 				<effecterDef>Revia_BloodyExplosionMedium</effecterDef>
 			</li>
 			<li Class="Revia_VanillaPsycastExpanded.AbilityExtension_EffecterOnTarget_ByBodySize">
-				<bodySizeRange>1.4~9999</bodySizeRange>
+				<bodySizeRange>1.1~9999</bodySizeRange>
 				<effecterDef>Revia_BloodyExplosionBig</effecterDef>
 			</li>
 		</modExtensions>
