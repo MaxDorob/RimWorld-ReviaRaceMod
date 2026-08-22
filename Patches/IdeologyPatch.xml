@@ -13,3 +13,25 @@
     <success>Always</success>
   </Operation>
 </Patch>
+<Patch>
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/PreceptDef[defName="IdeoRole_ShootingSpecialist"]/requiredMemes</xpath>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/PreceptDef[defName="IdeoRole_ShootingSpecialist"]/requiredMemes</xpath>
+            <value>
+                <li>ReviaRaceSkarniteMeme</li>
+            </value>
+        </match>
+    </Operation>
+</Patch>
+<Patch>
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/PreceptDef[defName="IdeoRole_MeleeSpecialist"]/requiredMemes</xpath>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/PreceptDef[defName="IdeoRole_MeleeSpecialist"]/requiredMemes</xpath>
+            <value>
+                <li>ReviaRaceSkarniteMeme</li>
+            </value>
+        </match>
+    </Operation>
+</Patch>
