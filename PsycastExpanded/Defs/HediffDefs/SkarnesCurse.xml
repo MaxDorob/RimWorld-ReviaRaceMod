@@ -3,7 +3,7 @@
 	<HediffDef ParentName="PsycastHediffBase">
 		<defName>Revia_SkarnesCurse</defName>
 		<label>skarne's curse</label>
-		<description>Slowly, but never gently, this is how a life is taken.</description>
+		<description>Slowly, rarely gently, this is how a life is taken.</description>
 		<hediffClass>HediffWithComps</hediffClass>
 		<isBad>true</isBad>
 		<defaultLabelColor>(0.8, 0.4, 0.4)</defaultLabelColor>
