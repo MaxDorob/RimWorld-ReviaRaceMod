@@ -27,6 +27,7 @@
 		<comps>
 			<li Class="HediffCompProperties_Disappears">
 				<disappearsAfterTicks>120000~180000</disappearsAfterTicks> <!--2~3 days-->
+				<showRemainingTime>true</showRemainingTime>
 			</li>
 		</comps>
   </HediffDef>
