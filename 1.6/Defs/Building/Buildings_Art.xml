@@ -36,6 +36,7 @@
 			<li Class="CompProperties_Statue">
 				<compClass>ReviaRace.CompSkarneStatue</compClass>
 				<nameMaker>ReviaRace_SkarneNamerStatue</nameMaker>
+				<descriptionMaker>ReviaRace_SkarneDescriptionStatue</descriptionMaker>
 				<canBeEnjoyedAsArt>true</canBeEnjoyedAsArt>
 				<statueBaseGraphic>
 					<texPath>Things/Building/ReviaStatueBase</texPath>
@@ -116,6 +117,19 @@
 				<li>statueIdea->Bloody Night</li>
 				<li>statueIdea->Bloody Rain</li>
 				<li>statueIdea->Sunrise</li>
+			</rulesStrings>
+		</rulePack>
+	</RulePackDef>
+
+	<RulePackDef>
+		<defName>ReviaRace_SkarneDescriptionStatue</defName>
+		<include>
+			<li>ArtNameUtility</li>
+			<li>ArtDescriptionUtility_Global</li>
+		</include>
+		<rulePack>
+			<rulesStrings>
+				<li>r_statue_description->Statue of Skarne</li>
 			</rulesStrings>
 		</rulePack>
 	</RulePackDef>
